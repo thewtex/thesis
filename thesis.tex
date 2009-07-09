@@ -1,0 +1,263 @@
+% preliminary_proposal.tex
+%
+% This file is root file for Matt McCormick's preliminary proposal
+% based on University of Wisconsin-Madison LaTeX Style file withesis
+% available in the CTAN
+
+
+
+%=====================================================================
+% Document Style
+%=====================================================================
+% Choose only one of the following document classes:
+%
+% for a 12 Point UW PhD Thesis without Margin Check
+% \documentclass[12pt]{withesis}
+% the twoside option is for printing on both sides of paper
+\documentclass[12pt,twoside]{withesis}
+%
+% for a 10 Point UW PhD Thesis with Margin Check
+%\documentclass[10pt,margincheck]{withesis}
+%
+% The margincheck option flags lines which overflow their hbox with a black
+%  box at the end of the line.  This usually (but not always) indicates a
+%  margin violation on the right margin.  Left margin violations aren't
+%  indicated and if the margin violation is large enough, there isn't room
+%  for the black box to be visiable.  
+%
+% This option can be also used in conjunction with the msthesis option.
+%
+% or for a 12 Point UW Masters Thesis
+%\documentclass[12pt,msthesis]{withesis}
+%
+% or for a 10 Point UW Masters Thesis
+%\documentclass[10pt,msthesis]{withesis}
+%
+% The msthesis option changes the page margins from 1" all around
+% (the PhD format) to 1.25" left and 1" remaining margins (MS format).
+% The defaults for degree and thesis are changed to be MS and thesis.
+% These defaults can be overridden if the margins for the MS thesis
+% are desired for other documents.
+
+% To include optional packages, use the \usepackage command.
+%  The package epsfig is used to bring in the Encapsulated PostScript
+%    figures into the document.
+%  The package times is used to change the fonts to Times Roman; however
+%    because the times typewriter font looks odd, the original LaTeX
+%    Computer Modern font is kept for the typewriter font using
+%      \renewcommand{\ttdefault}{cmtt}
+%    Note that Times Roman is a PostScript font and therefore, the document
+%    cannot be correctly viewed from the *.dvi file.  It should be converted
+%    to a *.ps file first and then viewed with a PostScript previewer...
+\usepackage{times}
+\renewcommand{\ttdefault}{cmtt}
+
+%========================================================================
+%  Draft Control Commands:
+%========================================================================
+%
+% \psdraft causes the \psfig or \epsfig commands to draw a box and label
+% the box with the postscript file name instead of reading in the full
+% postscript figure.  This can save time and toner when printing drafts.
+%
+%\psdraft
+%
+%
+% \psfull causes the inclusion of the postscript figures.
+%\psfull
+%
+%
+%\pagestyle{thesisdraft} causes the footer text to become:
+% DRAFT: Do Not Distribute        <time><Date>        <input file name>
+%
+%\pagestyle{thesisdraft}
+%
+%\pagestyle{thesis} causes the header and footers to be the correct format
+%
+\pagestyle{thesis}
+%
+%
+%  The page margins can be marked with a post-script box using the
+%  \draftmargins command.  This command uses dvips's end-of-page hook
+%  This is only visible in the *.ps file (NOT the *.dvi file)!
+%
+%\draftmargins
+%
+%
+%  The word ``DRAFT'' can be diagonally printed across the page using
+%  the \draftscreen command.  This command uses dvip's beginning-of-page
+%  hook.  This is only visible in the *.ps file (NOT the *.dvi file)!
+%
+%\draftscreen
+
+
+%=======================================================================
+% Remove the following lines if appendix tables or figures are present.
+% The suppress writing the auxiliary information which appears in the
+% list of tables or list of figures.
+%
+\noappendixtables                % Don't have appendix tables
+\noappendixfigures               % Don't have appendix figures
+
+
+% hyphenation penalty, 50=weak 10000=super-strong
+\hyphenpenalty=5000
+% how much space is allowed between words
+\tolerance=500
+% widow penalty, last line of a paragraph at the start of a page
+\widowpenalty=500
+% orphan penalty, the first line of a paragraph at the beginning of a page
+\clubpenalty=500
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+
+%=======================================================================
+% End of Preamble, start of document
+%
+
+
+\begin{document}
+
+\tableofcontents
+
+\chapter{Specific Aims}
+
+
+\chapter{Human Health Significance}
+
+\section{Etiology of stroke and the role of atherosclerotic plaque}
+\section{Clinical carotid ultrasound and plaque characterization}
+\subsection{Defining vulnerable plaque}
+\subsection{Plaque characterization with other methods and imaging modalities}
+\subsection{Plaque characterization with diagnostic ultrasound}
+\section{High frequency ultrasound on carotid plaque}
+\section{Transcranial Doppler for monitoring microembolic events}
+
+
+\chapter{Novel motion estimation with hierarchical Naive Bayesian multilevel
+adaptive estimation}
+
+\section{Prior motion tracking algorithms}
+\subsection{Kernel based tracking}
+\subsection{Multilevel image registration techniques}
+\section{The hierarchical Naive Bayesian estimator}
+\subsection{Theory}
+\subsection{Application in other fields}
+\subsection{Application to image motion tracking}
+\subsubsection{Hierarchical deconstruction of the image}
+\subsubsection{Efficient algorithmic implementation applied to discrete data}
+\subsubsection{Regularization techniques}
+
+
+\chapter{Validation of motion tracking algorithm with simulated and phantom
+data}
+
+\section{Simulated data}
+\subsection{Mechanical model}
+\subsubsection{Spherical inclusion}
+\subsubsection{Arterial model}
+\subsection{Acoustic model}
+
+\section{Phantom model}
+
+\section{Performance}
+\subsection{Accuracy}
+\subsection{Precision}
+\subsection{Robustness}
+\subsection{Stability}
+\subsection{Computational efficiency}
+
+
+\chapter{Application of the novel strain imaging algorithm to \textit{in vivo}
+plaques}
+
+\section{Strain images}
+
+\section{Cardiac cycle waveforms}
+
+\section{Combination of normal strains and shear strain into single strain index}
+\subsection{Maximum principal strain}
+\subsection{Maximum shear strain}
+\subsection{Total strain energy}
+\subsection{Distortional energy}
+
+\section{Compounding of beam steered strain images}
+\subsection{Registration}
+\subsection{Strain index consistency}
+\subsection{Changes in images and waveforms relative to non-compounded images}
+
+
+\chapter{High-frequency 3D ultrasound characterization}
+
+\section{Collection and analysis of 3D radiofrequency data}
+\subsection{VisualSonics Vevo 770 system}
+\subsection{Volume concatenation, storage, and processing}
+\subsection{Scan conversion}
+
+\section{Reference phantom development and characterization}
+\subsection{Phantom design}
+\subsection{Attenuation characterization}
+\subsection{Phase velocity characterization}
+\subsection{Absolute backscater measurement}
+
+\section{Backscatter analysis}
+
+\section{Attenuation estimation}
+\subsection{Water-tissue segmentation}
+\subsection{Spectral difference estimation}
+\subsection{Spectral shift estimation}
+\subsection{Hybrid estimation}
+
+
+\chapter{Transcranial Doppler detection of microemboli}
+
+\section{Methods to increase robustness of unstable data}
+\subsection{Examination room protocol}
+\subsection{Post processing software design}
+
+\section{Results}
+
+
+\chapter{Effectiveness of ultrasonic strain imaging algorithm to detect high
+risk plaque}
+
+\section{Histological classification}
+\subsection{Registration methods}
+\subsection{Strain imaging results}
+\subsection{Backscatter results}
+
+\section{Transcranial Doppler}
+
+\section{Symptomatic/Asymptomatic status}
+
+\section{MRI indices of neural atrophy and ischemia}
+
+\section{Neuropsychological assessment}
+
+
+\chapter{Summary and Conclusions}
+
+
+%\include{prelude} % Title page, nomenclature, abstract, table of contents, etc
+%\include{specific_aims}                
+%\include{background/background}
+%\include{preliminary_results/preliminary_results}
+%\include{research_design/research_design}
+%\include{timeline/timeline}
+
+%% Choose your bibliography style
+%% plain is the basic style, others include ieeetr, siam, asm, etc
+%\bibliographystyle{plain}
+%% \altbibtitle{}
+%\bibliography{preliminary_proposal}              % Make the bibliography
+
+% \begin{appendices}               % Start of the Appendix Chapters.  If there is only
+%                                  % one Appendix Chapter, then use \begin{appendix}
+% \include{code}                   % Including computer code listings
+% \include{bibref}                 % a BibTeX reference
+% \include{math}                   % Complex Equations from the UW Math Department
+% \include{acro}                   % A discussion on generating PDF files.
+% \end{appendices}                 % End of the Appendix Chapters.  ibid on \end{appendix}
+%\include{vita}                  % Optional Vita, use \begin{vita} vita text \end{vita}
+\end{document}
