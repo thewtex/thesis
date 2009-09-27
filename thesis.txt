@@ -3,52 +3,6 @@ Carotid Plaque Characterization with Medical Ultrasound
 -------------------------------------------------------
 
 
-
-
-=========================
-Human Health Significance
-=========================
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Etiology of stroke and the role of atherosclerotic plaque
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Clinical carotid ultrasound and plaque characterization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-Defining vulnerable plaque
-==========================
-
-
-Plaque characterization with other methods and imaging modalities
-=================================================================
-
-
-Plaque characterization with diagnostic ultrasound
-==================================================
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-High frequency ultrasound on carotid plaque
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Transcranial Doppler for monitoring microembolic events
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
-
 =======================================================================================
 Novel motion estimation with hierarchical Naive Bayesian multilevel adaptive estimation
 =======================================================================================
@@ -98,4 +52,4 @@ Regularization techniques
 
 
 
-.. vim ft=rst
+.. vim filetype=rst :
