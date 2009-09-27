@@ -3,11 +3,25 @@ Human Health Significance
 =========================
 
 
+In this section we describe the role diagnostic medical ultrasound plays in addressing the public health needs related to diagnosis of plaque burden in the carotid artery that predispose a patient to a stroke. 
+Specifically, we focus on stroke due to carotid atherosclerotic disease with increased vessel stenosis or embolization being primary causative factors. 
+First, we describe the prevalence and pathology of stroke. 
+Next, we describe the current role of medical ultrasound clinically in carotid plaque detection and characterization. 
+We review previous research efforts to improve carotid examination. 
+The literature on high frequency ultrasonic characterization of carotid plaques is also described.  
+Finally, the use of transcranial Doppler ultrasound for monitoring microembolic events in the middle cerebral artery is presented. 
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Etiology of stroke and the role of atherosclerotic plaque
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Stroke is a disease that effects the most defining and critical organ of the human body, the brain. 
+Stroke is a result of prolonged hypoxia to neural tissue resulting in cell death. 
+Symptoms include compromised movement, speech, cognition, and death. 
+Location and extent of neuron injury determine the resulting neuronal dysfunction.
+While stroke is an acute ischemic cerebrovascular event with long lasting effects, there are similar ischemic pathologies with different time-courses. 
+Transient ischemic attacks, TIA, usually last from 2-15 minutes. 
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
