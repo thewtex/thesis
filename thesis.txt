@@ -1,7 +1,3 @@
--------------------------------------------------------
-Carotid Plaque Characterization with Medical Ultrasound
--------------------------------------------------------
-
 
 =======================================================================================
 Novel motion estimation with hierarchical Naive Bayesian multilevel adaptive estimation
