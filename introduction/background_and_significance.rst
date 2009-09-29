@@ -22,11 +22,11 @@ Symptoms include compromised movement, speech, cognition, and death.
 Location and extent of neuron injury determine the resulting neuronal dysfunction.
 While stroke is an acute ischemic cerebrovascular event with long lasting effects, there are similar ischemic pathologies with different time-courses. 
 Transient ischemic attacks, TIA, usually last from 2-15 minutes. 
-They result in cerebral impairment that subsides in under twenty-four hours [Classify1990]_. 
-In addition, there also may be chronic ischemic events resulting from microemboli that explains some dementias due to the vascular cognitive impairment [Classify1990]_.  
+They result in cerebral impairment that subsides in under twenty-four hours [Whisnant1990]_. 
+In addition, there also may be chronic ischemic events resulting from microemboli that explains some dementias due to the vascular cognitive impairment [Whisnant1990]_.  
 Furthermore, a correlation between migraine and ischemic stroke has led to the suggestion that embolic ischemia may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.
 
-The pathogenesis of stroke is classified into four categories [Classify1990]_: brain hemorrhage, subarachnoid hemorrhage, intracranial hemorrhage from an arteriovenous malformation, and brain infarction, which is also referenced as *ischemic stroke*. 
+The pathogenesis of stroke is classified into four categories [Whisnant1990]_: brain hemorrhage, subarachnoid hemorrhage, intracranial hemorrhage from an arteriovenous malformation, and brain infarction, which is also referenced as *ischemic stroke*. 
 Mechanisms of cerebral infarction are further divided into subcategories, namely, thrombotic, embolic, and hemodynamic.  
 Thrombotic infarction usually occurs with a thrombosis that forms around an atherosclerotic plaque.
 This will occasionally occur with the larger cerebral arteries with extensive cerebrovascular disease. 
@@ -37,7 +37,7 @@ Cardioembolic stroke can be due to many conditions.
 Atrial fibrillation, recent myocardial infarction, congestive heart failure, valve disease or mechanical valve replacement can result in thrombosis with free passage to the brain.  
 Stroke that was previously labeled idiopathic, paradoxical, or crypotogenic, is now thought to be primarily caused by a patent foramen ovale (PFO).  
 A PFO occurs when the shunt in the fetus's atrial septum, for bypassing circulation to the lungs, fails to close after birth.  
-There can be a clot within the shunt or a peripheral venous thrombus that has bypassed the lungs. [Classify1990]_
+There can be a clot within the shunt or a peripheral venous thrombus that has bypassed the lungs. [Whisnant1990]_
 Finally, hemodynamic brain infarctions refer to hypoperfusion due to plaque stenosis or occlusion.
 The stroke pathogenesis targeted in the proposed work are emboli from carotid plaque.
 This is one of the common causes of stroke, underlying over 50\% of strokes [Nikic2006,Rothwell2000]_ .
