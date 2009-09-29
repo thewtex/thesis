@@ -12,7 +12,6 @@ The literature on high frequency ultrasonic characterization of carotid plaques 
 Finally, the use of transcranial Doppler ultrasound for monitoring microembolic events in the middle cerebral artery is presented. 
 
 
-.. sectnum::
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Etiology of stroke and the role of atherosclerotic plaque
@@ -78,4 +77,7 @@ Transcranial Doppler for monitoring microembolic events
 ~~~~~~~~~~
 References
 ~~~~~~~~~~
+
+.. sectnum::
+
 
