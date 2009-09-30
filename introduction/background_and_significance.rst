@@ -3,7 +3,8 @@ Human Health Significance
 =========================
 
 
-In this section we describe the role diagnostic medical ultrasound plays in addressing the public health needs related to diagnosis of plaque burden in the carotid artery that predispose a patient to a stroke. 
+In this section we describe the role diagnostic medical ultrasound plays in 
+addressing the public health needs related to diagnosis of plaque burden in the carotid artery that predispose a patient to a stroke. 
 Specifically, we focus on stroke due to carotid atherosclerotic disease with increased vessel stenosis or embolization being primary causative factors. 
 First, we describe the prevalence and pathology of stroke. 
 Next, we describe the current role of medical ultrasound clinically in carotid plaque detection and characterization. 
