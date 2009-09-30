@@ -17,3 +17,5 @@
 *.odt
 *.odt#
 *_w_cite.rst
+*.doc
+*.doc#
