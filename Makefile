@@ -13,7 +13,7 @@ BACK_PRE=introduction/background_and_significance
 all: $(BACK_PRE).odt
 
 
-$(BACK_PRE)_w_cite.rst: $(BACK_PRE).rst
+$(BACK_PRE)_w_cite.rst: $(BACK_PRE).rst $(BACK_PRE).bib
 	$(BIB4TXT) --all -i $(BACK_PRE).rst -no $(BACK_PRE)_w_cite.rst $(BACK_PRE).bib
 
 $(BACK_PRE).odt: $(BACK_PRE)_w_cite.rst $(STYLESODTPATH)

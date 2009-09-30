@@ -3,7 +3,7 @@ Human Health Significance
 =========================
 
 
-In this section we describe the role diagnostic medical ultrasound plays in 
+In this chapter we describe the role diagnostic medical ultrasound plays in 
 addressing the public health needs related to diagnosis of plaque burden in the carotid artery that predispose a patient to a stroke. 
 Specifically, we focus on stroke due to carotid atherosclerotic disease with increased vessel stenosis or embolization being primary causative factors. 
 First, we describe the prevalence and pathology of stroke. 
@@ -44,6 +44,27 @@ Finally, hemodynamic brain infarctions refer to hypoperfusion due to plaque sten
 The stroke pathogenesis targeted in the proposed work are emboli from carotid plaque.
 This is one of the common causes of stroke, underlying over 50\% of strokes [Nikic2006,Rothwell2000]_ .
 
+Carotid endarterectomy, CEA, is a surgery performed to reduce the risk of stroke from carotid atherosclerosis. 
+It involves accessing the carotid in the neck near the carotid bulb. 
+An incision is made longitudinally along the carotid, the plaque is scraped out, and the surgical site closed.  
+CEA has been performed since 1954, and approximately one million surgeries have been performed between 1974 to 1985 [Barnett1998]_.  
+Two large scale clinical trials were performed in the 1990s to test the safety and effectiveness of CEA, namely the North American Symptomatic Carotid Endarterectomy Trial, NASCET, and the Committee for the Asymptomatic Carotid Atherosclerosis Study, ACAS [NASCET1991,ACAS1995,Barnett1998]_.
+The metric for stroke risk used during the trials was the extent of stenosis. 
+Severe stenosis, defined to be 70 to 99\%, demonstrated CEA has significant ipsilateral benefit over medical treatment alone.  
+Stenosis from 50 to 69\% had a moderate reduction in stroke risk, and there was no significant statistical benefit for patients with stenosis less than 50\%.
+It was estimated that for patients with 50 to 69\% stenosis, it took 15 surgeries to prevent one stroke in a five year period.  
+Another study from the European Carotid Surgery Trial concluded that CEA was beneficial in only 16\% of patients with 70-99\% stenosis. [Rothwell1999]_
+
+Surgical complications and costs has solicited increased specificity in the selection of CEA candidates.  
+Most patients with significant carotid plaques are older and have other symptoms of cardiovascular disease, and the surgical risks must be weighed carefully.  
+Yet, stroke is a widespread detriment to public health and increased sensitivity to stroke risk is desired for appropriate prophylactic treatments.  
+In 2005, 780 thousand new cases of stroke occurred in the United States. [AHAStats2008]_  
+There were 150 thousand deaths in the United States during 2004.
+While mortality rates have decreased over the years, morbidity is a public health and financial burden because of the recovery and rehabilitation required. 
+Around 5.8 million stroke survivors are alive today.
+It is estimated that the direct medical costs in the United States due to stroke were \$43.7 billion dollars in 2008. [AHAStats2008]_
+Therefore, the most effective method of addressing stroke is prevention.
+The purpose of the proposed research are to develop methods to more effectively identify stroke risk from embolic carotid plaque.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
