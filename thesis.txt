@@ -46,6 +46,17 @@ Efficient algorithmic implementation applied to discrete data
 Regularization techniques
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+High frequency ultrasound on carotid plaque
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+@todo import from prelim
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Transcranial Doppler for monitoring microembolic events
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+@todo import from prelim
 
 .. vim filetype=rst :

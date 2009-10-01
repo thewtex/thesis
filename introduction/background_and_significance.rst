@@ -3,14 +3,18 @@ Human Health Significance
 =========================
 
 
-In this chapter we describe the role diagnostic medical ultrasound plays in 
-addressing the public health needs related to diagnosis of plaque burden in the carotid artery that predispose a patient to a stroke. 
-Specifically, we focus on stroke due to carotid atherosclerotic disease with increased vessel stenosis or embolization being primary causative factors. 
-First, we describe the prevalence and pathology of stroke. 
-Next, we describe the current role of medical ultrasound clinically in carotid plaque detection and characterization. 
-We review previous research efforts to improve carotid examination. 
-The literature on high frequency ultrasonic characterization of carotid plaques is also described.  
-Finally, the use of transcranial Doppler ultrasound for monitoring microembolic events in the middle cerebral artery is presented. 
+In this chapter we describe the role diagnostic medical ultrasound plays in
+ addressing the public health needs related to diagnosis of plaque burden in the
+ carotid artery that predispose a patient to a stroke.  Specifically, we focus
+ on stroke due to carotid atherosclerotic disease with increased vessel stenosis
+ or embolization being primary causative factors.  First, we describe the prevalence
+ and pathology of stroke.  We describe the current status of prevention and treatment 
+ measures.  We review current methods to access stroke risk by describing their 
+ techniques, the physiological target they aim to quantify, their status of 
+ development, and their effectiveness.  In this review, we a focus on imaging methods.
+  A thorough literature review describes the research efforts in medical ultrasound
+ imaging for carotid plaque detection and characterization.  Finally, we present
+ the the approach taken in this thesis in the context of prior efforts.
 
 
 
@@ -150,17 +154,72 @@ Increased metabolic activity associated with inflammation can be detected with a
 Plaque characterization with diagnostic ultrasound
 ==================================================
 
+Vulnerability assessment with ultrasound focuses on many of the same parameters examined using other modalities such as MRI.  
+Stenosis is currently assessed with Doppler velocity measurements, along with Color-flow images and B-mode imaging.  
+After measuring peak systolic velocity, end-diastolic velocity, and pre and post-stenotic ratios, a percent stenosis can be implied based on these measurements [Koelemay1996,Wardlaw2006,Arbeille1999]_.
+Many radiologists also try to access the plaque through visual inspection of the B-mode images.
+Echolucent plaque are considered more vulnerable because lipid and hemorrhage are often echolucent.  [Groenholdt1999,ECPSG1995,Pedro2000,Ohki1998,Polak1998]_ 
+In contrast, homogeneous calcification is thought to cause plaque stabilization [Avril1991]_.
+While calcified tissue is usually echogenic, fibrous plaque can also be echolucent.  
+Additionally, shadowing and other effects can make echogenicity difficult to interpret.
+Nonetheless, echogenicity has been the most commonly tested and most widely used metric of vulnerability.
+Ultrasound echogenicity is assessed via direct visual examination of ubiquitous B-mode images.
+Some authors prefer to use the Gray-Weale scale for echogenicity which stratifies echogenicity into five types ranging from echolucent to calcific with shadowing [Gray-Weale1988]_
+A slight improvement to visual examination are computer-assisted gray-scale median (GSM) measurements [Sztajzel2005,Aly2000,Lal2002]_.  
+These results are semi-quantitative since they rely on the settings and properties of the ultrasound scanning device.
+Plaque intensities are normalized to intraluminal blood and adventitia. 
+When the definition of thresholds and regions of interest is forced and quantitative intensity measurements are made, objectivity is increased [Lal2006]_.
+Additionally, the quality of B-mode images have recently been improved with angular compounding [Kern2004]_.
+More sophisticated analysis of B-mode properties focuses on factors other than local intensity, broadly termed 'texture analysis'.  
+Texture analysis has the aim of differentiating tissue composition and properties [Christodoulou2003,Coleman2005,Lee1998,Madycki2006]_. 
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-High frequency ultrasound on carotid plaque
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Morphologically, the appearance of ulceration is also associated with vulnerability [Groenholdt1999]_.  
+Ulcerations are irregularities on the plaque surface.  
+In a study monitoring patients over 6.2 years on 1,091 plaques, it was found that these irregularities or ulcerations increased stroke risk with a 2.7:1 hazard ratio [Prabhakaran2006]_.
+Resolution and two dimensional imaging limitations with *in vivo* ultrasound make it difficult to consistently evaluate ulceration.  
+It is more difficult to detect ulceration for plaques with increased stenosis.
+By comparing with results from histology, it was found that for plaque with >50% stenosis, the sensitivity for direct ulceration detection was only 41% [ECPSG1995]_.
+However, the use of microbubble contrast agents improves surface definition by increasing contrast at the lumen border where it may be otherwise compromised by partial-volume effects [Kono2004]_.
+
+Neoangiogenesis in large plaques also plays a role similar to ulceration as mechanical stress concentrators.  
+Unlike surface ulcerations, neoangiogenesis compromises the tissue at a deeper level, making large ruptures more likely.  
+These tiny vessels that were previously undetectable with ultrasound, and they may now be visible under ultrasound imaging with contrast agents [Coli2008]_.
+
+The interaction of morphology, composition, and pulse pressures can lead to high stress states, but the instability depends on mechanical system configuration as a whole [Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a,Groen2008]_, which is quite complex in naturally occurring situations.
+For example, large lipid pools can cause mechanical stresses, but these stresses are much more significant when the pool is closer to the lumen [Lal2006,Bassiouny1997]_.  
+Ulceration has observed to be more common proximal to stenosis and more common for fatty plaques [Saba2007]_.  
+Inflammation may be part of a positive feedback process where mechanical tearing would stimulate a necrotic response that catabolizes the extracellular matrix, leading to further mechanical weakness at the site [Lendon1993,Arroyo1999,Benbir2005,Dhume2003,Ho2002,Lee1998,Lendon1991]_.
+These high stress states may lead to fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
+|holzapfel_intima| shows a tensile test performed by Holzapfel on diseased intima sectioned from cadaver iliac arteries [Holzapfel2004]_.  
+As the graph progresses from the origin, the stretch and stress is increased on the tissue until the tissue fractures at the curve's termination.
+The point in the curve farthest from the origin defines the stretch at which failure occurs, ultimate tensile stretch :texmath:`\lambda_{ult}`, and the stress at which failure occurs, ultimate tensile stress, :texmath:`\sigma_{ult}`.
+
+.. figure:: introduction/figures/holzapfel_intima.png
+    :width: 8cm
+    :height: 5.8cm
+    :align: center
+    
+    Tensile test on diseased intima. [Holzapfel2004]_
+
+.. |holzapfel_intima| replace:: Figure 1
+
+Recently, ultrasonic and MRI [Lin2008]_ strain imaging techniques have been applied to imaging of the carotids.
+Strain imaging creates an *in vivo* map of strain, a parameter directly related to tissue stretch or contraction, drawn on the abscissa in |holzapfel_intima|.
+Vulnerable plaques have a higher extensibility and a lower ultimate stress [Lendon1991,Holzapfel2004]_.
+Therefore, strain imaging directly measures a parameter that determines how close a plaque is to failure [Tang2005]_.
+This contrasts with other characterization methods that focus on parameters like composition, which may effect strain in a secondary manner and may be system dependent as previously discussed.
+Strain imaging directly measures the effect of multiple stress concentrators including composition, ulceration, morphology, neovascularization, and hemodynamics.
+Most of the initial carotid strain imaging studies were performed with intravascular ultrasound (IVUS) by de Korte [deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003,Wan2001,Maurice2008,Liang2008]_.
+However, IVUS is invasive because catheterization is required.
+Additionally, catheter movement with blood flow can make it difficult to determine the orientation of the transducer and to differentiate between catheter and artery movement.
+
+More recently, strain imaging with external ultrasound has been attempted [Meairs1999,Bang2003,Brusseau2001,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
+While the resolution of external ultrasound is much lower, it is noninvasive and appropriate for general stroke risk screening purposes.
+Even though strain imaging holds much promise in the detection of vulnerable plaque, its success depends on the ability to measure strain accurately, with a large dynamic range, and with minimal noise.  
+The proposed research focuses on the development of improved strain imaging algorithms and techniques. 
 
 
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Transcranial Doppler for monitoring microembolic events
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ~~~~~~~~~~
 References
