@@ -225,7 +225,7 @@ post-stenotic ratios, a percent stenosis can be implied based on these
 measurements [Koelemay1996,Wardlaw2006,Arbeille1999]_.  Many radiologists also
 try to access the plaque through visual inspection of the B-mode images.
 Echolucent plaque are considered more vulnerable because lipid and hemorrhage
-are often echolucent.  [Groenholdt1999,ECPSG1995,Pedro2000,Ohki1998,Polak1998]_ 
+are often echolucent.  [Groenholdt1997,Groenholdt1999,ECPSG1995,Pedro2000,Ohki1998,Polak1998]_ 
 In contrast, homogeneous calcification is thought to cause plaque stabilization
 [Avril1991]_.  While calcified tissue is usually echogenic, fibrous plaque can
 also be echolucent.  Additionally, shadowing and other effects can make
