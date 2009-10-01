@@ -18,7 +18,7 @@ $(BACK_PRE)_w_math.rst: $(BACK_PRE).rst
 
 # add '-s example_numbered' for numbered references instead of last names
 $(BACK_PRE)_w_cite.rst: $(BACK_PRE)_w_math.rst $(BACK_PRE).bib
-	$(BIB4TXT) --all -i $(BACK_PRE)_w_math.rst -no $(BACK_PRE)_w_cite.rst $(BACK_PRE).bib
+	PYTHONPATH='./formatting' $(BIB4TXT) --all -i $(BACK_PRE)_w_math.rst -no $(BACK_PRE)_w_cite.rst $(BACK_PRE).bib
 
 $(BACK_PRE).odt: $(BACK_PRE)_w_cite.rst $(STYLESODTPATH)
 	$(RST2ODT) --stylesheet=$(STYLESODTPATH) $(BACK_PRE)_w_cite.rst $(BACK_PRE).odt
