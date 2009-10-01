@@ -98,44 +98,64 @@ Clinical carotid ultrasound and plaque characterization
 
 
 
-Defining vulnerable plaque
-==========================
+Vulnerable plaque
+=================
 
-Vulnerable plaque is defined as ''a plaque which has a high tendency to cause ischemic events due to cerebral emboli originating from a thrombus on the plaque surface or from plaque rupture.'' [Kwee2008]_
-There have been many hypotheses presented on the property or properties that make a plaque vulnerable.  These include a large lipid necrotic core or intraplaque hemorrhage with thin overlying cap, inflammatory infiltrate, and other factors [Schroeder1996]_.
+Vulnerable plaque is defined as ''a plaque which has a high tendency to cause
+ischemic events due to cerebral emboli originating from a thrombus on the plaque
+surface or from plaque rupture.'' [Kwee2008]_  There have been many hypotheses
+presented on the property or properties that make a plaque vulnerable.  These
+include a large lipid necrotic core or intraplaque hemorrhage with thin overlying
+cap, inflammatory infiltrate, and other factors [Schroeder1996]_.
 
-Stress concentrators have received exhaustive attention in the Materials Science and Engineering discipline because of their relationship to material failure.
+Stress concentrators have received exhaustive attention in the Materials Science
+and Engineering discipline because of their relationship to material failure.
 They define a *stress concentration factor* to be [Hibbeler2000]_
 
 .. texmath::  K = \frac{\sigma_{max}}{\sigma_{avg}}
 
-The stress concentration factor, :texmath:`K`, is the maximum stress caused by the disturbance in uniformity, :texmath:`\sigma_{max}`, divided by the reference stress, :texmath:`\sigma_{avg}`.
-This concept is relevant not only to industrial materials such as metals and ceramics, but biological tissues.
-Morphologically, the appearance of ulceration is also associated with vulnerability [Groenholdt1999,Park1998]_.
-Ulceration is an irregularity in the surface of the plaque.  
-In addition to inducing stress concentrations, ulcers expose thrombogenic layers of the plaque and provide a surface for a thrombus to develop on.   
-Neoangiogensis is the formation of small blood vessels from the vasa vasorum that results from large and complex atherogenesis [Lusby1982]_.
-These small fissures in the plaque also create stress concentrations.  
-Plaques that appear heterogeneous are also associated with amaurosis fugax, TIA, and stroke symptoms [Groenholdt1999,Langsfeld1989,Pedro2000]_.
-Heterogeneity can cause stress concentrations due to material property distribution discontinuity, similarly to how ulcerations or neovascularization can cause stress concentrations due to morphological discontinuities.
-Thrombus in the plaque is considered a risk for future rupture since it not only can result in mechanically weak conditions but also is a marker of previous rupture events.
-Thrombus formation, healing, and remodeling can be an ongoing process in vulnerable plaques.
+The stress concentration factor, :texmath:`K`, is the maximum stress caused by
+the disturbance in uniformity, :texmath:`\sigma_{max}`, divided by the reference
+stress, :texmath:`\sigma_{avg}`.  This concept is relevant not only to industrial
+materials such as metals and ceramics, but biological tissues.  Morphologically,
+the appearance of ulceration is also associated with vulnerability
+[Groenholdt1999,Park1998]_.  Ulceration is an irregularity in the surface of the
+plaque.  In addition to inducing stress concentrations, ulcers expose thrombogenic
+layers of the plaque and provide a surface for a thrombus to develop on.   
+Neoangiogensis is the formation of small blood vessels from the vasa vasorum that
+results from large and complex atherogenesis [Lusby1982]_.  These small fissures
+in the plaque also create stress concentrations.  Plaques that appear heterogeneous
+are also associated with amaurosis fugax, TIA, and stroke symptoms
+[Groenholdt1999,Langsfeld1989,Pedro2000]_.  Heterogeneity can cause stress
+concentrations due to material property distribution discontinuity, similarly to
+how ulcerations or neovascularization can cause stress concentrations due to
+morphological discontinuities.  Thrombus in the plaque is considered a risk for
+future rupture since it not only can result in mechanically weak conditions but
+also is a marker of previous rupture events.  Thrombus formation, healing, and
+remodeling can be an ongoing process in vulnerable plaques.
 
 
-Chemical markers of inflammation are also associated with plaque instability [Kunte2008,Tan2008]_.
-These markers are used for the justification and development of pharmacological treatments such as statins. 
-These markers tag for macrophage infiltration, the presence of matrix metalloproteinase-9 (MMP-9), and the presence of inflammation.  
-Macrophage infiltration plays a role in plaque formation along with indicating an acute inflammatory response [Wasserman2002,Lendon1991]_.  
-Buildup of lipids initiates in macrophages that distend until they cannot escape into the circulation, forming 'foam cells', and eventually lipid crystals.
+Chemical markers of inflammation are also associated with plaque instability
+[Kunte2008,Tan2008]_.  These markers are used for the justification and development
+of pharmacological treatments such as statins.  These markers tag for macrophage
+infiltration, the presence of matrix metalloproteinase-9 (MMP-9), and the presence
+of inflammation.  Macrophage infiltration plays a role in plaque formation along
+with indicating an acute inflammatory response [Wasserman2002,Lendon1991]_.  
+Buildup of lipids initiates in macrophages that distend until they cannot escape
+into the circulation, forming 'foam cells', and eventually lipid crystals.
 Macrophages secrete proteolytic enzymes that weakens the extracellular matrix.
 MMP-9 functions as an enzyme that breaks down the extracellular matrix [Loftus2000]_.
-As such, it plays a role in weakening the plaque material, which can have a positive-feedback influence on the presence of MMP-9.
-Smooth muscle cells usually produce extra-cellular collagen that strengthens, though it can also produce the elastases capesin S or K in diseased intima [Davies1993,Sukhova1998]_.
+As such, it plays a role in weakening the plaque material, which can have a
+positive-feedback influence on the presence of MMP-9.  Smooth muscle cells usually
+produce extra-cellular collagen that strengthens, though it can also produce the
+elastases capesin S or K in diseased intima [Davies1993,Sukhova1998]_.
 
 
-Finally, while all these factors can make plaques intrinsically vulnerable to rupture, rupture is caused by extrinsic hemodynamic forces [Schroeder1996,Wootton1999]_.
+Finally, while all these factors can make plaques intrinsically vulnerable to
+rupture, rupture is caused by extrinsic hemodynamic forces [Schroeder1996,Wootton1999]_.
 Cyclic hemodynamic pulse pressure has been associated with carotid plaque ulceration [Lovett2003]_.
-However, this changes from patient to patient with hypertension, pulsatility, and turbulence influenced by the bifurcation and plaque morphology.  
+However, this changes from patient to patient with hypertension, pulsatility, and
+turbulence influenced by the bifurcation and plaque morphology.  
 
 
 Plaque characterization with other methods and imaging modalities
