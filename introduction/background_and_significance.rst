@@ -116,6 +116,36 @@ However, this changes from patient to patient with hypertension, pulsatility, an
 Plaque characterization with other methods and imaging modalities
 =================================================================
 
+Ultrasound is currently the most common method for plaque investigation because it is noninvasive, easily accessible, and has a relatively low cost.
+While most prevalent clinically, other methods have a clinical and research role in determining plaque vulnerability.
+Histological classification of excised plaques have shown that hemorrhage, ulceration, and lipid rich plaques have as association with amaurosis fugax, TIA, or stroke. [Groenholdt1999]_
+Fresh thrombi especially have a connection with ischemic infarction. [Lusby1982]_
+Also, as previously mentioned, inflammatory markers are also related to stroke symptoms.
+
+Angiography is the current gold standard for quantifying stenosis, and the high resolution is good for identifying ulcerations [NASCET1991,Saba2007]_.
+Single slice computed tomography (CT) has had limited success in carotid plaque classification [Walker2002]_, but recently multidetector-row computed tomography (MRCT) have attempted to quantify total plaque volume, calcification, fibrous, and lipid or hemorrhage areas [Ajduk2008,Saba2008]_.  
+
+
+High resolution magnetic resonance imaging (MRI) has better composition determination than MRCT because of the increased soft tissue contrast [Kwee2008,U-King-Im2008,Fabiano2008,Yarnykh2006,Saam2008]_.  
+This contrast is not only used to identify volume and degree of stenosis but provides a noninvasive method to identify components of lipid, fibrous, calcium, or thrombus.
+Relative to the surrounding muscle, calcium appears hypointense on `T_1`\ -weighted, very hypointense on proton-density weighted, and very hypointense on `T_2`\ -weighted images, lipid is very hyperintense on `T_1`\ -weighted, hypertense on proton-density weighted, and hypointense on `T_2`\ -weighted images, and fibrous tissue is isointense to slightly hyperintense on all three parameter-weighted images.
+`T_1` shortening causing increased signal intensity is associated with the protein-water interactions of the extracellular matrix content found in fibrous tissue.
+A short `T_2`\ , which causes low signal intensity in `T_2`\ -weighted images, is found in primarily lipid areas where there is increased interaction between free and bound water.
+The calcium areas will have low signal intensity because of low proton density and diffusion-mediated susceptibility effects. [Fayad2001]_
+The calcium susceptibility and paramagnetic ferric iron in hemorrhage may alter atherosclerotic appearance in 3.0 T magnets slightly, but the general characteristics still apply from 1.5 T magnets. [Underhill2008]_
+Contrast can be further improved and neovascularization visualized with contrast-enhanced MRI [Saam2007]_.
+Since methemoglobin is associated with thrombus and hemorrhage and with a shortening of `T_1`\ , intraplaque hemorrhage can be detected with MRI [Moody2003]_.
+Another thrombus detecting MRI agent is the fibrin targeted peptide EP-2104R. [Sirol2005]_
+Thrombus age can be inferred from `T_1`\ -weighted or `T_2`\ -weighted signal intensity, although thrombus generally has better `T_1` intensity. [Corti2002]_
+The gadolinium-based MRI contrast agent P947 MMPs may be a tool for detecting plaque inflammation [Lancelot2008]_.
+
+Plaque inflammation is targeted in many of the newer nuclear imaging techniques
+[Chen2005]_.  `^{18}F-FDG` PET detects the increased glycolytic activity of
+inflammatory cells. [Tawakol2006,Rudd2002]_  
+SPECT imaging can be performed to trace oxidized low density lipoproteins ( `^{99m}Tc-LDL` ), or apoptosis ( `^{99m}Tc-annexin A5` ). [Lees1988,Virgolini1992,Boersma2005]_
+
+Increased metabolic activity associated with inflammation can be detected with a needle thermistor, although this requires interrogation with a catheter, which is an invasive procedure[Casscells1996,Madjid2002]_.  
+
 
 Plaque characterization with diagnostic ultrasound
 ==================================================

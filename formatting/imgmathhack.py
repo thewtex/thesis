@@ -38,7 +38,7 @@ from rolehack import *
 
 class Tex_to_images(object):
     """Feeds math to ``tex_to_images``.  Always goes through ppm."""
-    def __init__(self, dir='./imgmath', options='-s 1.4 -u 6',
+    def __init__(self, dir='./imgmath', options='-s 1.3 -u 6',
                  converter='pnmtopng', extension='.png'):
         try:
             os.mkdir(dir)
