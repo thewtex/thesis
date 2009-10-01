@@ -83,6 +83,7 @@ Stress concentrators have received exhaustive attention in the Materials Science
 They define a *stress concentration factor* to be [Hibbeler2000]_
 
 .. texmath::  K = \frac{\sigma_{max}}{\sigma_{avg}}
+
 The stress concentration factor, :texmath:`K`, is the maximum stress caused by the disturbance in uniformity, :texmath:`\sigma_{max}`, divided by the reference stress, :texmath:`\sigma_{avg}`.
 This concept is relevant not only to industrial materials such as metals and ceramics, but biological tissues.
 Morphologically, the appearance of ulceration is also associated with vulnerability [Groenholdt1999,Park1998]_.
