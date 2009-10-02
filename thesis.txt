@@ -52,11 +52,106 @@ High frequency ultrasound on carotid plaque
 
 @todo import from prelim
 
+Collection and analysis of 3D radiofrequency data
+=================================================
+
+VisualSonics Vevo 770 system
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Volume concatenation, storage, and processing
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Scan conversion
+~~~~~~~~~~~~~~~
+
+Reference phantom development and characterization
+==================================================
+
+Phantom design
+~~~~~~~~~~~~~~
+
+Attenutation characterization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Phase velocity characterization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Absolute backscatter measurement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Backscatter analysis
+====================
+
+Attenuation estimation
+======================
+
+Water-tissue segmentation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Spectral difference estimation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Spectral shift estimation
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Hybrid estimation
+~~~~~~~~~~~~~~~~~
+
+
+
+
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Transcranial Doppler for monitoring microembolic events
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 @todo import from prelim
+
+Methods to increase robustness of unstable data
+===============================================
+
+Examination room protocol
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Post processing software design
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Results
+=======
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Effectiveness of ultrasonic strain imaging algorithm to detect high risk plaque
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Histological classification
+===========================
+
+Registration methods
+~~~~~~~~~~~~~~~~~~~~
+
+Strain imaging results
+~~~~~~~~~~~~~~~~~~~~~~
+
+Backscatter results
+~~~~~~~~~~~~~~~~~~~
+
+Transcranial Doppler
+====================
+
+Symptomatic/Asymptomatic status
+===============================
+
+MRI indices of neural atrophy and ischemia
+==========================================
+
+Neuropsychological assessment
+=============================
+
+~~~~~~~~~~~~~~~~~~~~~~~
+Summary and Conclusions
+~~~~~~~~~~~~~~~~~~~~~~~
+
 
 .. vim filetype=rst :
