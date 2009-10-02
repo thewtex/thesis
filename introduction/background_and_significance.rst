@@ -180,14 +180,14 @@ than MRCT because of the increased soft tissue contrast
 [Kwee2008,U-King-Im2008,Fabiano2008,Yarnykh2006,Saam2008]_.  This contrast is
 not only used to identify volume and degree of stenosis but provides a
 noninvasive method to identify components of lipid, fibrous, calcium, or thrombus.
-Relative to the surrounding muscle, calcium appears hypointense on `T_1`\ -weighted,
-very hypointense on proton-density weighted, and very hypointense on `T_2`\ -weighted
-images, lipid is very hyperintense on `T_1`\ -weighted, hypertense on proton-density
-weighted, and hypointense on `T_2`\ -weighted images, and fibrous tissue is
+Relative to the surrounding muscle, calcium appears hypointense on T\ :sub:`1`\ -weighted,
+very hypointense on proton-density weighted, and very hypointense on T\ :sub:`2`\ -weighted
+images, lipid is very hyperintense on T\ :sub:`1`\ -weighted, hypertense on proton-density
+weighted, and hypointense on T\ `2`\ -weighted images, and fibrous tissue is
 isointense to slightly hyperintense on all three parameter-weighted images.
-`T_1` shortening causing increased signal intensity is associated with the
+T\ :sub:`1` shortening causing increased signal intensity is associated with the
 protein-water interactions of the extracellular matrix content found in fibrous
-tissue.  A short `T_2`\ , which causes low signal intensity in `T_2`\ -weighted
+tissue.  A short T\ :sub:`2`\ , which causes low signal intensity in T\ `2`\ -weighted
 images, is found in primarily lipid areas where there is increased interaction
 between free and bound water.  The calcium areas will have low signal intensity
 because of low proton density and diffusion-mediated susceptibility effects. [Fayad2001]_
@@ -196,18 +196,18 @@ atherosclerotic appearance in 3.0 T magnets slightly, but the general
 characteristics still apply from 1.5 T magnets. [Underhill2008]_ Contrast can be
 further improved and neovascularization visualized with contrast-enhanced MRI [Saam2007]_.
 Since methemoglobin is associated with thrombus and hemorrhage and with a
-shortening of `T_1`\ , intraplaque hemorrhage can be detected with MRI [Moody2003]_.
+shortening of T\ :sub:`1`\ , intraplaque hemorrhage can be detected with MRI [Moody2003]_.
 Another thrombus detecting MRI agent is the fibrin targeted peptide EP-2104R. [Sirol2005]_
-Thrombus age can be inferred from `T_1`\ -weighted or `T_2`\ -weighted signal
-intensity, although thrombus generally has better `T_1` intensity. [Corti2002]_
+Thrombus age can be inferred from T\ :sub:`1`\ -weighted or T\ `2`\ -weighted signal
+intensity, although thrombus generally has better T\ `1` intensity. [Corti2002]_
 The gadolinium-based MRI contrast agent P947 MMPs may be a tool for detecting
 plaque inflammation [Lancelot2008]_.
 
 Plaque inflammation is targeted in many of the newer nuclear imaging techniques
-[Chen2005]_.  `^{18}F-FDG` PET detects the increased glycolytic activity of
+[Chen2005]_.  :sup:`18`\ F-FDG PET detects the increased glycolytic activity of
 inflammatory cells. [Tawakol2006,Rudd2002]_  SPECT imaging can be performed
-to trace oxidized low density lipoproteins ( `^{99m}Tc-LDL` ), or apoptosis
-( `^{99m}Tc-annexin A5` ). [Lees1988,Virgolini1992,Boersma2005]_
+to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or apoptosis
+(\ :sup:`99m`\ Tc-annexin A5). [Lees1988,Virgolini1992,Boersma2005]_
 
 Increased metabolic activity associated with inflammation can be detected with
 a needle thermistor, although this requires interrogation with a catheter, which

@@ -99,5 +99,8 @@ texdisplay = child.texdisplay
 def mangle_include(text):
     return 'include:: ' + text.replace('.mathhack', '.imgmathhack')
 
-main({'texmath': texmath}, texmath,
+#main({'texmath': texmath}, texmath,
+     #{'texmath': texdisplay, 'include': mangle_include})
+# do not use the default role because it consumes our other roles
+main({'texmath': texmath}, None,
      {'texmath': texdisplay, 'include': mangle_include})
