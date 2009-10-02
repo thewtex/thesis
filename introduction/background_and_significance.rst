@@ -321,7 +321,9 @@ orientation of the transducer and to differentiate between catheter and
 artery movement.
 
 More recently, strain imaging with external ultrasound has been attempted
-[Meairs1999,Bang2003,Brusseau2001,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
+[Meairs1999,Bang2003,Brusseau2001,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
+We give a detailed literature review of this area in the chapter that describes the
+effectiveness of the novel motion tracking method.
 While the resolution of external ultrasound is much lower, it is noninvasive and
 appropriate for general stroke risk screening purposes.  Even though strain imaging holds
 much promise in the detection of vulnerable plaque, its success depends on the ability
