@@ -56,7 +56,15 @@ or a peripheral venous thrombus that has bypassed the lungs. [Whisnant1990]_
 Finally, hemodynamic brain infarctions refer to hypoperfusion due to plaque stenosis
 or occlusion.  The stroke pathogenesis targeted in the proposed work are emboli
 from carotid plaque.  This is one of the common causes of stroke, underlying over
-50% of strokes [Nikic2006,Rothwell2000]_ .
+50% of strokes [Nikic2006,Rothwell2000]_ .  The carotid artery is the main
+conduit of blood to the brain.  In humans there is a left and right common
+carotid artery (CCA) that bifurcates in the upper neck into the internal carotid
+artery (ICA) and the external carotid artery (ECA).  The diameter of the CCA is
+typical 0.5 mm although age and atherosclerosis can increased diameter through
+remodeling [Eigenbrodt2006]_.  Large muscular arteries are prone to develop
+atherosclerosis, areas of hemodynamic disturbance are inherently susceptible to
+atherosclerosis, so plaque invariably develops around the bifurcation at the
+carotid bulb.
 
 Carotid endarterectomy, CEA, is a surgery performed to reduce the risk of stroke
 from carotid atherosclerosis.  It involves accessing the carotid in the neck near
@@ -77,7 +85,10 @@ European Carotid Surgery Trial concluded that CEA was beneficial in only 16% of
 patients with 70-99% stenosis. [Rothwell1999]_
 
 Surgical complications and costs has solicited increased specificity in the
-selection of CEA candidates.  Most patients with significant carotid plaques are
+selection of CEA candidates.  In general, CEA has low rates of death and
+morbidity, but patients with a history of tobacco use, substantial angina,
+contralateral occlusion, or preoperative TIA have elevated risk of
+complications [Duncan2008]_.  Most patients with significant carotid plaques are
 older and have other symptoms of cardiovascular disease, and the surgical risks
 must be weighed carefully.  Yet, stroke is a widespread detriment to public health
 and increased sensitivity to stroke risk is desired for appropriate prophylactic
