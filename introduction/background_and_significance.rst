@@ -81,7 +81,11 @@ selection of CEA candidates.  Most patients with significant carotid plaques are
 older and have other symptoms of cardiovascular disease, and the surgical risks
 must be weighed carefully.  Yet, stroke is a widespread detriment to public health
 and increased sensitivity to stroke risk is desired for appropriate prophylactic
-treatments.  In 2005, 780 thousand new cases of stroke occurred in the United
+treatments.  The risk factors for stroke are well known and include diabetes,
+hypercholesterolemia, hypertension, coronary heart disease, tobacco use, large
+artery disease, atrial fibrillation, patent foramen ovale or atrial septal
+defect, and cervical artery dissection [Arnold2008]_.  In 2005, 780 thousand
+new cases of stroke occurred in the United
 States. [AHAStats2008]_  There were 150 thousand deaths in the United States
 during 2004.  While mortality rates have decreased over the years, morbidity
 is a public health and financial burden because of the recovery and rehabilitation
@@ -183,7 +187,7 @@ noninvasive method to identify components of lipid, fibrous, calcium, or thrombu
 Relative to the surrounding muscle, calcium appears hypointense on T\ :sub:`1`\ -weighted,
 very hypointense on proton-density weighted, and very hypointense on T\ :sub:`2`\ -weighted
 images, lipid is very hyperintense on T\ :sub:`1`\ -weighted, hypertense on proton-density
-weighted, and hypointense on T\ `2`\ -weighted images, and fibrous tissue is
+weighted, and hypointense on T\ :sub:`2`\ -weighted images, and fibrous tissue is
 isointense to slightly hyperintense on all three parameter-weighted images.
 T\ :sub:`1` shortening causing increased signal intensity is associated with the
 protein-water interactions of the extracellular matrix content found in fibrous
@@ -198,8 +202,8 @@ further improved and neovascularization visualized with contrast-enhanced MRI [S
 Since methemoglobin is associated with thrombus and hemorrhage and with a
 shortening of T\ :sub:`1`\ , intraplaque hemorrhage can be detected with MRI [Moody2003]_.
 Another thrombus detecting MRI agent is the fibrin targeted peptide EP-2104R. [Sirol2005]_
-Thrombus age can be inferred from T\ :sub:`1`\ -weighted or T\ `2`\ -weighted signal
-intensity, although thrombus generally has better T\ `1` intensity. [Corti2002]_
+Thrombus age can be inferred from T\ :sub:`1`\ -weighted or T\ :sub:`2`\ -weighted signal
+intensity, although thrombus generally has better T\ :sub:`1` intensity. [Corti2002]_
 The gadolinium-based MRI contrast agent P947 MMPs may be a tool for detecting
 plaque inflammation [Lancelot2008]_.
 
@@ -207,7 +211,10 @@ Plaque inflammation is targeted in many of the newer nuclear imaging techniques
 [Chen2005]_.  :sup:`18`\ F-FDG PET detects the increased glycolytic activity of
 inflammatory cells. [Tawakol2006,Rudd2002]_  SPECT imaging can be performed
 to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or apoptosis
-(\ :sup:`99m`\ Tc-annexin A5). [Lees1988,Virgolini1992,Boersma2005]_
+(\ :sup:`99m`\ Tc-annexin A5). [Lees1988,Virgolini1992,Boersma2005]_  Annovazzi
+et. al. have attempted to use :sub:`99m`\ Tc-IL2 scintigraphy to detect chronic
+inflammatory response indicated my T-cell and macrophage activation as a marker
+for Crohn's disease [Annovazzi2003]_.
 
 Increased metabolic activity associated with inflammation can be detected with
 a needle thermistor, although this requires interrogation with a catheter, which
