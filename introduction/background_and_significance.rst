@@ -31,7 +31,15 @@ there are similar ischemic pathologies with different time-courses.  Transient
 ischemic attacks, TIA, usually last from 2-15 minutes.  They result in cerebral impairment
 that subsides in under twenty-four hours [Whisnant1990]_.  In addition, there also
 may be chronic ischemic events resulting from microemboli that explains some dementias
-due to the vascular cognitive impairment [Whisnant1990]_.  Furthermore, a correlation
+due to the vascular cognitive impairment [Whisnant1990]_.  According to Hachinski et al.,
+one three people will experience stroke or dementia, but twice as many individuals will have 
+cognitive impairment to a lesser degree [Hachinski2006]_.  Hachinski reported efforts of the
+National Institute of Neurological Disorders and Stroke-Canadian Stroke
+Network's effort to create a standard way to identify and report the degree of
+cognitive impairment because vascular cognitive impairment is likely to be a hot
+area of future research since it has has been a largely unrecognized detriment
+to human health with widespread presence and increasing importance as life
+expectancy continues to be prolonged.  Furthermore, a correlation
 between migraine and ischemic stroke has led to the suggestion that embolic ischemia
 may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.
 
