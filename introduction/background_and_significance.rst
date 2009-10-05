@@ -41,7 +41,10 @@ area of future research since it has has been a largely unrecognized detriment
 to human health with widespread presence and increasing importance as life
 expectancy continues to be prolonged [Hachinski2006,Hennerici2004]_.  Furthermore, a correlation
 between migraine and ischemic stroke has led to the suggestion that embolic ischemia
-may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.
+may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.  For example,
+Jesurum et al. found that migraine with aura can be relieved when the source
+of ischemia causing emboli, a right-to-left shunt with a patent foramen ovale
+(PFO), is closed even partially with surgery [Jesurum2008]_.
 
 The pathogenesis of stroke is classified into four categories [Whisnant1990]_:
 brain hemorrhage, subarachnoid hemorrhage, intracranial hemorrhage from an
