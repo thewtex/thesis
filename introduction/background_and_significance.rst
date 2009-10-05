@@ -312,7 +312,12 @@ common proximal to stenosis and more common for fatty plaques [Saba2007]_.
 Inflammation may be part of a positive feedback process where mechanical tearing
 would stimulate a necrotic response that catabolizes the extracellular matrix, leading
 to further mechanical weakness at the site 
-[Lendon1993,Arroyo1999,Benbir2005,Dhume2003,Ho2002,Lee1998,Lendon1991]_.  These high
+[Lendon1993,Arroyo1999,Benbir2005,Dhume2003,Ho2002,Lee1998,Lendon1991]_.  For example,
+Lee et al. performed a mechanical finite element analysis simulation using
+the morphology of 12 unruptured human coronary lesions and assumed appropriate
+mechanical material properties for the tissue components.  When comparing images
+of immunoreactive MMP-1, they found that high stress had twice the MMP-1
+expression as low stress regions [Lee1996]_.  These high
 stress states may lead to fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
 |holzapfel_intima| shows a tensile test performed by Holzapfel on diseased intima
 sectioned from cadaver iliac arteries [Holzapfel2004]_.  

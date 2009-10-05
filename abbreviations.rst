@@ -14,3 +14,12 @@ ECA
 
 ICA
   *Internal Carotid Artery*.  Branches off CCA to supply the brain.
+
+MMP
+  *Matrix Metalloproteinase*.  Enzyme involved in breakdown of the extracellular
+  matrix.
+
+PFO
+  *Patent Foramen Ovale*.  Right-to-left heart shunt that is of consequence of
+  in-uteral development, which remains partially patent in a quarter of the
+  population into adulthood.  Can be a source of emboli.
