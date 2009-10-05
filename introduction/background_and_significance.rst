@@ -208,7 +208,13 @@ between free and bound water.  The calcium areas will have low signal intensity
 because of low proton density and diffusion-mediated susceptibility effects. [Fayad2001]_
 The calcium susceptibility and paramagnetic ferric iron in hemorrhage may alter
 atherosclerotic appearance in 3.0 T magnets slightly, but the general
-characteristics still apply from 1.5 T magnets. [Underhill2008]_ Contrast can be
+characteristics still apply from 1.5 T magnets. [Underhill2008]_  In a study of
+*ex-vivo* plaque specimens, Fabiano et al. found that 1.5-T MRI had
+sensitivities and specificities of 92% and 74% for the lipid core, 82% and 94%
+for fibrous tissue, 72% and 87% for fibrous/loose connective tissue, and 98% and
+99% for calcifications [Fabiano2008]_.
+
+Contrast can be
 further improved and neovascularization visualized with contrast-enhanced MRI [Saam2007]_.
 Since methemoglobin is associated with thrombus and hemorrhage and with a
 shortening of T\ :sub:`1`\ , intraplaque hemorrhage can be detected with MRI [Moody2003]_.
