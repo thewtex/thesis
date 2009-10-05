@@ -243,7 +243,9 @@ to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or apoptosis
 [Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi
 et. al. have attempted to use :sub:`99m`\ Tc-IL2 scintigraphy to detect chronic
 inflammatory response indicated my T-cell and macrophage activation as a marker
-for Crohn's disease [Annovazzi2003]_.
+for Crohn's disease [Annovazzi2003]_.  :sup:`111`\In platlet scintigraphy is
+sensitive to thrombosis, but it cannot distinguish other tissue types
+[Manca2001]_.
 
 Increased metabolic activity associated with inflammation can be detected with
 a needle thermistor, although this requires interrogation with a catheter, which
