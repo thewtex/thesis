@@ -39,7 +39,7 @@ Network's effort to create a standard way to identify and report the degree of
 cognitive impairment because vascular cognitive impairment is likely to be a hot
 area of future research since it has has been a largely unrecognized detriment
 to human health with widespread presence and increasing importance as life
-expectancy continues to be prolonged.  Furthermore, a correlation
+expectancy continues to be prolonged [Hachinski2006,Hennerici2004]_.  Furthermore, a correlation
 between migraine and ischemic stroke has led to the suggestion that embolic ischemia
 may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.
 
