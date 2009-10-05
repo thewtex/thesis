@@ -239,7 +239,8 @@ Plaque inflammation is targeted in many of the newer nuclear imaging techniques
 [Chen2005]_.  :sup:`18`\ F-FDG PET detects the increased glycolytic activity of
 inflammatory cells. [Tawakol2006,Rudd2002]_  SPECT imaging can be performed
 to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or apoptosis
-(\ :sup:`99m`\ Tc-annexin A5). [Lees1988,Virgolini1992,Boersma2005]_  Annovazzi
+(\ :sup:`99m`\ Tc-annexin A5).
+[Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi
 et. al. have attempted to use :sub:`99m`\ Tc-IL2 scintigraphy to detect chronic
 inflammatory response indicated my T-cell and macrophage activation as a marker
 for Crohn's disease [Annovazzi2003]_.
@@ -340,7 +341,17 @@ to failure [Tang2005]_.  This contrasts with other characterization methods that
 focus on parameters like composition, which may effect strain in a secondary manner
 and may be system dependent as previously discussed.  Strain imaging directly measures
 the effect of multiple stress concentrators including composition, ulceration, morphology,
-neovascularization, and hemodynamics.  Most of the initial carotid strain imaging studies
+neovascularization, and hemodynamics.  
+
+A slightly different approach is thermal strain imaging, 
+which has recently been examined as a method for characterizing plaque
+composition [Kim2008b]_.  In that studying, ultrasound image motion tracking
+with a high frequency (50 MHz) transducer was
+employed to monitor ultrasound induced thermal expansion on *in vitro* tissue.  Yet, it 
+remains to be seen how this technique can be applied *in vivo* where tissue movement is 
+significant.  
+
+Most of the initial carotid strain imaging studies
 were performed with intravascular ultrasound (IVUS) by de Korte 
 [deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003,Wan2001,Maurice2008,Liang2008]_.
 However, IVUS is invasive because catheterization is required.  Additionally,
