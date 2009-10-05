@@ -23,3 +23,8 @@ PFO
   *Patent Foramen Ovale*.  Right-to-left heart shunt that is of consequence of
   in-uteral development, which remains partially patent in a quarter of the
   population into adulthood.  Can be a source of emboli.
+
+UTC
+  *Ultrasound Tissue Characterization*.  Imaging techniques that put greater
+  emphasis on displaying parameters of the target tissue  instead of the machine
+  used to generate the image.

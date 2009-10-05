@@ -282,7 +282,15 @@ the quality of B-mode images have recently been improved with angular compoundin
 [Kern2004]_.  More sophisticated analysis of B-mode properties focuses on factors
 other than local intensity, broadly termed 'texture analysis'.  Texture analysis
 has the aim of differentiating tissue composition and properties
-[Christodoulou2003,Coleman2005,Lee1998,Madycki2006]_. 
+[Christodoulou2003,Coleman2005,Lee1998,Madycki2006]_.  More sophisticated
+analysis attempts to separate device dependent from tissue dependent effects on
+the image, termed Ultrasonic Tissue Characterization (UTC).  There have been various
+research efforts using parameters such as slope, intercept, and midband-fit of the
+local backscatter spectra that aim to differentiate plaque composition
+[Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_, but the poor effectiveness and difficulty of the data
+reduction methods has limited clinical adoption.  UTC on arterial plaque is
+discussed in detail in the chapter on high frequency characterization of carotid
+plaque.
 
 
 Morphologically, the appearance of ulceration is also associated with
