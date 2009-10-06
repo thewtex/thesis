@@ -302,7 +302,7 @@ local backscatter spectra that aim to differentiate plaque composition
 [Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_, but the poor effectiveness and difficulty of the data
 reduction methods has limited clinical adoption.  Most attempts have been *in
 vitro* or invasively with IVUS, although there have been a few recent attempts
-with external ultrasound on *in vivo* human carotid [Sareen2008,Shi2009]_.  UTC on arterial plaque is
+with external ultrasound on *in vivo* human carotid [Sareen2008,Shi2009,Urbani1993]_.  UTC on arterial plaque is
 discussed in detail in the chapter on high frequency characterization of carotid
 plaque.
 
