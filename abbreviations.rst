@@ -15,9 +15,18 @@ ECA
 ICA
   *Internal Carotid Artery*.  Branches off CCA to supply the brain.
 
+IVUS
+  *Intravascular ultrasound*.  High frequency (high resolution) ultrasound
+  performed with a transducer placed at the tip of a catheter that is inserted
+  into the artery.
+
 MMP
   *Matrix Metalloproteinase*.  Enzyme involved in breakdown of the extracellular
   matrix.
+
+MRI
+  *Magnetic resonance imaging*.  Imaging modality based on the magnetic behavior
+  of water affected by its local tissue environment.
 
 PFO
   *Patent Foramen Ovale*.  Right-to-left heart shunt that is of consequence of

@@ -272,7 +272,8 @@ try to access the plaque through visual inspection of the B-mode images.
 Echolucent plaque are considered more vulnerable because lipid and hemorrhage
 are often echolucent.  [Groenholdt1997,Groenholdt1999,ECPSG1995,Pedro2000,Ohki1998,Polak1998]_ 
 In contrast, homogeneous calcification is thought to cause plaque stabilization
-[Avril1991]_.  While calcified tissue is usually echogenic, fibrous plaque can
+[Avril1991]_.
+While calcified tissue is usually echogenic, fibrous plaque can
 also be echolucent.  Additionally, shadowing and other effects can make
 echogenicity difficult to interpret.  Nonetheless, echogenicity has been the
 most commonly tested and most widely used metric of vulnerability.  Ultrasound
@@ -331,13 +332,30 @@ complex in naturally occurring situations.  P.D. Richardson performed
 seminal work examining this hypothesis, and he points out that rupture is a result of 
 structural mechanics, fluid mechanics, plaque morphology, plaque micromechanical material properties, and MMPs [Richardson2002,Richardson1989]_.  For example, large lipid pools can
 cause mechanical stresses, but these stresses are much more significant when the pool
-is closer to the lumen [Lal2006,Bassiouny1997]_.  Ulceration has observed to be more
+is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and 3D fluid-structure interaction
+finite element analysis using MRI and IVUS based morphology and composition information [Tang2008,Yang2009]_.  From this model, vulnerability
+is graded according to a computational plaque stress index based on the maximum
+principle stress [Tang2009].  Tang's research has shown that plaque wall stress
+was 126% higher in 5 ruptured plaques compared to 7 non-ruptured plaques for 12
+patients that underwent CEA in one study and was found to have an 85% agreement
+rate with histopathological analysis in another study  [Tang2009a,Tang2005]_.  These studies also verify that
+markers traditionally considered for vulnerability such as morphology and
+composition also increase local stress/strain [Tang2005a]_.  Trivendi reached similar conclusions
+in an MR imaging-based computational analysis of 5 symptomatic and 5
+asymptomatic patients: principal shear stress was higher in symptomatic plaques
+than in asymptomatic plaques [Trivedi2007]_.  Ulceration has observed to be more
 common proximal to stenosis and more common for fatty plaques [Saba2007]_.  
 
 Inflammation may be part of a positive feedback process where mechanical tearing
 would stimulate a necrotic response that catabolizes the extracellular matrix, leading
 to further mechanical weakness at the site 
-[Lendon1993,Arroyo1999,Benbir2005,Dhume2003,Ho2002,Lee1998,Lendon1991]_.  For example,
+[Lendon1993,Arroyo1999,Benbir2005,Dhume2003,Ho2002,Lee1998,Lendon1991]_.
+This is supported by a recent study comparing gene expression in
+calcific, often associated with stability, compared to non-calcific areas.
+It was found that gene expression of
+factors that promote interleukin 8 and monocyte chemoattractant protein 1, associated with
+inflammation and thereby vulnerability, were higher in non-calcified areas
+[Wahlgren2009]_.  For example,
 Lee et al. performed a mechanical finite element analysis simulation using
 the morphology of 12 unruptured human coronary lesions and assumed appropriate
 mechanical material properties for the tissue components.  When comparing images
