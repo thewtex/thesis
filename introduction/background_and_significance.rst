@@ -39,7 +39,14 @@ Network's effort to create a standard way to identify and report the degree of
 cognitive impairment because vascular cognitive impairment is likely to be a hot
 area of future research since it has has been a largely unrecognized detriment
 to human health with widespread presence and increasing importance as life
-expectancy continues to be prolonged [Hachinski2006,Hennerici2004]_.  Furthermore, a correlation
+expectancy continues to be prolonged [Hachinski2006,Hennerici2004]_.  Recent evidence has emerged
+suggesting that cerebral emboli may be a cause or accelorator for the cognitive decline
+associated with Alzheimer's [Purandare2006a,Purandare2006,Purandare2007]_.  Some have termed the Alzheimer's/vascular disease combination 'mixed dementia', and it has gained increased recognition as the cause 
+of mild cognitive impairment observed with aging [Langa2004,Schneider2009,Deschaintre2009]_.  
+Mild cognitive impairment, which may be a precursor to Alzheimer's,  is thought to occur
+in 10 to 20 percent of the elderly, and Alzheimer's is one of the fastest
+growing causes of death in the United States: the number of deaths per year
+increased by 47% from 2000 to 2006 [AAStats2009]_.Furthermore, a correlation
 between migraine and ischemic stroke has led to the suggestion that embolic ischemia
 may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.  For example,
 Jesurum et al. found that migraine with aura can be relieved when the source
@@ -282,13 +289,19 @@ the quality of B-mode images have recently been improved with angular compoundin
 [Kern2004]_.  More sophisticated analysis of B-mode properties focuses on factors
 other than local intensity, broadly termed 'texture analysis'.  Texture analysis
 has the aim of differentiating tissue composition and properties
-[Christodoulou2003,Coleman2005,Lee1998,Madycki2006]_.  More sophisticated
-analysis attempts to separate device dependent from tissue dependent effects on
-the image, termed Ultrasonic Tissue Characterization (UTC).  There have been various
+[Christodoulou2003,Coleman2005,Lee1998,Madycki2006,Stoitsis2006]_.  Texture analysis examines
+statistical parameters of the intensity, Fourier spectrum, Wavelet Transform, or
+other quantities in a local area, and statistical techniques are applied to
+empirically determine which parameters may differentiate tissue composition.  In
+contrast, sophisticated
+analysis that attempts to separate device dependent from tissue dependent effects on
+the image is termed Ultrasonic Tissue Characterization (UTC).  There have been various
 research efforts using parameters such as slope, intercept, and midband-fit of the
 local backscatter spectra that aim to differentiate plaque composition
 [Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_, but the poor effectiveness and difficulty of the data
-reduction methods has limited clinical adoption.  UTC on arterial plaque is
+reduction methods has limited clinical adoption.  Most attempts have been *in
+vitro* or invasively with IVUS, although there have been a few recent attempts
+with external ultrasound on *in vivo* human carotid [Sareen2008,Shi2009]_.  UTC on arterial plaque is
 discussed in detail in the chapter on high frequency characterization of carotid
 plaque.
 
@@ -314,7 +327,9 @@ ultrasound imaging with contrast agents [Coli2008]_.
 The interaction of morphology, composition, and pulse pressures can lead to high stress
 states, but the instability depends on mechanical system configuration as a whole
 [Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a,Groen2008]_, which is quite
-complex in naturally occurring situations.  For example, large lipid pools can
+complex in naturally occurring situations.  P.D. Richardson performed 
+seminal work examining this hypothesis, and he points out that rupture is a result of 
+structural mechanics, fluid mechanics, plaque morphology, plaque micromechanical material properties, and MMPs [Richardson2002,Richardson1989]_.  For example, large lipid pools can
 cause mechanical stresses, but these stresses are much more significant when the pool
 is closer to the lumen [Lal2006,Bassiouny1997]_.  Ulceration has observed to be more
 common proximal to stenosis and more common for fatty plaques [Saba2007]_.  
