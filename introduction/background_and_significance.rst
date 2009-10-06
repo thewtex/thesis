@@ -11,7 +11,7 @@ or embolization being primary causative factors.  First, we describe the prevale
 and pathology of stroke.  We describe the current status of prevention and treatment 
 measures.  We review current methods to access stroke risk by describing their 
 techniques, the physiological target they aim to quantify, their status of 
-development, and their effectiveness.  In this review, we a focus on imaging methods.
+development, and their effectiveness.  In this review, we focus on imaging methods.
 A thorough literature review describes the research efforts in medical ultrasound
 imaging for carotid plaque detection and characterization.  Finally, we present
 the the approach taken in this thesis in the context of prior efforts.
@@ -46,11 +46,11 @@ of mild cognitive impairment observed with aging [Langa2004,Schneider2009,Descha
 Mild cognitive impairment, which may be a precursor to Alzheimer's,  is thought to occur
 in 10 to 20 percent of the elderly, and Alzheimer's is one of the fastest
 growing causes of death in the United States: the number of deaths per year
-increased by 47% from 2000 to 2006 [AAStats2009]_.Furthermore, a correlation
+increased by 47% from 2000 to 2006 [AAStats2009]_.  Furthermore, a correlation
 between migraine and ischemic stroke has led to the suggestion that embolic ischemia
 may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.  For example,
 Jesurum et al. found that migraine with aura can be relieved when the source
-of ischemia causing emboli, a right-to-left shunt with a patent foramen ovale
+of ischemia causing emboli, a right-to-left shunt via a patent foramen ovale
 (PFO), is closed even partially with surgery [Jesurum2008]_.
 
 The pathogenesis of stroke is classified into four categories [Whisnant1990]_:
@@ -72,7 +72,7 @@ occurs when the shunt in the fetus's atrial septum, for bypassing circulation
 to the lungs, fails to close after birth.  There can be a clot within the shunt
 or a peripheral venous thrombus that has bypassed the lungs. [Whisnant1990]_
 Finally, hemodynamic brain infarctions refer to hypoperfusion due to plaque stenosis
-or occlusion.  The stroke pathogenesis targeted in the proposed work are emboli
+or occlusion.  The stroke pathogenesis targeted in the work presented is emboli
 from carotid plaque.  This is one of the common causes of stroke, underlying over
 50% of strokes [Nikic2006,Rothwell2000]_ .  The carotid artery is the main
 conduit of blood to the brain.  In humans there is a left and right common
@@ -80,7 +80,7 @@ carotid artery (CCA) that bifurcates in the upper neck into the internal carotid
 artery (ICA) and the external carotid artery (ECA).  The diameter of the CCA is
 typical 0.5 mm although age and atherosclerosis can increased diameter through
 remodeling [Eigenbrodt2006]_.  Large muscular arteries are prone to develop
-atherosclerosis, areas of hemodynamic disturbance are inherently susceptible to
+atherosclerosis and areas of hemodynamic disturbance are inherently susceptible to
 atherosclerosis, so plaque invariably develops around the bifurcation at the
 carotid bulb.
 
@@ -102,7 +102,7 @@ less than 50%.  It was estimated that for patients with 50 to 69% stenosis, it t
 European Carotid Surgery Trial concluded that CEA was beneficial in only 16% of
 patients with 70-99% stenosis. [Rothwell1999]_
 
-Surgical complications and costs has solicited increased specificity in the
+Surgical complications and costs solicit increased specificity in the
 selection of CEA candidates.  In general, CEA has low rates of death and
 morbidity, but patients with a history of tobacco use, substantial angina,
 contralateral occlusion, or preoperative TIA have elevated risk of
@@ -186,7 +186,7 @@ Finally, while all these factors can make plaques intrinsically vulnerable to
 rupture, rupture is caused by extrinsic hemodynamic forces [Schroeder1996,Wootton1999]_.
 Cyclic hemodynamic pulse pressure has been associated with carotid plaque ulceration [Lovett2003]_.
 Hypertension, as quantified with central systolic blood pressure, correlates with ischemia as
-quantified with Fluid-attenuated Inversion Recovery MRI images demonstrating
+quantified with Fluid-attenuated Inversion Recovery MRI images
 white matter hyperintensities independently of carotid plaque score [Shrestha2009]_.
 Hemodynamic forces change from patient to patient with hypertension, pulsatility, and
 turbulence influenced by the bifurcation and plaque morphology.  
@@ -223,7 +223,7 @@ weighted, and hypointense on T\ :sub:`2`\ -weighted images, and fibrous tissue i
 isointense to slightly hyperintense on all three parameter-weighted images.
 T\ :sub:`1` shortening causing increased signal intensity is associated with the
 protein-water interactions of the extracellular matrix content found in fibrous
-tissue.  A short T\ :sub:`2`\ , which causes low signal intensity in T\ `2`\ -weighted
+tissue.  A short T\ :sub:`2`\ , which causes low signal intensity in T\ :sub:`2`\ -weighted
 images, is found in primarily lipid areas where there is increased interaction
 between free and bound water.  The calcium areas will have low signal intensity
 because of low proton density and diffusion-mediated susceptibility effects. [Fayad2001]_
@@ -263,7 +263,7 @@ inflammatory cells. [Rominger2009,Tawakol2006,Rudd2002]_  SPECT imaging can be p
 to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or apoptosis
 (\ :sup:`99m`\ Tc-annexin A5).
 [Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi
-et. al. have attempted to use :sub:`99m`\ Tc-IL2 scintigraphy to detect chronic
+et. al. have attempted to use :sup:`99m`\ Tc-IL2 scintigraphy to detect chronic
 inflammatory response indicated my T-cell and macrophage activation as a marker
 for Crohn's disease [Annovazzi2003]_.  :sup:`111`\In platlet scintigraphy is
 sensitive to thrombosis, but it cannot distinguish other tissue types
@@ -271,7 +271,7 @@ sensitive to thrombosis, but it cannot distinguish other tissue types
 
 Increased metabolic activity associated with inflammation can be detected with
 a needle thermistor, although this requires interrogation with a catheter, which
-is an invasive procedure[Casscells1996,Madjid2002]_.  
+is an invasive procedure [Casscells1996,Madjid2002]_.  
 
 
 Plaque characterization with diagnostic ultrasound
@@ -313,10 +313,10 @@ contrast, sophisticated
 analysis that attempts to separate device dependent from tissue dependent effects on
 the image is termed Ultrasonic Tissue Characterization (UTC).  There have been various
 research efforts using parameters such as slope, intercept, and midband-fit of the
-local backscatter spectra that aim to differentiate plaque composition
+local backscatter spectra normalized by a reference spectra that aim to differentiate plaque composition
 [Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_, but the poor effectiveness and difficulty of the data
 reduction methods has limited clinical adoption.  Most attempts have been *in
-vitro* or invasively with IVUS, although there have been a few recent attempts
+vitro* or invasively collected with IVUS, although there have been a few recent attempts
 with external ultrasound on *in vivo* human carotid [Sareen2008,Shi2009,Urbani1993]_.  UTC on arterial plaque is
 discussed in detail in the chapter on high frequency characterization of carotid
 plaque.
@@ -350,7 +350,7 @@ cause mechanical stresses, but these stresses are much more significant when the
 is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and 3D fluid-structure interaction
 finite element analysis using MRI and IVUS based morphology and composition information [Tang2008,Yang2009]_.  From this model, vulnerability
 is graded according to a computational plaque stress index based on the maximum
-principle stress [Tang2009].  Tang's research has shown that plaque wall stress
+principle stress [Tang2009]_.  Tang's research has shown that plaque wall stress
 was 126% higher in 5 ruptured plaques compared to 7 non-ruptured plaques for 12
 patients that underwent CEA in one study and was found to have an 85% agreement
 rate with histopathological analysis in another study  [Tang2009a,Tang2005]_.  These studies also verify that
@@ -369,8 +369,7 @@ This is supported by a recent study comparing gene expression in
 calcific, often associated with stability, compared to non-calcific areas.
 It was found that gene expression of
 factors that promote interleukin 8 and monocyte chemoattractant protein 1, associated with
-inflammation and thereby vulnerability, were higher in non-calcified areas
-[Wahlgren2009]_.  For example,
+inflammation and thereby vulnerability, were higher in non-calcified areas [Wahlgren2009]_.
 Lee et al. performed a mechanical finite element analysis simulation using
 the morphology of 12 unruptured human coronary lesions and assumed appropriate
 mechanical material properties for the tissue components.  When comparing images
@@ -379,6 +378,7 @@ expression as low stress regions [Lee1996]_.  Elevated levels of highly
 sensitive C-reactive protein, another inflammation marker, correlates with
 increased intima-media thickness [Benbir2005]_.  These high
 stress states may lead to fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
+
 |holzapfel_intima| shows a tensile test performed by Holzapfel on diseased intima
 sectioned from cadaver iliac arteries [Holzapfel2004]_.  
 As the graph progresses from the origin, the stretch and stress is increased
@@ -408,6 +408,14 @@ and may be system dependent as previously discussed.  Strain imaging directly me
 the effect of multiple stress concentrators including composition, ulceration, morphology,
 neovascularization, and hemodynamics.  
 
+Most of the initial carotid strain imaging studies
+were performed with IVUS by de Korte 
+[deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003,Wan2001,Maurice2008,Liang2008]_.
+However, IVUS is invasive because catheterization is required.  Additionally,
+catheter movement with blood flow can make it difficult to determine the
+orientation of the transducer and to differentiate between catheter and
+artery movement.
+
 A slightly different approach is thermal strain imaging, 
 which has recently been examined as a method for characterizing plaque
 composition [Kim2008b]_.  In that studying, ultrasound image motion tracking
@@ -415,14 +423,6 @@ with a high frequency (50 MHz) transducer was
 employed to monitor ultrasound induced thermal expansion on *in vitro* tissue.  Yet, it 
 remains to be seen how this technique can be applied *in vivo* where tissue movement is 
 significant.  
-
-Most of the initial carotid strain imaging studies
-were performed with intravascular ultrasound (IVUS) by de Korte 
-[deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003,Wan2001,Maurice2008,Liang2008]_.
-However, IVUS is invasive because catheterization is required.  Additionally,
-catheter movement with blood flow can make it difficult to determine the
-orientation of the transducer and to differentiate between catheter and
-artery movement.
 
 More recently, strain imaging with external ultrasound has been attempted
 [Meairs1999,Bang2003,Brusseau2001,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
@@ -432,8 +432,9 @@ While the resolution of external ultrasound is much lower, it is noninvasive and
 appropriate for general stroke risk screening purposes.  Even though strain imaging holds
 much promise in the detection of vulnerable plaque, its success depends on the ability
 to measure strain accurately, with a large dynamic range, and with minimal noise.  
-The proposed research focuses on the development of improved strain imaging
-algorithms and techniques. 
+The research presented in this thesis focuses on the development of improved strain imaging
+algorithms and techniques and applies them to the diagnosis of stroke risk due
+to carotid plaque disruption. 
 
 
 
