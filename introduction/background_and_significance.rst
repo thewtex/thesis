@@ -185,7 +185,10 @@ elastases capesin S or K in diseased intima [Davies1993,Sukhova1998]_.
 Finally, while all these factors can make plaques intrinsically vulnerable to
 rupture, rupture is caused by extrinsic hemodynamic forces [Schroeder1996,Wootton1999]_.
 Cyclic hemodynamic pulse pressure has been associated with carotid plaque ulceration [Lovett2003]_.
-However, this changes from patient to patient with hypertension, pulsatility, and
+Hypertension, as quantified with central systolic blood pressure, correlates with ischemia as
+quantified with Fluid-attenuated Inversion Recovery MRI images demonstrating
+white matter hyperintensities independently of carotid plaque score [Shrestha2009]_.
+Hemodynamic forces change from patient to patient with hypertension, pulsatility, and
 turbulence influenced by the bifurcation and plaque morphology.  
 
 
@@ -210,7 +213,7 @@ and lipid or hemorrhage areas [Ajduk2008,Saba2008]_.
 
 High resolution magnetic resonance imaging (MRI) has better composition determination
 than MRCT because of the increased soft tissue contrast
-[Kwee2008,U-King-Im2008,Fabiano2008,Yarnykh2006,Saam2008]_.  This contrast is
+[Oikawa2009,Kwee2008,U-King-Im2008,Fabiano2008,Yarnykh2006,Saam2008]_.  This contrast is
 not only used to identify volume and degree of stenosis but provides a
 noninvasive method to identify components of lipid, fibrous, calcium, or thrombus.
 Relative to the surrounding muscle, calcium appears hypointense on T\ :sub:`1`\ -weighted,
@@ -230,7 +233,19 @@ characteristics still apply from 1.5 T magnets. [Underhill2008]_  In a study of
 *ex-vivo* plaque specimens, Fabiano et al. found that 1.5-T MRI had
 sensitivities and specificities of 92% and 74% for the lipid core, 82% and 94%
 for fibrous tissue, 72% and 87% for fibrous/loose connective tissue, and 98% and
-99% for calcifications [Fabiano2008]_.
+99% for calcifications [Fabiano2008]_.  The quality of MRI images of the carotid
+bifurcation will continue to improve as hardware, excitation sequences, and
+image processing is modified for this application.  Balu et al. showed a 1.7
+fold improvement in SNR and larger coverage with a 8 channel phased array coil
+at 3T [Balu2009]_.  In a study of 60 patients,, high resolution MRI was able to
+detect greater plaque hemorrhage in acute symptomatic vs recently symptomatic vs
+asymptomatic patients [Sadat2009]_.  The application of black-blood MR imaging
+sequences increases the detection of ulceration [Yu2009]_.  Even though MRI imaging of composition hold
+promise, there is room for improvement: an attempt to correlate plaque
+morphology and composition as measured on both arteries of 40 patients did not
+find that the MRI images along could not predict the severity of white matter
+ischaemia as measured by Fluid-Attenuated Inversion Recovery images
+[Patterson2009]_.
 
 Contrast can be
 further improved and neovascularization visualized with contrast-enhanced MRI [Saam2007]_.
@@ -244,7 +259,7 @@ plaque inflammation [Lancelot2008]_.
 
 Plaque inflammation is targeted in many of the newer nuclear imaging techniques
 [Chen2005]_.  :sup:`18`\ F-FDG PET detects the increased glycolytic activity of
-inflammatory cells. [Tawakol2006,Rudd2002]_  SPECT imaging can be performed
+inflammatory cells. [Rominger2009,Tawakol2006,Rudd2002]_  SPECT imaging can be performed
 to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or apoptosis
 (\ :sup:`99m`\ Tc-annexin A5).
 [Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi
@@ -349,7 +364,7 @@ common proximal to stenosis and more common for fatty plaques [Saba2007]_.
 Inflammation may be part of a positive feedback process where mechanical tearing
 would stimulate a necrotic response that catabolizes the extracellular matrix, leading
 to further mechanical weakness at the site 
-[Lendon1993,Arroyo1999,Benbir2005,Dhume2003,Ho2002,Lee1998,Lendon1991]_.
+[Sirico2009,Lendon1993,Arroyo1999,Dhume2003,Ho2002,Lee1998,Lendon1991]_.
 This is supported by a recent study comparing gene expression in
 calcific, often associated with stability, compared to non-calcific areas.
 It was found that gene expression of
@@ -360,7 +375,9 @@ Lee et al. performed a mechanical finite element analysis simulation using
 the morphology of 12 unruptured human coronary lesions and assumed appropriate
 mechanical material properties for the tissue components.  When comparing images
 of immunoreactive MMP-1, they found that high stress had twice the MMP-1
-expression as low stress regions [Lee1996]_.  These high
+expression as low stress regions [Lee1996]_.  Elevated levels of highly
+sensitive C-reactive protein, another inflammation marker, correlates with
+increased intima-media thickness [Benbir2005]_.  These high
 stress states may lead to fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
 |holzapfel_intima| shows a tensile test performed by Holzapfel on diseased intima
 sectioned from cadaver iliac arteries [Holzapfel2004]_.  
