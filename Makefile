@@ -12,7 +12,7 @@ STYLESODTPATH=formatting/$(STYLESODT)
 
 BACK_PRE=introduction/background_and_significance
 
-all: $(BACK_PRE).odt
+all: $(BACK_PRE).doc
 
 $(BACK_PRE)_w_math.rst: $(BACK_PRE).rst 
 	$(IMGMATHHACK) $(BACK_PRE).rst $(BACK_PRE)_w_math.rst
@@ -32,4 +32,4 @@ $(BACK_PRE).doc: $(BACK_PRE)_double_spaced.odt
 	mv $(BACK_PRE)_double_spaced.doc $(BACK_PRE).doc
 
 clean:
-	rm -f $(shell find . -name '*.doc' -or -name '*.odt' -not -name $(STYLESODT) -or -name '*_w_cite.rst' -or -name '*_w_math.rst') mti* imgmath/*
+	rm -f $(shell find . -name '*.doc' -or -name '*.odt' -not -name $(STYLESODT) -or -name '*_w_cite.rst' -or -name '*_w_math.rst' | grep -v doc_edits ) mti* imgmath/*
