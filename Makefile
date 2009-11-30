@@ -21,8 +21,13 @@ $(BACK_PRE)_w_math.rst: $(BACK_PRE).rst
 $(BACK_PRE)_w_cite.rst: $(BACK_PRE)_w_math.rst $(BACK_PRE).bib
 	PYTHONPATH='./formatting' $(BIB4TXT) --all -i $(BACK_PRE)_w_math.rst -no $(BACK_PRE)_w_cite.rst $(BACK_PRE).bib
 
-$(BACK_PRE).odt: $(BACK_PRE)_w_cite.rst $(STYLESODTPATH)
-	$(RST2ODT) --stylesheet=$(STYLESODTPATH) $(BACK_PRE)_w_cite.rst $(BACK_PRE).odt
+# this is a hack for something broken in bibstuff, maybe in the ebnf grammar in
+# bibgrammar.py.  No time to fix it now.
+$(BACK_PRE)_w_cite_fix.rst: $(BACK_PRE)_w_cite.rst
+	sed -e 's/AmericanHeartAssociation/American Heart Association/g' -e "s/AmericanAlzheimer'sAssociation/American Alzheimer's Association/g" $(BACK_PRE)_w_cite.rst > $(BACK_PRE)_w_cite_fix.rst
+
+$(BACK_PRE).odt: $(BACK_PRE)_w_cite_fix.rst $(STYLESODTPATH)
+	$(RST2ODT) --stylesheet=$(STYLESODTPATH) $(BACK_PRE)_w_cite_fix.rst $(BACK_PRE).odt
 
 $(BACK_PRE)_double_spaced.odt: $(BACK_PRE).odt
 	$(ODTRESPACE) $(BACK_PRE).odt $(BACK_PRE)_double_spaced.odt

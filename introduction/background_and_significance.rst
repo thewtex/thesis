@@ -5,16 +5,17 @@ Human Health Significance
 
 In this chapter we describe the role diagnostic medical ultrasound plays in
 addressing public health needs related to diagnosis of plaque burden in the
-carotid artery that may predispose a patient to a stroke.  Specifically, we focus
-on stroke due to carotid atherosclerotic disease with increased vessel stenosis
-or embolization being primary causative factors.  First, we describe the prevalence
-and pathology of stroke.  We describe the current status of prevention and treatment 
-measures.  We review current methods to access stroke risk by describing these 
-techniques, the physiological target they aim to quantify, current status of 
-development, and effectiveness.  In this chapter, we focus primarily on imaging methods.
-A thorough literature review describes research efforts in medical ultrasound
-imaging for carotid plaque detection and characterization.  Finally, we present
-the approach taken in this dissertation in the context of prior research efforts.
+carotid artery that may predispose a patient to a stroke.  Specifically, we
+focus on stroke due to carotid atherosclerotic disease with increased vessel
+stenosis or embolization being primary causative factors.  First, we describe
+the prevalence and pathology of stroke.  We describe the current status of
+prevention and treatment measures.  We review current methods to access stroke
+risk by describing these techniques, the physiological target they aim to
+quantify, current status of development, and effectiveness.  In this chapter, we
+focus primarily on imaging methods.  A thorough literature review describes
+research efforts in medical ultrasound imaging for carotid plaque detection and
+characterization.  Finally, we present the approach taken in this dissertation
+in the context of prior research efforts.
 
 
 
@@ -22,107 +23,119 @@ the approach taken in this dissertation in the context of prior research efforts
 Etiology of stroke and the role of atherosclerotic plaque
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Stroke is a disease that effects the most defining and critical organ of the human
-body, the brain.  Stroke is a result of prolonged hypoxia to neural tissue resulting
-in cell death.  Symptoms include compromised movement, speech, cognition, and death.
-Location and extent of neuron injury determine the resulting neuronal dysfunction.
-While stroke is an acute ischemic cerebrovascular event with long lasting effects,
-there are similar ischemic pathologies with different time-courses.  Transient 
-ischemic attacks, TIA, usually last from 2-15 minutes.  They result in cerebral impairment
-that subsides in under twenty-four hours [Whisnant1990]_.  In addition, there also
-may be chronic ischemic events resulting from microemboli that explains some dementias
-due to the vascular cognitive impairment [Whisnant1990]_.  According to Hachinski et al.,
-one three people will experience stroke or dementia, but twice as many individuals will have 
-cognitive impairment to a lesser degree [Hachinski2006]_.  Hachinski reported efforts of the
-National Institute of Neurological Disorders and Stroke-Canadian Stroke
-Network's effort to create a standard way to identify and report the degree of
-cognitive impairment because vascular cognitive impairment is likely to be a hot
-area of future research since it has has been a largely unrecognized detriment
-to human health with widespread presence and increasing importance as life
-expectancy continues to be prolonged [Hachinski2006,Hennerici2004]_.  Recent evidence has emerged
-suggesting that cerebral emboli may be a cause or accelorator for the cognitive decline
-associated with Alzheimer's [Purandare2006a,Purandare2006,Purandare2007]_.  Some have termed the Alzheimer's/vascular disease combination 'mixed dementia', and it has gained increased recognition as the cause 
-of mild cognitive impairment observed with aging [Langa2004,Schneider2009,Deschaintre2009]_.  
-Mild cognitive impairment, which may be a precursor to Alzheimer's,  is thought to occur
-in 10 to 20 percent of the elderly, and Alzheimer's is one of the fastest
-growing causes of death in the United States: the number of deaths per year
-increased by 47% from 2000 to 2006 [AAStats2009]_.  Furthermore, a correlation
-between migraine and ischemic stroke has led to the suggestion that embolic ischemia
-may increase migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.  For example,
-Jesurum et al. found that migraine with aura can be relieved when the source
+Stroke is a disease that effects the most defining and critical organ of the
+human body, the brain.  Stroke is a result of prolonged hypoxia to neural tissue
+resulting in cell death that can occur because of infarction, hemorrhage, or
+subarachnoid hemorrhage [Whisnant1990]_.  Symptoms include compromised movement,
+speech, cognition, and death.  Location and extent of neuronal injury determine
+the resulting neuronal dysfunction.  While stroke is an acute ischemic
+cerebrovascular event with long lasting effects, there are similar ischemic
+cerebrovascular pathologies with different time-courses.  For example, transient
+ischemic attacks (TIA), usually last from 2-15 minutes.  They result in cerebral
+impairment that subsides in under twenty-four hours [Whisnant1990]_.  In
+addition, there also may be chronic ischemic events resulting from microemboli
+that explain some dementias due to vascular cognitive impairment
+[Whisnant1990]_.  According to Hachinski et al., one in three people will
+experience stroke or dementia, but twice as many individuals will incur
+cognitive impairment to a lesser degree [Hachinski2006]_.  Hachinski reported on
+the efforts of the National Institute of Neurological Disorders and Stroke
+(NINDS) and the Canadian Stroke Network's (CSN) effort to create a standard way
+to identify and report on the degree of cognitive impairment.  Vascular
+cognitive impairment is likely to become a productive area of future research
+since it has been a largely unrecognized detriment to human health.  Its
+widespread presence and increasing importance to quality of life as life
+expectancy continues to be prolonged cannot be understated
+[Hachinski2006,Hennerici2004]_.  Recent evidence has emerged suggesting that
+cerebral emboli may be a cause or accelerator for cognitive decline associated
+with Alzheimer's [Purandare2006a,Purandare2006,Purandare2007]_.  Some
+researchers have termed the Alzheimer's/vascular disease combination as 'mixed
+dementia', and it has gained increased recognition as the cause of mild
+cognitive impairment observed with aging
+[Langa2004,Schneider2009,Deschaintre2009]_.  Mild cognitive impairment, which
+may be a precursor to Alzheimer's,  is thought to occur in 10 to 20 percent of
+the elderly.  Alzheimer's disease is one of the fastest growing causes of death
+in the United States: the number of deaths per year increased by 47% from 2000
+to 2006 [AAStats2009]_.  Furthermore, a correlation between migraine and
+ischemic stroke has led to the suggestion that embolic ischemia may increase
+migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.  For example, Jesurum et
+al. [Jesurum2008]_ found that migraine with aura can be relieved when the source
 of ischemia causing emboli, a right-to-left shunt via a patent foramen ovale
-(PFO), is closed even partially with surgery [Jesurum2008]_.
+(PFO), is closed even partially with surgery. 
 
-The pathogenesis of stroke is classified into four categories [Whisnant1990]_:
-brain hemorrhage, subarachnoid hemorrhage, intracranial hemorrhage from an
-arteriovenous malformation, and brain infarction, which is also referenced as
-*ischemic stroke*.  Mechanisms of cerebral infarction are further divided into
-subcategories, namely, thrombotic, embolic, and hemodynamic.  Thrombotic infarction
-usually occurs with a thrombosis that forms around an atherosclerotic plaque.
-This will can occur with the larger cerebral arteries that possess extensive cerebrovascular
-disease. 
+While the effects of stroke are far reaching, there are only a few basic causes.
+The pathogenesis of stroke can be classified into four categories
+[Whisnant1990]_, namely: brain hemorrhage, subarachnoid hemorrhage, intracranial
+hemorrhage from an arteriovenous malformation, and brain infarction, which is
+also referenced as *ischemic stroke*.  Mechanisms of cerebral infarction are
+further divided into subcategories, namely, thrombotic, embolic, and
+hemodynamic.  Thrombotic infarction usually occurs with a thrombosis that forms
+around an atherosclerotic plaque.  This can occur with the larger cerebral
+arteries that possess extensive cerebrovascular disease. 
 
-Emboli causing brain infarction can have many origins.  One source of emboli is the heart.
-Cardioembolic stroke can be due to many conditions.  Atrial fibrillation, recent
-myocardial infarction, congestive heart failure, valve disease or mechanical
-valve replacement can result in thrombosis with free passage to the brain.  
-Stroke that was previously labeled idiopathic, paradoxical, or crypotogenic, is
-now thought to be primarily caused by a patent foramen ovale (PFO).  A PFO
-occurs when the shunt in the fetus's atrial septum, for bypassing circulation
-to the lungs, fails to close after birth.  There can be a clot within the shunt
-or a peripheral venous thrombus that has bypassed the lungs. [Whisnant1990]_
-Finally, hemodynamic brain infarctions refer to hypoperfusion due to plaque stenosis
-or occlusion.  The stroke pathogenesis targeted in the work presented is emboli
-from carotid plaque.  This is one of the common causes of stroke, underlying over
-50% of strokes [Nikic2006,Rothwell2000]_ .  The carotid artery is the main
-conduit of blood to the brain.  In humans there is a left and right common
-carotid artery (CCA) that bifurcates in the upper neck into the internal carotid
-artery (ICA) and the external carotid artery (ECA).  The diameter of the CCA is
-typical 0.5 mm although age and atherosclerosis can increased diameter through
-remodeling [Eigenbrodt2006]_.  Large muscular arteries are prone to develop
-atherosclerosis and areas of hemodynamic disturbance are inherently susceptible to
-atherosclerosis, so plaque invariably develops around the bifurcation at the
-carotid bulb.
+Emboli causing brain infarction can have many origins.  One source of emboli is
+the heart.  Cardioembolic stroke can be due to many conditions.  Atrial
+fibrillation, recent myocardial infarction, congestive heart failure, valve
+disease or mechanical valve replacement can result in thrombosis with free
+passage to the brain.  Stroke that were previously labeled idiopathic,
+paradoxical, or crypotogenic, are now thought to be primarily caused by a patent
+foramen ovale (PFO).  A PFO occurs when the shunt in the fetus's atrial septum,
+for bypassing circulation to the lungs, fails to close after birth.  A clot
+within the shunt or a peripheral venous thrombus that has bypassed the lungs
+could then find its way to cerebral tissue [Whisnant1990]_.  Finally,
+hemodynamic brain infarctions refer to hypoperfusion due to plaque stenosis or
+occlusion.  The stroke pathogenesis targeted in this work are emboli originating
+from carotid plaque.  This is one of the more common causes of stroke,
+underlying over 50% of strokes [Nikic2006,Rothwell2000]_.  The carotid artery is
+the main conduit of blood to the brain.  In humans there is a left and right
+common carotid artery (CCA) that bifurcates in the upper neck into the internal
+carotid artery (ICA) and the external carotid artery (ECA).  The diameter of the
+CCA is typical 0.5 mm although age and atherosclerosis can increase diameter
+through remodeling [Eigenbrodt2006]_.  Large muscular arteries are prone to
+develop atherosclerosis and areas of hemodynamic disturbance are inherently
+susceptible to atherosclerosis, so plaque invariably develops around the
+bifurcation at the carotid bulb.
 
-Carotid endarterectomy, CEA, is a surgery performed to reduce the risk of stroke
-from carotid atherosclerosis.  It involves accessing the carotid in the neck near
-the carotid bulb.  An incision is made longitudinally along the carotid, the plaque
-is scraped out, and the surgical site closed.  CEA has been performed since 1954,
-and approximately one million surgeries have been performed between 1974 to 1985
-[Barnett1998]_.  Two large scale clinical trials were performed in the 1990s to
-test the safety and effectiveness of CEA, namely the North American Symptomatic
-Carotid Endarterectomy Trial, NASCET, and the Committee for the Asymptomatic Carotid
-Atherosclerosis Study, ACAS [NASCET1991,ACAS1995,Barnett1998]_.  The metric for
-stroke risk used during the trials was the extent of stenosis.  Severe stenosis,
-defined to be 70 to 99%, demonstrated CEA has significant ipsilateral benefit over
-medical treatment alone.  Stenosis from 50 to 69% had a moderate reduction in stroke
-risk, and there was no significant statistical benefit for patients with stenosis
-less than 50%.  It was estimated that for patients with 50 to 69% stenosis, it took
-15 surgeries to prevent one stroke in a five year period.  Another study from the
-European Carotid Surgery Trial concluded that CEA was beneficial in only 16% of
-patients with 70-99% stenosis. [Rothwell1999]_
+Carotid endarterectomy (CEA), is a surgery performed to reduce the risk of
+stroke from carotid atherosclerosis.  It involves accessing the carotid in the
+neck near the carotid bulb.  An incision is made longitudinally along the
+carotid, the plaque is scraped out, and the surgical site closed.  CEA has been
+performed since 1954, and approximately one million surgeries have been
+performed between 1974 to 1985 [Barnett1998]_.  Two large scale clinical trials
+were performed in the 1990s to test the safety and effectiveness of CEA, namely
+the North American Symptomatic Carotid Endarterectomy Trial (NASCET), and the
+Committee for the Asymptomatic Carotid Atherosclerosis Study (ACAS)
+[NASCET1991,ACAS1995,Barnett1998]_.  The metric for stroke risk used during the
+trials was the extent of stenosis.  In patients with severe stenosis, defined to
+be 70 to 99%, the results demonstrated that CEA had significant ipsilateral
+benefit over medical treatment alone.  However, stenosis from 50 to 69% had a
+moderate reduction in stroke risk, and there was no significant statistical
+benefit for patients with stenosis less than 50%.  It was estimated that for
+patients with 50 to 69% stenosis, it took 15 surgeries to prevent one stroke in
+a five year period.  Another study from the European Carotid Surgery Trial
+concluded that CEA was beneficial in only 16% of patients with 70-99% stenosis.
+[Rothwell1999]_
 
-Surgical complications and costs solicit increased specificity in the
+Surgical complications and costs also solicit increased specificity in the
 selection of CEA candidates.  In general, CEA has low rates of death and
 morbidity, but patients with a history of tobacco use, substantial angina,
-contralateral occlusion, or preoperative TIA have elevated risk of
-complications [Duncan2008]_.  Most patients with significant carotid plaques are
-older and have other symptoms of cardiovascular disease, and the surgical risks
-must be weighed carefully.  Yet, stroke is a widespread detriment to public health
-and increased sensitivity to stroke risk is desired for appropriate prophylactic
+contralateral occlusion, or preoperative TIA have elevated risk of complications
+[Duncan2008]_.  Most patients with significant carotid plaques are older and
+have other symptoms of cardiovascular disease, and the surgical risks must be
+weighed carefully.  Yet, stroke is a widespread detriment to public health and
+increased sensitivity to stroke risk is desired for appropriate prophylactic
 treatments.  The risk factors for stroke are well known and include diabetes,
 hypercholesterolemia, hypertension, coronary heart disease, tobacco use, large
 artery disease, atrial fibrillation, patent foramen ovale or atrial septal
-defect, and cervical artery dissection [Arnold2008]_.  In 2005, 780 thousand
-new cases of stroke occurred in the United
-States. [AHAStats2008]_  There were 150 thousand deaths in the United States
-during 2004.  While mortality rates have decreased over the years, morbidity
-is a public health and financial burden because of the recovery and rehabilitation
-required.  Around 5.8 million stroke survivors are alive today.  It is estimated
-that the direct medical costs in the United States due to stroke were $43.7 billion
-dollars in 2008. [AHAStats2008]_ Therefore, the most effective method of addressing
-stroke is prevention.  The purpose of the proposed research are to develop methods
-to more effectively identify stroke risk from embolic carotid plaque.
+defect, and cervical artery dissection [Arnold2008]_.  In 2005, 780 thousand new
+cases of stroke occurred in the United States. [AHAStats2008]_  There were 150
+thousand deaths in the United States during 2004.  While mortality rates have
+decreased over the years, morbidity is a public health and financial burden
+because of the recovery and rehabilitation required.  Around 5.8 million stroke
+survivors are alive today.  It is estimated that the direct medical costs in the
+United States due to stroke were $43.7 billion dollars in 2008. [AHAStats2008]_
+Therefore, the most effective method of addressing stroke is prevention.  The
+purpose of the proposed research is to develop methods to more effectively
+identify and stratify stroke risk from embolic carotid plaque.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

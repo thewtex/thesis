@@ -33,6 +33,10 @@ PFO
   in-uteral development, which remains partially patent in a quarter of the
   population into adulthood.  Can be a source of emboli.
 
+TIA
+  *Transient ischemic attack."*  Brief episodes of focal loss of brain function
+  due to ischemia [Whisnant1990]_.
+
 UTC
   *Ultrasound Tissue Characterization*.  Imaging techniques that put greater
   emphasis on displaying parameters of the target tissue  instead of the machine

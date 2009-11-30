@@ -17,6 +17,7 @@
 *.odt
 *.odt#
 *_w_cite.rst
+*_w_cite_fix.rst
 *_w_math.rst
 *.doc
 *.doc#
