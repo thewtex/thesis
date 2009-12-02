@@ -446,13 +446,17 @@ catheter movement with blood flow can make it difficult to determine the
 orientation of the transducer and to differentiate between catheter and
 artery movement.
 
-A slightly different approach is thermal strain imaging, 
-which has recently been examined as a method for characterizing plaque
-composition [Kim2008b]_.  In that studying, ultrasound image motion tracking
-with a high frequency (50 MHz) transducer was
-employed to monitor ultrasound induced thermal expansion on *in vitro* tissue.  Yet, it 
-remains to be seen how this technique can be applied *in vivo* where tissue movement is 
-significant.  
+A slightly different approach is thermal strain imaging, which has recently been
+examined as a method for characterizing plaque composition [Shi2005,Kim2008b]_.
+Strain in the ultrasound signal is a result of the tissue's coefficient of
+thermal expansion and the change in sound speed that occurs with temperature.
+Temperature changes on the order of 1º C can be detected [Shi2005]_.  The
+temperature change is induced by microwave radiation or ultrasound energy
+absorption.  In the study by Kim et al., ultrasound image motion tracking with a
+high frequency (50 MHz) transducer was employed to monitor ultrasound induced
+thermal expansion on *in vitro* tissue [Kim2008b]_.  Yet, it remains to be seen
+how this technique can be applied *in vivo* where tissue movement, from both
+bula motion and mechanical strain, is significant [Shi2005a]_.  
 
 More recently, strain imaging with external ultrasound has been attempted
 [Meairs1999,Bang2003,Brusseau2001,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
