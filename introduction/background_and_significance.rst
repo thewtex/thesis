@@ -303,47 +303,52 @@ Plaque characterization with diagnostic ultrasound
 
 Vulnerability assessment with ultrasound focuses on many of the same parameters
 examined using other modalities such as MRI.  Stenosis is currently assessed
-with Doppler velocity measurements, along with Color-flow images and B-mode imaging.  
+with Doppler velocity measurements, along with color-flow and B-mode imaging.
 After measuring peak systolic velocity, end-diastolic velocity, and pre and
 post-stenotic ratios, a percent stenosis can be implied based on these
 measurements [Koelemay1996,Wardlaw2006,Arbeille1999]_.  Many radiologists also
 try to access the plaque through visual inspection of the B-mode images.
 Echolucent plaque are considered more vulnerable because lipid and hemorrhage
-are often echolucent.  [Groenholdt1997,Groenholdt1999,ECPSG1995,Pedro2000,Ohki1998,Polak1998]_ 
-In contrast, homogeneous calcification is thought to cause plaque stabilization
-[Avril1991]_.
-While calcified tissue is usually echogenic, fibrous plaque can
+are often echolucent.
+[Groenholdt1997,Groenholdt1999,ECPSG1995,Pedro2000,Ohki1998,Polak1998]_ In
+contrast, homogeneous calcification is thought to cause plaque stabilization
+[Avril1991]_.  While calcified tissue is usually echogenic, fibrous plaque can
 also be echolucent.  Additionally, shadowing and other effects can make
 echogenicity difficult to interpret.  Nonetheless, echogenicity has been the
 most commonly tested and most widely used metric of vulnerability.  Ultrasound
-echogenicity is assessed via direct visual examination of ubiquitous B-mode images.
-Some authors prefer to use the Gray-Weale scale for echogenicity which stratifies
+echogenicity is assessed via direct visual examination of B-mode images.  Some
+authors prefer to use the Gray-Weale scale for echogenicity which stratifies
 echogenicity into five types ranging from echolucent to calcific with shadowing
-[Gray-Weale1988]_ A slight improvement to visual examination are computer-assisted
-gray-scale median (GSM) measurements [Sztajzel2005,Aly2000,Lal2002]_.  These results
-are semi-quantitative since they rely on the settings and properties of the ultrasound
-scanning device.  Plaque intensities are normalized to intraluminal blood and adventitia. 
-When the definition of thresholds and regions of interest is forced and quantitative
-intensity measurements are made, objectivity is increased [Lal2006]_.  Additionally,
-the quality of B-mode images have recently been improved with angular compounding
-[Kern2004]_.  More sophisticated analysis of B-mode properties focuses on factors
-other than local intensity, broadly termed 'texture analysis'.  Texture analysis
-has the aim of differentiating tissue composition and properties
-[Christodoulou2003,Coleman2005,Lee1998,Madycki2006,Stoitsis2006]_.  Texture analysis examines
-statistical parameters of the intensity, Fourier spectrum, Wavelet Transform, or
-other quantities in a local area, and statistical techniques are applied to
-empirically determine which parameters may differentiate tissue composition.  In
-contrast, sophisticated
-analysis that attempts to separate device dependent from tissue dependent effects on
-the image is termed Ultrasonic Tissue Characterization (UTC).  There have been various
-research efforts using parameters such as slope, intercept, and midband-fit of the
-local backscatter spectra normalized by a reference spectra that aim to differentiate plaque composition
-[Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_, but the poor effectiveness and difficulty of the data
-reduction methods has limited clinical adoption.  Most attempts have been *in
-vitro* or invasively collected with IVUS, although there have been a few recent attempts
-with external ultrasound on *in vivo* human carotid [Sareen2008,Shi2009,Urbani1993]_.  UTC on arterial plaque is
-discussed in detail in the chapter on high frequency characterization of carotid
-plaque.
+[Gray-Weale1988]_ A slight improvement to visual examination are
+computer-assisted gray-scale median (GSM) measurements
+[Sztajzel2005,Aly2000,Lal2002]_.  These results are semi-quantitative since they
+rely on the settings and properties of the ultrasound scanning device.  Plaque
+intensities are normalized to intraluminal blood and adventitia.  When the
+definition of thresholds and regions of interest is forced and quantitative
+intensity measurements are made, objectivity is increased [Lal2006]_.
+Additionally, the quality of B-mode images have recently been improved with
+angular compounding [Kern2004]_.  
+
+More sophisticated analysis of B-mode properties focuses on factors other than
+local intensity, broadly termed 'texture analysis'.  Texture analysis has the
+aim of differentiating tissue composition and properties
+[Christodoulou2003,Coleman2005,Lee1998,Madycki2006,Stoitsis2006]_.  Texture
+analysis examines statistical parameters of the intensity, Fourier spectrum,
+Wavelet Transform, or other quantities in a local area, and statistical
+techniques are applied to empirically determine which parameters may
+differentiate tissue composition.  In contrast, sophisticated analysis that
+attempts to separate device dependent from tissue dependent effects on the image
+is termed Ultrasonic Tissue Characterization (UTC).  There have been various
+research efforts using parameters such as slope, intercept, and midband-fit of
+the local backscatter spectra normalized by a reference spectra that aim to
+differentiate plaque composition
+[Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_.
+However, the poor effectiveness and difficulty of the data reduction methods
+have limited clinical adoption.  Most attempts have been *in vitro* or
+invasively collected with IVUS, although there have been a few recent attempts
+with external ultrasound on *in vivo* human carotid
+[Sareen2008,Shi2009,Urbani1993]_.  UTC on arterial plaque is discussed in detail
+in the chapter on high frequency characterization of carotid plaque.
 
 
 Morphologically, the appearance of ulceration is also associated with
@@ -355,53 +360,54 @@ ultrasound make it difficult to consistently evaluate ulceration.  It is more di
 to detect ulceration for plaques with increased stenosis.  By comparing with results
 from histology, it was found that for plaque with >50% stenosis, the sensitivity for
 direct ulceration detection was only 41% [ECPSG1995]_.  However, the use of microbubble
-contrast agents improves surface definition by increasing contrast at the lumen border
+contrast agents improve surface definition by increasing contrast at the lumen border
 where it may be otherwise compromised by partial-volume effects [Kono2004]_.
 
-Neoangiogenesis in large plaques also plays a role similar to ulceration as mechanical
-stress concentrators.  Unlike surface ulcerations, neoangiogenesis compromises the
-tissue at a deeper level, making large ruptures more likely.  These tiny vessels
-that were previously undetectable with ultrasound, and they may now be visible under
-ultrasound imaging with contrast agents [Coli2008]_.
+Neoangiogenesis in large plaques also plays a role similar to ulceration as
+mechanical stress concentrators.  Unlike surface ulcerations, neoangiogenesis
+compromises the tissue at a deeper level, making large ruptures more likely.
+These tiny vessels that were previously undetectable with ultrasound, and they
+may now be visible under ultrasound imaging with contrast agents [Coli2008]_.
 
 The interaction of morphology, composition, and pulse pressures can lead to high stress
 states, but the instability depends on mechanical system configuration as a whole
-[Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a,Groen2008]_, which is quite
-complex in naturally occurring situations.  P.D. Richardson performed 
+[Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a,Groen2008]_.
+P.D. Richardson performed 
 seminal work examining this hypothesis, and he points out that rupture is a result of 
 structural mechanics, fluid mechanics, plaque morphology, plaque micromechanical material properties, and MMPs [Richardson2002,Richardson1989]_.  For example, large lipid pools can
 cause mechanical stresses, but these stresses are much more significant when the pool
-is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and 3D fluid-structure interaction
-finite element analysis using MRI and IVUS based morphology and composition information [Tang2008,Yang2009]_.  From this model, vulnerability
+is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and 3D
+fluid-structure interaction based finite element analysis using MRI and IVUS based
+morphology and composition information [Tang2008,Yang2009]_.  From this model, vulnerability
 is graded according to a computational plaque stress index based on the maximum
-principle stress [Tang2009]_.  Tang's research has shown that plaque wall stress
+principal stress [Tang2009]_.  Tang's research has shown that plaque wall stress
 was 126% higher in 5 ruptured plaques compared to 7 non-ruptured plaques for 12
 patients that underwent CEA in one study and was found to have an 85% agreement
-rate with histopathological analysis in another study  [Tang2009a,Tang2005]_.  These studies also verify that
+rate with histopathological analysis in a second study  [Tang2009a,Tang2005]_.  These studies also verify that
 markers traditionally considered for vulnerability such as morphology and
-composition also increase local stress/strain [Tang2005a]_.  Trivendi reached similar conclusions
+composition also increase local stress/strain [Tang2005a]_.  Trivedi reached similar conclusions
 in an MR imaging-based computational analysis of 5 symptomatic and 5
 asymptomatic patients: principal shear stress was higher in symptomatic plaques
 than in asymptomatic plaques [Trivedi2007]_.  Ulceration has observed to be more
 common proximal to stenosis and more common for fatty plaques [Saba2007]_.  
 
 Inflammation may be part of a positive feedback process where mechanical tearing
-would stimulate a necrotic response that catabolizes the extracellular matrix, leading
-to further mechanical weakness at the site 
-[Sirico2009,Lendon1993,Arroyo1999,Dhume2003,Ho2002,Lee1998,Lendon1991]_.
-This is supported by a recent study comparing gene expression in
-calcific, often associated with stability, compared to non-calcific areas.
-It was found that gene expression of
-factors that promote interleukin 8 and monocyte chemoattractant protein 1, associated with
-inflammation and thereby vulnerability, were higher in non-calcified areas [Wahlgren2009]_.
-Lee et al. performed a mechanical finite element analysis simulation using
-the morphology of 12 unruptured human coronary lesions and assumed appropriate
-mechanical material properties for the tissue components.  When comparing images
-of immunoreactive MMP-1, they found that high stress had twice the MMP-1
-expression as low stress regions [Lee1996]_.  Elevated levels of highly
-sensitive C-reactive protein, another inflammation marker, correlates with
-increased intima-media thickness [Benbir2005]_.  These high
-stress states may lead to fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
+would stimulate a necrotic response that catabolizes the extracellular matrix,
+leading to further mechanical weakness at the site
+[Sirico2009,Lendon1993,Arroyo1999,Dhume2003,Ho2002,Lee1998,Lendon1991]_.  This
+is supported by a recent study comparing gene expression in calcific areas,
+often associated with stability, compared to non-calcific areas.  It was found
+that gene expression of factors that promote interleukin 8 and monocyte
+chemoattractant protein 1, associated with inflammation and thereby
+vulnerability, were higher in non-calcified areas [Wahlgren2009]_.  Lee et al.
+performed a mechanical finite element analysis simulation using the morphology
+of 12 unruptured human coronary lesions and assumed appropriate mechanical
+material properties for the tissue components.  When comparing images of
+immunoreactive MMP-1, they found that high stress had twice the MMP-1 expression
+as low stress regions [Lee1996]_.  Elevated levels of highly sensitive
+C-reactive protein, another inflammation marker, correlates with increased
+intima-media thickness [Benbir2005]_.  These high stress states may lead to
+fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
 
 |holzapfel_intima| shows a tensile test performed by Holzapfel on diseased intima
 sectioned from cadaver iliac arteries [Holzapfel2004]_.  
@@ -421,18 +427,18 @@ occurs, ultimate tensile stress, :texmath:`\sigma_{ult}`.
 .. |holzapfel_intima| replace:: Figure 1
 
 Recently, ultrasonic and MRI [Lin2008]_ strain imaging techniques have been
-applied to imaging of the carotids.  Strain imaging creates an *in vivo* map
+applied to imaging of the carotid arteries.  Strain imaging creates an *in vivo* map
 of strain, a parameter directly related to tissue stretch or contraction, drawn
 on the abscissa in |holzapfel_intima|.  Vulnerable plaques have a higher extensibility
 and a lower ultimate stress [Lendon1991,Holzapfel2004]_.  Therefore, strain
 imaging directly measures a parameter that determines how close a plaque is
 to failure [Tang2005]_.  This contrasts with other characterization methods that
-focus on parameters like composition, which may effect strain in a secondary manner
+focus on parameters like composition, which may affect strain in a secondary manner
 and may be system dependent as previously discussed.  Strain imaging directly measures
 the effect of multiple stress concentrators including composition, ulceration, morphology,
 neovascularization, and hemodynamics.  
 
-Most of the initial carotid strain imaging studies
+Most of the initial arterial strain imaging studies
 were performed with IVUS by de Korte 
 [deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003,Wan2001,Maurice2008,Liang2008]_.
 However, IVUS is invasive because catheterization is required.  Additionally,
