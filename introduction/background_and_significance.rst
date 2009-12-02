@@ -438,13 +438,13 @@ and may be system dependent as previously discussed.  Strain imaging directly me
 the effect of multiple stress concentrators including composition, ulceration, morphology,
 neovascularization, and hemodynamics.  
 
-Most of the initial arterial strain imaging studies
-were performed with IVUS by de Korte 
+Most of the initial arterial strain imaging studies were performed with IVUS by
+de Korte
 [deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003,Wan2001,Maurice2008,Liang2008]_.
 However, IVUS is invasive because catheterization is required.  Additionally,
 catheter movement with blood flow can make it difficult to determine the
-orientation of the transducer and to differentiate between catheter and
-artery movement.
+orientation of the transducer and to differentiate between catheter and artery
+movement [DeKorte1999,Shi2005b]_.
 
 A slightly different approach is thermal strain imaging, which has recently been
 examined as a method for characterizing plaque composition [Shi2005,Kim2008b]_.
