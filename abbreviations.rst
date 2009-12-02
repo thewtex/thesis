@@ -12,6 +12,10 @@ CEA
 ECA
   *External Carotid Artery*.  Branches off CCA to supply the face.
 
+FLAIR
+  *Fluid-Attenuated Inversion Recovery*.  MRI pulse sequence designed to
+  suppress signal from fluid such as cerebrospinal fluid.
+
 ICA
   *Internal Carotid Artery*.  Branches off CCA to supply the brain.
 

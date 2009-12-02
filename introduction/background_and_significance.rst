@@ -219,81 +219,82 @@ Plaque characterization with other methods and imaging modalities
 =================================================================
 
 Ultrasound is currently the most common method for plaque investigation because
-it is noninvasive, easily accessible, and has a relatively low cost.
-While most prevalent clinically, other methods have a clinical and research role
-in determining plaque vulnerability.  Histological classification of excised
-plaques have shown that hemorrhage, ulceration, and lipid rich plaques have as
-association with amaurosis fugax, TIA, or stroke. [Groenholdt1999]_ Fresh thrombi
-especially have a connection with ischemic infarction. [Lusby1982]_ Also, as
-previously mentioned, inflammatory markers are also related to stroke symptoms.
+it is noninvasive, easily accessible, and has a relatively low cost.  While most
+prevalent clinically, other methods have a clinical and research role in
+determining plaque vulnerability.  Histological classification of excised
+plaques have shown that hemorrhage, ulceration, and lipid rich plaques have an
+association with amaurosis fugax, TIA, or stroke. [Groenholdt1999]_ Fresh
+thrombi especially have a connection with ischemic infarction. [Lusby1982]_
+Also, as previously mentioned, inflammatory markers are also related to stroke
+symptoms.
 
 Angiography is the current gold standard for quantifying stenosis, and the high
-resolution is good for identifying ulcerations [NASCET1991,Saba2007]_.
-Single slice computed tomography (CT) has had limited success in carotid plaque
+resolution is good for identifying ulcerations [NASCET1991,Saba2007]_.  Single
+slice computed tomography (CT) has had limited success in carotid plaque
 classification [Walker2002]_, but recently multidetector-row computed tomography
 (MRCT) have attempted to quantify total plaque volume, calcification, fibrous,
 and lipid or hemorrhage areas [Ajduk2008,Saba2008]_.  
 
-High resolution magnetic resonance imaging (MRI) has better composition determination
-than MRCT because of the increased soft tissue contrast
-[Oikawa2009,Kwee2008,U-King-Im2008,Fabiano2008,Yarnykh2006,Saam2008]_.  This contrast is
-not only used to identify volume and degree of stenosis but provides a
-noninvasive method to identify components of lipid, fibrous, calcium, or thrombus.
-Relative to the surrounding muscle, calcium appears hypointense on T\ :sub:`1`\ -weighted,
-very hypointense on proton-density weighted, and very hypointense on T\ :sub:`2`\ -weighted
-images, lipid is very hyperintense on T\ :sub:`1`\ -weighted, hypertense on proton-density
-weighted, and hypointense on T\ :sub:`2`\ -weighted images, and fibrous tissue is
-isointense to slightly hyperintense on all three parameter-weighted images.
-T\ :sub:`1` shortening causing increased signal intensity is associated with the
+High resolution magnetic resonance imaging (MRI) has better composition
+determination capabilities than MRCT because of the increased soft tissue
+contrast [Oikawa2009,Kwee2008,U-King-Im2008,Fabiano2008,Yarnykh2006,Saam2008]_.
+This contrast is not only used to identify volume and degree of stenosis but
+also provides a noninvasive method to identify components of lipid, fibrous,
+calcium, or thrombus.  Relative to the surrounding muscle, calcium appears
+hypointense on T\ :sub:`1`\ -weighted, very hypointense on proton-density
+weighted, and very hypointense on T\ :sub:`2`\ -weighted images.  Lipids are very
+hyperintense on T\ :sub:`1`\ -weighted, hypertense on proton-density weighted,
+and hypointense on T\ :sub:`2`\ -weighted images.  Finally, fibrous tissue is
+isointense to slightly hyperintense on all three parameter-weighted images.  T\
+:sub:`1` shortening causing increased signal intensity is associated with the
 protein-water interactions of the extracellular matrix content found in fibrous
-tissue.  A short T\ :sub:`2`\ , which causes low signal intensity in T\ :sub:`2`\ -weighted
-images, is found in primarily lipid areas where there is increased interaction
-between free and bound water.  The calcium areas will have low signal intensity
-because of low proton density and diffusion-mediated susceptibility effects. [Fayad2001]_
-The calcium susceptibility and paramagnetic ferric iron in hemorrhage may alter
-atherosclerotic appearance in 3.0 T magnets slightly, but the general
-characteristics still apply from 1.5 T magnets. [Underhill2008]_  In a study of
-*ex-vivo* plaque specimens, Fabiano et al. found that 1.5-T MRI had
-sensitivities and specificities of 92% and 74% for the lipid core, 82% and 94%
-for fibrous tissue, 72% and 87% for fibrous/loose connective tissue, and 98% and
-99% for calcifications [Fabiano2008]_.  The quality of MRI images of the carotid
-bifurcation will continue to improve as hardware, excitation sequences, and
-image processing is modified for this application.  Balu et al. showed a 1.7
-fold improvement in SNR and larger coverage with a 8 channel phased array coil
-at 3T [Balu2009]_.  In a study of 60 patients,, high resolution MRI was able to
-detect greater plaque hemorrhage in acute symptomatic vs recently symptomatic vs
-asymptomatic patients [Sadat2009]_.  The application of black-blood MR imaging
-sequences increases the detection of ulceration [Yu2009]_.  Even though MRI imaging of composition hold
-promise, there is room for improvement: an attempt to correlate plaque
-morphology and composition as measured on both arteries of 40 patients did not
-find that the MRI images along could not predict the severity of white matter
-ischaemia as measured by Fluid-Attenuated Inversion Recovery images
-[Patterson2009]_.
+tissue.  A short T\ :sub:`2`\ , which causes low signal intensity in T\
+:sub:`2`\ -weighted images, is found in primarily lipid areas where there is
+increased interaction between free and bound water.  The calcium areas will have
+low signal intensity because of low proton density and diffusion-mediated
+susceptibility effects.  [Fayad2001]_ The calcium susceptibility and
+paramagnetic ferric iron in hemorrhage may alter atherosclerotic appearance in
+3.0 T magnets slightly, but the general characteristics still apply from 1.5 T
+magnets. [Underhill2008]_  In a study of *ex-vivo* plaque specimens, Fabiano et
+al. found that 1.5-T MRI had sensitivities and specificities of 92% and 74% for
+the lipid core, 82% and 94% for fibrous tissue, 72% and 87% for fibrous/loose
+connective tissue, and 98% and 99% for calcifications [Fabiano2008]_.  The
+quality of MRI images of the carotid bifurcation will continue to improve as
+hardware, excitation sequences, and image processing is modified for this
+application.  Balu et al. indicated a 1.7 fold improvement in SNR and larger
+coverage with a 8 channel phased array coil at 3T [Balu2009]_.  In a study of 60
+patients, high resolution MRI was able to detect greater plaque hemorrhage in
+acute symptomatic vs. recently symptomatic vs. asymptomatic patients [Sadat2009]_.
+The application of black-blood MR imaging sequences increases the detection of
+ulceration [Yu2009]_.  Even though MRI imaging of composition hold promise,
+there is room for improvement: an attempt to correlate plaque morphology and
+composition as measured on both arteries of 40 patients did not find that the
+MRI images along could not predict the severity of white matter ischemia as
+measured using FLAIR MRI images [Patterson2009]_.
 
-Contrast can be
-further improved and neovascularization visualized with contrast-enhanced MRI [Saam2007]_.
-Since methemoglobin is associated with thrombus and hemorrhage and with a
-shortening of T\ :sub:`1`\ , intraplaque hemorrhage can be detected with MRI [Moody2003]_.
-Another thrombus detecting MRI agent is the fibrin targeted peptide EP-2104R. [Sirol2005]_
-Thrombus age can be inferred from T\ :sub:`1`\ -weighted or T\ :sub:`2`\ -weighted signal
-intensity, although thrombus generally has better T\ :sub:`1` intensity. [Corti2002]_
-The gadolinium-based MRI contrast agent P947 MMPs may be a tool for detecting
-plaque inflammation [Lancelot2008]_.
+Contrast can be further improved and neovascularization visualized with
+contrast-enhanced MRI [Saam2007]_.  Since methemoglobin is associated with
+thrombus and hemorrhage and with a shortening of T\ :sub:`1`\ , intraplaque
+hemorrhage can be detected with MRI [Moody2003]_.  Another thrombus detecting
+MRI agent is the fibrin targeted peptide EP-2104R. [Sirol2005]_ Thrombus age can
+be inferred from T\ :sub:`1`\ -weighted or T\ :sub:`2`\ -weighted signal
+intensity, although thrombus generally has better T\ :sub:`1` intensity.
+[Corti2002]_ The gadolinium-based MRI contrast agent P947 MMPs may be a tool for
+detecting plaque inflammation [Lancelot2008]_.
 
 Plaque inflammation is targeted in many of the newer nuclear imaging techniques
 [Chen2005]_.  :sup:`18`\ F-FDG PET detects the increased glycolytic activity of
-inflammatory cells. [Rominger2009,Tawakol2006,Rudd2002]_  SPECT imaging can be performed
-to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or apoptosis
-(\ :sup:`99m`\ Tc-annexin A5).
-[Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi
-et. al. have attempted to use :sup:`99m`\ Tc-IL2 scintigraphy to detect chronic
-inflammatory response indicated my T-cell and macrophage activation as a marker
-for Crohn's disease [Annovazzi2003]_.  :sup:`111`\In platlet scintigraphy is
-sensitive to thrombosis, but it cannot distinguish other tissue types
-[Manca2001]_.
+inflammatory cells. [Rominger2009,Tawakol2006,Rudd2002]_  SPECT imaging can be
+performed to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or
+apoptosis (\ :sup:`99m`\ Tc-annexin A5).
+[Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi et. al. have
+attempted to use :sup:`99m`\ Tc-IL2 scintigraphy to detect chronic inflammatory
+response indicated my T-cell and macrophage activation as a marker for Crohn's
+disease [Annovazzi2003]_.  :sup:`111`\In platlet scintigraphy is sensitive to
+thrombosis, but it cannot distinguish other tissue types [Manca2001]_.
 
-Increased metabolic activity associated with inflammation can be detected with
-a needle thermistor, although this requires interrogation with a catheter, which
+Increased metabolic activity associated with inflammation can be detected with a
+needle thermistor, although this requires interrogation with a catheter, which
 is an invasive procedure [Casscells1996,Madjid2002]_.  
 
 
