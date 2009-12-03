@@ -452,23 +452,24 @@ Strain in the ultrasound signal is a result of the tissue's coefficient of
 thermal expansion and the change in sound speed that occurs with temperature.
 Temperature changes on the order of 1º C can be detected [Shi2005]_.  The
 temperature change is induced by microwave radiation or ultrasound energy
-absorption.  In the study by Kim et al., ultrasound image motion tracking with a
-high frequency (50 MHz) transducer was employed to monitor ultrasound induced
+absorption.  In the study by Kim et al., ultrasound signal motion tracking with
+a high frequency (50 MHz) transducer was employed to monitor ultrasound induced
 thermal expansion on *in vitro* tissue [Kim2008b]_.  Yet, it remains to be seen
 how this technique can be applied *in vivo* where tissue movement, from both
 bula motion and mechanical strain, is significant [Shi2005a]_.  
 
-More recently, strain imaging with external ultrasound has been attempted
+More recently, strain imaging with external ultrasound imaging using linear
+array transducers has been attempted
 [Meairs1999,Bang2003,Brusseau2001,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
-We give a detailed literature review of this area in the chapter that describes the
-effectiveness of the novel motion tracking method.
-While the resolution of external ultrasound is much lower, it is noninvasive and
-appropriate for general stroke risk screening purposes.  Even though strain imaging holds
-much promise in the detection of vulnerable plaque, its success depends on the ability
-to measure strain accurately, with a large dynamic range, and with minimal noise.  
-The research presented in this thesis focuses on the development of improved strain imaging
-algorithms and techniques and applies them to the diagnosis of stroke risk due
-to carotid plaque disruption. 
+We give a detailed literature review of this area in the chapter that describes
+the effectiveness of the novel motion tracking method.  While the resolution of
+external ultrasound is much lower, it is noninvasive and appropriate for general
+stroke risk screening purposes.  Even though strain imaging holds much promise
+in the detection of vulnerable plaque, its success depends on the ability to
+measure strain accurately, with a large dynamic range, and with minimal noise.
+The research presented in this dissertation focuses on the development of improved
+strain imaging algorithms and techniques and applies them to the diagnosis of
+stroke risk due to carotid plaque disruption. 
 
 
 
