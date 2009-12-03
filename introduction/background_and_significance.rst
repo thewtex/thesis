@@ -228,12 +228,18 @@ thrombi especially have a connection with ischemic infarction. [Lusby1982]_
 Also, as previously mentioned, inflammatory markers are also related to stroke
 symptoms.
 
+Computed Tomography
+-------------------
+
 Angiography is the current gold standard for quantifying stenosis, and the high
 resolution is good for identifying ulcerations [NASCET1991,Saba2007]_.  Single
 slice computed tomography (CT) has had limited success in carotid plaque
 classification [Walker2002]_, but recently multidetector-row computed tomography
 (MRCT) have attempted to quantify total plaque volume, calcification, fibrous,
 and lipid or hemorrhage areas [Ajduk2008,Saba2008]_.  
+
+Magnetic Resonance Imaging
+--------------------------
 
 High resolution magnetic resonance imaging (MRI) has better composition
 determination capabilities than MRCT because of the increased soft tissue
@@ -282,6 +288,9 @@ intensity, although thrombus generally has better T\ :sub:`1` intensity.
 [Corti2002]_ The gadolinium-based MRI contrast agent P947 MMPs may be a tool for
 detecting plaque inflammation [Lancelot2008]_.
 
+Nuclear imaging
+---------------
+
 Plaque inflammation is targeted in many of the newer nuclear imaging techniques
 [Chen2005]_.  :sup:`18`\ F-FDG PET detects the increased glycolytic activity of
 inflammatory cells. [Rominger2009,Tawakol2006,Rudd2002]_  SPECT imaging can be
@@ -292,6 +301,9 @@ attempted to use :sup:`99m`\ Tc-IL2 scintigraphy to detect chronic inflammatory
 response indicated my T-cell and macrophage activation as a marker for Crohn's
 disease [Annovazzi2003]_.  :sup:`111`\In platlet scintigraphy is sensitive to
 thrombosis, but it cannot distinguish other tissue types [Manca2001]_.
+
+Optical
+-------
 
 Increased metabolic activity associated with inflammation can be detected with a
 needle thermistor, although this requires interrogation with a catheter, which
