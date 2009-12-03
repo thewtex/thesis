@@ -313,6 +313,9 @@ is an invasive procedure [Casscells1996,Madjid2002]_.
 Plaque characterization with diagnostic ultrasound
 ==================================================
 
+B-Mode intensity and textural features
+--------------------------------------
+
 Vulnerability assessment with ultrasound focuses on many of the same parameters
 examined using other modalities such as MRI.  Stenosis is currently assessed
 with Doppler velocity measurements, along with color-flow and B-mode imaging.
@@ -380,6 +383,14 @@ mechanical stress concentrators.  Unlike surface ulcerations, neoangiogenesis
 compromises the tissue at a deeper level, making large ruptures more likely.
 These tiny vessels that were previously undetectable with ultrasound, and they
 may now be visible under ultrasound imaging with contrast agents [Coli2008]_.
+
+Radiofrequency signal based characterization
+--------------------------------------------
+
+todo
+
+Strain imaging
+--------------
 
 The interaction of morphology, composition, and pulse pressures can lead to high stress
 states, but the instability depends on mechanical system configuration as a whole
