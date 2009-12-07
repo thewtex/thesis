@@ -302,12 +302,64 @@ response indicated my T-cell and macrophage activation as a marker for Crohn's
 disease [Annovazzi2003]_.  :sup:`111`\In platlet scintigraphy is sensitive to
 thrombosis, but it cannot distinguish other tissue types [Manca2001]_.
 
-Optical
+Thermal
 -------
 
 Increased metabolic activity associated with inflammation can be detected with a
 needle thermistor, although this requires interrogation with a catheter, which
-is an invasive procedure [Casscells1996,Madjid2002]_.  
+is an invasive procedure.  Inflammation is associated with thrombosis generation
+on both ruptured and non-ruptured surfaces [Casscells1996]_.  In a study of 50
+CEA samples, Casscells et at. found that some plaques have focal regions that
+are warmer by 0.4-2.2 ºC, and they can be very close to one another, less than 1
+mm apart [Casscells1996]_.  Increased cell density correlated with macrophage
+cell density and proximity to the luminal surface.  In general, the thermal
+profile is heterogenous.  Temperture is also found to be higher in areas where
+local pH is lower, and it is inversely correlated with smooth muscle cell
+density [Madjid2002]_.
+
+There are two methods to measure temperature variations *in vivo*: a thermistor
+and infrared means.  A thermistor placed at the tip of a catheter must come into
+direct contact with tissue's luminal surface.  An fiber-optic cable in a
+catheter can transmit infrared energy indicating local temperature.  In both cases, blood
+flow may redistribute local spikes in temperature [Kim2008]_.
+
+Optical
+-------
+
+There have been a variety of optical techniques that have demonstrated
+diagnostic capabilities, which measure various optical characteristics. Like
+thermal methods, these methods require interrogation with a catheter because
+they generally have lower penetration than the other imaging modalities.  On the
+other hand, they have higher resolution than other modalities, which is
+important for such small tissue volumes.
+
+Intravascular optical coherence tomography (OCT) is a catheter based method that
+provides limited penetration, but very high resolution, on the order of 10 μm
+axially and 20 μm laterally [Yabushita2002]_.  Sensitivity and specificity rates
+for composition classifcation range from 71% and 79% to 97% and 98%
+[Yabushita2002]_.  Lipid and necrotic core have low optical attenuation, while
+fibrous and calcified tissue have a higher attenuation [VanSoest2009]_.
+
+Time-resolved fluorescence spectroscopy (TRFS) is another optical technique that
+is used in conjunction with intravascular ultrasound (IVUS)
+[Stephens2009,Marcu2005]_.  Anatomical guidance is provided by IVUS which is
+registered with the TRFS signal.  TRFS detects autofluorescence from elastic,
+collagen, lipids, and by products of inflammatory processes to characterize the
+local biochemical composition.
+
+Raman spectroscopy is a method that measures the weak scattered signal from a
+laser light that shifts in frequency due to interactions with characteristic
+molecular vibrations and rotations [Hanlon2000]_.  Spectra provide a chemical
+footprint of biomedical composition.  Recent developments of optical fiber
+technology and small diameter probes with sufficient filtering capabilities
+allows examination real-time *in vivo* acquisition [Motz2006]_.  The sensitivity
+and specificity rates for determining carotid and femoral plaque composition
+were found to be 79% and 85%, respectively [Motz2006]_.  Near-infrared (NIR)
+spectroscopy is similar to Raman spectroscopy, but investigates the absorbance
+at wavelengths from 400 to 2400 nm [Lerakis2008]_.  The defining characteristics
+of tissue components in these situations can be determined empirically by
+applying a histology-based training set on principle component analysis or other
+methods to components of the spectra [Moreno2002]_.
 
 
 Plaque characterization with diagnostic ultrasound
