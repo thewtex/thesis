@@ -630,7 +630,9 @@ Secondly, the combination of multiple images may introduce more noise than
 signal in the composite image.  The noise may be introduced by multiple factors.
 Averaging strains with a simple arithmetic mean of axial and lateral components
 may decrease quality in areas that were previously calculated with only the
-lateral component.  How strain components ar calculated and extracted from the
+lateral component.  Artifacts, such as the artifact due to refraction of the
+pulse at the curved arterial borders [Ribbers2007]_, may be compounded
+[Hansen2009]_.  How strain components ar calculated and extracted from the
 strain tensor also plays a roll.  Additional noise is introduced if an approach
 is taken such an that one in Hansen et al., where the strain matrix is rotated
 to a particular orientation, and components are average at that orientation.
@@ -647,8 +649,8 @@ the local curvature at the luman-artery interface [Lin2008]_ must be determined
 for each image.  Furthermore, radial and circumferential directions are not very
 meaningful when dealing with the structure of a complex plaque as opposed to a
 healthy artery.  Most importantly, it remains to be determined if registration
-and displacement compensation techniques for the significant *in vivo* motion
-that occurs are sufficiently effective. 
+and displacement compensation techniques are significantly effective for the significant motion
+that occurs *in vivo*. 
 
 Even though strain imaging holds much promise
 in the detection of vulnerable plaque, its success depends on the ability to
