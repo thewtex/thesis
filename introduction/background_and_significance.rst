@@ -264,19 +264,20 @@ paramagnetic ferric iron in hemorrhage may alter atherosclerotic appearance in
 magnets. [Underhill2008]_  In a study of *ex-vivo* plaque specimens, Fabiano et
 al. found that 1.5-T MRI had sensitivities and specificities of 92% and 74% for
 the lipid core, 82% and 94% for fibrous tissue, 72% and 87% for fibrous/loose
-connective tissue, and 98% and 99% for calcifications [Fabiano2008]_.  The
-quality of MRI images of the carotid bifurcation will continue to improve as
+connective tissue, and 98% and 99% for calcifications [Fabiano2008]_.  
+
+The quality of MRI images of the carotid bifurcation will continue to improve as
 hardware, excitation sequences, and image processing is modified for this
 application.  Balu et al. indicated a 1.7 fold improvement in SNR and larger
 coverage with a 8 channel phased array coil at 3T [Balu2009]_.  In a study of 60
 patients, high resolution MRI was able to detect greater plaque hemorrhage in
-acute symptomatic vs. recently symptomatic vs. asymptomatic patients [Sadat2009]_.
-The application of black-blood MR imaging sequences increases the detection of
-ulceration [Yu2009]_.  Even though MRI imaging of composition hold promise,
-there is room for improvement: an attempt to correlate plaque morphology and
-composition as measured on both arteries of 40 patients did not find that the
-MRI images along could not predict the severity of white matter ischemia as
-measured using FLAIR MRI images [Patterson2009]_.
+acute symptomatic vs. recently symptomatic vs. asymptomatic patients
+[Sadat2009]_.  The application of black-blood MR imaging sequences increases the
+detection of ulceration [Yu2009]_.  Even though MRI imaging of composition hold
+promise, there is room for improvement: an attempt to correlate plaque
+morphology and composition as measured on both arteries of 40 patients did not
+find that the MRI images along could not predict the severity of white matter
+ischemia as measured using FLAIR MRI images [Patterson2009]_.
 
 Contrast can be further improved and neovascularization visualized with
 contrast-enhanced MRI [Saam2007]_.  Since methemoglobin is associated with
@@ -287,6 +288,25 @@ be inferred from T\ :sub:`1`\ -weighted or T\ :sub:`2`\ -weighted signal
 intensity, although thrombus generally has better T\ :sub:`1` intensity.
 [Corti2002]_ The gadolinium-based MRI contrast agent P947 MMPs may be a tool for
 detecting plaque inflammation [Lancelot2008]_.
+
+Another MRI functional imaging approach is strain imaging.  The technique used
+to calculate displacements in MR strain imaging similar to the technique used to
+calculate blood velocity in phase-contrast magnetic resonance angiography.
+Dephasing that occurs during a bipolar gradient is proportional to the
+displacements of the tissue.  Early work studied the porcine aorta and found
+than when displacements estimated were compared to fiducial markers on the
+luminal wall, a strain of 10% would have a standard deviation of error of 3.6%
+[Draney2004]_.  In a study of *ex-vivo* porcine aortas comparing a control group
+to renovascular hypertension group, it was found that the Young's Modulus-wall
+thickness product, derived from MR strain images, differentiated the
+hypertensive group because of the increassed wall stiffness [Woodrum2009]_.  
+Lin et al. used a displacement encoding with stimulated echoes
+(DENSE) pulse sequence to get the circumferencial strain of the carotid artery
+[Lin2008]_.  High temporal resolution is obtained my utilizing steady-state
+free-precession (SSFP) along with high in-plane resolution, 0.6 mm.  Good
+repeatability was seen between acquisitions at 1.5 T and 3 T.  Changes in
+circumferential strain can even be observed in the aorta of a murine model of
+atherosclerosis when high field strength MRI is applied [Herold2009]_.
 
 Nuclear imaging
 ---------------
@@ -417,7 +437,6 @@ with external ultrasound on *in vivo* human carotid
 [Sareen2008,Shi2009,Urbani1993]_.  UTC on arterial plaque is discussed in detail
 in the chapter on high frequency characterization of carotid plaque.
 
-
 Morphologically, the appearance of ulceration is also associated with
 vulnerability [Groenholdt1999]_.  Ulcerations are irregularities on the plaque surface.  
 In a study monitoring patients over 6.2 years on 1,091 plaques, it was found that
@@ -446,10 +465,11 @@ Strain imaging
 
 The interaction of morphology, composition, and pulse pressures can lead to high stress
 states, but the instability depends on mechanical system configuration as a whole
-[Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a,Groen2008]_.
+[Li2006,Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a]_.
 P.D. Richardson performed 
 seminal work examining this hypothesis, and he points out that rupture is a result of 
-structural mechanics, fluid mechanics, plaque morphology, plaque micromechanical material properties, and MMPs [Richardson2002,Richardson1989]_.  For example, large lipid pools can
+structural mechanics, fluid mechanics, plaque morphology, plaque micromechanical
+material properties, and MMPs [Richardson2002,Richardson1989]_.  For example, large lipid pools can
 cause mechanical stresses, but these stresses are much more significant when the pool
 is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and 3D
 fluid-structure interaction based finite element analysis using MRI and IVUS based
@@ -458,12 +478,27 @@ is graded according to a computational plaque stress index based on the maximum
 principal stress [Tang2009]_.  Tang's research has shown that plaque wall stress
 was 126% higher in 5 ruptured plaques compared to 7 non-ruptured plaques for 12
 patients that underwent CEA in one study and was found to have an 85% agreement
-rate with histopathological analysis in a second study  [Tang2009a,Tang2005]_.  These studies also verify that
+rate with histopathological analysis in a second study  [Tang2009a,Tang2005]_.  
+These studies also verify that
 markers traditionally considered for vulnerability such as morphology and
-composition also increase local stress/strain [Tang2005a]_.  Trivedi reached similar conclusions
+composition also increase local stress/strain [Tang2005a]_.  In a sophisticated FEA model derived
+from 3D IVUS coronary images, Yang et al. found that "cyclic bending, anisotropic material
+properties, pulsating pressure, plaque structure, and axial stretch may affect critical
+stress/strain values in coronary plaques from 40% to 400% or more, depending on
+morphology, location, and contributing factors" [Yang2009]_.  Trivedi reached similar conclusions
 in an MR imaging-based computational analysis of 5 symptomatic and 5
 asymptomatic patients: principal shear stress was higher in symptomatic plaques
-than in asymptomatic plaques [Trivedi2007]_.  Ulceration has observed to be more
+than in asymptomatic plaques [Trivedi2007]_.  Ohayon et al. used a FEA model
+generated from IVUS images taken during a coronary angioplasty procedure to
+generate a FEA model [Ohayon2001]_.  Morphology from an unloaded vessel state was
+obtained by injecting ATP, which caused a brief atrioventricular block.  Locations
+of peak circumferential tensile stress were compared to location of plaque rupture
+cause by the angioplasty, and they were found to correspond.
+In another case study, high shear stress was associated with the rupture and ulceration of a carotid
+artery plaque on an individual that had received serial MRI imaging.
+Computational fluid dynamics base on MRI structure and composition identified
+the location of high shear stress with the location of the ulcer [Groen2008]_.
+Ulceration has observed to be more
 common proximal to stenosis and more common for fatty plaques [Saba2007]_.  
 
 Inflammation may be part of a positive feedback process where mechanical tearing
@@ -501,7 +536,7 @@ occurs, ultimate tensile stress, :texmath:`\sigma_{ult}`.
 
 .. |holzapfel_intima| replace:: Figure 1
 
-Recently, ultrasonic and MRI [Lin2008]_ strain imaging techniques have been
+Recently, ultrasonic strain imaging techniques have been
 applied to imaging of the carotid arteries.  Strain imaging creates an *in vivo* map
 of strain, a parameter directly related to tissue stretch or contraction, drawn
 on the abscissa in |holzapfel_intima|.  Vulnerable plaques have a higher extensibility
@@ -533,7 +568,20 @@ thermal expansion on *in vitro* tissue [Kim2008b]_.  Yet, it remains to be seen
 how this technique can be applied *in vivo* where tissue movement, from both
 bula motion and mechanical strain, is significant [Shi2005a]_.  
 
-More recently, strain imaging with external ultrasound imaging using linear
+The thermal strain effect was used to estimate the spatio-temporal temperature
+changes that occur with another plaque characterization imaging technique,
+photoacoustic imaging [Sethuraman2008]_.  During intravascular photoacoustic
+imaging (IVPA), tissue is irradiated with a sub-ablation threshold laser at
+20Hz [Sethuraman2005a]_.  Optical absorption of the laser energy results in
+thermoelastic expansion of the tissue and acoustic waves.  The acoustic waves
+are detected with an IVUS transducer, and a spatial map of optical obsorption is
+reconstructed.  This method allows for imaging optical properties but with a
+depth of penetration that is closer to ultrasound.  By exciting tissue with
+multiple wavelengths in the 680 - 900 nm range, the absorption properties across
+a spectrum can be used to differentiate fibrous and lipid plaque components
+[Sethuraman2008a]_.
+
+Recently, strain imaging with external ultrasound imaging using linear
 array transducers has been attempted
 [Meairs1999,Bang2003,Brusseau2001,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
 We give a detailed literature review of this area in the chapter that describes
