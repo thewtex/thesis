@@ -587,13 +587,75 @@ array transducers has been attempted
 We give a detailed literature review of this area in the chapter that describes
 the effectiveness of the novel motion tracking method.  While the resolution of
 external ultrasound is much lower, it is noninvasive and appropriate for general
-stroke risk screening purposes.  Even though strain imaging holds much promise
+stroke risk screening purposes.  
+
+Angular compounding
+~~~~~~~~~~~~~~~~~~~
+
+Quality in ultrasound strain images can potentially be improved with angular
+compounding [Rao2006]_.  Angular compounding is achieved by electronically
+steering the ultrasound beam when time appropriate time delays are applied to
+transducer array elements during the transmit pulse.  In B-Mode angular
+compounding, this gives a different instantiation of tissue speckle, which in
+can be averaged to improve image quality.  In strain imaging, a different
+realization of tissue scattering is again made available, but the instantiation
+of the strain tensor is also obtained in a different coordinate system.  This is
+advantageous since ultrasound image resolution in inherently highly anisotropic:
+resolution is inherently high along the axis of beam propation, but low lateral
+to beam propagation.  As result, the quality of strain estimates in the axial
+direction are better than the lateral direction.  Angular compounding has the
+potential to improve image quality with an averaging effect, but also provides
+axial quality motion tracking when the beam is steered to what is the lateral
+direction when the beam is not steered.
+
+Preliminary work on applying angular compounding to strain images on transverse
+images of a hollow cylinder phantom have been performed by Hansen et al.
+[Hansen2009]_.  A number of complications exist that make whether angular
+compounding of strain images of extensive carotid atherosclerosis *in vivo* will
+improve image quality an open question.  
+
+First, there are practical limitations to the maximum angle that can be steered
+due to transducer technology.  Grating lobe artifacts, which signifantly
+decrease image quality, will appear if the spacing between array elements is not
+small enough for a given excitation frequency and steering angle.  As a
+consequence, steering angles on current high frequency linear array transducers
+are limited to approximately +/- 15º.  Hansen et al. worked around this
+limitation to some extent by low pass filtering the signal at higher angles with
+a cutoff frequency corresponding to the frequency when grating lobes occur.
+This allowed them to steer up to +/- 45º without significant artifact, but the
+removal of high frequency content decreases the advantage of tracking in the
+axial direction.
+
+Secondly, the combination of multiple images may introduce more noise than
+signal in the composite image.  The noise may be introduced by multiple factors.
+Averaging strains with a simple arithmetic mean of axial and lateral components
+may decrease quality in areas that were previously calculated with only the
+lateral component.  How strain components ar calculated and extracted from the
+strain tensor also plays a roll.  Additional noise is introduced if an approach
+is taken such an that one in Hansen et al., where the strain matrix is rotated
+to a particular orientation, and components are average at that orientation.
+This is because the orientation may not be the same in all compounded images.
+For example, if prinicipal components (eigenvalues of the strain matrix) are
+averaged, they do not necessarily correspond to the same coordinate system
+orientation (eigenvectors of the strain matrix).  It is natural to try to
+extract 'radial' and 'circumferential' components of the strain tensor when
+dealing with a transverse view of an artery, because these coorespond to the
+direction of the principal components for a simple cylinder.  However,
+determination of the radial and circumferential directions introduces additional
+noise whether the center of the lumen is used as a reference [Hansen2009]_ or
+the local curvature at the luman-artery interface [Lin2008]_ must be determined
+for each image.  Furthermore, radial and circumferential directions are not very
+meaningful when dealing with the structure of a complex plaque as opposed to a
+healthy artery.  Most importantly, it remains to be determined if registration
+and displacement compensation techniques for the significant *in vivo* motion
+that occurs are sufficiently effective. 
+
+Even though strain imaging holds much promise
 in the detection of vulnerable plaque, its success depends on the ability to
 measure strain accurately, with a large dynamic range, and with minimal noise.
 The research presented in this dissertation focuses on the development of improved
 strain imaging algorithms and techniques and applies them to the diagnosis of
 stroke risk due to carotid plaque disruption. 
-
 
 
 ~~~~~~~~~~
