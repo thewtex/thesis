@@ -367,6 +367,26 @@ registered with the TRFS signal.  TRFS detects autofluorescence from elastic,
 collagen, lipids, and by products of inflammatory processes to characterize the
 local biochemical composition.
 
+A methods that focus primarily on collagen content is polarization-sensitive OCT
+(PSOCT) [Nadkarni2009]_.  Many different types of collagen fibers, primarilyy
+Type I and Type III, provide the majority of tensile strength and elasticity in
+healthy arteries [Plenz2003]_.  While smooth muscles migrate from the media to
+the intima to increase extracellular collagen during atherosclerosis, MMPs cause
+proteolysis of the collagen and apoptosis of intimal smooth muscle cells
+resulting in a net loss of collagen content [Newby1999]_.  In addition to high
+resolution plaque microstructure from OCT, PSOCT measures tissue birefringence.
+This behavior manifests itself as changes in back-reflected intensity when
+polarized light passes through anisotropic material such as organized collagen
+or smooth muscle cell actin-myosin in atherosclerotic plaque [Nadkarni2009]_.  
+
+Laser speckle is generally considered a source of noise in optical imaging, but
+the time-dependenct characterics of the speckle are focused on in laser speckle
+imaging (LSI) [Nadkarni2009]_.  Speckle will change because of Brownian motion of suspended
+particles in the tisse.  The motility of particles depends on the viscoelastic
+properties of the medium, which is related to plaque vulnerability.  Images
+related to local viscoelastic properties are made by quantifying the speckle
+decorrelation time constant. 
+
 Raman spectroscopy is a method that measures the weak scattered signal from a
 laser light that shifts in frequency due to interactions with characteristic
 molecular vibrations and rotations [Hanlon2000]_.  Spectra provide a chemical
