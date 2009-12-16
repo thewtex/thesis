@@ -191,14 +191,16 @@ elastases capesin S or K in diseased intima [Davies1993,Sukhova1998]_.
 
 Finally, while all these factors can make plaques intrinsically vulnerable to
 rupture, rupture is caused by extrinsic hemodynamic forces
-[Schroeder1996,Wootton1999]_.  Cyclic hemodynamic pulse pressure has been
-associated with carotid plaque ulceration [Lovett2003]_.  Hypertension, as
-quantified with central systolic blood pressure, correlates with ischemia as
-quantified with fluid-attenuated inversion recovery (FLAIR) MRI images, where
-the white matter hyperintensities correlate independently from carotid plaque
-score [Shrestha2009]_.  Hemodynamic forces vary from patient to patient with
-hypertension, pulsatility, and turbulence influenced by the bifurcation and
-plaque morphology.  
+[Schroeder1996,Wootton1999]_.  Computational finite element analysis has shown
+that peak wall shear stress is roughly proportional to flow rate at the carotid
+bifurcation in healthy arteries [Younis2003]_.  Cyclic hemodynamic pulse
+pressure has been associated with carotid plaque ulceration [Lovett2003]_.
+Hypertension, as quantified with central systolic blood pressure, correlates
+with ischemia as quantified with fluid-attenuated inversion recovery (FLAIR) MRI
+images, where the white matter hyperintensities correlate independently from
+carotid plaque score [Shrestha2009]_.  Hemodynamic forces vary from patient to
+patient with hypertension, pulsatility, and turbulence influenced by the
+bifurcation and plaque morphology.  
 
 All these factors that have been intuitively been associated with plaque
 vulnerability are explained formally by a quanitity arising from solid mechanics
@@ -401,6 +403,18 @@ of tissue components in these situations can be determined empirically by
 applying a histology-based training set on principle component analysis or other
 methods to components of the spectra [Moreno2002]_.
 
+Finally, OCT elastography can generate strain images of vascular tissue
+[Chan2004]_.  Unlike MRI strain imaging but similar to ultrasound strain
+imaging, discussed later, OCT elastography is essentially a deformable image
+registration problem [Chan2004,Kirkpatrick2006,Karimi2008]_.  Again, a clear
+advantage of OCT is the resolution for profiling these small inhomogenous
+tissues.  In fact, the precise of OCT is so high, that deformation in the skin
+due to pressure waves in the audible range has been imaged [Adie2009]_.  While
+resolution is more ideal than other modalities, depth of penetration may limit
+application to coronary plaques and preclude carotid plaques.  On the other
+hand, if behavior proximal to the arterial wall proves to be the area of
+diagnostic interest, the depth of penetration would be sufficient.
+
 
 Plaque characterization with diagnostic ultrasound
 ==================================================
@@ -492,7 +506,7 @@ structural mechanics, fluid mechanics, plaque morphology, plaque micromechanical
 material properties, and MMPs [Richardson2002,Richardson1989]_.  For example, large lipid pools can
 cause mechanical stresses, but these stresses are much more significant when the pool
 is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and 3D
-fluid-structure interaction based finite element analysis using MRI and IVUS based
+fluid-structure interaction (FSI) based finite element analysis using MRI and IVUS based
 morphology and composition information [Tang2008,Yang2009]_.  From this model, vulnerability
 is graded according to a computational plaque stress index based on the maximum
 principal stress [Tang2009]_.  Tang's research has shown that plaque wall stress
@@ -501,7 +515,12 @@ patients that underwent CEA in one study and was found to have an 85% agreement
 rate with histopathological analysis in a second study  [Tang2009a,Tang2005]_.  
 These studies also verify that
 markers traditionally considered for vulnerability such as morphology and
-composition also increase local stress/strain [Tang2005a]_.  In a sophisticated FEA model derived
+composition also increase local stress/strain [Tang2005a]_.  Similarily, Kock et al. found that MRI derived
+FSI models of carotid plaque showed elevated first principal stresses at areas of notorius risk [Kock2008]_.
+These FEA studies are not limited to IVUS and MRI microstructure inputs; OCT
+microstructure and and composition derived model has shown stress extrema at
+locations known for rupture [Chau2004]_.
+In a sophisticated FEA model derived
 from 3D IVUS coronary images, Yang et al. found that "cyclic bending, anisotropic material
 properties, pulsating pressure, plaque structure, and axial stretch may affect critical
 stress/strain values in coronary plaques from 40% to 400% or more, depending on
@@ -555,6 +574,15 @@ occurs, ultimate tensile stress, :texmath:`\sigma_{ult}`.
     Tensile test on diseased intima. [Holzapfel2004]_
 
 .. |holzapfel_intima| replace:: Figure 1
+
+Many of the atherosclerosis diagnostic imaging techniques have focused on
+imaging of plaque composition, which determines the elastic modulus.  While the
+distribution of material properties certainly affects stress and strain state,
+the sensitivity of stress and strain at the site of rupture in a diseased artery
+can be low.  In a computational analysis, it was found that +/- 50% variation in
+elastic modulus leads to less than a 10% change in stress at the site of
+rupture [Williamson2003]_.  Strain imaging has the potential to directly image
+the parameter of interest.
 
 Recently, ultrasonic strain imaging techniques have been
 applied to imaging of the carotid arteries.  Strain imaging creates an *in vivo* map
