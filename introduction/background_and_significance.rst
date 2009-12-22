@@ -472,16 +472,18 @@ with external ultrasound on *in vivo* human carotid
 in the chapter on high frequency characterization of carotid plaque.
 
 Morphologically, the appearance of ulceration is also associated with
-vulnerability [Groenholdt1999]_.  Ulcerations are irregularities on the plaque surface.  
-In a study monitoring patients over 6.2 years on 1,091 plaques, it was found that
-these irregularities or ulcerations increased stroke risk with a 2.7:1 hazard ratio
-[Prabhakaran2006]_.  Resolution and two dimensional imaging limitations with *in vivo*
-ultrasound make it difficult to consistently evaluate ulceration.  It is more difficult
-to detect ulceration for plaques with increased stenosis.  By comparing with results
-from histology, it was found that for plaque with >50% stenosis, the sensitivity for
-direct ulceration detection was only 41% [ECPSG1995]_.  However, the use of microbubble
-contrast agents improve surface definition by increasing contrast at the lumen border
-where it may be otherwise compromised by partial-volume effects [Kono2004]_.
+vulnerability [Groenholdt1999]_.  Ulcerations are irregularities on the plaque
+surface.  In a study monitoring patients over 6.2 years on 1,091 plaques, it was
+found that these irregularities or ulcerations increased stroke risk with a
+2.7:1 hazard ratio [Prabhakaran2006]_.  Resolution and two dimensional imaging
+  limitations with *in vivo* ultrasound make it difficult to consistently
+  evaluate ulceration.  It is more difficult to detect ulceration for plaques
+  with increased stenosis.  By comparing with results from histology, it was
+  found that for plaque with >50% stenosis, the sensitivity for direct
+  ulceration detection was only 41% [ECPSG1995]_.  However, the use of
+  microbubble contrast agents improve surface definition by increasing contrast
+  at the lumen border where it may be otherwise compromised by partial-volume
+  effects [Kono2004]_.
 
 Neoangiogenesis in large plaques also plays a role similar to ulceration as
 mechanical stress concentrators.  Unlike surface ulcerations, neoangiogenesis
@@ -494,51 +496,58 @@ Radiofrequency signal based characterization
 
 todo
 
+Kaufmann2009
+
 Strain imaging
 --------------
 
-The interaction of morphology, composition, and pulse pressures can lead to high stress
-states, but the instability depends on mechanical system configuration as a whole
-[Li2006,Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a]_.
-P.D. Richardson performed 
-seminal work examining this hypothesis, and he points out that rupture is a result of 
-structural mechanics, fluid mechanics, plaque morphology, plaque micromechanical
-material properties, and MMPs [Richardson2002,Richardson1989]_.  For example, large lipid pools can
-cause mechanical stresses, but these stresses are much more significant when the pool
-is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and 3D
-fluid-structure interaction (FSI) based finite element analysis using MRI and IVUS based
-morphology and composition information [Tang2008,Yang2009]_.  From this model, vulnerability
-is graded according to a computational plaque stress index based on the maximum
-principal stress [Tang2009]_.  Tang's research has shown that plaque wall stress
-was 126% higher in 5 ruptured plaques compared to 7 non-ruptured plaques for 12
-patients that underwent CEA in one study and was found to have an 85% agreement
-rate with histopathological analysis in a second study  [Tang2009a,Tang2005]_.  
-These studies also verify that
-markers traditionally considered for vulnerability such as morphology and
-composition also increase local stress/strain [Tang2005a]_.  Similarily, Kock et al. found that MRI derived
-FSI models of carotid plaque showed elevated first principal stresses at areas of notorius risk [Kock2008]_.
-These FEA studies are not limited to IVUS and MRI microstructure inputs; OCT
-microstructure and and composition derived model has shown stress extrema at
-locations known for rupture [Chau2004]_.
-In a sophisticated FEA model derived
-from 3D IVUS coronary images, Yang et al. found that "cyclic bending, anisotropic material
-properties, pulsating pressure, plaque structure, and axial stretch may affect critical
-stress/strain values in coronary plaques from 40% to 400% or more, depending on
-morphology, location, and contributing factors" [Yang2009]_.  Trivedi reached similar conclusions
-in an MR imaging-based computational analysis of 5 symptomatic and 5
-asymptomatic patients: principal shear stress was higher in symptomatic plaques
-than in asymptomatic plaques [Trivedi2007]_.  Ohayon et al. used a FEA model
-generated from IVUS images taken during a coronary angioplasty procedure to
-generate a FEA model [Ohayon2001]_.  Morphology from an unloaded vessel state was
-obtained by injecting ATP, which caused a brief atrioventricular block.  Locations
-of peak circumferential tensile stress were compared to location of plaque rupture
-cause by the angioplasty, and they were found to correspond.
-In another case study, high shear stress was associated with the rupture and ulceration of a carotid
-artery plaque on an individual that had received serial MRI imaging.
-Computational fluid dynamics base on MRI structure and composition identified
-the location of high shear stress with the location of the ulcer [Groen2008]_.
-Ulceration has observed to be more
-common proximal to stenosis and more common for fatty plaques [Saba2007]_.  
+Motivation
+~~~~~~~~~~
+
+The interaction of morphology, composition, and pulse pressures can lead to high
+stress states, but the instability depends on mechanical system configuration as
+a whole [Li2006,Li2007a,Li2007,Li2008,Hatsukami1997,Imoto2005,Tang2005a]_.  P.D.
+Richardson performed seminal work examining this hypothesis, and he points out
+that rupture is a result of structural mechanics, fluid mechanics, plaque
+morphology, plaque micromechanical material properties, and MMPs
+[Richardson2002,Richardson1989]_.  For example, large lipid pools can cause
+mechanical stresses, but these stresses are much more significant when the pool
+is closer to the lumen [Lal2006,Bassiouny1997]_.  D.L. Tang has created 2D and
+3D fluid-structure interaction (FSI) based finite element analysis using MRI and
+IVUS based morphology and composition information [Tang2008,Yang2009]_.  From
+this model, vulnerability is graded according to a computational plaque
+stress index based on the maximum principal stress [Tang2009]_.  Tang's
+research has shown that plaque wall stress was 126% higher in 5 ruptured
+plaques compared to 7 non-ruptured plaques for 12 patients that underwent CEA
+in one study and was found to have an 85% agreement rate with
+histopathological analysis in a second study  [Tang2009a,Tang2005]_.  These
+studies also verify that markers traditionally considered for vulnerability
+such as morphology and composition also increase local stress/strain
+[Tang2005a]_.  Similarily, Kock et al. found that MRI derived FSI models of
+carotid plaque showed elevated first principal stresses at areas of notorius
+risk [Kock2008]_.  These FEA studies are not limited to IVUS and MRI
+microstructure inputs; OCT microstructure and and composition derived model
+has shown stress extrema at locations known for rupture [Chau2004]_.  In a
+sophisticated FEA model derived from 3D IVUS coronary images, Yang et al.
+found that "cyclic bending, anisotropic material properties, pulsating
+pressure, plaque structure, and axial stretch may affect critical
+stress/strain values in coronary plaques from 40% to 400% or more, depending
+on morphology, location, and contributing factors" [Yang2009]_.  Trivedi
+reached similar conclusions in an MR imaging-based computational analysis of
+5 symptomatic and 5 asymptomatic patients: principal shear stress was higher
+in symptomatic plaques than in asymptomatic plaques [Trivedi2007]_.  Ohayon
+et al. used a FEA model generated from IVUS images taken during a coronary
+angioplasty procedure to generate a FEA model [Ohayon2001]_.  Morphology from
+an unloaded vessel state was obtained by injecting ATP, which caused a brief
+atrioventricular block.  Locations of peak circumferential tensile stress
+were compared to location of plaque rupture cause by the angioplasty, and
+they were found to correspond.  In another case study, high shear stress was
+associated with the rupture and ulceration of a carotid artery plaque on an
+individual that had received serial MRI imaging.  Computational fluid
+dynamics base on MRI structure and composition identified the location of
+high shear stress with the location of the ulcer [Groen2008]_.  Ulceration
+has observed to be more common proximal to stenosis and more common for fatty
+plaques [Saba2007]_.  
 
 Inflammation may be part of a positive feedback process where mechanical tearing
 would stimulate a necrotic response that catabolizes the extracellular matrix,
@@ -558,18 +567,16 @@ C-reactive protein, another inflammation marker, correlates with increased
 intima-media thickness [Benbir2005]_.  These high stress states may lead to
 fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
 
-|holzapfel_intima| shows a tensile test performed by Holzapfel on diseased intima
-sectioned from cadaver iliac arteries [Holzapfel2004]_.  
-As the graph progresses from the origin, the stretch and stress is increased
-on the tissue until the tissue fractures at the curve's termination.  The point
-in the curve farthest from the origin defines the stretch at which failure occurs,
-ultimate tensile stretch :texmath:`\lambda_{ult}`, and the stress at which failure
+|holzapfel_intima| shows a tensile test performed by Holzapfel on diseased
+intima sectioned from cadaver iliac arteries [Holzapfel2004]_.  As the graph
+progresses from the origin, the stretch and stress is increased on the tissue
+until the tissue fractures at the curve's termination.  The point in the curve
+farthest from the origin defines the stretch at which failure occurs, ultimate
+tensile stretch :texmath:`\lambda_{ult}`, and the stress at which failure
 occurs, ultimate tensile stress, :texmath:`\sigma_{ult}`.
 
-.. figure:: introduction/figures/holzapfel_intima.png
-    :width: 8cm
-    :height: 5.8cm
-    :align: center
+.. figure:: introduction/figures/holzapfel_intima.png :width: 8cm :height: 5.8cm
+:align: center
     
     Tensile test on diseased intima. [Holzapfel2004]_
 
@@ -580,29 +587,80 @@ imaging of plaque composition, which determines the elastic modulus.  While the
 distribution of material properties certainly affects stress and strain state,
 the sensitivity of stress and strain at the site of rupture in a diseased artery
 can be low.  In a computational analysis, it was found that +/- 50% variation in
-elastic modulus leads to less than a 10% change in stress at the site of
-rupture [Williamson2003]_.  Strain imaging has the potential to directly image
-the parameter of interest.
+elastic modulus leads to less than a 10% change in stress at the site of rupture
+[Williamson2003]_.  Strain imaging has the potential to directly image the
+parameter of interest.
 
-Recently, ultrasonic strain imaging techniques have been
-applied to imaging of the carotid arteries.  Strain imaging creates an *in vivo* map
-of strain, a parameter directly related to tissue stretch or contraction, drawn
-on the abscissa in |holzapfel_intima|.  Vulnerable plaques have a higher extensibility
+Recently, ultrasonic strain imaging techniques have been applied to imaging of
+the carotid arteries.  Strain imaging creates an *in vivo* map of strain, a
+parameter directly related to tissue stretch or contraction, drawn on the
+abscissa in |holzapfel_intima|.  Vulnerable plaques have a higher extensibility
 and a lower ultimate stress [Lendon1991,Holzapfel2004]_.  Therefore, strain
-imaging directly measures a parameter that determines how close a plaque is
-to failure [Tang2005]_.  This contrasts with other characterization methods that
-focus on parameters like composition, which may affect strain in a secondary manner
-and may be system dependent as previously discussed.  Strain imaging directly measures
-the effect of multiple stress concentrators including composition, ulceration, morphology,
-neovascularization, and hemodynamics.  
+imaging directly measures a parameter that determines how close a plaque is to
+failure [Tang2005]_.  This contrasts with other characterization methods that
+focus on parameters like composition, which may affect strain in a secondary
+manner and may be system dependent as previously discussed.  Strain imaging
+directly measures the effect of multiple stress concentrators including
+composition, ulceration, morphology, neovascularization, and hemodynamics.  
+
+IVUS strain imaging
+~~~~~~~~~~~~~~~~~~~
 
 Most of the initial arterial strain imaging studies were performed with IVUS by
 de Korte
-[deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003,Wan2001,Maurice2008,Liang2008]_.
-However, IVUS is invasive because catheterization is required.  Additionally,
-catheter movement with blood flow can make it difficult to determine the
-orientation of the transducer and to differentiate between catheter and artery
-movement [DeKorte1999,Shi2005b]_.
+[deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003]_.
+IVUS imaging differs from external ultrasound transducers in its insonification
+routine-- IVUS transducers are placed in a small catheter and a set of A-lines
+are emitted radially as the transducer is mechanically rotated or electronically
+steered.  The high frequencies in IVUS, from 20 MHz to 60 MHz, provide higher
+resolution images but lower penetration, and it is more common to find it
+applied to coronary arteries.  Shapo et al reported IVUS strain measurements *in
+vivo* where strain was incurred with an angioplasty balloon [Shapo1996]_.  De
+Korte reported on strain measurements with IVUS on tissue-mimicking phantoms by
+performing one-dimensional correlation with peak interpolation [deKorte1997]_.
+Adaptive and iterative estimation of local scaling factors has been added to
+simple one-dimensional cross-correlation techniques [Brusseau2001]_.  Two
+dimensional correlation windows were utilized by Shapo et al [Shapo1996]_ and
+Ryan and Foster [Ryan1997]_, with phase sensitive analysis and phase insensitive
+analysis performed by the former and latter.  Maurice et al. applied his motion
+tracking algorithm, the Lagrangian speckle model estimator (LSME)
+[Maurice2008]_.  Instead of block-matching techniques, Wan et al.
+applied an optical flow method to estimate tissue motion [Wan2001]_.  Liang et
+al. applied a Levenberg-Marquardt nonlinear minimization technique to a cubic
+B-spline model of displacement governed by a cost function that contained terms
+for intensity fidelity, a sum of squared difference, and strain smoothness, a
+sum of strain gradients [Liang2008]_.
+
+The feasibility of *in vivo* application examined on 12 patients undergoing
+angioplasty and it was found that strain in calified material (0.20% +/- 0.07)
+wis smaller than non-calcified tissue (0.51% +/- 0.20) [DeKorte2002]_.  During
+that study, it was revealed that catheter movement due to cardiac motion and
+blood flow impede strain estimation, so strain estimation was gated to points in
+late diastole.  Catheter movement with blood flow can make it difficult to
+determine the orientation of the transducer and to differentiate between
+catheter and artery movement, although movement compensation schemes have been
+described [DeKorte1999,Shi2005b]_.  In the technique described by Shapo et al.,
+motion is constrained with the angioplasty ballow, but strains are also measured
+relative to an artery, geometric center that is calculated from segmentation of
+the lumen [Shapo1996]_.  Schaar et al. described the effectiveness of what they
+termed palpography, an elastogram that only investigates the first 450 μm at the
+lumen boundary since this is where rupture may occurs [Schaar2006]_.  Comparison
+of mean strain values and histology revealed higher strain colocalized with
+fatty areas and areas with increased concentration of macrophages
+[DeKorte2000]_.  In a study of 54 cross sections validated by history,
+palpography was found to have a sensitivity of 88% and a specifity of 89%
+[Schaar2003]_.  In a study of an atherosclerotic Yucantan minipig, it was found
+that mean strain correlated with tissue type and localized high strain values
+correlated with indicators of inflammation, macrophages [DeKorte2002a]_.  The
+nature of IVUS acquisition results in 2D images of the vessel cross-section, but
+catheter pullback methods can be performed to generate a 3D profile of plaques
+that are typically spatially variant [Schaar2004]_.  In the 2004 study by Schaar
+et al., it was found the that number of deformable plaque locations had a
+negative correlation with the stability of angina and a positive correlation
+with the level of C-reactive protein, a marker of inflammation [Schaar2004]_.
+
+Thermal strain imaging
+~~~~~~~~~~~~~~~~~~~~~~
 
 A slightly different approach is thermal strain imaging, which has recently been
 examined as a method for characterizing plaque composition [Shi2005,Kim2008b]_.
@@ -629,13 +687,18 @@ multiple wavelengths in the 680 - 900 nm range, the absorption properties across
 a spectrum can be used to differentiate fibrous and lipid plaque components
 [Sethuraman2008a]_.
 
+External transducer strain imaging
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Recently, strain imaging with external ultrasound imaging using linear
 array transducers has been attempted
-[Meairs1999,Bang2003,Brusseau2001,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
+[Meairs1999,Bang2003,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
 We give a detailed literature review of this area in the chapter that describes
 the effectiveness of the novel motion tracking method.  While the resolution of
 external ultrasound is much lower, it is noninvasive and appropriate for general
 stroke risk screening purposes.  
+
+Maurice2008a
 
 Angular compounding
 ~~~~~~~~~~~~~~~~~~~
