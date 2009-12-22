@@ -608,7 +608,7 @@ IVUS strain imaging
 
 Most of the initial arterial strain imaging studies were performed with IVUS by
 de Korte
-[deKorte1997,Carlier2002,Cespedes2000,Korte2000,Schaar2003]_.
+[deKorte1997,Carlier2002,Cespedes2000,Korte2000]_.
 IVUS imaging differs from external ultrasound transducers in its insonification
 routine-- IVUS transducers are placed in a small catheter and a set of A-lines
 are emitted radially as the transducer is mechanically rotated or electronically
@@ -648,8 +648,8 @@ lumen boundary since this is where rupture may occurs [Schaar2006]_.  Comparison
 of mean strain values and histology revealed higher strain colocalized with
 fatty areas and areas with increased concentration of macrophages
 [DeKorte2000]_.  In a study of 54 cross sections validated by history,
-palpography was found to have a sensitivity of 88% and a specifity of 89%
-[Schaar2003]_.  In a study of an atherosclerotic Yucantan minipig, it was found
+palpography was found to have a sensitivity of 88% and a specifity of 89%.
+In a study of an atherosclerotic Yucantan minipig, it was found
 that mean strain correlated with tissue type and localized high strain values
 correlated with indicators of inflammation, macrophages [DeKorte2002a]_.  The
 nature of IVUS acquisition results in 2D images of the vessel cross-section, but
