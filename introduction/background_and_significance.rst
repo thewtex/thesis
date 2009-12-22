@@ -198,9 +198,11 @@ pressure has been associated with carotid plaque ulceration [Lovett2003]_.
 Hypertension, as quantified with central systolic blood pressure, correlates
 with ischemia as quantified with fluid-attenuated inversion recovery (FLAIR) MRI
 images, where the white matter hyperintensities correlate independently from
-carotid plaque score [Shrestha2009]_.  Hemodynamic forces vary from patient to
-patient with hypertension, pulsatility, and turbulence influenced by the
-bifurcation and plaque morphology.  
+carotid plaque score [Shrestha2009]_.  Turbulent flow resulting from severe
+stenosis can increase root mean square pressure fluctuations by 3.6 fold when
+stenosis increases from 80 to 90% [Loree1991]_.  Hemodynamic forces vary from
+patient to patient with hypertension, pulsatility, and turbulence influenced by
+the bifurcation and plaque morphology.  
 
 All these factors that have been intuitively been associated with plaque
 vulnerability are explained formally by a quanitity arising from solid mechanics
@@ -476,14 +478,14 @@ vulnerability [Groenholdt1999]_.  Ulcerations are irregularities on the plaque
 surface.  In a study monitoring patients over 6.2 years on 1,091 plaques, it was
 found that these irregularities or ulcerations increased stroke risk with a
 2.7:1 hazard ratio [Prabhakaran2006]_.  Resolution and two dimensional imaging
-  limitations with *in vivo* ultrasound make it difficult to consistently
-  evaluate ulceration.  It is more difficult to detect ulceration for plaques
-  with increased stenosis.  By comparing with results from histology, it was
-  found that for plaque with >50% stenosis, the sensitivity for direct
-  ulceration detection was only 41% [ECPSG1995]_.  However, the use of
-  microbubble contrast agents improve surface definition by increasing contrast
-  at the lumen border where it may be otherwise compromised by partial-volume
-  effects [Kono2004]_.
+limitations with *in vivo* ultrasound make it difficult to consistently
+evaluate ulceration.  It is more difficult to detect ulceration for plaques
+with increased stenosis.  By comparing with results from histology, it was
+found that for plaque with >50% stenosis, the sensitivity for direct
+ulceration detection was only 41% [ECPSG1995]_.  However, the use of
+microbubble contrast agents improve surface definition by increasing contrast
+at the lumen border where it may be otherwise compromised by partial-volume
+effects [Kono2004]_.
 
 Neoangiogenesis in large plaques also plays a role similar to ulceration as
 mechanical stress concentrators.  Unlike surface ulcerations, neoangiogenesis
@@ -575,10 +577,12 @@ farthest from the origin defines the stretch at which failure occurs, ultimate
 tensile stretch :texmath:`\lambda_{ult}`, and the stress at which failure
 occurs, ultimate tensile stress, :texmath:`\sigma_{ult}`.
 
-.. figure:: introduction/figures/holzapfel_intima.png :width: 8cm :height: 5.8cm
-:align: center
+.. figure:: introduction/figures/holzapfel_intima.png
+  :width: 8cm 
+  :height: 5.8cm
+  :align: center
     
-    Tensile test on diseased intima. [Holzapfel2004]_
+  Tensile test on diseased intima. [Holzapfel2004]_
 
 .. |holzapfel_intima| replace:: Figure 1
 
@@ -690,13 +694,29 @@ a spectrum can be used to differentiate fibrous and lipid plaque components
 External transducer strain imaging
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Recently, strain imaging with external ultrasound imaging using linear
-array transducers has been attempted
-[Meairs1999,Bang2003,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Maurice2004,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
-We give a detailed literature review of this area in the chapter that describes
-the effectiveness of the novel motion tracking method.  While the resolution of
-external ultrasound is much lower, it is noninvasive and appropriate for general
-stroke risk screening purposes.  
+Recently, strain imaging with external ultrasound imaging using linear array
+transducers has been attempted
+[Bang2003,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
+While the resolution of external ultrasound is much lower, it is noninvasive and
+appropriate for general stroke risk screening purposes.  The first plaque
+characterization based on an external clinical transducer, a 7.0 MHz Acuson
+linear array, was reported by Meairs and Hennerici in 1999 [Meairs]_.  While the
+bulk of research in this area ensued 5 years following, the quality of the
+Meairs and Hennerici paper supercedes later work.  4D *in vivo* characterization
+was performed on carotid artery plaques of 23 asymptomatic and 22 symptomatic
+patients by scanning the linear array with an ECG gated stepper motor.  The
+motion estimator was a hierarchical algorithm applied to laplacian filtered
+images that minimized a sum-of-squared differences cost function with the
+Gauss-Newton method.  They found that even though no significant differences in
+echogenicity ar surface structure between symptomatic and asymptomatic cases
+could be found, symptomatic plaques demonstrated inherent plaque movement
+relative to asymptomatic plaques.  Meairs evaluated two parameters: maximal
+surface velocity (MSV) and maximual discrepant surface velocity (MDSV).  They
+found that MSV, which is termed local displacement in other literature that
+does not account the inter-frame time period, did not have significant
+differences between symptomatic and asymptomatic cases.  In contract, MDSV,
+which is is termed local strain in other literature, did show a statistically
+significant difference between symptomatic and asymptomatic patients.
 
 Maurice2008a
 
