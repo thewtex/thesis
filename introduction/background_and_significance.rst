@@ -459,19 +459,7 @@ aim of differentiating tissue composition and properties
 analysis examines statistical parameters of the intensity, Fourier spectrum,
 Wavelet Transform, or other quantities in a local area, and statistical
 techniques are applied to empirically determine which parameters may
-differentiate tissue composition.  In contrast, sophisticated analysis that
-attempts to separate device dependent from tissue dependent effects on the image
-is termed Ultrasonic Tissue Characterization (UTC).  There have been various
-research efforts using parameters such as slope, intercept, and midband-fit of
-the local backscatter spectra normalized by a reference spectra that aim to
-differentiate plaque composition
-[Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_.
-However, the poor effectiveness and difficulty of the data reduction methods
-have limited clinical adoption.  Most attempts have been *in vitro* or
-invasively collected with IVUS, although there have been a few recent attempts
-with external ultrasound on *in vivo* human carotid
-[Sareen2008,Shi2009,Urbani1993]_.  UTC on arterial plaque is discussed in detail
-in the chapter on high frequency characterization of carotid plaque.
+differentiate tissue composition.  
 
 Morphologically, the appearance of ulceration is also associated with
 vulnerability [Groenholdt1999]_.  Ulcerations are irregularities on the plaque
@@ -491,14 +479,67 @@ Neoangiogenesis in large plaques also plays a role similar to ulceration as
 mechanical stress concentrators.  Unlike surface ulcerations, neoangiogenesis
 compromises the tissue at a deeper level, making large ruptures more likely.
 These tiny vessels that were previously undetectable with ultrasound, and they
-may now be visible under ultrasound imaging with contrast agents [Coli2008]_.
+may now be visible under ultrasound imaging with contrast agents
+[Coli2008,Kaufmann2009]_.
 
 Radiofrequency signal based characterization
 --------------------------------------------
 
-todo
+Quantitative ultrasound tissue characterization methods attempt to improve on
+simple B-mode texture analysis by removing system dependent features from the
+images to isolate tissue characteristics in the image[Lizzi1983]_.  These images attempt
+to show tissue properties that influence ultrasound propagation and scattering
+while removing effects such as the geometry and material makeup of the
+transducer or electronics of the imaging machine.  This removes the burden of
+accounting for system effects from the observer and allows calculation at a
+precision equal to the precision of digitization instead of being limited to the
+dynamic range of the human eye.  There are many aspects to ultrasound
+propagation and scattering, and the parameter chosen to be measured and
+displayed can be chosen to elucidate a single aspect of the physics of acoustic
+propagation, such as the attenuation coefficient or effective scatterer size or
+density, or a combination of multiple aspects.  Determining the most appropriate
+parameters depends on the ability to generate accurate and precise estimates of
+the parameter and the amount of correlation between the parameter and the tissue
+state of interest.
 
-Kaufmann2009
+Various tissue characterization parameters have been utilized for plaque
+examination, including slope, midband fit, intercept, minimum and maximum powers
+and their frequencies in the resulting spectra, along with the integrated
+backscatter, and attenuation slope parameters
+[Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_.
+For example, lipid infiltrated and calcified tissue have a higher attenuation
+than fibrous plaque [Bridal1998, Bridal1997, Hoskins2007]_.  Also, integrated
+backscatter increases in magnitude from thrombic to lipidic to fibrous to
+calcified atherosclerotic plaques [Katouzian2008, Kawasaki2002, Waters2003]_.
+Additional parameters can be obtained through high frequency texture
+analysis [Stoitsis2006]_ or simple integrated backscatter calculations [Sano2006,
+Wickline1993]_.  However, the quantities obtained in these methods is dependent
+on the machine and acquisition settings [Bridal1998, Ota1997]_.  Volcano
+Corporation has released a clinically available IVUS tissue characterization
+system they call Virtual Histology [Koenig2007]_.  Their system measures local
+spectral parameters that have been statistically classified into tissue types to
+label tissue areas.
+
+Most of the ultrasonic tissue characterization methods on atherosclerotic plaque
+have used the method introduced by Lizzi to account for system
+characteristics[Lizzi1983]_.  In this method, a flat reflector, often made of acrylic or
+steel, is placed at various distances in front of the transducer, and the
+returned signal is recorded.  The spectra received is used to normalize the
+spectra obtained from the region of interest in tissue.
+
+While this is an improvement, there are still inaccuracies inherent to the
+system approximation.  The measurement is made in water, which does not exhibit
+scattering throughout the beam path as would occur in vivo, and water does not
+have the same attenuation properties as tissue.  Furthermore, it relies on good
+alignment between the transducer and reflector, which is increasingly difficult
+at higher frequencies.  Reference phantom based methods have been developed that
+ameliorate many of these inadequacies [Yao1990]_.  In this method, the signal from a
+reference phantom with well characterized properties is used in the spectral
+normalization instead of that of a flat reflector.  The reference phantom method
+has been attempted at low frequencies on carotid plaques [Shi2007, Waters2003]_, but has yet
+to be evaluated at higher frequencies.  At lower frequencies, the small volume
+and heterogeneity of the tissue makes spectral estimation difficult.  
+
 
 Strain imaging
 --------------
@@ -846,12 +887,12 @@ healthy artery.  Most importantly, it remains to be determined if registration
 and displacement compensation techniques are significantly effective for the significant motion
 that occurs *in vivo*. 
 
-Even though strain imaging holds much promise
-in the detection of vulnerable plaque, its success depends on the ability to
-measure strain accurately, with a large dynamic range, and with minimal noise.
-The research presented in this dissertation focuses on the development of improved
-strain imaging algorithms and techniques and applies them to the diagnosis of
-stroke risk due to carotid plaque disruption. 
+Even though strain imaging holds much promise in the detection of vulnerable
+plaque, its success depends on the ability to measure strain accurately, with a
+large dynamic range, and with minimal noise.  The research presented in this
+dissertation focuses on the development of improved strain imaging algorithms
+and techniques and applies them to the diagnosis of stroke risk due to carotid
+plaque disruption. 
 
 
 ~~~~~~~~~~
