@@ -652,7 +652,7 @@ lumen boundary since this is where rupture may occurs [Schaar2006]_.  Comparison
 of mean strain values and histology revealed higher strain colocalized with
 fatty areas and areas with increased concentration of macrophages
 [DeKorte2000]_.  In a study of 54 cross sections validated by history,
-palpography was found to have a sensitivity of 88% and a specifity of 89%.
+palpography was found to have a sensitivity of 88% and a specifity of 89% [Schaar2003]_.
 In a study of an atherosclerotic Yucantan minipig, it was found
 that mean strain correlated with tissue type and localized high strain values
 correlated with indicators of inflammation, macrophages [DeKorte2002a]_.  The
@@ -696,29 +696,92 @@ External transducer strain imaging
 
 Recently, strain imaging with external ultrasound imaging using linear array
 transducers has been attempted
-[Bang2003,Dahl2004,Kanai2003,Maurice2005a,Maurice2004a,Maurice2005,Ribbers2007,Stoitsis2005,Schmitt2007,Shi2008]_.
+[Ribbers2007,Schmitt2007,Shi2008]_.
 While the resolution of external ultrasound is much lower, it is noninvasive and
-appropriate for general stroke risk screening purposes.  The first plaque
-characterization based on an external clinical transducer, a 7.0 MHz Acuson
-linear array, was reported by Meairs and Hennerici in 1999 [Meairs]_.  While the
-bulk of research in this area ensued 5 years following, the quality of the
-Meairs and Hennerici paper supercedes later work.  4D *in vivo* characterization
-was performed on carotid artery plaques of 23 asymptomatic and 22 symptomatic
-patients by scanning the linear array with an ECG gated stepper motor.  The
-motion estimator was a hierarchical algorithm applied to laplacian filtered
-images that minimized a sum-of-squared differences cost function with the
-Gauss-Newton method.  They found that even though no significant differences in
-echogenicity ar surface structure between symptomatic and asymptomatic cases
-could be found, symptomatic plaques demonstrated inherent plaque movement
-relative to asymptomatic plaques.  Meairs evaluated two parameters: maximal
-surface velocity (MSV) and maximual discrepant surface velocity (MDSV).  They
-found that MSV, which is termed local displacement in other literature that
-does not account the inter-frame time period, did not have significant
-differences between symptomatic and asymptomatic cases.  In contract, MDSV,
-which is is termed local strain in other literature, did show a statistically
-significant difference between symptomatic and asymptomatic patients.
+appropriate for general stroke risk screening purposes.  
 
-Maurice2008a
+The first plaque optimizationstrain characterization based on an external
+clinical transducer, a 7.0 MHz Acuson linear array, was reported by Meairs and
+Hennerici in 1999 [Meairs1999]_.  While the bulk of research in this area ensued
+5 years following, the quality of the Meairs and Hennerici paper supercedes
+later work.  4D *in vivo* characterization was performed on carotid artery
+plaques of 23 asymptomatic and 22 symptomatic patients by scanning the linear
+array with an ECG gated stepper motor.  The motion estimator was a hierarchical
+algorithm applied to laplacian filtered images that minimized a sum-of-squared
+differences cost function with the Gauss-Newton method.  They found that even
+though no significant differences in echogenicity ar surface structure between
+symptomatic and asymptomatic cases could be found, symptomatic plaques
+demonstrated inherent plaque movement relative to asymptomatic plaques.  Meairs
+evaluated two parameters: maximal surface velocity (MSV) and maximual discrepant
+surface velocity (MDSV).  They found that MSV, which is termed local
+displacement in other literature that does not account the inter-frame time
+period, did not have significant differences between symptomatic and
+asymptomatic cases.  In contract, MDSV, which is is termed local strain in other
+literature, did show a statistically significant difference between symptomatic
+and asymptomatic patients.  Later,
+
+Bang et al. implemented a motion tracking algorithm similar to what is found in
+the elastography literature [Ophir2000, Ophir2001]_, though they appeared to be
+unaware of that body of literature [Bang2003,Dahl2004]_.  That is, a 2D cross
+correlation is calculated between small windows of tissue at frames contigious
+in time for different translations of the window.  The local displacement is
+assumed to correspond to the translation with highest correlation.  The
+precision of the correlation function can be improved with interpolation of the
+correlation matrix.  Their images appeared to be quite noisy, and the fidelity
+of their method can not be determined because there was not rigorous validation.
+However, they commented on a few challenges that exist in the image analysis.
+First, the selection of optimal correlation window size is required for good
+performance.  Second, a low framerate results in significant out-of-plane motion
+that diminishes tracking performance.
+
+Kanai et al. performed regional plaque displacement tracking in longitudinal
+plane images with the phase tracking method used by Kanai in cardiac strain
+applications [Kanai2003,Kanai1996,Kanai1997]_.  This method was tauted for
+having a precision of approximately 0.5 μm observed with a rubber plate in a
+water tank [Kanai2003]_.
+
+Recent efforts working towards noninvasive strain estimation come from The
+University of Montreal and Montreal Hospital, Quebec.  They call their motion
+tracking algorithm the Lagrangian speckle model estimator (LSME)
+[Maurice2004a,Maurice2005]_.  The algorithm is similar to the approach by taken
+by Meairs: local motion is formulated as an non-linear minimization problem
+where the cost function is a sum of squared difference in intensity.  The
+optimization algorithm utilized in this case is the Levenberg-Marquardt method
+instead of the Gauss-Newton method, and this motion model is a full affine
+transform instead of a simple translation.  The translation portion of the
+problem is determined by peaking 2D cross-correlation, while the linear
+transformation (scaling, rotation, and shearing) is treated as a nonlinear
+optimization problem.  In order for the model to incorporate decorrelation noise
+in their model, they have tried adding brightness offset and contrast parameters
+to the affine model [Schmitt2007]_.  They have also used an optical flow
+approach [Maurice2005a]_.  Unlike other methods where strains are calculated
+from the contrast in displacements of adjacent tracking points, strains are
+calculated from components of the linear transformation matrix of a single
+tracking point.  Their method was applied to 16 subjects without carotid
+atherosclerosis binned into four age categories, [40-49], [50-59], [60-69], and
+[70-79] years old.  While they were able to obtain reproducibility between left
+and right carotid and scanning from two independent radiologists, a
+statistically significant difference was not observed across age groups
+[Maurice2008a]_.
+
+The de Korte group from the Netherlands, whos efforts were previously focused on
+IVUS strain imaging, as described earlier, has recently forayed into the
+non-invasive strain imaging area [Ribbers2007]_.  A 2-D cross-correlation motion
+tracking technique was applied to a cylindrical phantom and some *in vivo* test
+cases.  Challenges noted in transverse images of the vessel mimicking phantom
+was the refraction artifact that occurs in this configuration.  The speed of
+sound change coupled with the curvature of the artery's inner wall redirects
+propagation of the ultrasound beam.  Observed motion distal to the lumen-artery
+interface can then actually be due to movement of the lumen-artery interface
+instead of local tissue, or the refracted signal may not return to the
+transducer, which makes motion tracking a challenge.
+
+Recently, Shi et al. from our laboratory presented preliminary results from
+diagnostic characterization of carotid endarterectory patients with strain
+imaging [Shi2008]_.  A hierachical 2D cross-correlation method was used for
+motion tracking.  The results indicted tho strain values correlated with
+calcific and non-calcific B-Mode presentation and that strain indices may
+differentiate symptomatic and asymptomatic cases.
 
 Angular compounding
 ~~~~~~~~~~~~~~~~~~~
