@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
-Convert latex math to images.  Treats the default and ``texmath`` roles as
-inline LaTeX math and the ``texmath::`` directive as display latex math.
+Convert latex math to images.  Treats the default and ``math`` roles as
+inline LaTeX math and the ``math::`` directive as display latex math.
 
 If you include a file which also needs mathhack/imgmathhack preprocessing,
 write a name containing ``.mathhack`` in the include directive and it will be
@@ -17,29 +17,18 @@ you should create both preprocessed versions of the file).
 
     You'll need:
 
-    - ``tex_to_images``, last version seems to live at the `speech_tools
-      CVS`__.
-      
-      __ http://cvs.sourceforge.net/viewcvs.py/*checkout*/
-         emu/speech_tools/scripts/tex_to_images.prl?rev=HEAD
-
-      It, in turn, relies upon:
-
-      - LaTeX
-      - ``dviselect`` (part of ``dviutils``)
-      - ``dvips``
-      - Ghoscript
-      - netpbm tools
+    - ``klatexformula``
 """
 
 import os, os.path, hashlib
+import subprocess
 
 from rolehack import *
 
 class Tex_to_images(object):
-    """Feeds math to ``tex_to_images``.  Always goes through ppm."""
-    def __init__(self, dir='./imgmath', options='-s 1.3 -u 6',
-                 converter='pnmtopng', extension='.png'):
+    """Feeds math to ``klatexformula``.  Always goes through ppm."""
+    def __init__(self, dir='./imgmath', options=['-X', '170', '-f', '#000000'],
+                 converter='klatexformula', extension='.png'):
         try:
             os.mkdir(dir)
         except OSError:
@@ -57,31 +46,20 @@ class Tex_to_images(object):
         fname = hashlib.md5(text).hexdigest()
         fpath = os.path.join(dir, fname)
         if not os.path.exists(fpath + extension):
-            f = file(fpath, 'w')
-            f.write('@Start\n%s\n@End\n' % (text,))
-            f.close()
-            next_command = ('tex_to_images -f ppm -d %(dir)s -o %(fname)s.tmp '
-                       '%(options)s < %(fpath)s >& /dev/null' % vars())
-            os.system(next_command)
-            #os.system(('tex_to_images -f ppm -d %(dir)s -o %(fname)s.tmp '
-                       #'%(options)s < %(fpath)s >& /dev/null' % vars()))
-            if self.converter:
-                next_command = '%s < %s.tmp > %s%s' % (self.converter, fpath, fpath, extension)
-                os.system(next_command)
-                #os.system('%s < %s.tmp > %s%s' %
-                          #(self.converter, fpath, fpath, extension))
-            else:
-                os.rename(fpath + '.tmp', fpath + '.ppm')
-            os.remove(fpath + '.tmp')
+            next_command = [converter, '-l', text,
+                    '-o', fpath + extension ]
+            next_command.extend( options )
+            subprocess.check_call( next_command )
         return fpath + extension
-    def texmath(self, text):
+    def math(self, text):
         text = ' '.join(text.split())
         src = self.process(text)
         return '''\
 image:: %(src)s
     :align: middle
-    :class: texmath
+    :class: math
     :alt: %(text)s
+
 ''' % locals()
     def texdisplay(self, text):
         src = self.process(text)
@@ -90,17 +68,18 @@ image:: %(src)s
     :align: center
     :class: texdisplay
     :alt: %(text)s
+
 ''' % locals()
 
 child = Tex_to_images()
-texmath = child.texmath
+math = child.math
 texdisplay = child.texdisplay
 
 def mangle_include(text):
     return 'include:: ' + text.replace('.mathhack', '.imgmathhack')
 
-#main({'texmath': texmath}, texmath,
-     #{'texmath': texdisplay, 'include': mangle_include})
+#main({'math': math}, math,
+     #{'math': texdisplay, 'include': mangle_include})
 # do not use the default role because it consumes our other roles
-main({'texmath': texmath}, None,
-     {'texmath': texdisplay, 'include': mangle_include})
+main({'math': math}, None,
+     {'math': texdisplay, 'include': mangle_include})

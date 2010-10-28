@@ -211,11 +211,11 @@ concentrators have received exhaustive attention in the Materials Science and
 Engineering discipline because of their relationship to material failure.  They
 define a *stress concentration factor* to be [Hibbeler2000]_
 
-.. texmath::  K = \frac{\sigma_{max}}{\sigma_{avg}}
+.. math::  K = \frac{\sigma_{max}}{\sigma_{avg}}
 
-The stress concentration factor, :texmath:`K`, is the maximum stress caused by
-the disturbance in uniformity, :texmath:`\sigma_{max}`, divided by the reference
-stress, :texmath:`\sigma_{avg}`.  This concept is relevant not only to
+The stress concentration factor, :math:`K`, is the maximum stress caused by
+the disturbance in uniformity, :math:`\sigma_{max}`, divided by the reference
+stress, :math:`\sigma_{avg}`.  This concept is relevant not only to
 industrial materials such as metals and ceramics, but biological tissues
 including plaque [Meairs1999]_.  
 
@@ -627,8 +627,8 @@ intima sectioned from cadaver iliac arteries [Holzapfel2004]_.  As the graph
 progresses from the origin, the stretch and stress is increased on the tissue
 until the tissue fractures at the curve's termination.  The point in the curve
 farthest from the origin defines the stretch at which failure occurs, ultimate
-tensile stretch :texmath:`\lambda_{ult}`, and the stress at which failure
-occurs, ultimate tensile stress, :texmath:`\sigma_{ult}`.
+tensile stretch :math:`\lambda_{ult}`, and the stress at which failure
+occurs, ultimate tensile stress, :math:`\sigma_{ult}`.
 
 .. figure:: introduction/figures/holzapfel_intima.png
   :width: 8cm 
