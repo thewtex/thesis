@@ -86,9 +86,13 @@ Folding or tearing is not likely or possible in physical tissues, so
 diffeomorphic behavior should be enforced.
 
 Peak-hopping errors in block-matching methods will result in non-diffeomorphic
-displacement maps.  Since regularization helps to enforce diffeomorphic behavior with
-block-matching methods, it helps to remove peak-hopping errors in addition to
-generally improving the motion estimates.
+displacement maps.  Since regularization helps to enforce diffeomorphic behavior
+with block-matching methods, it helps to remove peak-hopping errors in addition
+to generally improving the motion estimates.  The motion estimates are improved
+by addressing quantization and decorrelation noise as well as addressing the
+"aperture" problem [Horn1981]_.  The aperture problem recognizes that a block
+may not have derivatives in the image intensity in all directions, and it is
+difficult to determine displacement in directions where gradients are small.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prior Efforts in Regularization
@@ -199,6 +203,160 @@ displacement.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Recursive Bayesian Regularization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+We will examine a regularization approach that attempts to optimize the
+displacement using both the block similarity metric and the motion of
+neighboring blocks.   However, unlike the aforementioned algorithms, we do not
+explicitly formulate the problem as the minimization of a cost function.
+Instead, we follow the approach proposed by Hayton et al. [Hayton1999]_ where
+the similarity metric is viewed in a probabilistic framework.  Iterative
+Bayesian regularization is applied based on the similarity metric observed in
+neighboring blocks.  Hayton et al.[Hayton1999]_ originally applied this method
+for deformable image registration of magnetic resonance images obtained during
+breast imaging.  The purpose of the algorithm was to register MR breast images
+taken before and after injection of a contrast agent, Gd-DTPA.  Without
+registration, patient motion due to breathing and other motion would interfere
+with effective analysis of the images.  A mutual information similarity metric
+was used and a multi-scale implementation was generated.  After the
+block-matching displacement estimates were obtained, they were used as initial
+values for a deformable cubic B-spline motion model that was regularized by a
+smoothing term
+
+.. math:: \rho \int \int u_{xx}^2 + 2 u_{xy}^2 + u_{yy}^2
+
+and optimization performed with the conjugate gradient descent method.
+
+The paper by Hayton has been referenced many times in the literature, but the
+author has not found a paper the reimplemented and applied the algorithm.
+However, another paper that describes application of the algorithm to an
+ultrasound registration case was published from the same Michael Brady Oxford
+University group.  Xiao et al. applied this method to the registration of 3D
+B-Mode ultrasound subvolumes[Xiao2002]_.  B-Mode breast ultrasound volumes were
+collected by free-hand sweeping of a 2D ultrasound transducer.  Multiple sweeps
+are obtained to obtain a larger area and reduce speckle noise through spatial
+compounding.  Differing sweep speeds, angles, and tissue deformation require
+deformable registration of the sub-volumes.  In contrast to the Hayton MR paper,
+normalized cross correlation was used as a similarity metric and single-level
+searching was performed.  Like the Hayton experiment, the resulting
+displacements where input into a cubic B-spline parameter optimization with a
+smoothing term consisting of squares of the second derivatives of displacement
+and solved with the conjugate gradient descent method.
+
+Algorithm
+=========
+
+In block-matching methods, a small kernel from the pre-deformation image is
+compared to the post-deformation image using a similarity metric
+[Ophir1991,Ophir2001]_.  We assume the comparison is made on a regular grid of
+points by translating the kernel within a specified search region.  The grid of
+similarity metric values located at the kernel's center define a similarity
+metric image associated with the kernel utilized for displacement estimation.
+Examples of similarity metrics include sum of absolute difference, sum of
+squared differences, normalized cross correlation, phase correlation, or mutual
+information [Zitova2003,Crum2004]_.
+
+We can treat the similarity metric image as a probability image for the
+displacement of the kernel by applying a few basic transformations.  First, the
+similarity must be inverted, if necessary, such that the maximum value
+corresponds the region with the greatest similarity.  Next, the metric must be
+shifted by the negative of the metric's theoretical minimum so the smallest
+resulting value is zero.  In the case of normalized cross correlation, 1.0 is
+added to the similarity metric since its bounds are :math:`[-1, 1]`.  For most
+other similarity metrics, this is a null operation.  Finally, the similarity
+metric values are normalized by their sum such that integral of all values is
+unity.  The similarity metric image can now be treated as a probability image
+for displacement estimation using the kernel.  A value of zero in the probability image occurs
+at the metric's theoretical minimum with the sum of probabilities being unity.
+
+The probability images obtained are prior probability estimates, :math:`Pr( \mathbf{u_x} )`, in
+a Bayesian framework.
+
+.. math:: Pr( \mathbf{u_x} | \mathbf{u}_{\mathcal{N}_x} ) = \frac {Pr( \mathbf{u}_{\mathcal{N}_x} | \mathbf{u_x} ) Pr( \mathbf{u_x} )} { Pr ( \mathbf{u}_{\mathcal{N}_x} ) }
+
+where :math:`\mathbf{u_x}` is the displacement of the kernel at location :math:`\mathbf{x}` and
+:math:`\mathbf{u}_{\mathcal{N}_x}` is the displacement at the neighboring kernels.  The
+denominator, :math:`Pr ( \mathbf{u}_{\mathcal{N}_x} )` serves at as a normalizing
+constant.  This factor is accounted for by re-normalization at the end of every
+iteration of the algorithm.
+
+We assume that :math:`Pr ( \mathbf{u}_{\mathcal{N}_x} | \mathbf{u_x} )` can be
+modeled by the probabilities of the displacements estimated at immediate
+neighbors, i.e. four neighbors in 2D.  In addition, we assume that these
+probabilities are independent.
+
+.. math:: Pr ( \mathbf{u}_{\mathcal{N}_x} | \mathbf{u_x} ) = \prod_{\mathbf{x'} \in \mathcal{N}_x} Pr( \mathbf{u_{x'}} | \mathbf{u_x} )
+
+Here :math:`Pr( \mathbf{u_{x'}} | \mathbf{u_x} )` is the probability that a neighboring block at
+:math:`\mathbf{x}'` has a displacement :math:`\mathbf{u_{x'}}` given a displacement :math:`\mathbf{u_x}` at
+:math:`\mathbf{x}`.  The assumption of independence is usually invalid, but iterative
+application of the algorithm is intended to account for some of the expected
+correlation between neighboring displacement estimates.
+
+We model :math:`P( \mathbf{u_{x'}} | \mathbf{u_x} )` as the maximum of the neighboring probability image modulated
+by a Gaussian term.
+
+.. math:: Pr( \mathbf{u_{x'}} | \mathbf{u_x} ) = \max_{\mathbf{v}} \left[ Pr( \mathbf{v_{x'}} ) \exp( \frac{- || \mathbf{v_{x'}} - \mathbf{u_x} || ^2 } { 2 \mathbf{\sigma_u}^2 } ) \right]
+
+Here :math:`\mathbf{v_{x'}}` is the displacement at :math:`\mathbf{x'}`.  We
+restrict the above to :math:`|| \mathbf{v_{x'}} - \mathbf{u} || < \epsilon`,
+where :math:`\epsilon` is a threshold.  The :math:`\mathbf{\sigma_u}`: is a vector that determines the width of Gaussian-like term for each direction.  If :math:`\delta_x` is the spacing
+between kernels in one direction, then :math:`\sigma_\varepsilon = \sigma_u / \delta_x`, the strain regulation sigma (SRS),
+represents the algorithm's parameter in terms of a factor related to the
+expected strain.  Spacing between kernels can be decreased by increasing kernel
+overlap or decreasing their dimension.
+
+A likelihood term for the Bayesian model can then be written as,
+
+.. math:: Pr( \mathbf{u}_{\mathcal{N}_x} | \mathbf{u_x} ) = \prod_{\mathbf{x'} \in  \mathcal{N}_x} Pr( \mathbf{u_{x'}} | \mathbf{u_x} ) = \prod_{\mathbf{x'} \in  \mathcal{N}_x} \max_{\mathbf{v}} \left[ Pr( \mathbf{v_{x'}} ) \exp( \frac{- || \mathbf{v_{x'}} - \mathbf{u} || ^2 } { 2 \mathbf{\sigma_u}^2 } ) \right]
+
+The influence of neighbors beyond adjacent blocks can be achieved by
+recursively applying the regularization.
+
+The displacement of the kernel is taken according to the *maximum a posteriori*
+principle.
+
+.. math:: \mathbf{u_x} = \arg\max_{ \mathbf{u_x} } Pr( \mathbf{u_x} | \mathbf{u}_{\mathcal{N}_x} )
+
+Subsample precision of the displacement is achieved using interpolation of the
+posterior probability.
+
+Implementation
+==============
+
+A multi-threaded version of the described algorithm was implemented with the
+Insight Toolkit [Yoo2002]_ using normalized cross-correlation as the similarity
+metric for the results presented in this article.
+
+The search region was 17 A-lines in the lateral direction along with sufficient
+data points along the axial direction to capture the maximum displacement for
+the following analysis.  A simple unguided search was used, which is sufficient
+for the following analysis but not computationally efficient.  The means to
+provide a computationally efficient implementation is achieved with the
+multi-resolution methods described in the other chapters.  For a 2D image, the
+computational complexity scales with order :math:`\mathcal{O}(n^2)` for a search
+region of side length *n*.  That is, the computational quadruples as the size of
+the search region doubles.  The size of the search region can be significantly
+reduced by using a coarse-to-fine or multi-scale approach.  Motion estimates
+from sub-sampled images are used to initialize the center of the search region
+in finer resolution images.
+
+The quantity :math:`\epsilon`, where :math:`|| \mathbf{v_{x'}} -
+\mathbf{u} || < \epsilon` was taken to be :math:`3 \sigma_u`.
+
+We followed the recommendations described in [Hayton1999]_ and [Xiao2002]_ and applied the
+natural logarithm operator before the exponential operator after computing
+posterior probabilities.  The idea is that additions, which are not as
+computationally expensive as multiplications, can be used in the
+convolution-like operation used for computing posterior probabilities.  That is, the
+log posterior probability is computed using
+
+.. math:: Pr_{log} ( \mathbf{u_x} | \mathbf{u}_{\mathcal{N}_x} ) \propto \sum_{\mathbf{x'} \in  \mathcal{N}_x} \max_{\mathbf{v}} \left[ Pr_{log} ( \mathbf{v_{x'}} ) - \frac{ || \mathbf{v_{x'}} - \mathbf{u} || ^2 } { 2 \mathbf{\sigma_u}^2 } \right] + Pr_{log} ( \mathbf{u_x} )
+
+The statement is only proportional because it does not contain the denominator
+in Bayes' Theorem, which is accounted for by re-normalization after taking the
+exponential of the posterior probability.
+
+
 
 ~~~~~~~
 Results
