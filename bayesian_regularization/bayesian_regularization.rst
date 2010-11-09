@@ -15,6 +15,15 @@ studies.
 Improvement of Strain Image Quality with Regularization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+The deformable image registration problem is common in medical imaging
+[Zitova2003, Crum2004]_.  It is used to monitor tumor growth, compensate for
+patient motion, register to a common atlas, etc.  In the context of ultrasound
+strain imaging, estimating local is the first step in a two stage process; in
+the second step strains are calculated from the estimated displacements.  In
+some cases strain is estimated iteratively along with the displacements in order
+to improve the quality of strain estimation
+[Brusseau2001,Maurice2004a,Brusseau2008]_, but all algorithms take this form.
+
 In simple block-matching image registration methods, the registration of a block
 is isolated to the given block.  Motion of the block is local, and motion of
 surrounding regions is not considered in determination of the block's
@@ -84,6 +93,108 @@ generally improving the motion estimates.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Prior Efforts in Regularization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Peak hopping errors and degradation in the quality of the strain image results
+primarily from signal decorrelation [Varghese2001, Varghese1998]_.  The source
+of signal decorrelation can be large axial deformations that distort the signal,
+motion of tissue in the elevational direction relative to the probe, or
+undesirable physiological motion [Kallel1997,Kallel1997a]_.
+
+Most approaches to address signal decorrelation can be placed in two categories.
+One strategy trys to reduce peak hopping be restricting the search region of a
+matching kernel.  Tighter search regions are feasible when the center of the
+search region is initialized appropriately.  Sometimes, *a priori* knowledge of
+the type of motion expected is used to initialize search regions.  Hall et al.
+described an implementation where the displacement is always assumed to be null
+at the transducer surface [Hall2003]_.  This is a reasonable assumption since
+the transducer must always remain in contact with the tissue to generate an
+image and the stiffness of transducer is so much higher than the soft tissue, it
+can be considered a rigid body.  Motion tracking starts from the transducer
+surface, and the displacement estimates are used initialize search regions
+deeper into tissue.  Basarab et al. describe a similar strategy [Basarab2008]_.
+Search regions are propagated by displacement estimates starting from the center
+of the transducer.  The points initialized are set in a "V" shaped front in
+order to better initialize lateral displacements since lateral displacement is
+often near zero at the transducer's center during freehand compression and
+increases towards the edges of the transducer.
+
+Search region initialization strategies that do not depend on the presence of
+locations of zero displacement somewhere in the image use points or lines of
+high displacement estimation confidence.  Instead of propagating search region
+centers axially from the transducer, estimates can be propagated from an A-line
+of high confidence [Jiang2007,Rivaz2010]_ or diagonally [Zahiri-Azar2006]_.
+Chen, Treece, Lindop, Gee, and Prager have described a quality-guided algorithm
+that uses multiple seed points [Chen2009]_.  The initial seed points required a
+large search region.  After initialization, search regions are kept small.
+Displacements are estimated from neighbors adjacent to the seed with the search
+region centered at the seed's displacement.  Among these neighbors and the other
+seed's neighbors, the location with the best quality metric is used to
+initialize the next set of search regions.  The process proceeds iteratively
+until the entire image has been tracked, and search region initialization
+propagates from location of highest tracking quality.  The quality metric used
+was normalized cross correlation.
+
+A weakness of the other search region initialization algorithms that the seeds
+algorithm overcomes is the presence of discontinuous locations.  This can occur
+with a slip boundary along a tumor or the vessel wall of the carotid artery, for
+example.  This weakness is also overcome by a coarse-to-fine scheme where
+displacements from a large kernel or low-pass filtered and sub-sampled kernel
+initializes the conter of the search region at progressively smaller kernel
+sizes to achieve a high resolution strain image [Pellot-Barakat2004, Shi2007,
+Yeung1998, Chen2007, Bai1999, Basarab2008, Lopata2009]_.  This multi-resolution
+pyramid approach is commonly employed in many different types of registration
+problems.  Since tracking in the coarse image can be performed on subsample
+data, initialized is performed quickly.  Also, robustness is improved because
+initializition occurs near the final solution and local minima in the high
+frequency speckle are avoided.
+
+The second strategy to address decorrelation noise in ultrasound displacement
+estimation incorporates displacements from neighboring blocks into the
+displacement estimation equation.  Filtering approaching remove noise but come
+at the cost of reduced strain dynamic range and spatial resolution.  For
+example, a median filter can be used to remove outliers, [Thitaikumar2008a]_.
+During estimation of strains from estimated displacement, a least squares fit to
+the displacement can be used estimate the local slope in displacement, i.e. the
+strain [Kallel1997a]_.  A statistical model of the displacements can be taken
+and the Kalman filter used during estimation for the strain [Rivaz2010]_.
+Alternatively, as mentioned previously, a cost function optimization approach
+can be taken involving a similarity metric term and a displacement continuity
+term.  Both Jiang and Rivaz describe implementations of this approach that use
+dynamic programming, sometimes called the Viterbi algorithm, to solve the
+optimization problem [Jiang2009,Rivaz2008]_.  Dynamic programming is a global, non-iterative
+optimization strategy that finds the shortest path through transitioning states
+given a cost to go from one state to the next set of states.  In the context of
+block-matching motion tracking, each state represents the displacement of a
+kernel.  The next set of states is the displacement of the next kernel along an
+A-line.  The transition cost is the chosen cost function that has a similarity
+and a continuity term.  In Jiang's paper, normalized cross correlation was used
+as a similarity metric and a number of continuity terms were examined
+[Jiang2009]_,
+
+.. math:: S = \sqrt{ \left( \frac{\delta \overrightarrow{u}}{\delta x} \right)^2 + \left( \frac{\delta \overrightarrow{u}}{\delta y} \right)^2 }
+
+.. math:: E_{c,a} = \frac{S}{ \sqrt{|S|^2 + \beta}}
+
+.. math:: E_{c,b} = \left\lbrace{ \begin{tabular}{ll} $e^S - 1,$ & $S < 2$ \\ $\frac{S}{ \sqrt{|S|^2 + \beta}} + e^2 - 1,$ & $S \geq 2 $ \end{tabular} } \right.
+
+.. math:: E_{c,c} = 2 \, (e^S - 1)
+
+In Rivaz's article, he examined sum of absolute differences as a similarity
+metric and the following continuity term[Rivaz2008]_,
+
+.. math:: E_c = ( d_i - d_{i-1} )^2
+
+where d\ :sub:`i` is the displacement at sample *i*.
+
+Brusseau used a sequential quadratic programming strategy to solve the
+optimization problem.  This is a Newton like optimization technique that allows
+for constrained parameters.  She applied normalized cross correlation as the
+similarity metric and used the following as a continuity term [Brusseau2008]_,
+
+.. math:: E_c = \left( \frac{ \alpha - \alpha_{average} }{ \alpha_{max} - \alpha_{min}} \right)^2 + \left( \frac{u - u_{average}}{ u_{max} - u_{min} } \right) ^2
+
+Where *α* is a scaling factor related to the local strain and *u* is the local
+displacement.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Recursive Bayesian Regularization
