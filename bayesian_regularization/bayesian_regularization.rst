@@ -258,15 +258,20 @@ information [Zitova2003,Crum2004]_.
 We can treat the similarity metric image as a probability image for the
 displacement of the kernel by applying a few basic transformations.  First, the
 similarity must be inverted, if necessary, such that the maximum value
-corresponds the region with the greatest similarity.  Next, the metric must be
-shifted by the negative of the metric's theoretical minimum so the smallest
-resulting value is zero.  In the case of normalized cross correlation, 1.0 is
-added to the similarity metric since its bounds are :math:`[-1, 1]`.  For most
-other similarity metrics, this is a null operation.  Finally, the similarity
-metric values are normalized by their sum such that integral of all values is
-unity.  The similarity metric image can now be treated as a probability image
-for displacement estimation using the kernel.  A value of zero in the probability image occurs
-at the metric's theoretical minimum with the sum of probabilities being unity.
+corresponds the region with the greatest similarity.  For normalized cross
+correlation or mutual information this is not required, but it is required for
+most other similarity metrics.  Next, the metric must be shifted by the negative
+of the metric's theoretical minimum so the smallest resulting value is zero.  In
+the case of normalized cross correlation, 1.0 is added to the similarity metric
+since its bounds are :math:`[-1, 1]`.  In the case of an inverted sum of squared
+differences, the theoretical minimum is negative infinity, but real world
+limited bit depth integer data and with finite signal length allow the use of a
+reasonable finite lower bound.  Finally, the similarity metric values are
+normalized by their sum such that integral of all values is unity.  The
+similarity metric image can now be treated as a probability image for
+displacement estimation using the kernel.  A value of zero in the probability
+image occurs at the metric's theoretical minimum with the sum of probabilities
+being unity.
 
 The probability images obtained are prior probability estimates, :math:`Pr( \mathbf{u_x} )`, in
 a Bayesian framework.
@@ -356,19 +361,127 @@ The statement is only proportional because it does not contain the denominator
 in Bayes' Theorem, which is accounted for by re-normalization after taking the
 exponential of the posterior probability.
 
-
-
-~~~~~~~
-Results
-~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Experimental Methods and Results
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Uniform Strain Simulations and Phantoms
 =======================================
 
+A uniform elastic modulus tissue-mimicking ultrasound phantom was tested.
+Frames of data were continuously collected as the unconstrained phantom was
+deformed with an acrylic plate.  The plate was  fitted with a transducer at the
+center and translated using a linear motion table.  The phantom was scanned
+using a Siemen's S2000 (Siemens Ultrasound, Mountain View, CA, USA) clinical
+ultrasound system equipped with a VFX9-4 transducer and the plane through the
+center of the sphere imaged.  The transducer was excited at 8.9 MHz and
+radiofrequency (RF) data was sampled at 40 MHz to a depth of 5.5 cm.
+
+Twenty independent deformation experiments were performed by varying the
+pre-deformation frame index within the continuous loop to obtain statistically
+significant results.  The frame average strain was controlled by the frame skip
+between pre-deformation and post-deformation frames.
+
+Displacement estimation error was quantified using the elastographic
+signal-to-noise (SNRe) ratio in the axial direction [Ophir2001]_
+
+.. math:: SNR_e [dB] = 20 \log10 \; ( \frac {m_\varepsilon} {s_\varepsilon} )
+
+where :math:`m_\epsilon` and :math:`s_\epsilon` are the mean and standard
+deviation of the axial strain, respectively.  Calculation of the SNRe
+was restricted to the area around the transducer's focus.
+
+Numerical ultrasound simulations were designed to mimic the ultrasound physics
+and solid body mechanics present in the phantom.  The RF data was generated
+using an ultrasound frequency domain simulation program developed in our
+laboratory [Li1999]_.  Uniformly distributed collections of randomly positioned
+acoustic scatterers were generated and their response to a linear array
+transducer over a range of frequencies calculated.  A particular ultrasound
+transducer was simulated by multiplying the phantom response in the frequency
+domain with the spectrum for the ultrasound transducer of interest.  A single
+row of 128 elements was the aperture, with a spacing of 0.2 mm between elements.
+An individual element had a size of 0.15 mm laterally and 10 mm elevationally.
+The beamspacing was 0.2 mm, and the transmit focus was located at a depth of 20
+mm.  This yielded the Fourier Transform of the RF data of interest.  For these
+experiments, the simulated transducer's spectrum was modeled as Gaussian with a
+center frequency of 8.0 MHz and a 40% fractional bandwidth. The simulated
+transducer array had a channel count of 128 elements.  Displacements were
+applied to the individual scatterers that made up each numerical phantom, to
+produce a set of post-deformation numerical phantoms and the accompanying RF
+data.  A 40mm×40mm×10mm volume of scatterers was simulated.
+
+The deformation field for a uniform elastic modulus phantom undergoing
+unconstrained compression along the axial direction is simply a linear increase
+in displacement starting from zero at the transducer surface.  The slope of the
+displacement is the amount of strain applied.  In the lateral direction the
+displacement often starts from zero at the center of the phantom and increases
+linearly towards the edge of the phantom.  The slope of the displacement is the
+applied axial strain multiplied by Poisson's ratio.  If we assume an
+incompressible material as is common for soft tissues and the gelatin phantoms,
+the Poisson's ratio is near 0.5.
+
+Deformation estimation statistics on n=30 randomly generated
+collections of scatterers were collected.
+
+The simulations of a uniformly elastic TM block were examined in a manner
+similar to the uniform TM phantom and evaluated for variations in the SNRe with
+applied deformation.
 
 Circular Inclusion Simulations and Phantoms
 ===========================================
 
+A TM ultrasound elastography phantom subject to uniform deformation was imaged
+using a clinical ultrasound scanner.  The 10×10×10 cm gelatin phantom had a 1.0
+cm spherical inclusion near its center.  This type of phantom is common in the
+elastography literature because of its simple, well known behavior and
+resemblance to a tumor within background tissue.
+
+Displacement estimation error for comparison with the median filter and
+optimization of SRS was computed as follows.  The estimated displacements were
+interpolated with cubic B-spline interpolation such that the sampling of the
+displacement image matched that of the RF data.  The inverse displacement was
+applied to each pixel in the pre-deformation image, and windowed-sinc
+interpolation applied to find the corresponding RF value in the post-deformation
+image.  A mean absolute RF difference (MARD) is reported excluding the edges of
+the image where edge effects or out-of-bounds conditions may occur.
+
+.. math:: MARD = \frac{ \sum_{i=1}^n | I_m(\mathbf{x}_i - \mathbf{u}_{x,i}) - I_f(\mathbf{x}_i) | } { n }
+
+Where :math:`I_m` is the interpolated RF value in the post-deformation (moving)
+image and :math:`I_f` is the RF value in pre-deformation (fixed) image.
+
+In order to simulate the circular inclusion, displacement fields were generated
+by specifying the mechanical properties of interest, and applying uniform
+displacements as boundary conditions using commercially available finite element
+software, ANSYS (ANSYS Inc, Pittsburgh, PA, USA).  Displacement fields were
+simulated for a simulation having a uniform background modulus of 2kPa and a
+circular inclusion with a modulus of 8 kPa.  The inclusion's diameter was 8 mm.
+Boundary conditions were as follows.  Uniform displacements were applied across
+the tops of each simulation in the axial direction such that the nominal strain
+produced in the simulation was equal to 0.5%,
+1.0%, 3.0%, 5.0%, 7.0%, and 9.0%.  The bottom of the simulation was constrained to
+have no axial displacement, and a single node was fixed in the lateral
+direction at the bottom, central node to ensure uniqueness of the solution.
+Displacement fields from a nearly incompressible (Poisson's ratio of 0.495)
+material model in a plane stress state were simulated and applied to the
+numerical phantoms.  The mechanical model represents a cylindrical inclusion
+in an unconstrained background, which is similar in its deformation to the
+spherical inclusion phantom [Skovorada1994]_.
+
+Again, deformation estimation statistics on n=30 randomly generated
+collections of scatterers were collected.
+
+Displacement estimation error for comparison with the median filter and
+optimization of SRS were computed as follows.  Output
+displacements from the finite element simulation were interpolated with cubic
+B-spline interpolation at locations where displacement estimation occurred.  A
+mean absolute axial displacement difference (MADD) is reported excluding the edges of
+the image, where edge effects may occur.
+
+.. math:: MADD = \frac{ \sum_{i=1}^n | \hat{u}_a - u_a | } { n }
+
+Where :math:`\hat{u}_a` is the estimated axial displacement and :math:`u_a` is
+the known axial displacement.
 
 Addressing a Carotid Reverberation
 ==================================
