@@ -490,6 +490,25 @@ Addressing a Carotid Reverberation
 Improvement of Carotid Strain Images
 ====================================
 
+In order to examine the performance from data closer to what is expected in
+clinical application, we examine strain images in a carotid plaque case study
+and also from porcine liver and a breast cancer case.  A different transducer
+was used to collect the carotid RF signal than the phantom images, the Siemens
+18L6 linear array (Siemens Ultrasound, Mountain View, CA, USA).  The carotid
+images are a longitudinal view of primarily the common carotid with some plaque
+into the bulb on the left side of the image.  The source of deformation in this
+case is blood pressure.  A second set of images correspond to a radiofrequency
+(RF) ablation performed on an open-abdominal *in vivo* porcine model with a
+healthy liver.  The study of approved by the research animal care use committee
+of the University of Wisconsin-Madison.  Details about this study are presented
+in [Rubert2010]_.  The source of deformation in this case was movement of the
+ablation electrode and breathing of the animal.  This case used the Siemens 9L4
+transducer.  The third set of images are strain images generated from a breast
+invasive ductal carcinoma [Xu2010]_ approved by the UW-Madison IRB.  In this
+case, the source of deformation is compression of the ultrasound transducer.  RF
+data was collected from a Siemen's VFX13-5 transducer to generate the breast
+images.
+
 
 ~~~~~~~~~~
 References
