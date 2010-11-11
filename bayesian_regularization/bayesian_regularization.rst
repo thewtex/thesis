@@ -12,11 +12,13 @@ Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
 
 .. |comparison_images_breast| replace:: Fig. 5
 
-.. |metric_plot| replace:: Fig. 6
+.. |metric_plot_uniform| replace:: Fig. 6
 
-.. |e_sigma_plot| replace:: Fig. 7
+.. |metric_plot_inclusion| replace:: Fig. 7
 
-.. |optimization_plot| replace:: Fig. 8
+.. |e_sigma_plot| replace:: Fig. 8
+
+.. |optimization_plot| replace:: Fig. 9
 
 This chapter describes how a recursive Bayesian regularization algorithm can be
 applied during ultrasound displacement estimation to improve the quality of
@@ -447,15 +449,27 @@ In order to visualize the effectiveness of recursive Bayesian regularization, we
 quantified errors at 0.5%, 1.0%, 3.0%, 5.0%, 7.0%, and 9.0% strain in the TM
 phantom and numerical simulation images.  Tracking kernel size used was
 41 points (0.8 mm) in the axial direction and 9 points (1.1 mm) in the lateral
-direction.
+direction.  Error bars denote two standard errors
+of the error measures corrected for repeated measure means [Cousineau2005]_.
+
 
 .. figure:: images/metric_plot_bottom_two.png
   :align: center
   :width: 10cm
   :height: 8.7cm
 
-  Motion tracking quality (SNRe) versus applied strain for a) uniform phantom and b)
+  |metric_plot_uniform|.  Motion tracking quality (SNRe) versus applied strain for a) uniform phantom and b)
   uniform simulation.
+
+In |metric_plot_uniform| we see that, especially for high strains, the Bayesian
+regularization outperforms median filtering or no regularization.  The same
+bandpass type pattern [Varghese1997]_ is seen for both the phantom and
+simulation.  With regularization, the simulation performs better at the highest
+strain, 9.0%.  This may be explained by the deformation model used in the
+simulation: the simulation does not account for out of plane motion, which may
+occur at high strains and cause large signal decorrelation.  Not that for very
+low strains, 0.5%, the Bayesian regularization causes a regression in
+performance.
 
 Circular Inclusion Simulations and Phantoms
 ===========================================
@@ -522,7 +536,7 @@ strain.  We also generated strain images after filtering the displacements with 
   :width: 14cm
   :height: 5cm
 
-  |comparison_images_phantom| Phantom axial strain images with different types of regularization applied.
+  |comparison_images_phantom|.  Phantom axial strain images with different types of regularization applied.
   a) No regularization.  b) 3×3 median filter applied to the displacements.  c)
   Three iterations of the proposed regularization algorithm.
 
@@ -531,7 +545,7 @@ strain.  We also generated strain images after filtering the displacements with 
   :height: 5cm
   :align: center
 
-  |comparison_images_simulation| Simulation axial strain images with different
+  |comparison_images_simulation|.  Simulation axial strain images with different
   types of regularization applied.  a) No regularization.  b) 3×3 median
   filter applied to the displacements.  c)  Three iterations of the proposed
   regularization algorithm.
@@ -560,12 +574,33 @@ are not removed as illustrated in |comparison_images_simulation|\ (c).
   :width: 10cm
   :height: 8.7cm
 
-  Motion tracking quality versus applied strain for a) spherical inclusion
+  |metric_plot_inclusion|.  Motion tracking quality versus applied strain for a) spherical inclusion
   phantom and b) cylindrical inclusion phantom simulation.  Different quality
   metrics are applied to the appropriate experiment-- a) uses mean absolute RF
   phantom image RF difference (MARD) versus regularization method (lower is
   better) and b) uses mean absolute displacement difference between the simulated and
   estimated displacements (lower is better).
+
+Quantification of the results observed visually in |comparison_images_phantom|,
+are shown in |metric_plot_inclusion|\ (a) and the corresponding simulation
+results indicated visually in |comparison_images_simulation| are plotted in
+|metric_plot_inclusion|\ (b).  Mean error metrics for the inclusion experiments
+are plotted against strain for each regularization method.  Error bars again
+denote two standard errors of the error measures corrected for repeated measure
+means [Cousineau2005]_.  Results are consistent across strain content,
+simulation and phantom data, and method for measuring the tracking quality of
+the estimated displacement.  Bayesian regularization greatly improves motion
+tracking performance over no regularization and median filtering at large
+strains, 5.0% and higher.  Improvement is on par with median filtering at
+moderate strains, 3.0%.  For small strains, <1.0%, Bayesian regularization may
+decrease performance relative to no regularization.  In general,
+increased iterations of the proposed algorithm results in greater improvement,
+but the relative improvement from three iterations to five iterations is much
+smaller than one iteration to three iterations.  In contrast, the ideal median
+filter size varies depending on the strain content and the amount of applied
+deformation.  This is consistent with our visual observations of the algorithm's
+behavior; images improve up to approximately three iterations after which the
+improvement is not as noticeable.
 
 Optimal SRS
 ===========
@@ -662,7 +697,9 @@ compression during systole.  Bayesian regularization removes many of the peak
 hopping artifacts in the areas of high strain, roughly 3% and higher.  However, note that in areas
 distant from the vessel wall, where there is little to no deformation, Bayesian
 regularization introduces additional artifacts compared to the case with no
-regularizations.  The MARD was 55.6, 50.5, and 46.6 for no correction, median
+regularizations.  This may be expected given the poor performance at very low
+strains that is observed in |metric_plot_uniform| and |metric_plot_inclusion|.
+The MARD was 55.6, 50.5, and 46.6 for no correction, median
 filtering, and Bayesian regularization, respectively.  Consistent results are
 also visible in the breast cancer image, and the MARD corroborates with 88.0,
 73.39, and 68.7 for no regularization, median filter, and Bayesian
