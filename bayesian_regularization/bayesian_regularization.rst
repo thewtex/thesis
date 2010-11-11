@@ -2,6 +2,22 @@
 Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
 ======================================================================
 
+.. |comparison_images_phantom| replace:: Fig. 1
+
+.. |comparison_images_simulation| replace:: Fig. 2
+
+.. |comparison_images_liver| replace:: Fig. 3
+
+.. |comparison_images_carotid| replace:: Fig. 4
+
+.. |comparison_images_breast| replace:: Fig. 5
+
+.. |metric_plot| replace:: Fig. 6
+
+.. |e_sigma_plot| replace:: Fig. 7
+
+.. |optimization_plot| replace:: Fig. 8
+
 This chapter describes how a recursive Bayesian regularization algorithm can be
 applied during ultrasound displacement estimation to improve the quality of
 carotid strain images.  First, we describe regularization's role in the block-
@@ -427,6 +443,12 @@ The simulations of a uniformly elastic TM block were examined in a manner
 similar to the uniform TM phantom and evaluated for variations in the SNRe with
 applied deformation.
 
+In order to visualize the effectiveness of recursive Bayesian regularization, we
+quantified errors at 0.5%, 1.0%, 3.0%, 5.0%, 7.0%, and 9.0% strain in the TM
+phantom and numerical simulation images.  Tracking kernel size used was
+41 points (0.8 mm) in the axial direction and 9 points (1.1 mm) in the lateral
+direction.
+
 Circular Inclusion Simulations and Phantoms
 ===========================================
 
@@ -483,6 +505,68 @@ the image, where edge effects may occur.
 Where :math:`\hat{u}_a` is the estimated axial displacement and :math:`u_a` is
 the known axial displacement.
 
+We present estimated axial strain images with and without regularization at 5.0%
+strain.  We also generated strain images after filtering the displacements with a 3×3,
+5×5, and 7×7 pixel median filter for comparison.
+
+.. figure:: images/comparison_images_phantom.png
+  :align: center
+  :width: 14cm
+  :height: 5cm
+
+  |comparison_images_phantom| Phantom axial strain images with different types of regularization applied.
+  a) No regularization.  b) 3×3 median filter applied to the displacements.  c)
+  Three iterations of the proposed regularization algorithm.
+
+.. figure:: images/comparison_images_simulation.png
+  :width: 14cm
+  :height: 5cm
+  :align: center
+
+  |comparison_images_simulation| Simulation axial strain images with different
+  types of regularization applied.  a) No regularization.  b) 3×3 median
+  filter applied to the displacements.  c)  Three iterations of the proposed
+  regularization algorithm.
+
+Examples of the algorithm's effectiveness are shown in
+|comparison_images_phantom| and |comparison_images_simulation|.
+|comparison_images_phantom| shows axial strain images of the phantom data with
+no regularization (a), median filtering of the displacements (b), and recursive
+Bayesian regularization (c).  With no regularization, there are considerable
+peak hopping errors limiting the ability of median filtering to remove these
+errors.  Instead, these errors are 'smeared', which arguably makes the
+regularized image worse than the original because the peak hopping errors are
+more likely to be interpreted as artifactual tissue structures.  The proposed
+Bayesian regularization on the other hand, does an excellent job of removing
+these noise artifacts from the image.  Results are similar for the numerical
+simulation results, shown in the |comparison_images_simulation|.  Again,
+considerable decorrelation noise is present in the uncorrected image.  Median
+filtering removes a good portion of the noise, but it also results in a
+noticeable loss of resolution at the boundary of the inclusion.  The Bayesian
+regularization does a better job of removing noise while increasing the
+observable strain pattern surrounding the inclusion.  However, a few peak hopping errors
+are not removed as illustrated in |comparison_images_simulation|\ (c).
+
+Optimal SRS
+===========
+
+An optimal SRS under different conditions was extracted
+by minimizing the described error measure for both TM phantom and numerical simulation
+images.  Brent's Method for scalar minimization [Brent1973]_ was performed to
+a tolerance of 0.001.  The optimal SRS was examined over a range
+of strains, kernel overlaps, and algorithm iterations.  Unless otherwise noted,
+strain examined was 5%, kernel separation was 0%, and the number of iterations was
+set to three.  Although SRS can be specified independently in
+all directions, SRS reported is the parameter's value along
+the axial direction.  The value in the lateral direction was taken to be half
+the value in the axial direction since unconstrained compression of nearly
+incompressible elastic materials lead to strains in orthogonal planes that are
+half that along the loading axis, i.e. the incompressibility assumption.  Note,
+however, the parameters for each direction can be specified independently, and
+strain in one direction does not directly influence strain in the other
+directions.
+
+
 Addressing a Carotid Reverberation
 ==================================
 
@@ -508,6 +592,11 @@ invasive ductal carcinoma [Xu2010]_ approved by the UW-Madison IRB.  In this
 case, the source of deformation is compression of the ultrasound transducer.  RF
 data was collected from a Siemen's VFX13-5 transducer to generate the breast
 images.
+
+Liver and carotid B-mode images are displayed along with axial strain images
+with no regulation, 3×3 median filtering, and three iterations of Bayesian
+regularization.  As with the spherical inclusion phantom, the MARD is calculated
+to quantify the quality of motion tracking.
 
 
 ~~~~~~~~~~
