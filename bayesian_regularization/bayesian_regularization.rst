@@ -756,6 +756,133 @@ also visible in the breast cancer image, and the MARD corroborates with 88.0,
 regularization.
 
 ~~~~~~~~~~
+Discussion
+~~~~~~~~~~
+
+Block matching based displacement tracking methods can regularize the estimated displacement
+to reduce noise artifacts by enforcing the diffeomorphic transformation expected
+in images of solid tissue.  Filtering methods such as median filtering take into
+account displacements of neighboring tracking kernels and can reduce noise
+artifacts, but come at the cost of spatial resolution.  Better regularization
+performance is possible when incorporating similarity metric values from
+neighboring blocks prior to displacement estimation.
+
+The method described in this article is analogous to regularization algorithms
+that minimize a cost function involving the similarity metric and the continuity
+[Rivaz2008]_ [Jiang2009]_ [Pellot-Barakat2004]_.  However, transforming the
+similarity metric image into a probability distribution allows use of the similarity
+metric's weight in determining displacements to vary dynamically depending on
+the local uncertainty.  The weight of the similarity metric does not depend on its
+absolute value.  Instead, weight of the similarity metric is adjusted locally to
+the noise conditions in a tracking kernel's search region.  This independence of
+local or global noise improves robustness of the local estimated displacements.
+
+Due to its statistical nature, the algorithm encourages a continuous solution,
+but it still allows discontinuous motion when it is strongly suggested by the
+data.  This is important for |comparison_images_carotid|, where opposing
+arterial walls move in opposite directions.
+
+The form of the likelihood term in the Bayesian model suggests that a Gaussian
+distribution in the estimated strain is expected since it involves the
+difference in displacements and kernel spacing is constant.  The actual strain
+distribution depends on the modulus distribution and boundary conditions of the
+tissue imaged, but a Gaussian distribution is an appropriate generic form
+because of the Central Limit Theorem.  As long as the regularization parameter
+is large enough, the algorithm performs across a wide range of strains.  This
+robustness can be inferred from the flatness in the latter portion of
+|e_sigma_plot|.  If the variance of the Gaussian is presumed to be too small,
+large strains are not possible, and regularization will degrade the quality of
+motion tracking.  Furthermore, we have shown that the parameter does not have to
+be chosen arbitrarily because of its meaningful interpretation in terms of the
+expected strain.  In Hayton's original article, he remarked on the complex
+interaction of the Gaussian likelihood standard deviation with kernel spacing
+[Hayton1999]_.  The term :math:`\mathbf{\sigma_u}` controls the probability of
+:math:`\delta u` in :math:`\delta u / \delta x` but the kernel spacing scales
+:math:`\delta x` in :math:`\delta u / \delta x`. When we formulate
+:math:`\sigma_\varepsilon` as :math:`\sigma_u / \delta_x` the algorithm's
+parameters are decoupled into a single parameter with a meaningful
+interpretation.  A good SRS can be determined
+analytically as opposed to heuristically with a rough knowledge of the expected
+strain.  |optimization_plot|\ (b) shows that the optimal parameter increases with
+the image strain.  However, the relationship is not expected to be strictly
+linear.  A strain image will contain a distribution of strain amplitudes, and
+signal decorrelation varies with the applied strain [Varghese1997]_, which will
+also affect the optimal parameter.  In an approximate sense, the SRS can be
+viewed as the standard deviation of a function that modulates the estimated
+strain.
+ 
+
+As seen in |metric_plot_uniform| and |metric_plot_inclusion|, Bayesian
+regularization can greatly increase the quality of motion tracking and dynamic
+range of strains that can be imaged.  This improvement is mostly seen at higher
+applied deformations, i.e. 5% and above.  For very small strains, application of
+the algorithm can decrease image quality compared to no regularization.  The
+source of noise at small strains is predominately electronic and quantization
+noise [Varghese1997]_, and quantization noise may prevent the algorithm from
+being effective at these levels.  This behavior along with the additional
+computational expense, suggest it may be desirable to limit application to high
+strain situations when applied to a clinical setting.
+
+Various methods, given in the subplots of |metric_plot_uniform| and
+|metric_plot_inclusion|, were used to to validate the algorithm.  The SNRe is a
+common method for evaluating strain imaging algorithms in the literature that
+characterizes the dynamic range and peak SNRe available [Varghese1997]_.
+Typically, an algorithm has difficulty at low strains and high strains, which
+gives the curve a 'bandpass filter' shape [Varghese1997]_, observable in
+|metric_plot_uniform| and |metric_plot_inclusion|.  The regularization greatly
+increases the dynamic range at the higher end, but slightly compresses it at the
+lower end.  Since the SNRe is calculated on a uniform target, it does not
+demonstrate the ability of the algorithm to faithfully reproduce structures,
+which is often the purpose of creating the image.  For this reason, we also
+evaluted performance with an inclusion target.  For the simulation case, we have
+perfect knowledge of the true underlying displacement, so we can calculate the
+MADD.  The MADD is a measure of the estimated displacement's fidelity over the
+entire image.  In the phantom case, the true displacement is not precisely
+known, so the MARD error measurement is used.  The MARD similarly measures the
+estimated displacement's fidelity if the motion of the RF can be assumed to
+follow the motion of the tissue from which it is generated.  Since the shape of
+the MARD curves coincide well with the other error measures, its use in
+providing a quantitative assessment of the *in vivo* examples is justified.  The
+*in vivo* examples demonstrate the algorithms effectiveness in more realistic
+clinical conditions.
+
+Application of regularization of course comes at a computational expense.  The
+authors have not attempted a real-time implementation, but the following
+observations were made on the computational complexity.  First, the algorithm is
+easily parallizable and was implemented as a multi-threaded filter on a CPU.
+The shifting, normalization, and logarithm operations are all parallelizable.
+Computation of the liklihood term is parallizable on a per displacement basis in
+a given iteration.  Particular computational expense comes in the calculation of
+the likilood term, which is a convolution-like operation.  This has the
+following implications.  Although |e_sigma_plot| suggests a safe choice of SRS
+is higher, this will come at an additional computation expense because the
+Gaussian term becomes larger.  Also, the size of the search region should be
+minimal to reduce calculation of the liklihood terms.  Approaches such as a
+multi-resolution pyramid [Shi2007]_ where subsampled search regions that
+cover a large area of physical space are used to initialize smaller search
+regions may be helpful.
+
+The algorithm is 2D, but analysis in this article focused on the performance
+along the ultrasound beam axis.  Although lateral strains and shear strains are
+also expected to be improved, the relatively poor point spread function and
+sampling in the lateral direction still create very noisy strain images.
+Combination of the algorithm with other techniques, such as the multi-resolution
+pyramid [Shi2007]_, will be necessary before an informative analysis can be
+performed on this data.
+
+~~~~~~~
+Summary
+~~~~~~~
+
+We propose the application of a recursive Bayesian regularization algorithm for
+ultrasound strain imaging.  This algorithm applies a probabilistic model to the
+similarity metric and imposes a Gaussian distribution on the estimated strain
+when incorporating the results of neighboring matching kernels.  Results from
+*in vivo*, TM phantom and numerical simulations were presented, and the proposed
+algorithm performs better than median filtering of the
+displacements.
+
+~~~~~~~~~~
 References
 ~~~~~~~~~~
 
