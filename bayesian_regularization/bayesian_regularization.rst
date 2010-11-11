@@ -621,6 +621,56 @@ however, the parameters for each direction can be specified independently, and
 strain in one direction does not directly influence strain in the other
 directions.
 
+.. figure:: images/e_sigma_plot.png
+  :width: 10cm
+  :height: 5cm
+  :align: center
+
+  |e_sigma_plot|.  Error measures on a) phantom and b) simulation versus
+  the regularization parameter.  The nominal strain in both cases was 5 \%.
+
+.. figure:: images/iterations_plot.png
+  :width: 8cm
+  :height: 6cm
+  :align: center
+
+.. figure:: images/strains_plot.png
+  :width: 8cm
+  :height: 6cm
+  :align: center
+
+.. figure:: images/overlaps_plot.png
+  :width: 8cm
+  :height: 6cm
+  :align: center
+
+.. figure:: images/overlaps_sigma_u_plot.png
+  :width: 8cm
+  :height: 6cm
+  :align: center
+
+  |optimization_plot|.
+  Variation in the optimized regularization parameter with a) the number of
+  algorithm iterations, b) image strain, and c) block matching kernel overlap.
+  To contrast with c) the optimized regularization parameter multiplied by block matching kernel
+  spacing versus block matching kernel overlap is shown in d).
+
+|optimization_plot|\ (a) shows optimized SRS versus the
+number of algorithm iterations.  No consistent pattern is observed.  This
+suggests the optimization parameters do not strongly depend on the
+number of iterations.  As expected, |optimization_plot|\ (b) demonstrates the
+optimal SRS increases with increasing image strain.  The
+optimal parameter is approximately twice the image strain.  A decrease in
+SRS is seen in |optimization_plot|\ (c) with phantom images, but a consistent trend
+is absent from the simulation images.  The deviation in optimized parameters in
+either case is relatively small given the flatness of the error metric shown in
+|e_sigma_plot|.  |optimization_plot|\ (d), which plots :math:`\sigma_u` as opposed
+to SRS, is shown to contrast with |optimization_plot|\ (c).
+Phantom images again demonstrate a downward trend while simulation images
+suggest an upward trend.  Optimized parameters for phantom images and simulation
+images are more consistent in |optimization_plot|\ (c) than |optimization_plot|\ (d),
+which suggest SRS may be a more consistent parameter than
+:math:`\sigma_u`.
 
 Addressing a Carotid Reverberation
 ==================================
