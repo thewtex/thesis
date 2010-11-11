@@ -598,6 +598,55 @@ with no regulation, 3×3 median filtering, and three iterations of Bayesian
 regularization.  As with the spherical inclusion phantom, the MARD is calculated
 to quantify the quality of motion tracking.
 
+.. figure:: images/comparison_images_ablation.png
+  :width: 10cm
+  :height: 8cm
+  :align: center
+
+  |comparison_images_liver| Strain images from a liver undergoing RF electrode ablation.  a)
+  B-Mode. b) No regularization. c) 3×3 median filter applied to the displacements.  d) Three
+  iterations of the proposed regularization algorithm.
+
+.. figure:: images/comparison_images_carotid.png
+  :width: 10cm
+  :height: 6cm
+  :align: center
+
+  |comparison_images_carotid| Strain images of an atherosclerotic carotid bulb during systole.
+  a) B-Mode.  b) No regularization.  c) 3×3 median filter applied to the displacements.  d) Three
+  iterations of the proposed regularization algorithm.
+
+.. figure:: images/breast_plot.png
+  :width: 10cm
+  :height: 8cm
+  :align: center
+
+  |comparison_images_breast| Strain images of a breast invasive ductal carcinoma.
+  a) B-Mode.  b) No regularization.  c) 5×5 median filter applied to the displacements.  d) One
+  iteration of the proposed regularization algorithm.
+
+Results from tracking tissue RF echo signals are shown in
+|comparison_images_liver|, |comparison_images_carotid|, and
+|comparison_images_breast|.  The ablated liver
+tissue observable in |comparison_images_liver|\ (a) causes the reduced strain
+region in the strain images.  Both median filtering and Bayesian regularization
+remove the majority of peak hopping errors.  The median filtered image appears
+smoother while the Bayesian regularization image has more detail, although the
+true underlying strain is unknown, so it is difficult to associate a correct
+image from appearance.  Bayesian regularization does slightly better at handling
+shadowing from the electrode ablation needle at the bottom of the ablated
+region.  The MARD were 150.0, 127.6, and 124.1 for no regularization, median
+filtering, and Bayesian regularization, respectively.
+|comparison_images_carotid| shows an atherosclerotic artery undergoing
+compression during systole.  Bayesian regularization removes many of the peak
+hopping artifacts in the areas of high strain, roughly 3% and higher.  However, note that in areas
+distant from the vessel wall, where there is little to no deformation, Bayesian
+regularization introduces additional artifacts compared to the case with no
+regularizations.  The MARD was 55.6, 50.5, and 46.6 for no correction, median
+filtering, and Bayesian regularization, respectively.  Consistent results are
+also visible in the breast cancer image, and the MARD corroborates with 88.0,
+73.39, and 68.7 for no regularization, median filter, and Bayesian
+regularization.
 
 ~~~~~~~~~~
 References
