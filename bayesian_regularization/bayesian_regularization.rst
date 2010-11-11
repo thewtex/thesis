@@ -449,6 +449,14 @@ phantom and numerical simulation images.  Tracking kernel size used was
 41 points (0.8 mm) in the axial direction and 9 points (1.1 mm) in the lateral
 direction.
 
+.. figure:: images/metric_plot_bottom_two.png
+  :align: center
+  :width: 10cm
+  :height: 8.7cm
+
+  Motion tracking quality (SNRe) versus applied strain for a) uniform phantom and b)
+  uniform simulation.
+
 Circular Inclusion Simulations and Phantoms
 ===========================================
 
@@ -546,6 +554,18 @@ noticeable loss of resolution at the boundary of the inclusion.  The Bayesian
 regularization does a better job of removing noise while increasing the
 observable strain pattern surrounding the inclusion.  However, a few peak hopping errors
 are not removed as illustrated in |comparison_images_simulation|\ (c).
+
+.. figure:: images/metric_plot_top_two.png
+  :align: center
+  :width: 10cm
+  :height: 8.7cm
+
+  Motion tracking quality versus applied strain for a) spherical inclusion
+  phantom and b) cylindrical inclusion phantom simulation.  Different quality
+  metrics are applied to the appropriate experiment-- a) uses mean absolute RF
+  phantom image RF difference (MARD) versus regularization method (lower is
+  better) and b) uses mean absolute displacement difference between the simulated and
+  estimated displacements (lower is better).
 
 Optimal SRS
 ===========
