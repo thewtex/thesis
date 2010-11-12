@@ -6,19 +6,24 @@ Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
 
 .. |comparison_images_simulation| replace:: Fig. 2
 
-.. |comparison_images_liver| replace:: Fig. 3
+.. |metric_plot_uniform| replace:: Fig. 3
 
-.. |comparison_images_carotid| replace:: Fig. 4
+.. |metric_plot_inclusion| replace:: Fig. 4
 
-.. |comparison_images_breast| replace:: Fig. 5
+.. |e_sigma_plot| replace:: Fig. 5
 
-.. |metric_plot_uniform| replace:: Fig. 6
+.. |optimization_plot| replace:: Fig. 6
 
-.. |metric_plot_inclusion| replace:: Fig. 7
+.. |reverb_b_mode| replace:: Fig. 7
 
-.. |e_sigma_plot| replace:: Fig. 8
+.. |prob_image| replace:: Fig. 8
 
-.. |optimization_plot| replace:: Fig. 9
+.. |comparison_images_liver| replace:: Fig. 9
+
+.. |comparison_images_carotid| replace:: Fig. 10
+
+.. |comparison_images_breast| replace:: Fig. 11
+
 
 This chapter describes how a recursive Bayesian regularization algorithm can be
 applied during ultrasound displacement estimation to improve the quality of
@@ -709,13 +714,29 @@ motion, upward, is opposite to the motion of the vessel wall, downward.
   :width: 10cm
   :height: 7.5cm
 
-  Longitudinal CCA B-mode with highlighted locations of the matching kernel (yellow, top), and the
+  |reverb_b_mode| Longitudinal CCA B-mode with highlighted locations of the matching kernel (yellow, top), and the
   search region (cyan, bottom) that are subsequently analyzed in fine detail.
 
 Focusing on the area of interest, we next examine initial probability image for the
 displacement of the kernel.
 
 .. figure:: images/probability.png
+  :align: center
+  :width: 6cm
+  :height: 8cm
+
+  Probability image for the matching kernel's displacement.
+
+Each point in the probability image is created by using normalized cross
+correlation to compare the RF data in the matching kernel from the
+pre-deformation image to the RF data in the post-deformation image.  The result
+is shifted by negative one, the theoretical lower bound, and normalized so the
+sum of the values add to one.  This is the prior probability for the
+displacement of the matching kernel before the algorithm has been applied.  The
+peak, the red region, is where the displacement would be estimated.  We see
+that the physics ultrasound's point response function effects the probability
+image: the image has rapid oscillations along the axial direction and slowly
+developing peaks with relatively low definition in the lateral direction.
 
 Improvement of Carotid Strain Images
 ====================================

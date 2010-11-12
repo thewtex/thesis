@@ -25,13 +25,13 @@ if len( sys.argv ) < 2:
 
 fig = plt.figure( figsize=(7, 7) )
 img = Image.open( sys.argv[1] )
-imsh = plt.imshow( img, cmap=mpl.cm.hot, origin='lower', extent=(0.0, 2.4, 0.0, 2.4) )
+imsh = plt.imshow( img, cmap=mpl.cm.jet, origin='lower', extent=(0.0, 2.4, 0.0, 2.4) )
 ax = imsh.get_axes()
 ticks = [x for x in np.arange(0.5, 2.4, 0.5)]
 ax.set_xticks( ticks )
 ax.set_yticks( ticks )
 ax.set_xlabel( 'Width [mm]' )
-ax.set_ylabel( 'Depth [mm]' )
+ax.set_ylabel( 'Height [mm]' )
 plt.savefig( sys.argv[1][:-4] + '_labels.png' )
 
 #plt.show()
