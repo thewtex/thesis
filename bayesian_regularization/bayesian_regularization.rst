@@ -675,6 +675,47 @@ which suggest SRS may be a more consistent parameter than
 Addressing a Carotid Reverberation
 ==================================
 
+While the Bayesian regularization is effective at removing decorrelation
+noise, it is also effective at removing reverberation artifacts.  Reverberation
+artifacts are a source of noise in B-Mode images, and they are also a source of
+noise in strain images.  A reverberation is a received signal that is the result
+of multiple scatter events.  The time delay and apparent depth of a
+reverberation artifact is longer and deeper than the true source of the original
+backscatter event.  The motion of a reverberation artifact is not necessarily
+congruent with backscattered signal from local tissue.  In fact, the
+displacement of the reverberation may be in the opposite direction direction of
+the local tissue.  If the reverbation signal is stronger than the local tissue
+inside the matching kernel, an artifactual displacement estimate will be
+generated.  However, if we use a regularization method that incorporates
+displacement estimates from surrounding matching kernels, the artifact can be
+removed.  In this section we demonstrate the removal of a carotid reverberation
+and illustrate the algorithm's behaviour during execution.
+
+The following images show the area of focus in the longitudinal carotid B-mode
+taken with the 18L6 on a Siemen's S2000 clinical machine.  The imaging plane
+bisects the common carotid artery throughout almost the entire image.  On the
+left the carotid bulb begins, with a thick mass originating at its base.
+Observation of a B-mode video clip of the region clearly elucidates the high intensity
+reverberation located in the center of the matching kernel.  The reverberation's
+motion, upward, is opposite to the motion of the vessel wall, downward.
+
+.. figure:: images/block_full.png
+  :align: center
+  :width: 10cm
+  :height: 7.5cm
+
+.. figure:: images/search_full.png
+  :align: center
+  :width: 10cm
+  :height: 7.5cm
+
+  Longitudinal CCA B-mode with highlighted locations of the matching kernel (yellow, top), and the
+  search region (cyan, bottom) that are subsequently analyzed in fine detail.
+
+Focusing on the area of interest, we next examine initial probability image for the
+displacement of the kernel.
+
+.. figure:: images/probability.png
 
 Improvement of Carotid Strain Images
 ====================================
