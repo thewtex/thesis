@@ -26,17 +26,17 @@ Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
 
 .. |iteration_3| replace:: Fig. 12
 
-.. |comparison_images_liver| replace:: Fig. 9
+.. |comparison_images_liver| replace:: Fig. 13
 
-.. |comparison_images_carotid| replace:: Fig. 10
+.. |comparison_images_carotid| replace:: Fig. 14
 
-.. |comparison_images_breast| replace:: Fig. 11
+.. |comparison_images_breast| replace:: Fig. 15
 
 
 This chapter describes how a recursive Bayesian regularization algorithm can be
 applied during ultrasound displacement estimation to improve the quality of
-carotid strain images.  First, we describe regularization's role in the block-
-matching approach to deformable image registration.  Then we review
+carotid strain images.  First, we describe regularization's role in the 
+block-matching approach to deformable image registration.  Then we review
 regularization algorithms that have been implemented in the literature.  Next,
 we describe the iterative probabilistic approach taken in this work.  Finally,
 we present results on simulations, phantoms, and carotid strain image case
@@ -49,10 +49,10 @@ Improvement of Strain Image Quality with Regularization
 The deformable image registration problem is common in medical imaging
 [Zitova2003, Crum2004]_.  It is used to monitor tumor growth, compensate for
 patient motion, register to a common atlas, etc.  In the context of ultrasound
-strain imaging, estimating local is the first step in a two stage process; in
-the second step strains are calculated from the estimated displacements.  In
-some cases strain is estimated iteratively along with the displacements in order
-to improve the quality of strain estimation
+strain imaging, estimating local displacements is the first step in a two stage
+process; in the second step strains are calculated from the estimated
+displacements.  In some cases strain is estimated iteratively along with the
+displacements in order to improve the quality of strain estimation
 [Brusseau2001,Maurice2004a,Brusseau2008]_, but all algorithms take this form.
 
 In simple block-matching image registration methods, the registration of a block
@@ -76,30 +76,30 @@ in a cost function paradigm, an additional term must be minimized.
 Here :math:`E_c` is a continuity term that depends on the neighboring
 displacements and the similarity metric at neighboring displacements.  The
 parameter :math:`\alpha` determines the amount of regularization.  A higher
-:math:`alpha` will given greater weight to the displacement of surrounding
+:math:`\alpha` will given greater weight to the displacement of surrounding
 displacements and increase the amount of regularization.  Different algorithms
 will implement their choice of :math:`E_s`, :math:`E_c`, and optimization
-technique to minimize the cost function.
+method to minimize the cost function.
 
 The result of regularization is an improved displacement estimate since we can
 incorporate our *a priori* knowledge that the displacement is continuous.
 However, if the regularization parameter :math:`\alpha` is too large, excessive
-smoothing may introduced causing a loss of features and dynamic range in the
+smoothing may be introduced causing a loss of features and dynamic range in the
 strain images.  Regularization of this type is especially important for
 block-matching deformable image registration techniques where the motion model
 does not assume any continuity.  Motion is considered as a completely local
-phenomena.  This contrasts with B-Spline, Elastic Body Spline, or Finite
+phenomena.  This contrasts with B-spline, Elastic Body Spline, or Finite
 Element Method (FEM) deformable image registration methods
 [Zikic2006,Davis1997,Krucker2002,Craene2009,Zhong2007]_.  In these methods, the motion
-model is such that a local point moves in concert with tissues.
+model is such that a local point moves in concert with surrounding tissues.
 
-While B-Spline deformable transform do not have the same difficulty the
+While the B-spline deformable transform does not have the same difficulty that the
 block-matching methods have in enforcing local continuity, they both share a
 related problem since the B-Spline deformation basis functions are compactly
-supported.  Both block-matching and B-Spline deformable transforms do not
-enforce diffeomorphic transform [Rueckert2006,Craene2009]_.  A displacement map that is
+supported.  Both block-matching and B-spline deformable transforms do not
+enforce a diffeomorphic transform [Rueckert2006,Craene2009]_.  A displacement map that is
 diffeomorphic must be continuous, differentiable, and invertible [Craene2009]_.
-A diffeomorphic transformation be a one-to-one mapping between the pre and post
+A diffeomorphic transformation is a one-to-one mapping between the pre and post
 deformation image.  Consider the following B-spline grid from Schnabel et. al.
 that illustrates non-diffeomorphic behavior [Schnabel2001]_
 
@@ -113,7 +113,7 @@ that illustrates non-diffeomorphic behavior [Schnabel2001]_
 
 .. |folding| replace:: Figure 1
 
-Folding or tearing is not likely or possible in physical tissues, so
+In general, folding or tearing is not likely or possible in physical tissues, so
 diffeomorphic behavior should be enforced.
 
 Peak-hopping errors in block-matching methods will result in non-diffeomorphic
@@ -132,66 +132,66 @@ Prior Efforts in Regularization
 Peak hopping errors and degradation in the quality of the strain image results
 primarily from signal decorrelation [Varghese2001, Varghese1998]_.  The source
 of signal decorrelation can be large axial deformations that distort the signal,
-motion of tissue in the elevational direction relative to the probe, or
-undesirable physiological motion [Kallel1997,Kallel1997a]_.
+reverberations, motion of tissue in the elevational direction relative to the
+probe, or undesirable physiological motion [Kallel1997,Kallel1997a]_.
 
 Most approaches to address signal decorrelation can be placed in two categories.
-One strategy trys to reduce peak hopping be restricting the search region of a
+One strategy tries to reduce peak hopping by restricting the search region of a
 matching kernel.  Tighter search regions are feasible when the center of the
 search region is initialized appropriately.  Sometimes, *a priori* knowledge of
 the type of motion expected is used to initialize search regions.  Hall et al.
 described an implementation where the displacement is always assumed to be null
 at the transducer surface [Hall2003]_.  This is a reasonable assumption since
 the transducer must always remain in contact with the tissue to generate an
-image and the stiffness of transducer is so much higher than the soft tissue, it
-can be considered a rigid body.  Motion tracking starts from the transducer
-surface, and the displacement estimates are used initialize search regions
-deeper into tissue.  Basarab et al. describe a similar strategy [Basarab2008]_.
-Search regions are propagated by displacement estimates starting from the center
-of the transducer.  The points initialized are set in a "V" shaped front in
-order to better initialize lateral displacements since lateral displacement is
-often near zero at the transducer's center during freehand compression and
-increases towards the edges of the transducer.
+image and the stiffness of transducer is much higher than the soft tissue, so it
+effectively a rigid body.  Motion tracking starts from the
+transducer surface, and the displacement estimates are used initialize search
+regions deeper into tissue.  Basarab et al. describe a similar strategy
+[Basarab2008]_.  Search regions are propagated by displacement estimates
+starting from the center of the transducer.  The points initialized are set in a
+"V" shaped front in order to better initialize lateral displacements since
+lateral displacements are often near zero at the transducer's center during
+freehand compression and increases towards the edges of the transducer.
 
 Search region initialization strategies that do not depend on the presence of
 locations of zero displacement somewhere in the image use points or lines of
 high displacement estimation confidence.  Instead of propagating search region
-centers axially from the transducer, estimates can be propagated from an A-line
-of high confidence [Jiang2007,Rivaz2010]_ or diagonally [Zahiri-Azar2006]_.
-Chen, Treece, Lindop, Gee, and Prager have described a quality-guided algorithm
-that uses multiple seed points [Chen2009]_.  The initial seed points required a
-large search region.  After initialization, search regions are kept small.
-Displacements are estimated from neighbors adjacent to the seed with the search
-region centered at the seed's displacement.  Among these neighbors and the other
-seed's neighbors, the location with the best quality metric is used to
-initialize the next set of search regions.  The process proceeds iteratively
-until the entire image has been tracked, and search region initialization
-propagates from location of highest tracking quality.  The quality metric used
-was normalized cross correlation.
+centers axially from the transducer, estimates can be propagated laterally from
+an A-line of high confidence [Jiang2007,Rivaz2010]_ or diagonally
+[Zahiri-Azar2006]_.  Chen, Treece, Lindop, Gee, and Prager have described a
+quality-guided algorithm that uses multiple seed points [Chen2009]_.  The
+initial seed points require a large search region.  After initialization,
+search regions are kept small.  Displacements are estimated from neighbors
+adjacent to the seed with the search region centered at the seed's displacement.
+Among these neighbors and the other seed's neighbors, the location with the best
+quality metric is used to initialize the next set of search regions.  The
+process proceeds iteratively until the entire image has been tracked, and search
+region initialization propagates from locations of highest tracking quality.  The
+quality metric used in [Chen2009]_ was normalized cross correlation.
 
 A weakness of the other search region initialization algorithms that the seeds
 algorithm overcomes is the presence of discontinuous locations.  This can occur
 with a slip boundary along a tumor or the vessel wall of the carotid artery, for
 example.  This weakness is also overcome by a coarse-to-fine scheme where
 displacements from a large kernel or low-pass filtered and sub-sampled kernel
-initializes the conter of the search region at progressively smaller kernel
+initializes the center of the search region at progressively smaller kernel
 sizes to achieve a high resolution strain image [Pellot-Barakat2004, Shi2007,
 Yeung1998, Chen2007, Bai1999, Basarab2008, Lopata2009]_.  This multi-resolution
 pyramid approach is commonly employed in many different types of registration
-problems.  Since tracking in the coarse image can be performed on subsample
-data, initialized is performed quickly.  Also, robustness is improved because
-initializition occurs near the final solution and local minima in the high
+problems.  Since tracking in the coarse image can be performed on subsampled
+data, initialization is performed quickly.  Also, robustness is improved because
+initialization occurs near the final solution and local minima in the high
 frequency speckle are avoided.
 
 The second strategy to address decorrelation noise in ultrasound displacement
 estimation incorporates displacements from neighboring blocks into the
-displacement estimation equation.  Filtering approaching remove noise but come
+displacement estimation equation.  Filtering approaches remove noise but come
 at the cost of reduced strain dynamic range and spatial resolution.  For
 example, a median filter can be used to remove outliers, [Thitaikumar2008a]_.
 During estimation of strains from estimated displacement, a least squares fit to
-the displacement can be used estimate the local slope in displacement, i.e. the
-strain [Kallel1997a]_.  A statistical model of the displacements can be taken
-and the Kalman filter used during estimation for the strain [Rivaz2010]_.
+the displacement can be used estimate the local slope in displacement
+[Kallel1997a]_.  A statistical model of the displacements can be taken
+and the Kalman filter used during estimation of the strain [Rivaz2010]_.
 Alternatively, as mentioned previously, a cost function optimization approach
 can be taken involving a similarity metric term and a displacement continuity
 term.  Both Jiang and Rivaz describe implementations of this approach that use
@@ -215,7 +215,7 @@ as a similarity metric and a number of continuity terms were examined
 .. math:: E_{c,c} = 2 \, (e^S - 1)
 
 In Rivaz's article, he examined sum of absolute differences as a similarity
-metric and the following continuity term[Rivaz2008]_,
+metric and the following continuity term [Rivaz2008]_,
 
 .. math:: E_c = ( d_i - d_{i-1} )^2
 
@@ -248,7 +248,7 @@ breast imaging.  The purpose of the algorithm was to register MR breast images
 taken before and after injection of a contrast agent, Gd-DTPA.  Without
 registration, patient motion due to breathing and other motion would interfere
 with effective analysis of the images.  A mutual information similarity metric
-was used and a multi-scale implementation was generated.  After the
+was used in a multi-scale implementation.  After the
 block-matching displacement estimates were obtained, they were used as initial
 values for a deformable cubic B-spline motion model that was regularized by a
 smoothing term
@@ -262,14 +262,14 @@ author has not found a paper the reimplemented and applied the algorithm.
 However, another paper that describes application of the algorithm to an
 ultrasound registration case was published from the same Michael Brady Oxford
 University group.  Xiao et al. applied this method to the registration of 3D
-B-Mode ultrasound subvolumes[Xiao2002]_.  B-Mode breast ultrasound volumes were
+B-mode ultrasound subvolumes[Xiao2002]_.  B-mode breast ultrasound volumes were
 collected by free-hand sweeping of a 2D ultrasound transducer.  Multiple sweeps
-are obtained to obtain a larger area and reduce speckle noise through spatial
+are collected to obtain a larger area and reduce speckle noise through spatial
 compounding.  Differing sweep speeds, angles, and tissue deformation require
 deformable registration of the sub-volumes.  In contrast to the Hayton MR paper,
 normalized cross correlation was used as a similarity metric and single-level
 searching was performed.  Like the Hayton experiment, the resulting
-displacements where input into a cubic B-spline parameter optimization with a
+displacements were input into a cubic B-spline parameter optimization with a
 smoothing term consisting of squares of the second derivatives of displacement
 and solved with the conjugate gradient descent method.
 
@@ -361,7 +361,7 @@ Implementation
 
 A multi-threaded version of the described algorithm was implemented with the
 Insight Toolkit [Yoo2002]_ using normalized cross-correlation as the similarity
-metric for the results presented in this article.
+metric for the results presented in this chapter.
 
 The search region was 17 A-lines in the lateral direction along with sufficient
 data points along the axial direction to capture the maximum displacement for
@@ -406,7 +406,7 @@ center and translated using a linear motion table.  The phantom was scanned
 using a Siemen's S2000 (Siemens Ultrasound, Mountain View, CA, USA) clinical
 ultrasound system equipped with a VFX9-4 transducer and the plane through the
 center of the sphere imaged.  The transducer was excited at 8.9 MHz and
-radiofrequency (RF) data was sampled at 40 MHz to a depth of 5.5 cm.
+RF data was sampled at 40 MHz to a depth of 5.5 cm.
 
 Twenty independent deformation experiments were performed by varying the
 pre-deformation frame index within the continuous loop to obtain statistically
@@ -431,7 +431,8 @@ transducer over a range of frequencies calculated.  A particular ultrasound
 transducer was simulated by multiplying the phantom response in the frequency
 domain with the spectrum for the ultrasound transducer of interest.  A single
 row of 128 elements was the aperture, with a spacing of 0.2 mm between elements.
-An individual element had a size of 0.15 mm laterally and 10 mm elevationally.
+An individual element had a size of 0.15 mm laterally and 10 mm in the
+elevational direction.
 The beamspacing was 0.2 mm, and the transmit focus was located at a depth of 20
 mm.  This yielded the Fourier Transform of the RF data of interest.  For these
 experiments, the simulated transducer's spectrum was modeled as Gaussian with a
@@ -441,7 +442,7 @@ applied to the individual scatterers that made up each numerical phantom, to
 produce a set of post-deformation numerical phantoms and the accompanying RF
 data.  A 40mm×40mm×10mm volume of scatterers was simulated.
 
-The deformation field for a uniform elastic modulus phantom undergoing
+The axial displacement field for a uniform elastic modulus phantom undergoing
 unconstrained compression along the axial direction is simply a linear increase
 in displacement starting from zero at the transducer surface.  The slope of the
 displacement is the amount of strain applied.  In the lateral direction the
@@ -456,14 +457,12 @@ collections of scatterers were collected.
 
 The simulations of a uniformly elastic TM block were examined in a manner
 similar to the uniform TM phantom and evaluated for variations in the SNRe with
-applied deformation.
-
-In order to visualize the effectiveness of recursive Bayesian regularization, we
-quantified errors at 0.5%, 1.0%, 3.0%, 5.0%, 7.0%, and 9.0% strain in the TM
-phantom and numerical simulation images.  Tracking kernel size used was
-41 points (0.8 mm) in the axial direction and 9 points (1.1 mm) in the lateral
-direction.  Error bars denote two standard errors
-of the error measures corrected for repeated measure means [Cousineau2005]_.
+applied deformation.  In order to visualize the effectiveness of recursive
+Bayesian regularization, we quantified errors at 0.5%, 1.0%, 3.0%, 5.0%, 7.0%,
+and 9.0% strain in the TM phantom and numerical simulation images.  Tracking
+kernel size used was 41 points (0.8 mm) in the axial direction and 9 points (1.1
+mm) in the lateral direction.  Error bars denote two standard errors of the
+error measures corrected for repeated measure means [Cousineau2005]_.
 
 
 .. figure:: images/metric_plot_bottom_two.png
@@ -474,13 +473,13 @@ of the error measures corrected for repeated measure means [Cousineau2005]_.
   |metric_plot_uniform|.  Motion tracking quality (SNRe) versus applied strain for a) uniform phantom and b)
   uniform simulation.
 
-In |metric_plot_uniform| we see that, especially for high strains, the Bayesian
+In |metric_plot_uniform| we see that, especially for high strains, Bayesian
 regularization outperforms median filtering or no regularization.  The same
 bandpass type pattern [Varghese1997]_ is seen for both the phantom and
 simulation.  With regularization, the simulation performs better at the highest
 strain, 9.0%.  This may be explained by the deformation model used in the
 simulation: the simulation does not account for out of plane motion, which may
-occur at high strains and cause large signal decorrelation.  Not that for very
+occur at high strains and causes large signal decorrelation.  Note that for very
 low strains, 0.5%, the Bayesian regularization causes a regression in
 performance.
 
@@ -525,15 +524,13 @@ numerical phantoms.  The mechanical model represents a cylindrical inclusion
 in an unconstrained background, which is similar in its deformation to the
 spherical inclusion phantom [Skovorada1994]_.
 
-Again, deformation estimation statistics on n=30 randomly generated
-collections of scatterers were collected.
-
-Displacement estimation error for comparison with the median filter and
-optimization of SRS were computed as follows.  Output
+Again, deformation estimation statistics on n=30 randomly generated collections
+of scatterers were collected.  Displacement estimation error for comparison with
+the median filter and optimization of SRS were computed as follows.  Output
 displacements from the finite element simulation were interpolated with cubic
 B-spline interpolation at locations where displacement estimation occurred.  A
-mean absolute axial displacement difference (MADD) is reported excluding the edges of
-the image, where edge effects may occur.
+mean absolute axial displacement difference (MADD) is reported excluding the
+edges of the image, where edge effects may occur.
 
 .. math:: MADD = \frac{ \sum_{i=1}^n | \hat{u}_a - u_a | } { n }
 
@@ -690,19 +687,19 @@ Addressing a Carotid Reverberation
 
 While the Bayesian regularization is effective at removing decorrelation
 noise, it is also effective at removing reverberation artifacts.  Reverberation
-artifacts are a source of noise in B-Mode images, and they are also a source of
+artifacts are a source of noise in B-mode images, and they are also a source of
 noise in strain images.  A reverberation is a received signal that is the result
 of multiple scatter events.  The time delay and apparent depth of a
 reverberation artifact is longer and deeper than the true source of the original
 backscatter event.  The motion of a reverberation artifact is not necessarily
 congruent with backscattered signal from local tissue.  In fact, the
 displacement of the reverberation may be in the opposite direction direction of
-the local tissue.  If the reverbation signal is stronger than the local tissue
+the local tissue.  If the reverberation signal is stronger than the local tissue
 inside the matching kernel, an artifactual displacement estimate will be
 generated.  However, if we use a regularization method that incorporates
 displacement estimates from surrounding matching kernels, the artifact can be
 removed.  In this section we demonstrate the removal of a carotid reverberation
-and illustrate the algorithm's behaviour during execution.
+and illustrate the algorithm's behavior during execution.
 
 The following images show the area of focus in the longitudinal carotid B-mode
 taken with the 18L6 on a Siemen's S2000 clinical machine.  The imaging plane
@@ -742,8 +739,8 @@ is shifted by negative one, the theoretical lower bound, and normalized so the
 sum of the values add to one.  This is the prior probability for the
 displacement of the matching kernel before the algorithm has been applied.  The
 peak, the red region, is where the displacement would be estimated.  We see
-that the ultrasound's point response function effects the probability
-image: the image has rapid oscillations along the axial direction and slowly
+that the ultrasound's point response function affects the probability
+image; the image has rapid oscillations along the axial direction and slowly
 developing peaks with relatively low definition in the lateral direction.
 
 .. figure:: images/iteration_0.png
@@ -791,7 +788,7 @@ vessel wall.  High strain in the vessel wall can be observed in |iteration_0|\
 c).  In both |iteration_0|\ b) and |iteration_0|\ c) tracking of the
 reverberation's discontinuous motion can be observed in the center of the
 image.  Without regularization, peaks in |iteration_0|\ a) are not distinctive.
-We also not the extent of the noise in the displacement and strain image.
+We also note the extent of the noise in the displacement and strain image.
 
 After the first iteration, the posterior probabilities in |iteration_1|\ a)
 concentrate their energy in the same confined region in all three probability
@@ -813,7 +810,7 @@ Improvement of Carotid Strain Images
 ====================================
 
 In order to examine the performance from data closer to what is expected in
-clinical application, we examine strain images in a carotid plaque case study
+clinical application, we visualize strain images in a carotid plaque case study
 and also from porcine liver and a breast cancer case.  A different transducer
 was used to collect the carotid RF signal than the phantom images, the Siemens
 18L6 linear array (Siemens Ultrasound, Mountain View, CA, USA).  The carotid
@@ -821,7 +818,7 @@ images are a longitudinal view of primarily the common carotid with some plaque
 into the bulb on the left side of the image.  The source of deformation in this
 case is blood pressure.  A second set of images correspond to a radiofrequency
 (RF) ablation performed on an open-abdominal *in vivo* porcine model with a
-healthy liver.  The study of approved by the research animal care use committee
+healthy liver.  The study was approved by the research animal care use committee
 of the University of Wisconsin-Madison.  Details about this study are presented
 in [Rubert2010]_.  The source of deformation in this case was movement of the
 ablation electrode and breathing of the animal.  This case used the Siemens 9L4
@@ -900,9 +897,9 @@ artifacts, but come at the cost of spatial resolution.  Better regularization
 performance is possible when incorporating similarity metric values from
 neighboring blocks prior to displacement estimation.
 
-The method described in this article is analogous to regularization algorithms
+The method described in this chapter is analogous to regularization algorithms
 that minimize a cost function involving the similarity metric and the continuity
-[Rivaz2008]_ [Jiang2009]_ [Pellot-Barakat2004]_.  However, transforming the
+[Rivaz2008,Jiang2009,Pellot-Barakat2004]_.  However, transforming the
 similarity metric image into a probability distribution allows use of the similarity
 metric's weight in determining displacements to vary dynamically depending on
 the local uncertainty.  The weight of the similarity metric does not depend on its
@@ -967,7 +964,7 @@ increases the dynamic range at the higher end, but slightly compresses it at the
 lower end.  Since the SNRe is calculated on a uniform target, it does not
 demonstrate the ability of the algorithm to faithfully reproduce structures,
 which is often the purpose of creating the image.  For this reason, we also
-evaluted performance with an inclusion target.  For the simulation case, we have
+evaluated performance with an inclusion target.  For the simulation case, we have
 perfect knowledge of the true underlying displacement, so we can calculate the
 MADD.  The MADD is a measure of the estimated displacement's fidelity over the
 entire image.  In the phantom case, the true displacement is not precisely
@@ -982,38 +979,39 @@ clinical conditions.
 Application of regularization of course comes at a computational expense.  The
 authors have not attempted a real-time implementation, but the following
 observations were made on the computational complexity.  First, the algorithm is
-easily parallizable and was implemented as a multi-threaded filter on a CPU.
+easily parallelizable and was implemented as a multi-threaded filter on a CPU.
 The shifting, normalization, and logarithm operations are all parallelizable.
-Computation of the liklihood term is parallizable on a per displacement basis in
+Computation of the likelihood term is parallelizable on a per displacement basis in
 a given iteration.  Particular computational expense comes in the calculation of
-the likilood term, which is a convolution-like operation.  This has the
+the likeilood term, which is a convolution-like operation.  This has the
 following implications.  Although |e_sigma_plot| suggests a safe choice of SRS
 is higher, this will come at an additional computation expense because the
 Gaussian term becomes larger.  Also, the size of the search region should be
-minimal to reduce calculation of the liklihood terms.  Approaches such as a
+minimal to reduce calculation of the likelihood terms.  Approaches such as a
 multi-resolution pyramid [Shi2007]_ where subsampled search regions that
 cover a large area of physical space are used to initialize smaller search
 regions may be helpful.
 
-The algorithm is 2D, but analysis in this article focused on the performance
-along the ultrasound beam axis.  Although lateral strains and shear strains are
-also expected to be improved, the relatively poor point spread function and
-sampling in the lateral direction still create very noisy strain images.
-Combination of the algorithm with other techniques, such as the multi-resolution
-pyramid [Shi2007]_, will be necessary before an informative analysis can be
-performed on this data.
+In the removal of a carotid reverberation case study, we showed that, unlike a
+median filter, the method is effective at removing reverberation
+artifacts.  This is especially important for carotid strain images, where
+reverberations are abundant relative to tissues like liver.  In the carotid low
+attenuation in the blood and a number of high strength, coherent reflectors at
+the muscles walls, artery wall, and blood-lumen interface contribute to a higher
+concentration of reverberations.
 
 ~~~~~~~
 Summary
 ~~~~~~~
 
 We propose the application of a recursive Bayesian regularization algorithm for
-ultrasound strain imaging.  This algorithm applies a probabilistic model to the
+carotid ultrasound strain imaging.  This algorithm applies a probabilistic model to the
 similarity metric and imposes a Gaussian distribution on the estimated strain
 when incorporating the results of neighboring matching kernels.  Results from
 *in vivo*, TM phantom and numerical simulations were presented, and the proposed
 algorithm performs better than median filtering of the
-displacements.
+displacements.  Application of regularization is particularily appropriate for
+images of the carotid artery where reverberations are abundant.
 
 ~~~~~~~~~~
 References
