@@ -18,6 +18,14 @@ Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
 
 .. |prob_image| replace:: Fig. 8
 
+.. |iteration_0| replace:: Fig. 9
+
+.. |iteration_1| replace:: Fig. 10
+
+.. |iteration_2| replace:: Fig. 11
+
+.. |iteration_3| replace:: Fig. 12
+
 .. |comparison_images_liver| replace:: Fig. 9
 
 .. |comparison_images_carotid| replace:: Fig. 10
@@ -714,7 +722,7 @@ motion, upward, is opposite to the motion of the vessel wall, downward.
   :width: 10cm
   :height: 7.5cm
 
-  |reverb_b_mode| Longitudinal CCA B-mode with highlighted locations of the matching kernel (yellow, top), and the
+  |reverb_b_mode|. Longitudinal CCA B-mode with highlighted locations of the matching kernel (yellow, top), and the
   search region (cyan, bottom) that are subsequently analyzed in fine detail.
 
 Focusing on the area of interest, we next examine initial probability image for the
@@ -725,7 +733,7 @@ displacement of the kernel.
   :width: 6cm
   :height: 8cm
 
-  Probability image for the matching kernel's displacement.
+  |prob_image|. Probability image for the matching kernel's displacement.
 
 Each point in the probability image is created by using normalized cross
 correlation to compare the RF data in the matching kernel from the
@@ -734,9 +742,72 @@ is shifted by negative one, the theoretical lower bound, and normalized so the
 sum of the values add to one.  This is the prior probability for the
 displacement of the matching kernel before the algorithm has been applied.  The
 peak, the red region, is where the displacement would be estimated.  We see
-that the physics ultrasound's point response function effects the probability
+that the ultrasound's point response function effects the probability
 image: the image has rapid oscillations along the axial direction and slowly
 developing peaks with relatively low definition in the lateral direction.
+
+.. figure:: images/iteration_0.png
+  :align: center
+  :width: 15cm
+  :height: 5.3cm
+
+  |iteration_0|.  a) Probability images, b) axial displacement image in the ROI, and
+  c) axial strain image in the ROI for iteration 0 (no regularization).
+
+.. figure:: images/iteration_1.png
+  :align: center
+  :width: 15cm
+  :height: 5.3cm
+
+  |iteration_1|.  a) Probability images, b) axial displacement image in the ROI, and
+  c) axial strain image in the ROI for iteration 1.
+
+.. figure:: images/iteration_2.png
+  :align: center
+  :width: 15cm
+  :height: 5.3cm
+
+  |iteration_2|.  a) Probability images, b) axial displacement image in the ROI, and
+  c) axial strain image in the ROI for iteration 2.
+
+.. figure:: images/iteration_3.png
+  :align: center
+  :width: 15cm
+  :height: 5.3cm
+
+  |iteration_3|.  a) Probability images, b) axial displacement image in the ROI, and
+  c) axial strain image in the ROI for iteration 3.
+
+In |iteration_0| to |iteration_3| we examine the evolution of our ROI from no
+regularization (iteration zero) to three iterations of our recursive Bayesian
+algorithm.  The probability images of our matching kernel of interest (top), a
+lateral neighbor (middle), and an axial neighbor (bottom) display what is
+happening at specific points while the axial displacement and strain images
+display the general situation in the region.
+
+Structures present in the B-mode can be identified in |iteration_0|.  Near the
+top of |iteration_0|\ b) we see the change in displacement that occurs at the
+vessel wall.  High strain in the vessel wall can be observed in |iteration_0|\
+c).  In both |iteration_0|\ b) and |iteration_0|\ c) tracking of the
+reverberation's discontinuous motion can be observed in the center of the
+image.  Without regularization, peaks in |iteration_0|\ a) are not distinctive.
+We also not the extent of the noise in the displacement and strain image.
+
+After the first iteration, the posterior probabilities in |iteration_1|\ a)
+concentrate their energy in the same confined region in all three probability
+images.  The noise is reduced in |iteration_1|\ b) and |iteration_1|\ c), but
+the reverberation artifact is still present.
+
+At the second iteration, |iteration_2|, it is easily visible that all three of
+our probability images are bimodal.  One mode corresponds to the displacement of
+reverberation while the other mode corresponds to the displacement of the local
+tissue.  However, the reverbation peak is still stronger as the artifact is
+still observable in |iteration_2|\ b) and |iteration_2|\ c).
+
+Finally, at the third iteration, the local tissue mode dominates in
+|iteration_3|\ a) causing the reverberation artifact to be removed from
+|iteration_3|\ b) and |iteration_3|\ c).
+
 
 Improvement of Carotid Strain Images
 ====================================
