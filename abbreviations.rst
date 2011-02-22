@@ -16,6 +16,9 @@ FLAIR
   *Fluid-Attenuated Inversion Recovery*.  MRI pulse sequence designed to
   suppress signal from fluid such as cerebrospinal fluid.
 
+FPS
+  *Frames per second*.
+
 ICA
   *Internal Carotid Artery*.  Branches off CCA to supply the brain.
 
@@ -44,6 +47,13 @@ SRS
 TIA
   *Transient ischemic attack."*  Brief episodes of focal loss of brain function
   due to ischemia [Whisnant1990]_.
+
+TM phantom
+  *Tissue mimicking phantom.*  Has similar physical properties as the target tissue in
+  the phenomena being examined.  For instance, when examining mechanical
+  phenomena, a TM phantom should have a similar elastic modulus.  When examining acoustic phenomena, a TM
+  phantom should have similar speed of sound, attenuation, and backscatter
+  properties.
 
 UTC
   *Ultrasound Tissue Characterization*.  Imaging techniques that put greater

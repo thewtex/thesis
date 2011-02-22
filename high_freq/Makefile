@@ -19,7 +19,7 @@ $(PAPER)_w_math.rst: $(PAPER).rst
 
 # add '-s example_numbered' for numbered references instead of last names
 $(PAPER)_w_cite.rst: $(PAPER)_w_math.rst $(PAPER).bib
-	PYTHONPATH='./formatting' $(BIB4TXT) --all -i $(PAPER)_w_math.rst -no $(PAPER)_w_cite.rst $(PAPER).bib
+	PYTHONPATH='./formatting' $(BIB4TXT) -s my_numbered --all -i $(PAPER)_w_math.rst -no $(PAPER)_w_cite.rst $(PAPER).bib
 
 $(PAPER).odt: $(PAPER)_w_cite.rst $(STYLESODTPATH)
 	$(RST2ODT) --stylesheet=$(STYLESODTPATH) $(PAPER)_w_cite.rst $(PAPER).odt
