@@ -365,7 +365,7 @@
         <dia:point val="8,36"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.93819,35.9382;8.06181,43.0618"/>
+        <dia:rectangle val="5.85091,35.9382;8.14909,43.0618"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="8,36"/>
@@ -373,6 +373,24 @@
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
+      </dia:attribute>
+      <dia:attribute name="start_arrow">
+        <dia:enum val="22"/>
+      </dia:attribute>
+      <dia:attribute name="start_arrow_length">
+        <dia:real val="0.5"/>
+      </dia:attribute>
+      <dia:attribute name="start_arrow_width">
+        <dia:real val="0.5"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow">
+        <dia:enum val="22"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_length">
+        <dia:real val="0.5"/>
+      </dia:attribute>
+      <dia:attribute name="end_arrow_width">
+        <dia:real val="0.5"/>
       </dia:attribute>
     </dia:object>
     <dia:object type="Standard - Line" version="0" id="O12">
