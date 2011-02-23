@@ -24,6 +24,10 @@ plaques.
 
 .. |vs_digital_rf_long| replace:: **Figure 3**
 
+.. |vs_field_of_view| replace:: Fig. 4
+
+.. |vs_field_of_view_long| replace:: **Figure 4**
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Collection and analysis of 3D radiofrequency data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -121,12 +125,10 @@ approximately two hours.  RF acquisition was previously limited to single 2D
 frames, but we worked with VisualSonics engineers such that RF acquisitions can
 be collected in 3D with the optional high-precision stepper motor.  Data is
 stored in a pair of non-standard plain text and binary files that contain system
-settings and raw data respectively with B-mode and saturation image of the scout
-window for the first frame along with the RF data.  A/D conversion is 12 bit
-with 71 dB dynamic range, 410 MS/s sampling rate, and 73 dB gain.  Data
-collection is well integrated into the user interface of the machine, but buffer
-limits on the A/D card limit the length of acquisition to a subset of the field
-of view, |vs_digital_rf|.
+settings and raw data respectively with B-mode and saturation image of the
+region-of-interest (ROI) window for the first frame along with the RF data.  A/D
+conversion is 12 bit with 71 dB dynamic range, 410 MS/s sampling rate, and 73 dB
+gain.  
 
 .. image:: images/vs_digital_rf.png
   :width: 10cm
@@ -136,14 +138,57 @@ of view, |vs_digital_rf|.
 
   |vs_digital_rf_long|.  The *Digital-RF* user interface on the VisualSonics
   Vevo 770.  System B-Mode is shown in the upper right with a red overlay of the
-  RF collection region.  The lower right shows the scout window B-Mode and
+  RF collection ROI.  The lower right shows the ROI window B-Mode and
   saturation content, which is saved in the acquired file along with the RF
-  data.  The time and frequency content a selected A-line in the scout window is
+  data.  The time and frequency content a selected A-line in the ROI window is
   shown in the lower right.
+
+Data collection is well integrated into the user interface of the machine, but
+buffer limits on the A/D card limit the length of acquisition to a subset of the
+field of view, |vs_digital_rf|.  When data files are exported in *RAW* format,
+two files are saved for each acquisition.  A file with the *.rdb* extension is a
+binary format file.  This *.rdb* contains three images in sequence in sequence:
+two *scout window* images followed by the RF data.  Regardless of whether the 3D
+acquisition occurs, the scout window images are always 2D images.  These images
+contain the content found in the system preview of the scan ROI before scan
+conversion.  First is a B-Mode image in two byte unsigned integer format written
+sequentially in A-lines.  All binary data is in *Little Endian* format, i.e. the
+least significant byte (LSB) precedes the most significant byte (MSB).  A
+saturation image with the same size as the B-Mode images follows.  The
+saturation image is again in two-byte unsigned integer format, but the content
+is boolean; a non-zero sample indicates that the digitizer was saturated at that
+datum.  The scout window data is followed by RF data in the acquired volume of
+interest.  Unlike the scout window images, the RF data is in a two-byte signed
+integer format.  The RF data is written sequentially by samples within an A-line,
+followed by A-lines within a frame, followed by the frame in the volume.  There
+is more than one pulse-echo data segment saved for each A-line.  To allow signal
+averaging with the transducer fixed in a given position, an average A-line
+signal is save followed by the individual pulse-echo contents.  For the beta 3D
+Digital-RF acquisition software available, though, only a single
+pulse-echo acquisition is possible per A-line when in 3D mode.  Information on
+the number of A-lines, averaged signals, etc. required to read, analyze, and scan
+convert the binary data must be extracted from the metadata header file.
+
+Each *.rdb* binary file has a *.rdi* metadata header file associated with it.
+This file has three sections, 
 
 
 Scan conversion
 ===============
+
+.. image:: images/vs_field_of_view.png
+  :width: 6cm
+  :height: 13.7cm
+  :align: center
+.. highlights::
+
+  |vs_field_of_view_long|.  Diagram of the Vevo 770 geometric parameters used in
+  field of view calculations.  The transducer sits at the end of a shaft, and
+  the angle of rotation is recorded by a rotary encoder attached to an extension
+  of the shaft across the pivot point.  Parameters stored in the metadata file
+  include PE, the pivot-to-encoder distance, SL, the shaft length, DL, the
+  delay length in the water path from transducer to start of acquisition, DD,
+  the digitizer depth, and EP, the encoder position.
 
 Rotational scan version.
 
@@ -181,7 +226,11 @@ Parametric images of excised plaque
 Each
 acquisition consists of 250 beam lines separated by approximately 60 μm, 2128
 samples (3.9 mm), and up to 250 frames separated by 200 μm to 100 μm
-depending on the length of the plaque specimen.  Some longer plaques may require
+depending on the length of the plaque specimen.  For the lengths of the plaques
+we examined, which ranged from approximately 20 mm to 40 mm, this filled the
+system limit on acquisition.  Resulting files are approximately 150 per
+volumettric slice.  Three to five volumetric slices are required to encompass
+the majority of an excised plaque's volume.  Some longer plaques may require
 larger inter-frame spacing because of memory limitations, although the
 resolution in the elevational direction is nominally 140 μm for the RMV710B
 transducer.

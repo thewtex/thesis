@@ -40,6 +40,9 @@ PFO
   in-uteral development, which remains partially patent in a quarter of the
   population into adulthood.  Can be a source of emboli.
 
+ROI
+  *Region of interest*.
+
 SRS
   *Strain Regularization Sigma*.  Parameter of the Bayesian regularization
   method is related to the distribution of expected strains in the image.
