@@ -24,9 +24,17 @@ plaques.
 
 .. |vs_digital_rf_long| replace:: **Figure 3**
 
-.. |vs_field_of_view| replace:: Fig. 4
+.. |rdi_content| replace:: Fig. 4
 
-.. |vs_field_of_view_long| replace:: **Figure 4**
+.. |rdi_content_long| replace:: **Figure 4**
+
+.. |rdixml| replace:: Fig. 5
+
+.. |rdixml_long| replace:: **Figure 5**
+
+.. |vs_field_of_view| replace:: Fig. 6
+
+.. |vs_field_of_view_long| replace:: **Figure 6**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Collection and analysis of 3D radiofrequency data
@@ -148,30 +156,127 @@ buffer limits on the A/D card limit the length of acquisition to a subset of the
 field of view, |vs_digital_rf|.  When data files are exported in *RAW* format,
 two files are saved for each acquisition.  A file with the *.rdb* extension is a
 binary format file.  This *.rdb* contains three images in sequence in sequence:
-two *scout window* images followed by the RF data.  Regardless of whether the 3D
-acquisition occurs, the scout window images are always 2D images.  These images
-contain the content found in the system preview of the scan ROI before scan
-conversion.  First is a B-Mode image in two byte unsigned integer format written
-sequentially in A-lines.  All binary data is in *Little Endian* format, i.e. the
-least significant byte (LSB) precedes the most significant byte (MSB).  A
-saturation image with the same size as the B-Mode images follows.  The
-saturation image is again in two-byte unsigned integer format, but the content
-is boolean; a non-zero sample indicates that the digitizer was saturated at that
-datum.  The scout window data is followed by RF data in the acquired volume of
-interest.  Unlike the scout window images, the RF data is in a two-byte signed
-integer format.  The RF data is written sequentially by samples within an A-line,
-followed by A-lines within a frame, followed by the frame in the volume.  There
-is more than one pulse-echo data segment saved for each A-line.  To allow signal
-averaging with the transducer fixed in a given position, an average A-line
-signal is save followed by the individual pulse-echo contents.  For the beta 3D
-Digital-RF acquisition software available, though, only a single
-pulse-echo acquisition is possible per A-line when in 3D mode.  Information on
-the number of A-lines, averaged signals, etc. required to read, analyze, and scan
-convert the binary data must be extracted from the metadata header file.
+two image of the ROI selected in the scout window followed by the RF data.
+Regardless of whether the 3D acquisition occurs, the ROI images are
+always 2D images.  These images contain the content found in the system preview
+of the scan ROI before scan conversion.  First is a B-Mode image in two byte
+unsigned integer format written sequentially in A-lines.  All binary data is in
+*Little Endian* format, i.e. the least significant byte (LSB) precedes the most
+significant byte (MSB).  A saturation image with the same size as the B-Mode
+images follows.  The saturation image is again in two-byte unsigned integer
+format, but the content is boolean; a non-zero sample indicates that the
+digitizer was saturated at that datum.  The ROI data is followed by RF
+data in the acquired volume of interest.  Unlike the ROI images, the RF
+data is in a two-byte signed integer format.  The RF data is written
+sequentially by samples within an A-line, followed by A-lines within a frame,
+followed by the frame in the volume.  There is more than one pulse-echo data
+segment saved for each A-line.  To allow signal averaging with the transducer
+fixed in a given position, an average A-line signal is save followed by the
+individual pulse-echo contents.  For the beta 3D Digital-RF acquisition software
+available, though, only a single pulse-echo acquisition is possible per A-line
+when in 3D mode.  Information on the number of A-lines, averaged signals, etc.
+required to read, analyze, and scan convert the binary data must be extracted
+from the metadata header file.
 
 Each *.rdb* binary file has a *.rdi* metadata header file associated with it.
-This file has three sections, 
+This file has three sections, Image Info, Image Data, and Image Parameters.  The
+Image Info section contains information related to the current acquisition such
+as an operator defined labels, the number of frames, or the acquisition time.
+The Image Data section contains information on byte offsets to A-line locations
+in the binary file for the ROI B-mode, ROI saturation, and the RF data.
+Finally, the Image Parameters section contains system settings such as the
+transmit pulse settings, time-gain compensation (TGC) settings, characteristics
+of the current transducer, ECG settings, or the stepper motor position.  Example
+content from an *.rdi* is shown in |rdi_content|.
 
+::
+
+  "=== IMAGE INFO ==="
+  "Study Name","QuickStudy 201001201737"
+  "Image Id","54HTKMSSMJCKL2JSKMMF1TPCDW"
+  "Image Label",""
+  "Image Frames","136"
+  "Image Lines","250"
+  "Image Acquisition Per Line","1"
+  "Image Acquisition Size","4256","bytes"
+  ...
+  "=== IMAGE DATA ==="
+  "ROI Data Offset - B-Mode","0","bytes"
+  "ROI Data Size - B-Mode","73472","bytes"
+  "ROI Data Offset - Saturation","73472","bytes"
+  "ROI Data Size - Saturation","73472","bytes"
+  "Image Data Offset - Frame 0 - Line 0 - Acq 0","146944","bytes"
+  "Image Data Offset - Frame 0 - Line 1 - Acq 0","151200","bytes"
+  ....
+  "=== IMAGE PARAMETERS ==="
+  "RF-Mode/ActiveProbe/Notes","Rat Cardiology"
+  "RF-Mode/ActiveProbe/Sample-Time","154","µs"
+  "RF-Mode/BModeSoft/V-Relative-Frame-Rate","4"
+  "RF-Mode/ActiveProbe/Focal-Length","15","mm"
+
+.. highlights::
+
+  |rdi_content_long|.  Example data from a Vevo 770 *.rdi* file.  Example
+  content from the three sections of the ASCII plain text content, Image Info,
+  Image Data, and Image Parameters, are given.
+
+Each parameter is described on a line with two to three fields delimited by
+quotations and commas.  The first field is generally a key name.  In the Image
+Parameters section, this can take a hierarchical form delimited by a forward
+slash.  The second field is the value for the given key, which will contain an
+array of comma delimited numbers for an array of values.  An optional third
+field contains the units for the value.  The voluminous amount of Image
+Parameters results in a large file; a typical size is 35,000 lines.
+
+Parameters for parsing the binary file can be found or derived from the Image
+Info section, which makes the Image Data section largely redundant.  Parametric
+image formation and scan conversions relies on content dispersed throughout the
+Image Parameters section.  To facilitate the extraction of values of a given key
+and conversion from plain text to the appropriate data type, library was develop
+to parse the header content into an intermediate eXtensible Markup Language
+(XML) form [Bray2008]_.  The advantages of XML in for this data set include its broad
+support under diverse tools and programming languages as an open standard, a
+native text-based and hierarchical form, and some explicit specification of data
+types.  The structure of the *.rdi* is transformed into an XML hierarchy by
+considering the main three sections as top level elements and division and
+sorting of the keys in the Image Parameters section into a hierarchy of child
+elements.  This structure was determined by parse and example header file instance
+with a Python [Rossum2011]_ script and defined using an XMLSchema [Fallside2004]_
+
+::
+
+  <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+  <rdi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="rdi.xsd">
+
+  <image_info>
+    <Study_Name>QuickStudy 201001201737</Study_Name>
+    <Image_Id>54HTKMSSMJCKL2JSKMMF1TPCDW</Image_Id>
+    <Image_Label/>
+    <Image_Frames>136</Image_Frames>
+    <Image_Lines>250</Image_Lines>
+    <Image_Acquisition_Per_Line>1</Image_Acquisition_Per_Line>
+    <Image_Acquisition_Size>4256</Image_Acquisition_Size>
+    <Animal_ID/>
+    <Acquisition_Mode>Digital RF-Mode</Acquisition_Mode>
+    <Acquisition_Date>1/20/2010</Acquisition_Date>
+    <Acquisition_Time>5:42:14 PM</Acquisition_Time>
+    <Acquisition_Operator>Default Operator</Acquisition_Operator>
+  </image_info>
+
+  <image_data/>
+
+  <image_parameters>
+    <RF-Mode>
+      <ActiveProbe>
+        <Notes>Rat Cardiology</Notes>
+        <Sample-Time units="µs">154</Sample-Time>
+        <Focal-Length units="mm">15</Focal-Length>
+        <Acceleration-Limit-Slope>0</Acceleration-Limit-Slope>
+
+.. highlights::
+
+  |rdixml_long|.  Content of the header file in |rdi_content| after
+  transformation into XML format.
 
 Scan conversion
 ===============
