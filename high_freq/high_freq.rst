@@ -32,9 +32,21 @@ plaques.
 
 .. |rdixml_long| replace:: **Figure 5**
 
-.. |vs_field_of_view| replace:: Fig. 6
+.. |rdihtml| replace:: Fig. 6
 
-.. |vs_field_of_view_long| replace:: **Figure 6**
+.. |rdihtml_long| replace:: **Figure 6**
+
+.. |vs_field_of_view| replace:: Fig. 7
+
+.. |vs_field_of_view_long| replace:: **Figure 7**
+
+.. |head_streaming| replace:: Fig. 8
+
+.. |head_streaming_long| replace:: **Figure 8**
+
+.. |peak_memory| replace:: Fig. 9
+
+.. |peak_memory_long| replace:: **Figure 9**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Collection and analysis of 3D radiofrequency data
@@ -124,7 +136,7 @@ penetrate the plaque and the field of view was large enough to encompass the
 entire sample.
 
 
-Volume concatenation, storage, and processing
+File storage and metadata extraction
 =============================================
 
 RF acquisition is performed in M-mode and is considerably slower than B-mode
@@ -136,7 +148,7 @@ stored in a pair of non-standard plain text and binary files that contain system
 settings and raw data respectively with B-mode and saturation image of the
 region-of-interest (ROI) window for the first frame along with the RF data.  A/D
 conversion is 12 bit with 71 dB dynamic range, 410 MS/s sampling rate, and 73 dB
-gain.  
+gain.
 
 .. image:: images/vs_digital_rf.png
   :width: 10cm
@@ -278,8 +290,55 @@ with a Python [Rossum2011]_ script and defined using an XMLSchema [Fallside2004]
   |rdixml_long|.  Content of the header file in |rdi_content| after
   transformation into XML format.
 
-Scan conversion
-===============
+The content is imported in C++ into a Xerces-C++ [XercesC]_ object, from which
+it can be serialized into an XML file, |rdixml| to be easily processed by other
+programs.  Alternatively, it can be transformed into a Hyper-Text Markup
+Language (HTML) to be easily examined in web browers, |rdihtml|.  Transformation
+is specified through an EXtensible Stylesheet Language (XSLT) document and applied in
+memory with Xalan-C++ [XalanC]_.  Most importantly, the parameters can be accessed
+in C++ as native data objects through the use of XML data binding with
+CodeSynthesis XSD [XSD]_ since an XMLSchema has been generated.
+
+.. image:: images/rdi_html.png
+  :align: center
+.. highlights::
+
+  |rdihtml_long|.  Rendering of the header file contents after transformation
+  from XML to HTML.
+
+An InsightToolkit (ITK) [Yoo2002]_ ImageIO class was written for processing the
+data with ITK.  The data is imported as an "image", i.e. geometry of uniform,
+anisotropic spacing in Cartesian format, with angle and radius information stored in the
+metadata dictionary for scan conversion after B-Mode or parametric image
+formation from the A-lines at their original sample locations.
+
+Scan conversion and volume concatenation
+=========================================
+
+The raw data collected on the Vevo 770 is structured grid data.  Structured grid
+data has implicit connectivity, i.e. the topology is determined by a dimensional
+index [Schroeder2006]_.  However, the geometric locations of the points do not
+necessary fall on a uniform grid.  An image, on the other hand, has both regular
+topology and geometry [Schroeder2006]_.  While there is some support in computer
+graphics hardware and software for rendering datasets in a structured grid from,
+the most widespread support exist for images with isotropic spacing.  Medical
+imaging or scientific rendering programs may have support for rendering of
+images with anisotropic spacing.  Volume rendering support for structured grid
+data is less common and less efficient than volume rendering algorithms for
+image data.  Also, most analysis algorithms are designed for image data.  For
+these reasons, we must scan convert the Vevo 770 data; we must resample the
+structured grid data onto a orthogonal grid with regular spacing.
+
+Locations of the RF is determined by the transducer geometry, which is
+diagrammed in |vs_field_of_view|.  Header file keys that define the geometry
+include: *PE*, the pivot-to-encoder distance,
+*RF-Mode/ActiveProbe/Pivot-Encoder-Dist*, *SL*, the shaft-length,
+*RF-Mode/ActiveProbe/Pivot-Transducer-Fact-Dist*, *DL*, the delay length in the
+water path from the transducer to start of acquisition,
+*RF-Mode/RX/V-Delay-Length*, *DD*, the digitizer depth,
+*RF-Mode/RX/V-Digi-Depth-Imaging*, and *EP*, the encoder position,
+*RF-Mode/RfModeSoft/V-Lines-Pos*.  Note that the last value is an array since it
+changes with every A-line.
 
 .. image:: images/vs_field_of_view.png
   :width: 6cm
@@ -291,13 +350,95 @@ Scan conversion
   field of view calculations.  The transducer sits at the end of a shaft, and
   the angle of rotation is recorded by a rotary encoder attached to an extension
   of the shaft across the pivot point.  Parameters stored in the metadata file
-  include PE, the pivot-to-encoder distance, SL, the shaft length, DL, the
-  delay length in the water path from transducer to start of acquisition, DD,
-  the digitizer depth, and EP, the encoder position.
+  include *PE*, the pivot-to-encoder distance, *SL*, the shaft length, *DL*, the
+  delay length in the water path from the transducer to start of acquisition, *DD*,
+  the digitizer depth, and *EP*, the encoder position.
 
-Rotational scan version.
+This polar coordinate configuration is common in ultrasound imaging; it also
+occurs with a curvilinear array or phased array transducer, for example.   The
+radius is given by :math:`r = SL + DL + \frac{s \, c}{2 f_s}` where *s* is the
+sample number along the A-line, *c* is the assumed speed of sound (usually 1540
+m/s), and :math:`f_s` is the sampling frequency
+(*RF-Mode/RfModeSoft/SamplesPerSec*).  The angle in radians is simply
+:math:`\theta = EP / PE`.  Cartesian coordinates are then :math:`x_1 = r \cos(
+\theta )` and :math:`x_2 = r \sin( \theta )`.  For 3D imaging, the only other
+geometric parameter of importance is the frame spacing, which is found at
+*RF-Mode/3D/StepSize*.
 
-Doxygen content?
+Data streaming
+==============
+
+Due memory capacity limitations of modern computers, it is of necessary process
+a large image in independent chunks, also known as streamed data processing.  A
+single Vevo 770 plaque volume prior to scan conversion with 2128 samples per
+A-line, 250 lines per frame, 250 frames per subvolume, and four subvolumes per
+plaque has 532 million samples.  If the data samples are stored as single-byte
+*char* datatypes or two-byte *unsigned short* samples, as may be the case for
+clinical scanner's volume rendering software, a high-end modern computer is
+capable of store a copy of the image in system RAM or graphics card global
+memory.  When processing the data to create parametric ultrasound images or
+perform scan conversion, we use the eight-byte floating point *double* data type,
+and multiple copies of the data are required as it passes through our
+processing pipeline.  This size exceeds the capacity of most computers, and
+streaming is required.
+
+The process of resampling during scan conversion involves defining a
+transformation from the output space to the input space [Ibanez2005]_. In
+general, at the time of transformation all of the input data must be available
+because the transformation of point from output space may result in a point at any
+location in the input space.  This prevents streaming of the resampling process
+because the entire input dataset must be made available.
+
+At least for special cases, streaming during resampling may be possible, though,
+if we can restrict the region required for a transformation.  With a general
+affine transform [Ibanez2005]_,
+
+.. math:: \mathbf{y} = \mathbf{Ax} = \mathbf{b}
+
+where **x** is a vector of the output point position, **y** is the input point
+position, **A** is a matrix of cofficients that apply rotation, shearing or
+scaling to the output space, and **b** is a vector defining the rigid translation,
+lines remain lines after transformation.  Recognizing this fact, we see that the
+region required by a linear transformation of an image is the bounding box
+defined by the transformation of image's corners.  The result of a resampling
+implementation that takes advantage of this property to perform streaming is
+shown in |head_streaming|.  An affine transform is applied with scaling by a
+factor of 1.25 in all directions, rotation of 1 radian about the y-axis and 0.2
+radians about the z-axis, and translation of three pixel spacings in the
+y-direction and seven pixel spacings in the z-direction.  The resampling process
+is applied without streaming and streaming with eight stream divisions.  The
+results are the same for both cases.
+
+.. image:: images/mr_resample_annotate.png
+  :width:  16cm
+  :height: 4.6cm
+  :align: center
+.. highlights::
+
+  |head_streaming_long|.  Magnetic resonance head image a) before
+  transformation, b) after an affine transformation without streaming,
+  and c) after the same transformation with streaming.  A pixel-wise differnce
+  calculation on the transformed images shows they are identical.
+
+This same implementation can be applied to perform streaming when performing
+scan conversion for the Vevo 770.  Even though the inplane transformation is
+non-linear and applying this algorithm would be insufficient at the bottom of
+the scan plane, the transformation is linear in the stepper-motor direction (an
+identity transform).  Measurements of peak heap memory usage made with Valgrind
+[Valgrind]_ versus the number of frames per stream are plotted in |peak_memory|.
+A linear trend is clearly observed.  Decreased memory usage comes with a slight
+performance trade-off as the number of image processing pipeline updates
+required is directly proportional to the number of stream divisions.
+
+.. image:: images/peak_memory.png
+  :width: 10cm
+  :height: 10cm
+  :align: center
+.. highlights::
+
+  |peak_memory_long|. Peak heap memory usage during B-Mode image creation and scan
+  conversion of a Vevo 770 file.  The slope of a linear fit to the data is 1.33
+  MB/frame and the intercept is 11.0 MB.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -334,7 +475,7 @@ samples (3.9 mm), and up to 250 frames separated by 200 μm to 100 μm
 depending on the length of the plaque specimen.  For the lengths of the plaques
 we examined, which ranged from approximately 20 mm to 40 mm, this filled the
 system limit on acquisition.  Resulting files are approximately 150 per
-volumettric slice.  Three to five volumetric slices are required to encompass
+volumetric slice.  Three to five volumetric slices are required to encompass
 the majority of an excised plaque's volume.  Some longer plaques may require
 larger inter-frame spacing because of memory limitations, although the
 resolution in the elevational direction is nominally 140 μm for the RMV710B

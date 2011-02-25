@@ -50,7 +50,7 @@ article  = '%(title)s. *%(journal)s* %(volume)s, %(pages)s. %(year)s.',
 techreport  = '"%(title)s". %(institution)s %(type)s %(number)s. %(year)s. %(url)s',
 inproceedings  = '"%(title)s". In %(editor)s (Eds.) *%(booktitle)s*, %(address)s: %(publisher)s. %(year)s.',
 incollection  = '"%(title)s". In %(editor)s (Eds.) *%(booktitle)s*, %(address)s: %(publisher)s. %(year)s.',
-misc = '%(title)s. %(year)s.',
+misc = '%(title)s. %(booktitle)s. %(year)s. *%(url)s*.',
 default_type = '%(title)s. %(year)s.'
 ))
 
