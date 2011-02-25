@@ -10,7 +10,7 @@ UNOCONV=unoconv
 STYLESODT=styles.odt
 STYLESODTPATH=../formatting/$(STYLESODT)
 
-PAPER=high_freq
+PAPER=visualsonics_appendix
 
 all: $(PAPER).odt
 
