@@ -4,7 +4,8 @@ High Frequency Phantom Characterization
 
 Next, we describe methods to characterize the acoustic
 properties of high-frequency reference phantoms necessary to generate parametric
-images.  
+images.
+
 ~~~~~~~~~~~~~~
 Phantom design
 ~~~~~~~~~~~~~~
