@@ -179,7 +179,7 @@ Chemical markers of inflammation are also associated with plaque instability
 of pharmacological treatments such as statins.  These markers tag for macrophage
 infiltration, the presence of matrix metalloproteinase-9 (MMP-9), and the presence
 of inflammation.  Macrophage infiltration plays a role in plaque formation along
-with indicating an acute inflammatory response [Wasserman2002,Lendon1991]_.  
+with indicating an acute inflammatory response [Wasserman2002,Lendon1991]_.
 Buildup of lipids initiates inside macrophages that distend until they cannot escape
 into the circulation, forming 'foam cells', and eventually lipid crystals.
 Macrophages secrete proteolytic enzymes that weaken the extracellular matrix.
@@ -202,7 +202,7 @@ carotid plaque score [Shrestha2009]_.  Turbulent flow resulting from severe
 stenosis can increase root mean square pressure fluctuations by 3.6 fold when
 stenosis increases from 80 to 90% [Loree1991]_.  Hemodynamic forces vary from
 patient to patient with hypertension, pulsatility, and turbulence influenced by
-the bifurcation and plaque morphology.  
+the bifurcation and plaque morphology.
 
 All these factors that have been intuitively been associated with plaque
 vulnerability are explained formally by a quanity arising from solid mechanics
@@ -217,7 +217,7 @@ The stress concentration factor, :math:`K`, is the maximum stress caused by
 the disturbance in uniformity, :math:`\sigma_{max}`, divided by the reference
 stress, :math:`\sigma_{avg}`.  This concept is relevant not only to
 industrial materials such as metals and ceramics, but biological tissues
-including plaque [Meairs1999]_.  
+including plaque [Meairs1999]_.
 
 
 Plaque characterization with other methods and imaging modalities
@@ -226,7 +226,7 @@ Plaque characterization with other methods and imaging modalities
 Ultrasound is currently the most common method for plaque investigation because
 it is noninvasive, easily accessible, and has a relatively low cost.  While most
 prevalent clinically, other methods have a clinical and research role in
-determining plaque vulnerability.  
+determining plaque vulnerability.
 
 Histology
 ---------
@@ -248,7 +248,7 @@ resolution is good for identifying ulcerations [NASCET1991,Saba2007]_.  Single
 slice computed tomography (CT) has had limited success in carotid plaque
 classification [Walker2002]_, but recently multidetector-row computed tomography
 (MRCT) have attempted to quantify total plaque volume, calcification, fibrous,
-and lipid or hemorrhage areas [Ajduk2008,Saba2008]_.  
+and lipid or hemorrhage areas [Ajduk2008,Saba2008]_.
 
 Magnetic Resonance Imaging
 --------------------------
@@ -276,7 +276,7 @@ paramagnetic ferric iron in hemorrhage may alter atherosclerotic appearance in
 magnets. [Underhill2008]_  In a study of *ex-vivo* plaque specimens, Fabiano et
 al. found that 1.5-T MRI had sensitivities and specificities of 92% and 74% for
 the lipid core, 82% and 94% for fibrous tissue, 72% and 87% for fibrous/loose
-connective tissue, and 98% and 99% for calcifications [Fabiano2008]_.  
+connective tissue, and 98% and 99% for calcifications [Fabiano2008]_.
 
 The quality of MRI images of the carotid bifurcation will continue to improve as
 hardware, excitation sequences, and image processing is modified for this
@@ -311,7 +311,7 @@ luminal wall, a strain of 10% would have a standard deviation of error of 3.6%
 [Draney2004]_.  In a study of *ex-vivo* porcine aortas comparing a control group
 to renovascular hypertension group, it was found that the Young's Modulus-wall
 thickness product, derived from MR strain images, differentiated the
-hypertensive group because of the increassed wall stiffness [Woodrum2009]_.  
+hypertensive group because of the increassed wall stiffness [Woodrum2009]_.
 Lin et al. used a displacement encoding with stimulated echoes
 (DENSE) pulse sequence to get the circumferencial strain of the carotid artery
 [Lin2008]_.  High temporal resolution is obtained by utilizing steady-state
@@ -389,7 +389,7 @@ resulting in a net loss of collagen content [Newby1999]_.  In addition to high
 resolution plaque microstructure from OCT, PSOCT measures tissue birefringence.
 This behavior manifests itself as changes in back-reflected intensity when
 polarized light passes through anisotropic material such as organized collagen
-or smooth muscle cell actin-myosin in atherosclerotic plaque [Nadkarni2009]_.  
+or smooth muscle cell actin-myosin in atherosclerotic plaque [Nadkarni2009]_.
 
 Laser speckle is generally considered a source of noise in optical imaging, but
 the time-dependenct characterics of the speckle are targeted in laser speckle
@@ -397,7 +397,7 @@ imaging (LSI) [Nadkarni2009]_.  Speckle will change because of Brownian motion o
 particles in the tissue.  The motility of particles depends on the viscoelastic
 properties of the medium, which is related to plaque vulnerability.  Images
 related to local viscoelastic properties are made by quantifying the speckle
-decorrelation time constant. 
+decorrelation time constant.
 
 Raman spectroscopy is a method that measures the weak scattered signal from a
 laser light that shifts in frequency due to interactions with characteristic
@@ -458,7 +458,7 @@ intensities are normalized to intraluminal blood and adventitia.  When the
 definition of thresholds and regions of interest is forced and quantitative
 intensity measurements are made, objectivity is increased [Lal2006]_.
 Additionally, the quality of B-mode images have recently been improved with
-angular compounding [Kern2004]_.  
+angular compounding [Kern2004]_.
 
 More sophisticated analysis of B-mode properties focuses on factors other than
 local intensity, broadly termed 'texture analysis'.  Texture analysis has the
@@ -467,7 +467,7 @@ aim of differentiating tissue composition and properties
 analysis examines statistical parameters of the intensity, Fourier spectrum,
 Wavelet Transform, or other quantities in a local area, and statistical
 techniques are applied to empirically determine which parameters may
-differentiate tissue composition.  
+differentiate tissue composition.
 
 Morphologically, the appearance of ulceration is also associated with
 vulnerability [Groenholdt1999]_.  Ulcerations are irregularities on the plaque
@@ -498,24 +498,27 @@ Radiofrequency signal based characterization
 --------------------------------------------
 
 Quantitative ultrasound tissue characterization methods attempt to improve on
-simple B-mode texture analysis by removing system dependent features from the
-images to isolate tissue characteristics in the image [Lizzi1983]_.  These images attempt
+simple B-mode texture analysis by removing system dependent features from an
+image to isolate tissue characteristics in the image [Lizzi1983]_.  These images attempt
 to show tissue properties that influence ultrasound propagation and scattering
 while removing effects such as the geometry and material makeup of the
 transducer or electronics of the imaging machine.  This removes the burden of
 accounting for system effects from the observer and allows calculation at a
 precision equal to the precision of digitization instead of being limited to the
-dynamic range of the human eye.  There are many aspects to ultrasound
-propagation and scattering, and the parameter chosen to be measured and
+dynamic range of the human eye.  There are many aspects of ultrasound
+propagation and scattering, and the parameter to be measured and
 displayed can be chosen to elucidate a single aspect of the physics of acoustic
 propagation, such as the attenuation coefficient or effective scatterer size or
 density, or a combination of multiple aspects.  Determining the most appropriate
 parameters depends on the ability to generate accurate and precise estimates of
-the parameter and the amount of correlation between the parameter and the tissue
-state of interest.
+the parameter and on the amount of correlation between the parameter and the tissue
+state of interest.  A parameter is most desireable there is high contrast
+between healthy and diseased tissue states, the parameter can be estimated with
+a high signal-to-noise ratio, and an image of the parameter has sufficient
+resolution to distinguish the structures present.
 
 Various tissue characterization parameters have been utilized for plaque
-examination, including slope, midband fit, intercept, minimum and maximum powers
+examination, including backscattered spectral slope, midband fit, intercept, minimum and maximum powers
 and their frequencies in the resulting spectra, along with the integrated
 backscatter, and attenuation slope parameters
 [Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_.
@@ -550,7 +553,7 @@ reference phantom with well characterized properties is used in the spectral
 normalization instead of that of a flat reflector.  The reference phantom method
 has been attempted at low frequencies on carotid plaques [Shi2007, Waters2003]_, but has yet
 to be evaluated at higher frequencies.  At lower frequencies, the small volume
-and heterogeneity of the tissue makes spectral estimation difficult.  
+and heterogeneity of the tissue makes spectral estimation difficult.
 
 
 Strain imaging
@@ -602,7 +605,7 @@ individual that had received serial MRI imaging.  Computational fluid
 dynamics base on MRI structure and composition identified the location of
 high shear stress with the location of the ulcer [Groen2008]_.  Ulceration
 has been observed to be more common proximal to stenosis and more common for fatty
-plaques [Saba2007]_.  
+plaques [Saba2007]_.
 
 Inflammation may be part of a positive feedback process where mechanical tearing
 would stimulate a necrotic response that catabolizes the extracellular matrix,
@@ -631,10 +634,10 @@ tensile stretch :math:`\lambda_{ult}`, and the stress at which failure
 occurs, ultimate tensile stress, :math:`\sigma_{ult}`.
 
 .. figure:: introduction/figures/holzapfel_intima.png
-  :width: 8cm 
+  :width: 8cm
   :height: 5.8cm
   :align: center
-    
+
   Tensile test on diseased intima. [Holzapfel2004]_
 
 .. |holzapfel_intima| replace:: Figure 1
@@ -658,7 +661,7 @@ failure [Tang2005]_.  This contrasts with other characterization methods that
 focus on parameters like composition, which may affect strain in a secondary
 manner and may be system dependent as previously discussed.  Strain imaging
 directly measures the effect of multiple stress concentrators including
-composition, ulceration, morphology, neovascularization, and hemodynamics.  
+composition, ulceration, morphology, neovascularization, and hemodynamics.
 
 IVUS strain imaging
 ~~~~~~~~~~~~~~~~~~~
@@ -729,7 +732,7 @@ absorption.  In the study by Kim et al., ultrasound signal motion tracking with
 a high frequency (50 MHz) transducer was employed to monitor ultrasound induced
 thermal expansion on *in vitro* tissue [Kim2008b]_.  Yet, it remains to be seen
 how this technique can be applied *in vivo* where tissue movement, from both
-bulk motion and mechanical strain, is significant [Shi2005a]_.  
+bulk motion and mechanical strain, is significant [Shi2005a]_.
 
 The thermal strain effect was used to estimate the spatio-temporal temperature
 changes that occur with another plaque characterization imaging technique,
@@ -750,7 +753,7 @@ External transducer strain imaging
 Recently, strain imaging with external ultrasound imaging using linear array
 transducers has been attempted.
 While the resolution of external ultrasound is much lower, it is noninvasive and
-appropriate for general stroke risk screening purposes.  
+appropriate for general stroke risk screening purposes.
 
 The first plaque strain characterization based on an external
 clinical transducer, a 7.0 MHz Acuson linear array, was reported by Meairs and
@@ -770,7 +773,7 @@ displacement in other literature that does not account the inter-frame time
 period, did not have significant differences between symptomatic and
 asymptomatic cases.  In contract, MDSV, which is is termed local strain in other
 literature, did show a statistically significant difference between symptomatic
-and asymptomatic patients.  
+and asymptomatic patients.
 
 Later, Bang et al. implemented a motion tracking algorithm similar to what is
 found in the elastography literature [Ophir2000, Ophir2001]_, though they
@@ -858,7 +861,7 @@ Preliminary work on applying angular compounding to strain images on transverse
 images of a hollow cylinder phantom have been performed by Hansen et al.
 [Hansen2009]_.  A number of complications exist that question whether angular
 compounding of strain images of extensive carotid atherosclerosis *in vivo* will
-improve image quality.  
+improve image quality.
 
 First, there are practical limitations to the maximum angle that can be steered
 due to transducer technology.  Grating lobe artifacts, which signifantly
@@ -896,14 +899,14 @@ for each image.  Furthermore, radial and circumferential directions are not very
 meaningful when dealing with the structure of a complex plaque as opposed to a
 healthy artery.  Most importantly, it remains to be determined if registration
 and displacement compensation techniques are significantly effective for the significant motion
-that occurs *in vivo*. 
+that occurs *in vivo*.
 
 Even though strain imaging holds much promise in the detection of vulnerable
 plaque, its success depends on the ability to measure strain accurately, with a
 large dynamic range, and with minimal noise.  The research presented in this
 dissertation focuses on the development of improved strain imaging algorithms
 and techniques and applies them to the diagnosis of stroke risk due to carotid
-plaque disruption. 
+plaque disruption.
 
 
 ~~~~~~~~~~
