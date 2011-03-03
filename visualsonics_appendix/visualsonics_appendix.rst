@@ -42,7 +42,7 @@ high-frequency scanner system to perform low-level 3D imaging research.
 .. |peak_memory_long| replace:: **Figure 9**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Collection and analysis of 3D radiofrequency data
+Collection and analysis of 3D RF data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 VisualSonics Vevo 770 system
@@ -81,8 +81,8 @@ The newer linear array transducer systems have better capabilities for
 pre-clinical imaging: a programmable transmit focus and dynamic receive focusing
 allow for a greater depth of field and better lateral resolution [Madsen2010]_.
 However, the single-element, high-frequency, wide bandwidth transducers of the
-Vevo 770 are desireable for the purpose of creating parametric ultrasound images.
-As discussed later, the simpler transducer geometry allows the system to be
+Vevo 770 are desirable for the purpose of creating parametric ultrasound images.
+As discussed in Chapter 6 and Chapter 7, the simpler transducer geometry allows the system to be
 modeled during quantification of TM phantom acoustic properties.  The same
 transducer can then be used in the collection of planar reflector, TM phantom,
 and tissue signals.
@@ -110,7 +110,7 @@ and the scanhead filled with water prior to each application.
   element is suspended in a water filled capsule by a rod whose pivot point is
   high in the assembly housing above the clamp.
 
-Two options exist on the system to collect RF data: a BNC output exists for
+Two options exist on the system to collect RF data: a BNC output for
 triggered signal acquisition with an external oscilloscope or other
 analog-to-digital (A/D) device, or RF data can be collected with an on-board A/D
 board integrated with the *Digital-RF* software module if available.  An advantage to
@@ -119,10 +119,10 @@ acquisition along with coordinated 3D acquisition via system software
 control of the stepper-motor.
 
 A variety of transducers are available that differ in their focal length,
-aperature, center frequency, and bandwidth.  The transducer selected was a
+aperture, center frequency, and bandwidth.  The transducer selected was a
 RMV710B that has a center frequency of 25 MHz,
 which is on the lower end the center frequency for available transducers.  This
-transducer outputs frequencies upto 37.5 MHz, with an axial resolution of 70 μm,
+transducer outputs frequencies up to 37.5 MHz, with an axial resolution of 70 μm,
 lateral resolution of 140 μm, focal length 15 mm, and a maximum field of view of
 20.0 mm.  The RMV710B was selected because the frequency was low enough to
 penetrate the plaque and the field of view was large enough to encompass the
@@ -389,7 +389,7 @@ affine transform [Ibanez2005]_,
 .. math:: \mathbf{y} = \mathbf{Ax} = \mathbf{b}
 
 where **x** is a vector of the output point position, **y** is the input point
-position, **A** is a matrix of cofficients that apply rotation, shearing or
+position, **A** is a matrix of coefficients that apply rotation, shearing or
 scaling to the output space, and **b** is a vector defining the rigid translation,
 lines remain lines after transformation.  Recognizing this fact, we see that the
 region required by a linear transformation of an image is the bounding box
