@@ -2,8 +2,8 @@
 High-frequency 3D Data Analysis
 =============================================
 
-In this section we describe the methods used to adapt a commercial
-high-frequency scanner system to perform low-level 3D imaging research.
+In this section we describe methods used to adapt a commercial
+high-frequency scanner system to perform 3D imaging research.
 
 .. |vs_plaque_system| replace:: Fig. 1
 
@@ -54,7 +54,7 @@ VisualSonics Vevo 770 system
   :align: center
 .. highlights::
 
-  |vs_plaque_system_long|. VisualSonics Vevo 770 imaging system.  The Vevo 770
+  |vs_plaque_system_long|: VisualSonics Vevo 770 imaging system.  The Vevo 770
   supports multiple transducers and has a standard console for interaction
   common to commercial imaging systems.  The system also comes with a motion
   table designed to secure and position the transducer (right).  Typically,
@@ -62,30 +62,30 @@ VisualSonics Vevo 770 system
   anesthesia systems, but this has been replaced with a water bath to image the
   excised tissues.
 
-VisualSonics is a Toronto, Canada company that manufactures high-frequency
+VisualSonics (Toronto, Canada) manufactures high-frequency
 ultrasound imaging systems designed for pre-clinical research on small animal
-targets.  Anatomical and real-time physiological imaging of mice and rats is
-possible with resolutions up to 30 μm and frame rates up 240 frames per second
+models.  Anatomical and real-time physiological imaging of mice and rats is
+possible with resolutions up to 30 μm and frame rates up to 240 frames per second
 (fps).  Primary features of the system are intended to allow longitudinal,
 non-invasive monitoring of anatomical and hemodynamic features as well as for
-theraputic intervention.  Some of these features include 2D B-Mode, 3D B-Mode
+therapeutic intervention.  Some of these features include 2D B-Mode, 3D B-Mode
 with a stepper motor system, M-Mode, pulse-wave Doppler, power Doppler, tissue
 Doppler, and contrast agent imaging.  An ancillary feature of the system is the
-output of radio-frequency (RF) raw data for basic analysis.  In this section we
+output of radio-frequency (RF) data for analysis.  In this section we
 describe methods to harness the RF output to perform advanced imaging research.
 
 The Vevo 770 system is the last generation of Vevo line systems that are
 designed around rotated single-element transducers; beginning with the Vevo 2100
-and later, the transducers are high frequency linear array systems.
+and later systems, the transducers are a high frequency linear array design.
 The newer linear array transducer systems have better capabilities for
 pre-clinical imaging: a programmable transmit focus and dynamic receive focusing
 allow for a greater depth of field and better lateral resolution [Madsen2010]_.
 However, the single-element, high-frequency, wide bandwidth transducers of the
 Vevo 770 are desirable for the purpose of creating parametric ultrasound images.
-As discussed in Chapter 6 and Chapter 7, the simpler transducer geometry allows the system to be
-modeled during quantification of TM phantom acoustic properties.  The same
+As discussed in Chapter 6 and 7, the simpler transducer geometry allows the system to be
+modeled during quantification of tissue-mimicking (TM) phantom acoustic properties.  The same
 transducer can then be used in the collection of planar reflector, TM phantom,
-and tissue signals.
+and echo-signals from tissue.
 
 A photograph of the Vevo 770 imaging system is shown in |vs_plaque_system| with
 a close-up of the transducer assembly in |vs_plaque_transducer|.   The single
@@ -94,7 +94,7 @@ the body of the case assembly.  The angular position is measured with a rotary
 encoder above the pivot point and scan conversion is necessary for proper
 display.  In order to achieve high frame rates, the transducer is rotated quickly
 about the pivot point by a motor in the transducer housing.  To facilitate good
-coupling between the transducer and a living specimen outside of a water bath,
+coupling between the transducer and *in vivo* animal models outside a water bath,
 the transducer element is encapsulated by a plastic basin and a replaceable thin
 film over the active element.  The thin film must be placed on the transducer
 and the scanhead filled with water prior to each application.
@@ -105,7 +105,7 @@ and the scanhead filled with water prior to each application.
   :align: center
 .. highlights::
 
-  |vs_plaque_transducer_long|. The Vevo 770 transducer (white) is held by a
+  |vs_plaque_transducer_long|: The Vevo 770 transducer (white) is held by a
   clamp connected to a precise linear stepper motor (top).  The transducer
   element is suspended in a water filled capsule by a rod whose pivot point is
   high in the assembly housing above the clamp.
@@ -121,11 +121,11 @@ control of the stepper-motor.
 A variety of transducers are available that differ in their focal length,
 aperture, center frequency, and bandwidth.  The transducer selected was a
 RMV710B that has a center frequency of 25 MHz,
-which is on the lower end the center frequency for available transducers.  This
+on the lower end the center frequency for available transducers.  This
 transducer outputs frequencies up to 37.5 MHz, with an axial resolution of 70 μm,
 lateral resolution of 140 μm, focal length 15 mm, and a maximum field of view of
 20.0 mm.  The RMV710B was selected because the frequency was low enough to
-penetrate the plaque and the field of view was large enough to encompass the
+penetrate plaque tissue and the field of view was large enough to encompass the
 entire sample.
 
 
@@ -133,7 +133,7 @@ File storage and metadata extraction
 =============================================
 
 RF acquisition is performed in M-mode and is considerably slower than B-mode
-rates.  The collection of a single 3D data set covering an entire plaque takes
+frame rates.  The collection of a single 3D data set covering an entire plaque takes
 approximately two hours.  RF acquisition was previously limited to single 2D
 frames, but we worked with VisualSonics engineers such that RF acquisitions can
 be collected in 3D with the optional high-precision stepper motor.  Data is
@@ -149,7 +149,7 @@ gain.
   :align: center
 .. highlights::
 
-  |vs_digital_rf_long|.  The *Digital-RF* user interface on the VisualSonics
+  |vs_digital_rf_long|:  The *Digital-RF* user interface on the VisualSonics
   Vevo 770.  System B-Mode is shown in the upper right with a red overlay of the
   RF collection ROI.  The lower right shows the ROI window B-Mode and
   saturation content, which is saved in the acquired file along with the RF
@@ -158,30 +158,30 @@ gain.
 
 Data collection is well integrated into the user interface of the machine, but
 buffer limits on the A/D card limit the length of acquisition to a subset of the
-field of view, |vs_digital_rf|.  When data files are exported in *RAW* format,
-two files are saved for each acquisition.  A file with the *.rdb* extension is a
-binary format file.  This *.rdb* contains three images in sequence in sequence:
-two image of the ROI selected in the scout window followed by the RF data.
-Regardless of whether the 3D acquisition occurs, the ROI images are
-always 2D images.  These images contain the content found in the system preview
-of the scan ROI before scan conversion.  First is a B-Mode image in two byte
-unsigned integer format written sequentially in A-lines.  All binary data is in
-*Little Endian* format, i.e. the least significant byte (LSB) precedes the most
-significant byte (MSB).  A saturation image with the same size as the B-Mode
-images follows.  The saturation image is again in two-byte unsigned integer
-format, but the content is boolean; a non-zero sample indicates that the
-digitizer was saturated at that datum.  The ROI data is followed by RF
-data in the acquired volume of interest.  Unlike the ROI images, the RF
-data is in a two-byte signed integer format.  The RF data is written
-sequentially by samples within an A-line, followed by A-lines within a frame,
-followed by the frame in the volume.  There is more than one pulse-echo data
-segment saved for each A-line.  To allow signal averaging with the transducer
-fixed in a given position, an average A-line signal is save followed by the
-individual pulse-echo contents.  For the beta 3D Digital-RF acquisition software
-available, though, only a single pulse-echo acquisition is possible per A-line
-when in 3D mode.  Information on the number of A-lines, averaged signals, etc.
-required to read, analyze, and scan convert the binary data must be extracted
-from the metadata header file.
+field of view, as illustrated in |vs_digital_rf|.  When data files are exported
+in *RAW* format, two files are saved for each acquisition.  A file with the
+*.rdb* extension denotes a binary format file.  This *.rdb* contains three
+images in sequence: two image of the ROI selected in the scout window followed
+by the RF data.  Regardless of whether the 3D acquisition occurs, the ROI images
+are always 2D images.  These images contain the content found in the system
+preview of the scan ROI before scan conversion.  The first image is a B-Mode
+images in two byte unsigned integer format written sequentially in an A-line
+format.  All binary data is in *Little Endian* format, i.e. the least
+significant byte (LSB) precedes the most significant byte (MSB).  A saturation
+image with the same size as the B-Mode image follows.  The saturation image is
+again in two-byte unsigned integer format, but the content is Boolean; a
+non-zero sample indicates that the digitizer was saturated at that datum.  The
+ROI data is followed by RF data in the acquired volume of interest.  Unlike the
+ROI images, the RF data is in a two-byte signed integer format.  The RF data is
+written sequentially by samples within an A-line, followed by A-lines within a
+frame, followed by the frame in the volume.  There is more than one pulse-echo
+data segment saved for each A-line.  To allow signal averaging with the
+transducer fixed in a given position, an average A-line signal is saved followed
+by the individual pulse-echo signals.  For the beta 3D Digital-RF acquisition
+software, only a single pulse-echo acquisition is possible per A-line when in 3D
+mode.  Information on the number of A-lines, averaged number of signals, etc. that are
+required to read, analyze, and scan convert the binary data must be extracted from the
+metadata header file.
 
 Each *.rdb* binary file has a *.rdi* metadata header file associated with it.
 This file has three sections, Image Info, Image Data, and Image Parameters.  The
@@ -221,7 +221,7 @@ content from an *.rdi* is shown in |rdi_content|.
 
 .. highlights::
 
-  |rdi_content_long|.  Example data from a Vevo 770 *.rdi* file.  Example
+  |rdi_content_long|:  Example data from a Vevo 770 *.rdi* file.  Example
   content from the three sections of the ASCII plain text content, Image Info,
   Image Data, and Image Parameters, are given.
 
@@ -231,22 +231,22 @@ Parameters section, this can take a hierarchical form delimited by a forward
 slash.  The second field is the value for the given key, which will contain an
 array of comma delimited numbers for an array of values.  An optional third
 field contains the units for the value.  The voluminous amount of Image
-Parameters results in a large file; a typical size is 35,000 lines.
+Parameters results in a large file; typical size is 35,000 lines.
 
 Parameters for parsing the binary file can be found or derived from the Image
 Info section, which makes the Image Data section largely redundant.  Parametric
-image formation and scan conversions relies on content dispersed throughout the
+image formation and scan conversion relies on content dispersed throughout the
 Image Parameters section.  To facilitate the extraction of values of a given key
-and conversion from plain text to the appropriate data type, library was develop
+and conversion from plain text to the appropriate data type, a library was developed
 to parse the header content into an intermediate eXtensible Markup Language
-(XML) form [Bray2008]_.  The advantages of XML in for this data set include its broad
+(XML) form [Bray2008]_.  The advantages of XML for this data set includes its broad
 support under diverse tools and programming languages as an open standard, a
 native text-based and hierarchical form, and some explicit specification of data
 types.  The structure of the *.rdi* is transformed into an XML hierarchy by
 considering the main three sections as top level elements and division and
 sorting of the keys in the Image Parameters section into a hierarchy of child
-elements.  This structure was determined by parse and example header file instance
-with a Python [Rossum2011]_ script and defined using an XMLSchema [Fallside2004]_
+elements.  This structure was determined by parsing an example header file instance
+with a Python [Rossum2011]_ script and defined using XMLSchema [Fallside2004]_
 
 ::
 
@@ -280,13 +280,13 @@ with a Python [Rossum2011]_ script and defined using an XMLSchema [Fallside2004]
 
 .. highlights::
 
-  |rdixml_long|.  Content of the header file in |rdi_content| after
+  |rdixml_long|:  Content of the header file in |rdi_content| after
   transformation into XML format.
 
 The content is imported in C++ into a Xerces-C++ [XercesC]_ object, from which
-it can be serialized into an XML file, |rdixml| to be easily processed by other
+it can be serialized into an XML file, as shown in |rdixml| to be easily processed by other
 programs.  Alternatively, it can be transformed into a Hyper-Text Markup
-Language (HTML) to be easily examined in web browers, |rdihtml|.  Transformation
+Language (HTML) to be easily examined in web browsers, |rdihtml|.  Transformation
 is specified through an EXtensible Stylesheet Language (XSLT) document and applied in
 memory with Xalan-C++ [XalanC]_.  Most importantly, the parameters can be accessed
 in C++ as native data objects through the use of XML data binding with
@@ -296,10 +296,10 @@ CodeSynthesis XSD [XSD]_ since an XMLSchema has been generated.
   :align: center
 .. highlights::
 
-  |rdihtml_long|.  Rendering of the header file contents after transformation
+  |rdihtml_long|:  Rendering of the header file contents after transformation
   from XML to HTML.
 
-An InsightToolkit (ITK) [Yoo2002]_ ImageIO class was written for processing the
+An Insight Toolkit (ITK) [Yoo2002]_ ImageIO class was written for processing the
 data with ITK.  The data is imported as an "image", i.e. geometry of uniform,
 anisotropic spacing in Cartesian format, with angle and radius information stored in the
 metadata dictionary for scan conversion after B-Mode or parametric image
@@ -339,7 +339,7 @@ changes with every A-line.
   :align: center
 .. highlights::
 
-  |vs_field_of_view_long|.  Diagram of the Vevo 770 geometric parameters used in
+  |vs_field_of_view_long|:  Diagram of the Vevo 770 geometric parameters used in
   field of view calculations.  The transducer sits at the end of a shaft, and
   the angle of rotation is recorded by a rotary encoder attached to an extension
   of the shaft across the pivot point.  Parameters stored in the metadata file
@@ -353,7 +353,7 @@ radius is given by :math:`r = SL + DL + \frac{s \, c}{2 f_s}` where *s* is the
 sample number along the A-line, *c* is the assumed speed of sound (usually 1540
 m/s), and :math:`f_s` is the sampling frequency
 (*RF-Mode/RfModeSoft/SamplesPerSec*).  The angle in radians is simply
-:math:`\theta = EP / PE`.  Cartesian coordinates are then :math:`x_1 = r \cos(
+:math:`\theta = EP / PE`.  The Cartesian coordinates are then :math:`x_1 = r \cos(
 \theta )` and :math:`x_2 = r \sin( \theta )`.  For 3D imaging, the only other
 geometric parameter of importance is the frame spacing, which is found at
 *RF-Mode/3D/StepSize*.
@@ -361,16 +361,16 @@ geometric parameter of importance is the frame spacing, which is found at
 Data streaming
 ==============
 
-Due memory capacity limitations of modern computers, it is of necessary process
-a large image in independent chunks, also known as streamed data processing.  A
+Due to memory capacity limitations of modern computers, it is necessary to process
+a large image file in independent chunks, also known as streamed data processing.  A
 single Vevo 770 plaque volume prior to scan conversion with 2128 samples per
 A-line, 250 lines per frame, 250 frames per subvolume, and four subvolumes per
 plaque has 532 million samples.  If the data samples are stored as single-byte
 *char* datatypes or two-byte *unsigned short* samples, as may be the case for
 clinical scanner's volume rendering software, a high-end modern computer is
-capable of store a copy of the image in system RAM or graphics card global
+capable of storing a copy of the image in system RAM or graphics card global
 memory.  When processing the data to create parametric ultrasound images or
-perform scan conversion, we use the eight-byte floating point *double* data type,
+to perform scan conversion, we use the eight-byte floating point *double* data type,
 and multiple copies of the data are required as it passes through our
 processing pipeline.  This size exceeds the capacity of most computers, and
 streaming is required.
@@ -388,19 +388,21 @@ affine transform [Ibanez2005]_,
 
 .. math:: \mathbf{y} = \mathbf{Ax} = \mathbf{b}
 
-where **x** is a vector of the output point position, **y** is the input point
-position, **A** is a matrix of coefficients that apply rotation, shearing or
-scaling to the output space, and **b** is a vector defining the rigid translation,
-lines remain lines after transformation.  Recognizing this fact, we see that the
-region required by a linear transformation of an image is the bounding box
-defined by the transformation of image's corners.  The result of a resampling
-implementation that takes advantage of this property to perform streaming is
-shown in |head_streaming|.  An affine transform is applied with scaling by a
-factor of 1.25 in all directions, rotation of 1 radian about the y-axis and 0.2
-radians about the z-axis, and translation of three pixel spacings in the
-y-direction and seven pixel spacings in the z-direction.  The resampling process
-is applied without streaming and streaming with eight stream divisions.  The
-results are the same for both cases.
+.. epigraph::
+
+  where **x** is a vector of the output point position, **y** is the input point
+  position, **A** is a matrix of coefficients that apply rotation, shearing or
+  scaling to the output space, and **b** is a vector defining the rigid translation,
+  lines remain lines after transformation.  Recognizing this fact, we see that the
+  region required by a linear transformation of an image is the bounding box
+  defined by the transformation of image's corners.  The result of a resampling
+  implementation that takes advantage of this property to perform streaming is
+  shown in |head_streaming|.  An affine transform is applied with scaling by a
+  factor of 1.25 in all directions, rotation of 1 radian about the y-axis and 0.2
+  radians about the z-axis, and translation of three pixel spacings in the
+  y-direction and seven pixel spacings in the z-direction.  The resampling process
+  is applied without streaming and streaming with eight stream divisions.  The
+  results are the same for both cases.
 
 .. image:: images/mr_resample_annotate.png
   :width:  16cm
@@ -408,10 +410,10 @@ results are the same for both cases.
   :align: center
 .. highlights::
 
-  |head_streaming_long|.  Magnetic resonance head image a) before
+  |head_streaming_long|:  Magnetic resonance head image a) before
   transformation, b) after an affine transformation without streaming,
-  and c) after the same transformation with streaming.  A pixel-wise differnce
-  calculation on the transformed images shows they are identical.
+  and c) after the same transformation with streaming.  Pixel-wise difference
+  calculation on the transformed images show that they are identical.
 
 This same implementation can be applied to perform streaming when performing
 scan conversion for the Vevo 770.  Even though the inplane transformation is
@@ -429,7 +431,7 @@ required is directly proportional to the number of stream divisions.
   :align: center
 .. highlights::
 
-  |peak_memory_long|. Peak heap memory usage during B-Mode image creation and scan
+  |peak_memory_long|: Peak heap memory usage during B-Mode image creation and scan
   conversion of a Vevo 770 file.  The slope of a linear fit to the data is 1.33
   MB/frame and the intercept is 11.0 MB.
 
