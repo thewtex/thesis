@@ -16,6 +16,10 @@ coefficient, phase velocity, and absolute backscatter coefficient are described.
 
 .. |substitution_apparatus_long| replace:: **Figure 1**
 
+.. |panametrics_spectrum| replace:: Fig. 2
+
+.. |panametrics_spectrum_long| replace:: **Figure 2**
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Attenuation characterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,44 +56,97 @@ to remove the :math:`A_0` constant and solve for the attenuation coefficient.
   |substitution_apparatus_long|:  Water tank used for making methods with the
   substitution technique.  The transducers are suspended in the tank by a system
   of mounts with translational and rotational degrees of freedom.  A heater
-  keeps the water at a constant 22º C.  For calculation of both the phase
+  keeps the water at a constant 22.0º C.  For calculation of both the phase
   velocity and the attenuation coefficient, signal is collected from a
   water-only path (shown), and a with the sample placed in the path of the
   transducers (not shown).  A function generator and pulse amplifier provide
   input to the transmitting transducer, and the oscilloscope and computer used
   to record the received signal.
 
-This method involves measuring the
-ultrasound signal in a water tank with a transmitting and receiving transducer,
-then repeating the signal acquisition after introducing a sample of known
-thickness into the water.  The shift in arrival time was used to calculate the
-speed of sound, and the amplitude ratio was used to calculate the material's
-attenuation [AIUM1995,Madsen1999]_.
+The experimental apparatus layout is illustrated in |substitution_apparatus|.
+The water tank is filled with degassed, reverse osmosis water to provide a
+medium for ultrasound propagation.  Since the acoustic properties of water, in
+particular the sound speed, can change with temperature, the tank water is kept
+at a controlled 22.0 °C by a Haake DC10 heater (Thermo Fisher Scientific Inc.).
+Especially at high frequencies, it is important to temporarily turn off the
+circulating heater during signal acquisition to reduce vibrations that would
+impact time delays and cause jitter while averaging sweeps.  For the same
+reasons, it is critical to ensure the experimenter does not making contact with
+the water tank while data is collected.
+
+A Wavetek model 81 Function Generator is set to burst mode to generate a
+sinusoid tone burst of 30 wavelengths.  In the *narrowband* substitution method,
+measurements are made independently at individual frequencies.  This frequency
+is the frequency of the sine waves in the tone burst.  While a theoretical
+narrowband input would be a continuous sinusoid for all time, the signal can
+effectively be considered narrow band near the center of the tone burst where
+edge effects decrease to negligle levels.  The use of a tone burst instead of a
+continuous wave is required for two reasons: the transducers have a limited
+power dissipation capacity, and the start of the burst serves as a fiducial
+marker when determinied delays for speed of sound calculations.  The input
+function generator signal is amplified by a model 75A250A radiofrequency (RF)
+amplifier (Amplifier Research, Souderton, PA, USA) to provide a high voltage
+excitation of the ultrasound transducers.
+
+A sealed, co-axial BNC (Bayonet Neill-Concelman) connection to the transducers
+is made to the transducers.  The signal is transmitted and received by a V358 50
+MHz center frequency unfocused transducer pair (Olympus Panametrics-NDT, Waltham,
+MA, USA).  The transducers are aligned by peaking the received signal with a
+micrometer controlled translation unit (Ardel Kinematic Inc., Stratford, CT,
+USA) and gimbal mount (Newport Oriel, Stratford, CT, USA). The transducers are
+separated by a relatively close 42 μs delay (62.5 mm signal propagation path) to
+prevent attenuation of the signal.  The transducer, serial numbers 630314 and
+630315, are well matched in their spectral response with a -6 dB bandwidth from
+28 MHz to 65 MHz as shown in |panametrics_spectrum|.  In practice we find that
+sufficient signal can be obtained from 10 MHz to 70 MHz.
+
+.. image:: images/panametrics_spectrum.tif
+  :width:  14cm
+  :height: 6.3cm
+  :align:  center
+.. highlights::
+
+  |panametrics_spectrum_long|:  Impulse response of the two transducers, serial
+  number 630314 and 630315, used to measure the sound speed and attenuation of
+  the phantom sample.  Measurements are provided by Olympus Panametrics-NDT and
+  performed per ASTM E1065.
+
+The received signal is digitized and displayed with the WaveRunner LT342
+oscilloscope (LeCroy, Chestnut Ridge, NY, USA).  The received signal was
+collected at 500 MS/s, and ten independent sets of 100 averaged pulses were
+transferred to a computer for further offline analysis.
+
+
+
+This method involves measuring the ultrasound signal in a water tank with a
+transmitting and receiving transducer, then repeating the signal acquisition
+after introducing a sample of known thickness into the water.  The shift in
+arrival time was used to calculate the speed of sound, and the amplitude ratio
+was used to calculate the material's attenuation [AIUM1995,Madsen1999]_.
 
 The equipment and setup used has been described previously [Madsen2010]_, and
 includes a Wavetek model 81 Function Generator set to burst mode, generating a
 sinusoid of 30 wavelengths at the target frequency.  The input signal is
-amplified by a model 75A250A radiofrequency (RF) amplifier
-(Amplifier Research, Souderton, PA, USA).  The signal is transmitted and
-received by a V358 50 MHz center frequency unfocused transducer pair (Olympus
-Panametric-NDT, Waltham, MA, USA).  The transducers were aligned by peaking the
-received signal with a micrometer controlled translation unit (Ardel Kinematic
-Inc., Stratford, CT, USA) and gimbal mount (Newport Oriel, Stratford, CT, USA).
-The compressional wave was transmitted through deionized water maintained
-at 22.0 °C by a Haake DC10 heater (Thermo Fisher Scientific Inc.).  However, the
-circulating heater was temporarily turned off during signal acquisition to reduce
-vibrations that would impact time delays and cause jitter while averaging sweeps
-with the WaveRunner LT342 oscilloscope (LeCroy, Chestnut Ridge, NY, USA).  The
+amplified by a model 75A250A radiofrequency (RF) amplifier (Amplifier Research,
+Souderton, PA, USA).  The signal is transmitted and received by a V358 50 MHz
+center frequency unfocused transducer pair (Olympus Panametric-NDT, Waltham, MA,
+USA).  The transducers were aligned by peaking the received signal with a
+micrometer controlled translation unit (Ardel Kinematic Inc., Stratford, CT,
+USA) and gimbal mount (Newport Oriel, Stratford, CT, USA).  The compressional
+wave was transmitted through deionized water maintained at 22.0 °C by a Haake
+DC10 heater (Thermo Fisher Scientific Inc.).  However, the circulating heater
+was temporarily turned off during signal acquisition to reduce vibrations that
+would impact time delays and cause jitter while averaging sweeps with the
+WaveRunner LT342 oscilloscope (LeCroy, Chestnut Ridge, NY, USA).  The
 transducers were separated by a 42 μs delay (62.5 mm signal propagation path).
-The received signal was collected
-at 500 MS/s, and ten independent sets of 100 averaged pulses were transferred to a computer
-for further offline analysis.
+The received signal was collected at 500 MS/s, and ten independent sets of 100
+averaged pulses were transferred to a computer for further offline analysis.
 
 A sample of the material used in the production of the backscatter phantom was
-between 12 μm thick Saran Wrap® film inside an acrylic cylinder.  The thickness of
-the test cylinder was 5.00 mm measured with a calibrated
-micrometer.  The density of the TM material was 1.045 g/mL for the 4000E phantom
-and 1.062 g/mL for the 5000E phantom.
+between 12 μm thick Saran Wrap® film inside an acrylic cylinder.  The thickness
+of the test cylinder was 5.00 mm measured with a calibrated micrometer.  The
+density of the TM material was 1.045 g/mL for the 4000E phantom and 1.062 g/mL
+for the 5000E phantom.
 
 Considerable changes in the shape of the pulse occurred because of frequency
 dependent attenuation (see |substitution_pulse|).  To precisely obtain the phase

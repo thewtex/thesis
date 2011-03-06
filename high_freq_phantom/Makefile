@@ -12,7 +12,7 @@ STYLESODTPATH=../formatting/$(STYLESODT)
 
 PAPER=high_freq_phantom
 
-all: $(PAPER).doc
+all: $(PAPER).odt
 
 $(PAPER)_w_math.rst: $(PAPER).rst
 	$(IMGMATHHACK) $(PAPER).rst $(PAPER)_w_math.rst
