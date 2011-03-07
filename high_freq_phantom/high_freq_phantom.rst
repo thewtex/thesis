@@ -20,6 +20,10 @@ coefficient, phase velocity, and absolute backscatter coefficient are described.
 
 .. |panametrics_spectrum_long| replace:: **Figure 2**
 
+.. |average_waveform| replace:: Fig. 3
+
+.. |average_waveform_long| replace:: **Figure 3**
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Attenuation characterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -116,6 +120,28 @@ oscilloscope (LeCroy, Chestnut Ridge, NY, USA).  The received signal was
 collected at 500 MS/s, and ten independent sets of 100 averaged pulses were
 transferred to a computer for further offline analysis.
 
+Vibration from the buildings or other sources can cause jitter in received
+waveform, which will descrease the averaged amplitude.  A guard against this
+source of error is to plot the waveform before and after averaging, as in
+|average_waveform|.
+
+.. image:: images/13Nov08TMBlood--20.00-MHz.eps
+  :width: 10cm
+  :height: 7.5cm
+  :align: center
+.. highlights::
+
+  |average_waveform_long|:  Received waveform from the 5000E sample before and
+  after averaging.  Noise is removed from averaged waveform, but the amplitude
+  does not decrease, which can occur when jitter is present.
+
+
+A sample of the material used in the production of the backscatter phantom was
+between 12 μm thick Saran Wrap® film inside an acrylic cylinder.  The thickness
+of the test cylinder was 5.00 mm measured with a calibrated micrometer.  The
+density of the TM material was 1.045 g/mL for the 4000E phantom and 1.062 g/mL
+for the 5000E phantom.
+
 
 
 This method involves measuring the ultrasound signal in a water tank with a
@@ -195,7 +221,7 @@ g/mL, thickness 12.2 μm, and amplitude attenuation coefficient is given by
 
 .. math:: \alpha (f) = \alpha_0 \; f^{n}
 
-where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.5` and n  = 1.285 for the 4000E
+where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.285` and n  = 1.285 for the 4000E
 TM phantom α\ :sub:`0`  = 5.0 Np/m/MHz\ :sup:`1.5` and n  = 1.5 in the 5000E
 case.
 
