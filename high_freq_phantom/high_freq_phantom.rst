@@ -24,6 +24,10 @@ coefficient, phase velocity, and absolute backscatter coefficient are described.
 
 .. |average_waveform_long| replace:: **Figure 3**
 
+.. |saran_trans_coef| replace:: Fig. 4
+
+.. |saran_trans_coef_long| replace:: **Figure 4**
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Attenuation characterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -84,10 +88,10 @@ measurements are made independently at individual frequencies.  This frequency
 is the frequency of the sine waves in the tone burst.  While a theoretical
 narrowband input would be a continuous sinusoid for all time, the signal can
 effectively be considered narrow band near the center of the tone burst where
-edge effects decrease to negligle levels.  The use of a tone burst instead of a
+edge effects decrease to negligible levels.  The use of a tone burst instead of a
 continuous wave is required for two reasons: the transducers have a limited
 power dissipation capacity, and the start of the burst serves as a fiducial
-marker when determinied delays for speed of sound calculations.  The input
+marker when determined delays for speed of sound calculations.  The input
 function generator signal is amplified by a model 75A250A radiofrequency (RF)
 amplifier (Amplifier Research, Souderton, PA, USA) to provide a high voltage
 excitation of the ultrasound transducers.
@@ -121,7 +125,7 @@ collected at 500 MS/s, and ten independent sets of 100 averaged pulses were
 transferred to a computer for further offline analysis.
 
 Vibration from the buildings or other sources can cause jitter in received
-waveform, which will descrease the averaged amplitude.  A guard against this
+waveform, which will decrease the averaged amplitude.  A guard against this
 source of error is to plot the waveform before and after averaging, as in
 |average_waveform|.
 
@@ -135,12 +139,64 @@ source of error is to plot the waveform before and after averaging, as in
   after averaging.  Noise is removed from averaged waveform, but the amplitude
   does not decrease, which can occur when jitter is present.
 
+Frequency-dependent attenuation causes distortion at the beginning and the end
+of the tone burst.  In order to ensure that we are measuring the amplitude at
+the the narrowband portion of the signal, we calculate the root-mean-square
+amplitude where correlation with a 20 cycle sine wave of the excitation wave is
+peaked.
 
-A sample of the material used in the production of the backscatter phantom was
-between 12 μm thick Saran Wrap® film inside an acrylic cylinder.  The thickness
-of the test cylinder was 5.00 mm measured with a calibrated micrometer.  The
-density of the TM material was 1.045 g/mL for the 4000E phantom and 1.062 g/mL
-for the 5000E phantom.
+When sound is transmitted through the water-only path, its amplitude decreases
+across :math:`z_1`, the distance from the transmitting transducer to where the
+start of the sample will be placed, across :math:`d`, the thickness of the
+sample, and :math:`z_2`, the distance from the end of the sample to receiving
+transducer.
+
+.. math:: A_w = A_0 \exp( -\alpha_w z_1 ) \exp( -\alpha_w d ) \exp( -\alpha_w z_2 )
+
+When sound propagates through the surrounding water and sample, the received
+amplitude is,
+
+.. math:: A_s = A_0 \exp( -\alpha_w z_1 ) T \exp( -\alpha_s d ) \exp( -\alpha_w z_2)
+
+.. epigraph::
+
+  where *T* is the transmission coefficient of the two thin films enclosing the
+  sample.  The substitution method sample is constructed of the material used in the
+  production of the backscatter phantom but is covered by 12.2 μm thick Saran
+  Wrap® film inside an acrylic cylinder.  The transmission coefficient, while
+  nearly constant a lower frequencies, deviates at high frequencies, as shown in
+  |saran_trans_coef|.  The transmission coefficient, *T*, is given by
+  [Wear2005]_
+
+.. image:: images/saran_trans_eqn.png
+  :width: 14cm
+  :height: 2.23cm
+  :align: center
+
+.. epigraph::
+
+  where :math:`Z_w`, :math:`Z_s`, and :math:`Z_{Saran}`, are the acoustic
+  impedances of water, the sample, and Saran Wrap respectively, f is the
+  frequency, :math:`c_{Saran}` is the speed of sound in Saran, :math:`\alpha(f)`
+  is the attenuation coefficient of the Saran Wrap in *Np/m*, and *l* is the
+  thickness of each thin layer.  In our case :math:`c_{Saran}` is 2400 *m/s*,
+  :math:`\alpha (f) = 5.0 Np/m f^{1.5}`, the Saran density, :math:`\rho_{Saran}`
+  is 1.69 *g/mL*.
+
+.. image:: images/saran_trans_coef.png
+  :width: 10cm
+  :height: 7.5cm
+  :align: center
+.. highlights::
+
+  |saran_trans_coef_long|:  Transmission coefficient of the two thin Saran Wrap
+  layers covering the production sample used in attenuation estimation
+  experiments.  Note the dependence on frequency.
+
+
+  The thickness of the test cylinder was
+  5.00 mm measured with a calibrated micrometer.  The density of the TM material
+  was 1.045 g/mL for the 4000E phantom and 1.062 g/mL for the 5000E phantom.
 
 
 
