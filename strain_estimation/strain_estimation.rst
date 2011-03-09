@@ -19,6 +19,10 @@ cardiac cycle are explained.
 
 .. |points_long| replace:: **Figure 1**
 
+.. |segments| replace:: Fig. 2
+
+.. |segments_long| replace:: **Figure 2**
+
 ~~~~~~~~~~~~~~~~~
 The strain tensor
 ~~~~~~~~~~~~~~~~~
@@ -39,7 +43,33 @@ deformation of the body.
   |points_long|: 2D solid body at reference time *t*\ :sub:`0`, and after motion
   at time *t*.  The vector **X** defines the position of point P(t\ :sub:`0`\ )
   in the reference configuration, and the vector **x** defines the point's
-  position after motion.
+  position after motion.  The vector **u** is the difference between the two
+  vectors and the displacement of P.
+
+Consider a point, P, within a body at the time t\ :sub:`0` whose location is
+defined by the vector **X**.  Motion occurs and P(t) is now located at **x**.
+That is, :math:`\mathbf{x} = \mathbf{x}( \mathbf{X}, t )` and
+:math:`\mathbf{x} ( \mathbf{X}, t_0 ) = \mathbf{X} )`.  Here **X** defines the
+reference configuration.  We will consider the location of P after motion occurs
+to be the reference location plus a displacement, **u**, i.e.
+
+.. math:: \mathbf{x} = \mathbf{X} + \mathbf{u}( \mathbf{X}, t )
+
+.. image:: images/segments.png
+  :align: center
+  :width: 11cm
+  :height: 7.965cm
+.. highlights::
+
+  |segments_long|:  A different length segment extending from point P to point Q
+  in the reference configuration, d\ **X**, and after deformation, d\ **x**.
+
+Let us examine the motion of infinitesimally small line segments within the
+body.  The line segment at **X**, d\ **X**, at time *t* becomes d\ **x**.  This
+is illustrated in |segments|.  The nearby point Q is located in the post- and
+pre-deformation states at
+
+.. math:: \mathbf{x} + d\mathbf{x} = \mathbf{X} + d\mathbf{X} + \mathbf{u}( \mathbf{X} + d\mathbf{X}, t )
 
 Mechanical model
 ================
@@ -53,8 +83,58 @@ Lagrangian strain
 Eulerian strain
 ---------------
 
-
 Application in ultrasound
 =========================
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Methods for estimating strain from displacement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Finite difference based methods
+===============================
+
+The least squares strain estimator
+==================================
+
+B-spline fitting
+================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Useful quantities derived from the strain tensor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Principal strains
+=================
+
+Representation of the 2D strain tensor as an ellipse
+====================================================
+
+Combination of normal strains and shear strain into a single strain index
+=========================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Generating acculated strain from a time series
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dynamic frame skip
+==================
+
+Eulerian approach to accumulated strain
+=======================================
+
+Since strain is a measure of the distortion of an object relative to a reference
+strain, the *reference state* must be defined.  Experimentalists whom attempt to
+measure the *in vitro* mechanical properties will sometimes try to find a
+complete stress-free state of the artery and use this as the reference state.
+When removed from the tethering provided by surrounding tissue, arteries will
+shrink dramatically in size [Fung1993]_.  A *no-load* [Fung1993]_ condition
+occurs when excised vessels are removed and blood pressure and longitudinal
+tensile stresses are removed.  A *zero stress* [Fung1993]_ occurs when no
+further strain occurs after cutting the tissue.  The residual stress that
+defines the difference between the no-load and zero stress can be quantified
+with the opening angle, the angle that results from cutting an artery
+longitudinally [Fung1993]_.  When working with *in vivo* tissues,
+it is difficult to infer the zero stress state, although Masson et al. obtained
+reasonable results given a number of modeling assumptions for a healthy common
+carotid artery [Masson2008]_.  For this reason, an end diastolic image state is
+taken as the reference state.
