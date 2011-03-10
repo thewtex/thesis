@@ -23,6 +23,10 @@ cardiac cycle are explained.
 
 .. |segments_long| replace:: **Figure 2**
 
+.. |two_segments| replace:: Fig. 3
+
+.. |two_segments_long| replace:: **Figure 3**
+
 ~~~~~~~~~~~~~~~~~
 The strain tensor
 ~~~~~~~~~~~~~~~~~
@@ -70,6 +74,59 @@ is illustrated in |segments|.  The nearby point Q is located in the post- and
 pre-deformation states at
 
 .. math:: \mathbf{x} + d\mathbf{x} = \mathbf{X} + d\mathbf{X} + \mathbf{u}( \mathbf{X} + d\mathbf{X}, t )
+
+.. epigraph::
+
+  It is clear from |segments| that
+
+.. math:: d\mathbf{x} = d\mathbf{X} + \mathbf{u}( \mathbf{X} + d\mathbf{X}, t) - \mathbf{u}( \mathbf{X}, t)
+
+.. epigraph::
+
+  This can be expressed with the second-order tensor called the displacement
+  gradient [Lai1993]_, :math:`\nabla \mathbf{u}`.  In 2D Cartesian coordinates,
+
+  In 2D Cartesian coordinates,
+
+.. math:: \nabla \mathbf{u} = \begin{bmatrix} \dfrac{\partial u_1}{\partial X_1} & \dfrac{\partial u_1}{\partial X_2} \\ \dfrac{\partial u_2}{\partial X_1} & \dfrac{\partial u_2}{\partial X_2} \end{bmatrix}
+
+.. epigraph::
+
+  If :math:`\mathbf{F} \equiv I + \nabla \mathbf{u}`, then
+
+.. math:: d \mathbf{x} = d \mathbf{X} + \nabla \mathbf{u} \, d \mathbf{X} = \mathbf{F} d \mathbf{X}
+
+Strain, which quantifies the distortion that occurs in a material, is defined
+when investigating the expression for the inner product between two differential
+segments before and after deformation.  When we compare the two segments
+:math:`d \mathbf{x}^{(1)}` and :math:`d \mathbf{x}^{(2)}`
+
+.. image:: images/two_segments.png
+  :align: center
+  :width: 6cm
+  :height: 1.09cm
+
+.. image:: images/two_segments_dia.png
+  :align: center
+  :width: 11cm
+  :height: 7.97cm
+.. highlights::
+
+  |two_segments_long|: Two differential segments in the reference configuration,
+  :math:`d \mathbf{x}^{(1)}` and :math:`d \mathbf{x}^{(2)}`,
+  and after motion occurs. :math:`d \mathbf{X}^{(1)}` and :math:`d \mathbf{X}^{(2)}`
+
+Observe that
+
+.. image:: images/two_segments2.png
+  :align: center
+  :width: 6cm
+  :height: 1.0cm
+
+.. epigraph::
+
+  It is from this model that the different expressions for the strain tensor
+  arise.
 
 Mechanical model
 ================

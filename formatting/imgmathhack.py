@@ -27,8 +27,8 @@ from rolehack import *
 
 class Tex_to_images(object):
     """Feeds math to ``klatexformula``.  Always goes through ppm."""
-    def __init__(self, dir='./imgmath', options=['-X', '170', '-f', '#000000'],
-                 converter='klatexformula', extension='.png'):
+    def __init__(self, dir='./imgmath', options=['-X', '300', '-f', '#000000'],
+                 converter='klatexformula_cmdl', extension='.png'):
         try:
             os.mkdir(dir)
         except OSError:
@@ -46,7 +46,7 @@ class Tex_to_images(object):
         fname = hashlib.md5(text).hexdigest()
         fpath = os.path.join(dir, fname)
         if not os.path.exists(fpath + extension):
-            next_command = [converter, '-l', text,
+            next_command = [converter, '--preamble', '\usepackage{amsmath}', '-l', text,
                     '-o', fpath + extension ]
             next_command.extend( options )
             subprocess.check_call( next_command )
