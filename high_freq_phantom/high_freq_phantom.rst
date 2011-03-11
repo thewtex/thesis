@@ -32,9 +32,17 @@ coefficient, phase velocity, and absolute backscatter coefficient are described.
 
 .. |spectrogram_fig_long| replace:: **Figure 5**
 
-.. |saran_trans_coef| replace:: Fig. 4
+.. |saran_trans_coef| replace:: Fig. 6
 
-.. |saran_trans_coef_long| replace:: **Figure 4**
+.. |saran_trans_coef_long| replace:: **Figure 6**
+
+.. |attenuation_plot| replace:: Fig. 7
+
+.. |attenuation_plot_long| replace:: **Figure 7**
+
+.. |attenuation_table| replace:: Table 1
+
+.. |attenuation_table_long| replace:: **Table 1**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Attenuation characterization
@@ -204,7 +212,7 @@ amplitude is,
 
 .. epigraph::
 
-  where *T* is the transmission coefficient of the two thin films enclosing the
+  where *T* is the total transmission coefficient of the two thin films enclosing the
   sample.  When constructing the substitution method sample, the material used
   is the same as that produced during creation of the backscatter phantom but is
   covered by 12.2 μm thick Saran Wrap® film inside an acrylic cylinder.  The
@@ -244,10 +252,13 @@ amplitude is,
   layers covering the production sample used in attenuation estimation
   experiments.  Note the dependence on frequency.
 
+.. epigraph::
+
   Again, the attenuation coefficient, α, in dB/cm is calculated using the signal
   amplitude in the absence of the sample, A\ :sub:`w`, the signal amplitude with the sample in place, A\
-  :sub:`s`.  If the two equation that define these two cases are divided,
-  the result placed in decibels, and we solve for :math:`\alpha`,
+  :sub:`s`.  Taking the two equations that define the attenuation in water-only and
+  with the sample and dividing them,
+  solving for :math:`\alpha`, and placing the result in decibels per centimeter
 
   .. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
 
@@ -256,37 +267,47 @@ amplitude is,
   cyclinders used at lower frequencies to limit high frequency attenuation.
 
   Attenuation of water, α\ :sub:`w`, which is negligible at lower frequencies, must
-  be accounted for at high frequencies.   
+  be accounted for at high frequencies.  Attenuation of water is proportional to
+  the square of frequency from 3-70 MHz [Kay1995]_, and in dB/cm is
 
-This method involves measuring the ultrasound signal in a water tank with a
-transmitting and receiving transducer, then repeating the signal acquisition
-after introducing a sample of known thickness into the water.  The shift in
-arrival time was used to calculate the speed of sound, and the amplitude ratio
-was used to calculate the material's attenuation [AIUM1995,Madsen1999]_.
+.. math:: \alpha_w (f) [dB/cm] = 2.08e^{-3} \, f^2
 
-The equipment and setup used has been described previously [Madsen2010]_, and
-includes a Wavetek model 81 Function Generator set to burst mode, generating a
-sinusoid of 30 wavelengths at the target frequency.  The input signal is
-amplified by a model 75A250A radiofrequency (RF) amplifier (Amplifier Research,
-Souderton, PA, USA).  The signal is transmitted and received by a V358 50 MHz
-center frequency unfocused transducer pair (Olympus Panametric-NDT, Waltham, MA,
-USA).  The transducers were aligned by peaking the received signal with a
-micrometer controlled translation unit (Ardel Kinematic Inc., Stratford, CT,
-USA) and gimbal mount (Newport Oriel, Stratford, CT, USA).  The compressional
-wave was transmitted through deionized water maintained at 22.0 °C by a Haake
-DC10 heater (Thermo Fisher Scientific Inc.).  However, the circulating heater
-was temporarily turned off during signal acquisition to reduce vibrations that
-would impact time delays and cause jitter while averaging sweeps with the
-WaveRunner LT342 oscilloscope (LeCroy, Chestnut Ridge, NY, USA).  The
-transducers were separated by a 42 μs delay (62.5 mm signal propagation path).
-The received signal was collected at 500 MS/s, and ten independent sets of 100
-averaged pulses were transferred to a computer for further offline analysis.
+.. epigraph::
 
-A sample of the material used in the production of the backscatter phantom was
-between 12 μm thick Saran Wrap® film inside an acrylic cylinder.  The thickness
-of the test cylinder was 5.00 mm measured with a calibrated micrometer.  The
-density of the TM material was 1.045 g/mL for the 4000E phantom and 1.062 g/mL
-for the 5000E phantom.
+  when *f* is in MHz.
+
+Results of attenuation coefficient characterization for both the 4000E and 5000E
+phantom can be found in |attenuation_plot|.  Values from fitting to a power law model
+
+.. math:: \alpha (f) [dB/cm] = \alpha_0 f^n
+
+are tabulated in |attenuation_table|.
+
+.. image:: images/attenuation.png
+  :align: center
+  :width: 9cm
+  :height: 9cm
+.. highlights::
+
+  |attenuation_plot_long|:  Measured attenuation for the 4000E phantom and 5000E
+  phantom.  Dashed lines show the results of fitting to a power law model.
+
+
+=================== ====================  =========== ============================
+ TM Phantom          α\ :sub:`0` [dB/cm]   n           Coefficient of determination (R\ :sup:`2`\ )
+------------------- --------------------  ----------- ----------------------------
+ 4000E               0.107                 1.52        0.9997
+ 5000E               0.0545                1.74        0.9996
+=================== ====================  =========== ============================
+
+.. highlights::
+
+  |attenuation_table_long|: Parameters for a power law fit to the TM phantom
+  attenuations.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Phase velocity characterization
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Considerable changes in the shape of the pulse occurred because of frequency
 dependent attenuation (see |substitution_pulse|).  To precisely obtain the phase
@@ -305,34 +326,6 @@ sample thickness, d, into the following equation [Wear2007]_
 
 
 The speed of sound in pure water, c\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
-
-The attenuation coefficient, α, in dB/cm is calculated using the signal
-amplitude in the absence of the sample, A\ :sub:`w`, the signal amplitude with the sample in place, A\
-:sub:`s`, the transmission coefficient of the thin layer material holding the
-sample in place, T\ :sub:`total`, and the thickness of the sample, d.
-
-.. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
-
-Attenuation of water, α\ :sub:`w`, which is negligible at lower frequencies, must
-be accounted for at high frequencies. The transmission coefficient of the
-Saran Wrap® layer, a function of frequency, was calculated using Equation 3 from
-Wear et al. [Wear2005]_ where the speed of sound in Saran Wrap® was found to be 2400 m/s, density 1.69
-g/mL, thickness 12.2 μm, and amplitude attenuation coefficient is given by
-
-.. math:: \alpha (f) = \alpha_0 \; f^{n}
-
-where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.285` and n  = 1.285 for the 4000E
-TM phantom α\ :sub:`0`  = 5.0 Np/m/MHz\ :sup:`1.5` and n  = 1.5 in the 5000E
-case.
-
-Only the amplitude at the narrowband, i.e. central, portion of the pulse was
-used for calculating the attenuation.  As shown in |substitution_pulse|\ c) and
-|substitution_pulse|\ d), the edges of the signal, which have lower local
-frequency content, experience less attenuation.
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Phase velocity characterization
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 sos_atten
 
