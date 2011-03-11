@@ -24,6 +24,14 @@ coefficient, phase velocity, and absolute backscatter coefficient are described.
 
 .. |average_waveform_long| replace:: **Figure 3**
 
+.. |substitution_pulse| replace:: Fig. 4
+
+.. |substitution_pulse_long| replace:: **Figure 4**
+
+.. |spectrogram_fig| replace:: Fig. 5
+
+.. |spectrogram_fig_long| replace:: **Figure 5**
+
 .. |saran_trans_coef| replace:: Fig. 4
 
 .. |saran_trans_coef_long| replace:: **Figure 4**
@@ -143,7 +151,43 @@ Frequency-dependent attenuation causes distortion at the beginning and the end
 of the tone burst.  In order to ensure that we are measuring the amplitude at
 the the narrowband portion of the signal, we calculate the root-mean-square
 amplitude where correlation with a 20 cycle sine wave of the excitation wave is
-peaked.
+peaked.  If the received signal is viewed in the time-frequency plane, only the
+central portion of the tone burst is effectively narrowband.  As shown in
+|substitution_pulse|\ c) and |substitution_pulse|\ d), the edges of the signal,
+which have lower local frequency content, experience less attenuation.  A
+spectrogram, |spectrogram_fig|, demonstrates that in a frequency-time plane,
+the power spectral density of the signal is narrowband only at the center of the
+tone burst.
+
+.. image:: images/substitution_pulse.png
+  :align: center
+  :width: 16cm
+  :height: 13.13cm
+.. highlights::
+
+  |substitution_pulse_long|: Averaged, received signals obtained using the narrowband substitution method.
+  a) water-only signal at 20 MHz, b) 5 mm sample inserted with the center
+  frequency at 20 MHz, c) water-only signal at 40 MHz, and d) sample inserted
+  with the center frequency at 40 MHz.  Time is relative to excitation at the
+  source transducer and the plotted time axes limits are kept consistent to
+  demonstrate time shifts.  Amplitudes are kept consistent at each frequency,
+  but the excitation amplitude was adjusted with frequency so sufficient
+  signal-to-noise ratio was obtained without saturation and non-linear
+  propagation.  The dramatic effect of non-linear attenuation on the signal
+  shape can be seen in d).
+
+.. image:: images/spectrogram_fig.png
+  :align: center
+  :width: 14cm
+  :height: 14.84cm
+.. highlights::
+
+  |spectrogram_fig_long|: Spectrogram of the water-only signal at 40 MHz. a)
+  Signal amplitude versus time.  b) Spectrogram where the power spectral density
+  is mapped to colors and shown over the same time period.  A moving Hanning
+  window of 64 points is used to calculate the power spectral density with an
+  overlap of 32 points and zero-padding to 512 points.  The signal is only
+  narrow-band around 40 MHz at the center of the tone burst.
 
 When sound is transmitted through the water-only path, its amplitude decreases
 across :math:`z_1`, the distance from the transmitting transducer to where the
@@ -161,12 +205,12 @@ amplitude is,
 .. epigraph::
 
   where *T* is the transmission coefficient of the two thin films enclosing the
-  sample.  The substitution method sample is constructed of the material used in the
-  production of the backscatter phantom but is covered by 12.2 μm thick Saran
-  Wrap® film inside an acrylic cylinder.  The transmission coefficient, while
-  nearly constant a lower frequencies, deviates at high frequencies, as shown in
-  |saran_trans_coef|.  The transmission coefficient, *T*, is given by
-  [Wear2005]_
+  sample.  When constructing the substitution method sample, the material used
+  is the same as that produced during creation of the backscatter phantom but is
+  covered by 12.2 μm thick Saran Wrap® film inside an acrylic cylinder.  The
+  transmission coefficient, while nearly constant a lower frequencies, deviates
+  at high frequencies, as shown in |saran_trans_coef|.  The transmission
+  coefficient, *T*, is given by [Wear2005]_
 
 .. image:: images/saran_trans_eqn.png
   :width: 14cm
@@ -181,7 +225,14 @@ amplitude is,
   is the attenuation coefficient of the Saran Wrap in *Np/m*, and *l* is the
   thickness of each thin layer.  In our case :math:`c_{Saran}` is 2400 *m/s*,
   :math:`\alpha (f) = 5.0 Np/m f^{1.5}`, the Saran density, :math:`\rho_{Saran}`
-  is 1.69 *g/mL*.
+  is 1.69 *g/mL*.  Thickness of the Saran Wrap, which was 25 μm in previous
+  cases, was re-measured, and the other properties, are assumed to be the same
+  as those fit in Wear et al. [Wear2005]_.  Acoustic impedance, *Z*, for a
+  material is the product of its density and speed of sound.  The density of the
+  TM material was 1.045 g/mL for the 4000E phantom and 1.062 g/mL for the 5000E
+  phantom.  Methods to obtain values for speed of sound of the test materials
+  used in the attenutation coefficient calculation are described in the next
+  section.
 
 .. image:: images/saran_trans_coef.png
   :width: 10cm
@@ -193,12 +244,19 @@ amplitude is,
   layers covering the production sample used in attenuation estimation
   experiments.  Note the dependence on frequency.
 
+  Again, the attenuation coefficient, α, in dB/cm is calculated using the signal
+  amplitude in the absence of the sample, A\ :sub:`w`, the signal amplitude with the sample in place, A\
+  :sub:`s`.  If the two equation that define these two cases are divided,
+  the result placed in decibels, and we solve for :math:`\alpha`,
 
-  The thickness of the test cylinder was
-  5.00 mm measured with a calibrated micrometer.  The density of the TM material
-  was 1.045 g/mL for the 4000E phantom and 1.062 g/mL for the 5000E phantom.
+  .. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
 
+  The thickness of the test cylinder was 5.00 mm measured with a calibrated
+  micrometer.  This is significantly thinner than the larger 'hockey-puck'
+  cyclinders used at lower frequencies to limit high frequency attenuation.
 
+  Attenuation of water, α\ :sub:`w`, which is negligible at lower frequencies, must
+  be accounted for at high frequencies.   
 
 This method involves measuring the ultrasound signal in a water tank with a
 transmitting and receiving transducer, then repeating the signal acquisition
@@ -245,20 +303,6 @@ sample thickness, d, into the following equation [Wear2007]_
 
 .. math:: c = \frac{c_w}{1 + \frac{c_w \Delta t}{ d }}
 
-.. |substitution_pulse| replace:: Fig. 2
-
-.. |substitution_pulse_caption| replace::
-
-  (color online).  Averaged, received signals obtained using the narrowband  substitution method.  a)
-  water-only signal at 20 MHz, b) 5 mm sample inserted with the center
-  frequency at 20 MHz, c)
-  water-only signal at 40 MHz, and d) sample inserted with the center frequency at 40 MHz.  Time is
-  relative to excitation at the source transducer and the plotted time axes limits
-  are kept consistent to demonstrate time shifts.  Amplitudes are kept consistent
-  at each frequency, but the excitation amplitude was adjusted with frequency so
-  sufficient signal-to-noise ratio was obtained without saturation and non-linear
-  propagation.  The dramatic effect of non-linear attenuation on
-  the signal shape can be seen in d).
 
 The speed of sound in pure water, c\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
 
@@ -281,10 +325,10 @@ where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.285` and n  = 1.285 for the 4000E
 TM phantom α\ :sub:`0`  = 5.0 Np/m/MHz\ :sup:`1.5` and n  = 1.5 in the 5000E
 case.
 
-Only the amplitude at the narrowband, i.e. central, portion of the pulse was used
-for calculating the attenuation.  As shown in |substitution_pulse|\ c) and
-|substitution_pulse|\ d), the edges of the signal, which have lower local frequency content, experience less attenuation.
-sos_atten
+Only the amplitude at the narrowband, i.e. central, portion of the pulse was
+used for calculating the attenuation.  As shown in |substitution_pulse|\ c) and
+|substitution_pulse|\ d), the edges of the signal, which have lower local
+frequency content, experience less attenuation.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Phase velocity characterization
@@ -297,6 +341,14 @@ Absolute backscatter measurement
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 high freq paper.
+
+d amplitude attenuation coefficient is given by
+
+.. math:: \alpha (f) = \alpha_0 \; f^{n}
+
+where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.285` and n  = 1.285 for the 4000E
+TM phantom α\ :sub:`0`  = 5.0 Np/m/MHz\ :sup:`1.5` and n  = 1.5 in the 5000E
+case.
 
 ~~~~~~~~~~
 References
