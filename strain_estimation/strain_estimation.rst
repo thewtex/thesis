@@ -27,9 +27,20 @@ cardiac cycle are explained.
 
 .. |two_segments_long| replace:: **Figure 3**
 
+.. |ds_normal_dia| replace:: Fig. 4
+
+.. |ds_normal_dia_long| replace:: **Figure 4**
+
+.. |ds_perpendicular_dia| replace:: Fig. 5
+
+.. |ds_perpendicular_dia_long| replace:: **Figure 5**
+
 ~~~~~~~~~~~~~~~~~
 The strain tensor
 ~~~~~~~~~~~~~~~~~
+
+Mechanical model
+================
 
 An *in situ* plaque prior to failure is a continuous, solid-body at a gross
 level, and solid-body continuum mechanics can be applied.  Solid-body continuum
@@ -128,11 +139,120 @@ Observe that
   It is from this model that the different expressions for the strain tensor
   arise.
 
-Mechanical model
-================
-
 Infinitesimal strain
 --------------------
+
+If we have very small deformations, :math:`(\nabla \mathbf{u})^T \nabla \mathbf{u}`
+becomes negligible, and
+
+.. math:: \mathbf{F}^T \mathbf{F} \approx \mathbf{I} + \nabla \mathbf{u} + (\nabla \mathbf{u})^T \equiv \mathbf{I} + 2 \mathbf{E}
+
+.. epigraph::
+
+  where
+
+.. math:: \mathbf{E} = \frac{1}{2} ( (\nabla \mathbf{u} )^T + \nabla \mathbf{u})
+
+Note that **E** is a second-rank tensor since :math:`\nabla \mathbf{u}` is a
+second-rank tensor, and it is symmetric because we have the transpose added to
+itself.  The tensor **E** is the *infinitesimal strain* [Lai1993]_, also known as
+*engineering strain* or *small strain*.  We then have
+
+.. math:: d \mathbf{x}^{(1)} \cdot d \mathbf{x}^{(2)} = d \mathbf{X}^{(1)} \cdot d \mathbf{X}^{(2)} + 2 d \mathbf{X}^{(1)} \cdot \mathbf{E} d \mathbf{X}^{(2)}
+
+.. epigraph::
+
+  Therefore, the change in the inner product is an additive term with
+  transformation of the original vectors being performed by the strain tensor.
+
+For Cartesian coordinates in Einstein notation,
+
+.. math:: E_{ij} = \frac{1}{2} ( \frac{\partial u_i}{\partial X_j} + \frac{\partial u_j}{\partial X_i} )
+
+.. epigraph::
+
+  and in 2D the infinitesimal strain tensor is explicitly defined as,
+
+.. math:: \mathbf{E} = \begin{bmatrix} \dfrac{\partial u_1}{\partial X_1} & \dfrac{1}{2}( \dfrac{\partial u_1}{\partial X_2} + \dfrac{\partial u_2}{\partial X_1}) \\ \dfrac{1}{2}( \dfrac{\partial u_1}{\partial X_2} + \dfrac{\partial u_2}{\partial X_1}) & \dfrac{\partial u_2}{\partial X_2} \end{bmatrix}
+
+We can elucidate the physical meaning of the infinitesimal strain tensor by
+examining special cases for :math:`d \mathbf{X}^{(1)}` and :math:`d
+\mathbf{X}^{(2)}`.  First, let us consider when :math:`d \mathbf{X}^{(1)} = d
+\mathbf{X}^{(2)} = dS \, \mathbf{e_1}` where :math:`\mathbf{e_1}` is the unit
+basis in direction 1 and *dS* is the length of :math:`d \mathbf{X}`, and *ds* is
+the deformed length of :math:`d \mathbf{x}^{(1)} = d \mathbf{x}^{(2)}`.
+
+.. image:: images/ds_normal.png
+  :align: center
+  :width: 8cm
+  :height: 1.698cm
+
+.. image:: images/ds_normal_dia.png
+  :align: center
+  :width: 11cm
+  :height: 7.967cm
+.. highlights::
+
+  |ds_normal_dia_long|: Two line segments, :math:`d \mathbf{X}^{(1)} = d
+  \mathbf{X}^{(2)} = dS \, \mathbf{e_1}` get transformed to *ds* after
+  deformation.
+
+For small deformations, :math:`(ds + dS)( ds - dS) \approx 2 dS( ds - dS )`, and
+
+.. math:: \frac{ ds - dS }{dS} = \mathbf{e_1} \cdot \mathbf{E} \mathbf{e_1} = E_{11}
+
+Therefore, :math:`E_{11}` is equal to the unit elongation (or shortening) for the segment
+in the direction of :math:`\mathbf{e_1}`.  Similarily, :math:`E_{22}` is the
+unit elongation for the segment that is in the direction of
+:math:`\mathbf{e_2}`.  These diagonal elements of **E** constitute the
+*normal strains* [Lai1993]_.  Note that
+
+.. math:: 100 \, \frac{ds - dS}{dS} \equiv \% \mbox{ elongation of } dS
+
+Therefore, in the small strain case, a normal strain component multiplied by 100 is equal to
+the percent elongation.  A positive normal strain indicates an extension of
+*dS*, and a negative normal strain indicates a shortening of *dS*.
+
+Secondly, instead of examining parallel segments centered at **X**, let us
+investigate perpendicular segments.
+
+.. image:: images/ds_perpendicular_dia.png
+  :align: center
+  :width: 11cm
+  :height: 7.97cm
+.. highlights::
+
+  |ds_perpendicular_dia_long|:  Relative change that occurs that are orthogonal
+  in the reference configuration.
+
+Let :math:`d \mathbf{X}^{(1)} = dS_1 \, \mathbf{e_2}` and :math:`d
+\mathbf{X}^{(2)} = dS_2 \, \mathbf{e_2}`, :math:`\Vert d \mathbf{x}^{(1)} \Vert = ds_1`,
+:math:`\Vert d \mathbf{x}^{(2)} \Vert = ds_2`, and the angle between
+:math:`\mathbf{x}^{(1)}` and :math:`\mathbf{x}^{(2)}` is :math:`\theta`.
+
+.. image:: images/ds_perpendicular.png
+  :align: center
+  :width: 6cm
+  :height: 1.424cm
+
+.. epigraph::
+
+  If we define :math:`\theta = \pi / 2 - \gamma`, then :math:`\gamma` is the
+  change in argle that occurs between :math:`\mathbf{x}^{(1)}` and :math:`\mathbf{x}^{(2)}`.
+
+.. math:: \sin \gamma = \cos( \pi / 2 - \gamma )
+
+.. epigraph::
+
+  For small strain
+
+.. math:: \sin \gamma \approx \gamma, \; \frac{dS_1}{ds_1} \approx 1, \; \frac{dS_2}{ds_2} \approx 1
+
+.. math:: \gamma = 2 \, E_{12} = 2 \, E_{21}
+
+That is, for infinitesimal strain, the decrease in angle between orthogonal
+segments is equal to twice the diagonal component of the strain tensor, the
+*shear strain* [Lai1993]_.
 
 Lagrangian strain
 -----------------
