@@ -1,11 +1,21 @@
 # Veusz saved document (version 1.8)
 # User: matt
-# Date: Sat, 12 Mar 2011 06:03:26 +0000
+# Date: Sat, 12 Mar 2011 17:25:58 +0000
 
 AddImportPath(u'/home/matt/rs/papers/thesis/high_freq_phantom/analysis')
-SetDataRange(u'crosscorrelation', 4, (20.0, 50.0), linked=True)
+ImportString(u'crosscorrelation(numeric)','''
+1.540600e+03
+1.541060e+03
+1.540760e+03
+1.541570e+03
+''')
 SetDataRange(u'freq', 4, (20.0, 50.0), linked=True)
-SetDataRange(u'zerocrossing', 4, (20.0, 50.0), linked=True)
+ImportString(u'zerocrossing(numeric)','''
+1.540480e+03
+1.541020e+03
+1.541170e+03
+1.542000e+03
+''')
 Add('page', name='page1', autoadd=False)
 To('page1')
 Add('graph', name='graph1', autoadd=False)
@@ -21,6 +31,8 @@ To('..')
 Add('axis', name='y', autoadd=False)
 To('y')
 Set('label', u'Phase Velocity [m/s]')
+Set('min', 1540.0)
+Set('max', 1543.0)
 Set('direction', 'vertical')
 To('..')
 Add('xy', name='xy1', autoadd=False)

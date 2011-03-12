@@ -1,11 +1,16 @@
 # Veusz saved document (version 1.8)
 # User: matt
-# Date: Fri, 11 Mar 2011 20:44:08 +0000
+# Date: Sat, 12 Mar 2011 17:19:15 +0000
 
 AddImportPath(u'/home/matt/rs/papers/thesis/high_freq_phantom/analysis')
 SetDataRange(u'4000E_atten', 4, (20.0, 50.0), linked=True)
 SetDataRange(u'4000E_atten_f', 4, (20.0, 50.0), linked=True)
-SetDataRange(u'5000E_atten', 4, (20.0, 50.0), linked=True)
+ImportString(u'5000E_atten(numeric)','''
+9.770000e+00
+2.036000e+01
+3.204000e+01
+4.470000e+01
+''')
 SetDataRange(u'5000E_atten_f', 4, (20.0, 50.0), linked=True)
 Add('page', name='page1', autoadd=False)
 To('page1')
@@ -58,7 +63,7 @@ To('..')
 Add('fit', name='fit1', autoadd=False)
 To('fit1')
 Set('function', u'a * x**b')
-Set('values', {u'a': 0.050720253370045737, u'b': 1.7600922946717814})
+Set('values', {u'a': 0.068346928886163477, u'b': 1.6636957309680425})
 Set('xData', u'5000E_atten_f')
 Set('yData', u'5000E_atten')
 Set('fitRange', True)
