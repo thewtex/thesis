@@ -3,54 +3,109 @@ High Frequency Phantom Characterization
 =======================================
 
 Next, we describe methods to characterize the acoustic properties of
-high-frequency reference phantoms necessary to generate parametric images.
-Recently, Madsen et al. [Madsen2010]_ developed tissue-mimicking (TM) phantoms
-with ultrasonic properties of human arteries at very high frequencies
-[Lockwood1991]_.  Accurate characterization of the acoustic properties of these new
-phantoms pose additional challenges relative to the same characterization at
-lower frequencies.  In this chapter, we describe the methods applied to
-characterization of these phantoms.  Methods to determined the attenuation
-coefficient, phase velocity, and absolute backscatter coefficient are described.
+high-frequency reference phantoms necessary to generate quantitative ultrasound
+images with the reference phantom method.  Recently, Madsen et al. [Madsen2010]_
+developed tissue-mimicking (TM) phantoms with ultrasonic properties of human
+arteries at very high frequencies [Lockwood1991]_.  Accurate characterization of
+the acoustic properties of these new phantoms pose additional challenges
+relative to the same characterization at lower frequencies.  In this chapter, we
+describe the methods applied to characterization of these phantoms.  Methods to
+determined the attenuation coefficient, phase velocity, and absolute backscatter
+coefficient are described.
 
-.. |substitution_apparatus| replace:: Fig. 1
+.. |size_distribution| replace:: Fig. 1
 
-.. |substitution_apparatus_long| replace:: **Figure 1**
+.. |size_distribution_long| replace:: **Figure 1**
 
-.. |panametrics_spectrum| replace:: Fig. 2
+.. |substitution_apparatus| replace:: Fig. 2
 
-.. |panametrics_spectrum_long| replace:: **Figure 2**
+.. |substitution_apparatus_long| replace:: **Figure 2**
 
-.. |average_waveform| replace:: Fig. 3
+.. |panametrics_spectrum| replace:: Fig. 3
 
-.. |average_waveform_long| replace:: **Figure 3**
+.. |panametrics_spectrum_long| replace:: **Figure 3**
 
-.. |substitution_pulse| replace:: Fig. 4
+.. |average_waveform| replace:: Fig. 4
 
-.. |substitution_pulse_long| replace:: **Figure 4**
+.. |average_waveform_long| replace:: **Figure 4**
 
-.. |spectrogram_fig| replace:: Fig. 5
+.. |substitution_pulse| replace:: Fig. 5
 
-.. |spectrogram_fig_long| replace:: **Figure 5**
+.. |substitution_pulse_long| replace:: **Figure 5**
 
-.. |saran_trans_coef| replace:: Fig. 6
+.. |spectrogram_fig| replace:: Fig. 6
 
-.. |saran_trans_coef_long| replace:: **Figure 6**
+.. |spectrogram_fig_long| replace:: **Figure 6**
 
-.. |attenuation_plot| replace:: Fig. 7
+.. |saran_trans_coef| replace:: Fig. 7
 
-.. |attenuation_plot_long| replace:: **Figure 7**
+.. |saran_trans_coef_long| replace:: **Figure 7**
 
-.. |delay_times| replace:: Fig. 8
+.. |attenuation_plot| replace:: Fig. 8
 
-.. |delay_times_long| replace:: **Figure 8**
+.. |attenuation_plot_long| replace:: **Figure 8**
 
-.. |sos_method| replace:: Fig. 9
+.. |delay_times| replace:: Fig. 9
 
-.. |sos_method_long| replace:: **Figure 9**
+.. |delay_times_long| replace:: **Figure 9**
+
+.. |sos_method| replace:: Fig. 10
+
+.. |sos_method_long| replace:: **Figure 10**
+
+.. |backscattered_spectra| replace:: Fig. 11
+
+.. |backscattered_spectra_long| replace:: **Figure 11**
+
+.. |harmonics| replace:: Fig. 12
+
+.. |harmonics_long| replace:: **Figure 12**
+
+
 
 .. |attenuation_table| replace:: Table 1
 
 .. |attenuation_table_long| replace:: **Table 1**
+
+.. |sos_table| replace:: Table 2
+
+.. |sos_table_long| replace:: **Table 2**
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Tissue-mimicking phantoms
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The TM phantoms examined in this chapter were produced as reference phantoms for
+use at high frequencies [Madsen2010]_.  Each phantom is macroscopically uniform.
+The base material of the phantoms consists of a mixture of agarose, propylene
+glycol, Germall Plus (preservative), and ultra-filtered whole bovine milk.
+Scattering is due to randomly distributed glass beads.  Two phantoms are
+examined with different glass bead concentrations (mass per unit volume) and
+different diameter distributions (catalog numbers 4000E and 5000E, Potter
+Industries, Inc., Valley Forge, Pennsylvania, USA).  The two phantoms will
+henceforth be referenced as the '4000E phantom' and '5000E phantom',
+respectively.  The diameter distributions of the two glass bead categories that
+are utilized in these phantoms are shown in |size_distribution|. The diameters
+were measured by placing beads in an agarose suspension and viewing under an optical
+microscope.  Approximately 500 diameter measurements were made for each bead
+source.  We show the diameter percentage calculated by binning the measurements
+and dividing by the total frequency.  We also show the percentage calculated
+with the kernel density estimation (KDE) technique [Rosenblatt1956,Parzen1962a]_; a Gaussian kernel is used
+with bandwidth automatically calculated using the method of Silverman
+[Silverman1986]_.
+The concentration of the 4000E bead is 6.00 g/L, and that of the 5000E beads is
+15.60 g/L.
+
+.. image:: images/size_distribution.png
+  :align: center
+  :width: 14cm
+  :height: 6.899cm
+.. highlights::
+
+  |size_distribution_long|: Size distribution of the TM phantom glass bead
+  scatterers.  a) 4000E and 5000E distribution determined with a histogram
+  divided by the total frequency.  b) 4000E and 5000E distribution determined
+  with the KDE method.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Attenuation characterization
@@ -411,10 +466,126 @@ phantoms at 30 MHz is shown in |sos_table|.
  5000E         1540.64
 ============= ======================
 
+.. highlights::
+
+  |sos_table_long|: Phase velocity for the phantoms characterized at 30 MHz
+  calculated with the narrowband zero-crossing method.
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Absolute backscatter estimation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+In this chapter, calculation of the absolute backscatter coefficient (BSC), the differential
+scattering cross section per unit volume at a scattering angle of 180 degrees,
+follows the method described by Chen et al. [Chen1993,Madsen1984]_.  Using a
+single element ultrasound transducer, pulses were propagated through water and
+into the material of interest, and the spectrum of the received backscattered
+signal voltage determined the BSC after correcting for characteristics of the
+transducer, instrumentation properties, and ultrasonic properties of intervening
+materials.
+
+.. math::  BSC (f) \approx \frac{\langle V_g(f) V_g^*(f) \rangle}{C^2 \Vert T(f) B_0(f) \Vert^2 \int \int \int \Vert A(\mathbf{r}, f ) \Vert^4 d \mathbf{r} }
+
+The backscattered signal V\ :sub:`g`'s spectrum is averaged from many
+uncorrelated locations in the phantom to obtain the power spectrum.  The term C
+is a constant that accounts for windowing of the signal, and is 0.63 for the
+Hamming Window.  A(r,f) is the complex superposition coefficient determined by
+the geometric properties of the transducer.  A planar reflector is then used to
+determine :math:`T(f) B_0(f)`, where :math:`T(f)` is the complex transfer
+function of the transducer, and :math:`B_0(f)` is the complex superposition
+coefficient for the uniform monopole radiator assumed to exist on the transducer
+surface [Madsen1984]_.
+
+Generation of spectra
+=====================
+
+The transducer used for backscatter analysis was the 710B on a Vevo 770 scanning
+system (VisualSonics, Inc., Toronto, Canada).  Further details on the methods
+used to adapt the Vevo 770 for quantitative ultrasound imaging research can be
+found in Appendix TODO.  This transducer has a center frequency of about 25 MHz,
+and a broad bandwidth, 82% fractional bandwidth at -6dB, as illustrated in
+|backscattered_spectra|.  The transducer active element is a spherical cap with
+a projected aperture of 3.5 mm and 15.0 mm radius of curvature.  The received
+signal was digitized at 420 MS/s with 12 bit precision.
+
+.. image:: images/backscattered_spectra.png
+  :align: center
+  :width: 9cm
+  :height: 9cm
+.. highlights::
+
+  |backscattered_spectra_long|: Power spectrum derived from radiofrequency data
+  acquired using the 710B transducer for the planar reflector and TM phantoms taken at
+  10% transmit power.
+
+The Vevo770, designed for high frequency imaging of small
+animal targets, is easily saturated when presented with signal from a strong
+planar reflector that experiences the relatively weak attenuation of a water path.  To
+prevent saturation, we use a liquid-liquid interface where the two liquids have closely matched
+acoustic impedances [Hall2001]_.  The interface reported by Hall et
+al. [Hall2001]_ was recreated, which consists of a brominated hydrocarbon mixture covered by
+water.  The hydrocarbon consisted of 39.018% by weight 1-bromoheptane (99%
+purity, Acros Organics, New Jersey, USA) and
+60.982% by weight 1,6-dibromohexane (97% purity, Aldrich Chemical Co., Milwaukee, WI, USA).
+The planar amplitude reflector reflection
+coefficient is 0.0138 [Hall2001]_.  An additional receive gain of -5.0 dB in
+the planar reflector case relative to the TM phantom signal gain is still required.
+The reflector was carefully aligned with a gimbal mount to obtain the highest possible amplitude for the
+backscattered signal.  To prevent non-linear effects, planar reflector and TM
+phantom signal is collected with a 10% transducer power.  At 10% power, a
+reasonable tradeoff is achieved that reduces non-linear effects in the planar
+reflector signal while leaving sufficient signal-to-noise ratio in the TM
+phantom signals.  At higher transmit powers, harmonics introduce lobes into the
+spectrum as shown in |harmonics|.
+
+.. image:: images/harmonics.png
+  :align:  center
+  :width:  9cm
+  :height: 9cm
+.. highlights::
+
+  |harmonics_long|: Planar reflector spectrum when the 710B transducer is
+  excited at 100% transmit power.  Lobes in the upper part of the spectrum are
+  introduced by harmonics generated during non-linear propagation.
+
+The single element transducer can be moved laterally and elevationally, and 1200
+independent Fourier spectra of the scattering instances are averaged to obtain
+the backscattered power spectrum.  The 5000E phantom is covered with a thin
+Saran Wrap® layer as previously described in the substitution experiment, and
+the 4000E phantom was covered with a 128 μm-thick TPX® (polymethyl-pentene)
+layer.  A TPX® layer is advantageous relative to a Saran layer because of its
+low reflection coefficient, which minimizes reverberation effects especially at
+higher frequencies.  The gated window for spectral analysis in the phantom is
+placed at the focus beyond the surface in an area free from any reverberation
+artifacts.
+
+Faran scattering model
+======================
+
+Measured BSC are compared to those predicted by the theoretical model of Faran
+[Faran1951]_.  The medium density is 1.045 g/mL and 1.062 g/mL, respectively,
+and the glass bead longitudinal speed of sound is 5572 m/s, with a density of
+2.380 g/mL and shear wave speed of 3376 m/s.  The bead mass per volume phantom
+is 6.0 kg/m\ :sup:`3` and 15.6 kg/m\ :sup:`3` for the 4000E and 5000E
+phantom, respectively.  Superposition using the diameter distribution given in
+|size_distribution| is assumed.  The total mass of the diameter distribution,
+:math:`m_g`, is
+
+.. math:: m_g = \rho_m \sum_{i=1}^N \frac{\pi}{6} D_i^3 g(D_i), \; \; \; \; \; D_1 = 0,\: D_N = D_{max}
+
+where :math:`\rho_m` is the bead mass density, :math:`D` is the diameter of
+the bead, and :math:`g(D)` is the diameter distribution.
+We next calculate the bead number density - the number of beads of a given
+diameter per unit volume.  The bead number density, :math:`\rho_n(D)`, is
+
+.. math:: \rho_n (D) = \frac{\rho_V}{m_g} g(D)
+
+where :math:`\rho_V` is the bead concentration (mass per unit volume).
+The backscatter coefficient, a function of frequency :math:`f`, results from
+summing the backscatter for a single bead, :math:`BS_s(f,D)`
+multiplied by the bead number density,
+
+.. math:: BSC(f) = \sum_{i=1}^N BS_s (f, D_i) \rho_n(D_i)
 high freq paper.
 
 d amplitude attenuation coefficient is given by
@@ -428,3 +599,4 @@ case.
 ~~~~~~~~~~
 References
 ~~~~~~~~~~
+

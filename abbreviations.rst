@@ -2,8 +2,15 @@
 Abbreviations
 =============
 
+BSC
+  *Backscatter coefficient*.  Differential scattering cross section per unit
+  volume at a scattering angle of 180 degrees.  A quantity that describes how
+  much energy gets returned to the transducer when performing pulse-echo
+  imaging.
+
 CCA
-  *Common Carotid Artery*.  Artery from aorta on the left __ on the right side that supplies the brain.  
+  *Common Carotid Artery*.  Artery that branches from the aorta on the left and
+  the brachiocephalic artery on the right side that supplies the brain.
 
 CEA
   *Carotid Endarterectomy*.  Surgery to remove plaque from the carotid through a
