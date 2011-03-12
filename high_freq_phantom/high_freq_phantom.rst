@@ -61,6 +61,14 @@ coefficient are described.
 
 .. |harmonics_long| replace:: **Figure 12**
 
+.. |waveforms| replace:: Fig. 13
+
+.. |waveforms_long| replace:: **Figure 13**
+
+.. |vs_screenshots| replace:: Fig. 14
+
+.. |vs_screenshots_long| replace:: **Figure 14**
+
 
 
 .. |attenuation_table| replace:: Table 1
@@ -518,7 +526,7 @@ signal was digitized at 420 MS/s with 12 bit precision.
   acquired using the 710B transducer for the planar reflector and TM phantoms taken at
   10% transmit power.
 
-The Vevo770, designed for high frequency imaging of small
+The Vevo 770, designed for high frequency imaging of small
 animal targets, is easily saturated when presented with signal from a strong
 planar reflector that experiences the relatively weak attenuation of a water path.  To
 prevent saturation, we use a liquid-liquid interface where the two liquids have closely matched
@@ -550,14 +558,54 @@ spectrum as shown in |harmonics|.
 
 The single element transducer can be moved laterally and elevationally, and 1200
 independent Fourier spectra of the scattering instances are averaged to obtain
-the backscattered power spectrum.  The 5000E phantom is covered with a thin
-Saran Wrap® layer as previously described in the substitution experiment, and
-the 4000E phantom was covered with a 128 μm-thick TPX® (polymethyl-pentene)
-layer.  A TPX® layer is advantageous relative to a Saran layer because of its
-low reflection coefficient, which minimizes reverberation effects especially at
-higher frequencies.  The gated window for spectral analysis in the phantom is
-placed at the focus beyond the surface in an area free from any reverberation
-artifacts.
+the backscattered power spectrum, |backscattered_spectra|.  The 5000E phantom is
+covered with a thin Saran Wrap® layer as previously described in the
+substitution experiment, and the 4000E phantom was covered with a 128 μm-thick
+TPX® (polymethyl-pentene) layer.  A TPX® layer is advantageous relative to a
+Saran layer because of its low reflection coefficient, which minimizes
+reverberation effects especially at higher frequencies.  The gated window for
+spectral analysis in the phantom is placed at the focus beyond the surface in an
+area free from any reverberation artifacts and devoid from the high amplitude
+response at the surface of the TM phantom.  To verify these conditions, the
+online Visualsonics Digital-RF user interface and saved data are utilized.
+Sample waveforms from the gate used in calculation of the phantom spectra are
+shown in |waveforms|\ a) and b).  The reflection waveform from the reference
+planar interface is shown in |waveforms|\ c).  Also, screenshots from during
+acquisition, |vs_screenshots|, demonstrate use of the system's real-time B-Mode
+display is a convenient method to ensure that these conditions are met.
+Reverberations between the transducer-water interface and the water-phantom
+interface are a possible source of artifact.  These reverberations appear to be
+present in the |vs_screenshots|\ a) B-Modes while they are not present in the RF
+plotted in |vs_screenshots|\ a) nore in |waveforms|\ a).  This is explained by the
+distinct operation of the Vevo 770 during B-Mode image acquision and Digital-RF
+acquisition.  B-Mode acquisition for small animal imaging or the scout-window
+shown will rotate the transducers at very fast rates to achieve the 200+
+frames-per-second required for small animal imaging while continuously
+transmitting and receiving ultrasound pulses.  The reverbation does not have an
+opportunity to dissipate in this situation.  On the other hand, Digital-RF
+operation is closer to M-Mode data collection; the positioning of the transducer
+is much slower, but the reverberations are not present in the received signal.
+In the B-Mode and RF we note the presence of larger scatterers in the 4000E
+phantom relative to the 5000E phantom, which is consistent with
+the diameter distribution in |size_distribution|.
+
+.. image:: images/waveforms.png
+  :align: center
+  :width: 14cm
+  :height: 11.49cm
+.. highlights::
+
+  |waveforms_long|: Waveforms from the a) 4000E and b) 5000E phantom around the focal region along with c) the
+  planar reflector waveform.
+
+.. image:: images/vs_screenshots.png
+  :align: center
+  :width: 15cm
+  :height: 6.02cm
+.. highlights::
+
+  |vs_screenshots_long|:  Screenshots in Digital-RF mode on the Vevo 770 when
+  collecting phantom data from the a) 4000E and b) 5000E.
 
 Faran scattering model
 ======================
@@ -595,6 +643,59 @@ d amplitude attenuation coefficient is given by
 where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.285` and n  = 1.285 for the 4000E
 TM phantom α\ :sub:`0`  = 5.0 Np/m/MHz\ :sup:`1.5` and n  = 1.5 in the 5000E
 case.
+
+Backscatter coefficient results
+===============================
+
+
+Variations in the BSC versus frequency  from both phantoms are displayed in
+|bsc|.  Since the spectral plots in |backscattered_spectra| suggested there may
+be sufficient signal-to-noise ratio up to 45 MHz, analysis is displayed over the
+entire range from 0 to 60 MHz.  However, there is a sharp minimum in the pulse
+spectrum around 34 MHz which appears to be disruptive enough to compromise the
+data reduction beyond about 30 MHz.  Evidence that the pulse spectrum is causing
+the problem and not some property of the liquid-liquid reflector is that the
+variation also is detectable in the scattered spectra.  There are significant
+differences between the two phantoms' BSC's, which are amplified at high
+frequencies.  This relationship is observed in both the experimental and
+theoretical results.  Differences in the predicted BSC of the Faran theoretical
+results are much greater in the 15-30 MHz range than the 5-15 MHz range.  The
+linear slope in the log-log graph with a slope near four indicates Rayleigh
+scattering in the 8-15 MHz range.  Linear regression to the experimental data
+resulted in a slope of 3.1 and a coefficient of determination, :math:`R^2`, of
+0.96 for the 4000E phantom and 4.4 and 0.99 for the 5000E phantom.  The Rayleigh
+region extends to higher frequencies for the 5000E phantom, which is expected
+because of the smaller bead diameter distribution evident in
+|size_distribution|.
+
+The correspondence between the 5000E theory and experiment is quite good from 5
+MHz to approximately 30 MHz, even though there appears to be significant signal
+in |backscattered_spectra| up to 45 MHz for both the phantom spectra and
+reflector spectrum.  However, values in the BSC curves deviate from both prior
+behavior and Faran values at the 34 MHz dip in the reflector spectrum.
+
+The lower BSC of the 4000E phantom may explain the noisier appearance of the
+curve.  The general trend of the 4000E BSC appears correct,
+although there are some oscillations not found in the theoretical curve.  A
+resonance in the backscattered spectrum at 4 MHz causes an artifact in the BSC
+calculation at the beginning of the curve.  Again major deviations from prior
+behavior occurs around 34 MHz.
+
+.. |bsc| replace:: Fig. 5
+
+.. |bsc_caption| replace::
+
+  (color online).  Absolute backscatter coefficient for the two TM phantoms examined.  A
+  theoretical curve derived from the phantom composition and Faran scattering
+  theory for spherical scatterers is displayed along with experimental results. Dashed lines are the
+  Faran predicted BSC for the acoustic properties assumed for the component
+  materials.  Curves with markers represent the experimental results.  In a), we
+  present theoretical curves for both the histogram approximation of size
+  distribution and the KDE approximation of the size distribution.  The same
+  data is present in b), but with logarithmic scaling on both axes and limiting
+  the frequency range to 25 MHz.  We only plot the KDE theoretical curves, but
+  we also show results from linear regression of the experimental data in the
+  7-15 MHz range.
 
 ~~~~~~~~~~
 References
