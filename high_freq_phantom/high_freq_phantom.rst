@@ -40,6 +40,14 @@ coefficient, phase velocity, and absolute backscatter coefficient are described.
 
 .. |attenuation_plot_long| replace:: **Figure 7**
 
+.. |delay_times| replace:: Fig. 8
+
+.. |delay_times_long| replace:: **Figure 8**
+
+.. |sos_method| replace:: Fig. 9
+
+.. |sos_method_long| replace:: **Figure 9**
+
 .. |attenuation_table| replace:: Table 1
 
 .. |attenuation_table_long| replace:: **Table 1**
@@ -295,7 +303,7 @@ are tabulated in |attenuation_table|.
 
 
 =================== ====================  =========== ============================
- TM Phantom          α\ :sub:`0` [dB/cm]   n           Coefficient of determination (R\ :sup:`2`\ )
+ TM phantom          α\ :sub:`0` [dB/cm]   n           Coefficient of determination (R\ :sup:`2`\ )
 ------------------- --------------------  ----------- ----------------------------
  4000E               0.107                 1.52        0.9997
  5000E               0.0545                1.74        0.9996
@@ -315,14 +323,16 @@ degree; for instance, fat has a lower sound speed (1478 m/s) and tendon has a hi
 (1670 m/s) [Culjat2010]_.  However, the canonical sound speed assumed by
 clinical scanners for soft tissues is 1540 m/s.
 
-The speed of sound can be calculated with the substitution method by
+The speed of sound is then obtained by inserting the change in time delay, Δt,
+and sample thickness, d, into the following equation [Wear2007]_
 
 .. math:: c = \frac{c_w}{1 + \frac{c_w \Delta t}{ d }}
 
 .. epigraph::
 
-  if :math:`\Delta t` is the difference in the time delay between water-with-sample and
-  water-only cases, :math:`t_w - t_s`.  The speed of sound in pure water, c\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
+  if :math:`\Delta t` is the difference in the time delay between
+  water-with-sample and water-only cases, :math:`t_w - t_s`.  The speed of sound
+  in pure water, c\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
 
 Considerable changes in the shape of the pulse occurred because of frequency
 dependent attenuation (see |substitution_pulse|).  As with the attenuation
@@ -332,26 +342,74 @@ a pulse or tone burst, there are different velocity definitions depending on how
 the delay is defined.  The *signal velocity* results from measuring the delay of
 the front of a pulse, *group velocity* from the center of a pulse, and *phase
 velocity* if the delay of a single frequency component is measured [Wear2007]_.
-The phase velocity is the most desireable because signal velocity and group
+The phase velocity is the most desirable because signal velocity and group
 velocity have broad spectral content.  In general there is dispersion in phase
 velocity, so it is difficult to apply signal or group velocity results to
 other situations where the spectral content differs.
 
-To precisely obtain the phase velocity, the same narrowband pulse
-zero crossing location is found in the tone burst.
-First, an offset from the start of both the delay where the pulse
-exceeded the noise level in both the water-only and water-with-sample path.  The
+To precisely obtain the phase velocity, the same narrowband pulse zero-crossing
+location is found in the tone burst of the water-only signal and the
+water-with-sample signal.  First, we find the delay to a zero-crossing at the
+center of the water-only tone burst.  To locate this zero-crossing, we first
+find the 'start' of the received tone burst.  The 'start' of the tone is where
+the signal exceeds the electronic noise that comes before the tone burst.  The
 noise level was quantified by measuring the standard error of the first 100
 samples of the received waveform.  The start of the signal was taken as the
 sample where the received signal exceeded eight times the noise standard error.
-The offset from the start of the pulse to the narrowband section of signal
-varied with the frequency measured.  The closest zero crossing was linearly
-interpolated from the samples to obtain a precise result.  The speed of sound is
-then obtained by inserting the change in time delay, Δt, and sample thickness,
-d, into the following equation [Wear2007]_
+An approximate center of the pulse is found by moving 15 periods past the start.
+The closest zero-crossing was linearly interpolated from the samples to obtain a
+precise delay for the water-only signal.  The procedure is repeated for the
+water-with-sample signal, but instead of moving 15 periods past the start, the
+offset closest to a center zero-crossing is the different between the water-only
+zero crossing and the water-only start.  This ensures the same relative
+zero-crossing is used as the delay for both the water-only and the
+water-with-sample cases.  This will be true as long as the distortion at the
+front edge of the signal does not approach half a period, which has emperically
+proven to be a valid assumption.  |delay_times| shows the delay samples selected
+in this process at 50.0 MHz for the water-only signal and after the 5000E signal
+is inserted.
 
+.. image:: images/delay_times.png
+  :align: center
+  :width: 14cm
+  :height: 10.67cm
+.. highlights::
 
-sos_atten
+  |delay_times_long|:  Delay samples used in phase velocity calculations.
+  Measurements made at 50 MHz.  An offset from the water signal start sample,
+  a), to a zero-crossing at the center of the water-only tone burst, b), is used
+  to find the corresponding zero-crossing, d), given the water-with-sample start, c).
+
+An alternative method to the above is to take the delay to be the lag to the
+maximum of the cross-correlation of the two signals.  A more precise location of
+the cross-correlation peak can be obtained with with parabolic interpolation of
+the peak.  Of course, the broad-band edges of the tone burst are included in
+the cross-correlation calculation.  Results for both methods are shown in
+|sos_method|.  The calculated phase velocities are similar, but the
+zero-crossing method trend is closer the expected dispersion.  According to the
+Kramers-Kronig relations [Waters2000,Mobley2003]_, increased attenuation with frequency will cause an
+increase in phase velocity with frequency.  Since attenuation increases
+monotonically with frequency, it is expected that phase velocity will increase
+monotonically with frequency.  Note, though, that the dispersion is minute
+compared to the variation found in soft tissues.  The phase velocity for both
+phantoms at 30 MHz is shown in |sos_table|.
+
+.. image:: images/sos_method.png
+  :align: center
+  :width: 9cm
+  :height: 9cm
+.. highlights::
+
+  |sos_method_long|:  Phase velocity for the 5000E phantom calculated when the
+  delay is determined with two different methods: zero-crossing in the
+  narrowband portion of the signal, and lag of the cross-correlation peak.
+
+============= ======================
+ TM phantom    Phase velocity [m/s]
+------------- ----------------------
+ 4000E         1540.62
+ 5000E         1540.64
+============= ======================
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Absolute backscatter estimation
