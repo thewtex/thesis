@@ -257,8 +257,9 @@ amplitude is,
   Again, the attenuation coefficient, α, in dB/cm is calculated using the signal
   amplitude in the absence of the sample, A\ :sub:`w`, the signal amplitude with the sample in place, A\
   :sub:`s`.  Taking the two equations that define the attenuation in water-only and
-  with the sample and dividing them,
-  solving for :math:`\alpha`, and placing the result in decibels per centimeter
+  water-with-sample cases and dividing them,
+  solving for :math:`\alpha`, and placing the result in decibels per centimeter,
+  we obtain:
 
   .. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
 
@@ -309,28 +310,51 @@ are tabulated in |attenuation_table|.
 Phase velocity characterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Considerable changes in the shape of the pulse occurred because of frequency
-dependent attenuation (see |substitution_pulse|).  To precisely obtain the phase
-velocity, the same narrowband pulse location was obtained by finding the same
-offset from the delay where the pulse exceeded the noise level in both the
-water-only and water + sample path.  The noise level was quantified by measuring
-the standard error of the first 100 samples of the received waveform.  The start of
-the signal was taken as the sample where the received signal exceeded eight
-times the noise standard error.  The offset from the start of the pulse to the
-narrowband section of signal varied with the frequency measured.  The closest
-zero crossing was linearly interpolated from the samples to obtain a precise result.  The
-speed of sound is then obtained by inserting the change in time delay, Δt, and
-sample thickness, d, into the following equation [Wear2007]_
+Speed of sound is another fundamental acoustic property.  Tissue vary to some
+degree; for instance, fat has a lower sound speed (1478 m/s) and tendon has a higher sound speed
+(1670 m/s) [Culjat2010]_.  However, the canonical sound speed assumed by
+clinical scanners for soft tissues is 1540 m/s.
+
+The speed of sound can be calculated with the substitution method by
 
 .. math:: c = \frac{c_w}{1 + \frac{c_w \Delta t}{ d }}
 
+.. epigraph::
 
-The speed of sound in pure water, c\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
+  if :math:`\Delta t` is the difference in the time delay between water-with-sample and
+  water-only cases, :math:`t_w - t_s`.  The speed of sound in pure water, c\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
+
+Considerable changes in the shape of the pulse occurred because of frequency
+dependent attenuation (see |substitution_pulse|).  As with the attenuation
+coefficient, this poses challenges to measuring the quantity needed to calculate
+the speed of sound, the time delay of a tone burst.  When measuring the delay of
+a pulse or tone burst, there are different velocity definitions depending on how
+the delay is defined.  The *signal velocity* results from measuring the delay of
+the front of a pulse, *group velocity* from the center of a pulse, and *phase
+velocity* if the delay of a single frequency component is measured [Wear2007]_.
+The phase velocity is the most desireable because signal velocity and group
+velocity have broad spectral content.  In general there is dispersion in phase
+velocity, so it is difficult to apply signal or group velocity results to
+other situations where the spectral content differs.
+
+To precisely obtain the phase velocity, the same narrowband pulse
+zero crossing location is found in the tone burst.
+First, an offset from the start of both the delay where the pulse
+exceeded the noise level in both the water-only and water-with-sample path.  The
+noise level was quantified by measuring the standard error of the first 100
+samples of the received waveform.  The start of the signal was taken as the
+sample where the received signal exceeded eight times the noise standard error.
+The offset from the start of the pulse to the narrowband section of signal
+varied with the frequency measured.  The closest zero crossing was linearly
+interpolated from the samples to obtain a precise result.  The speed of sound is
+then obtained by inserting the change in time delay, Δt, and sample thickness,
+d, into the following equation [Wear2007]_
+
 
 sos_atten
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Absolute backscatter measurement
+Absolute backscatter estimation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 high freq paper.
