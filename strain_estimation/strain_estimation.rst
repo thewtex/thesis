@@ -35,6 +35,10 @@ cardiac cycle are explained.
 
 .. |ds_perpendicular_dia_long| replace:: **Figure 5**
 
+.. |ds_normal_eulerian_dia| replace:: Fig. 6
+
+.. |ds_normal_eulerian_dia_long| replace:: **Figure 6**
+
 ~~~~~~~~~~~~~~~~~
 The strain tensor
 ~~~~~~~~~~~~~~~~~
@@ -103,7 +107,7 @@ pre-deformation states at
 
 .. epigraph::
 
-  If :math:`\mathbf{F} \equiv I + \nabla \mathbf{u}`, then
+  If **F**, the *deformation gradient* [Lai1993]_ is defined by :math:`\mathbf{F} \equiv I + \nabla \mathbf{u}`, then
 
 .. math:: d \mathbf{x} = d \mathbf{X} + \nabla \mathbf{u} \, d \mathbf{X} = \mathbf{F} d \mathbf{X}
 
@@ -194,8 +198,8 @@ the deformed length of :math:`d \mathbf{x}^{(1)} = d \mathbf{x}^{(2)}`.
 .. highlights::
 
   |ds_normal_dia_long|: Two line segments, :math:`d \mathbf{X}^{(1)} = d
-  \mathbf{X}^{(2)} = dS \, \mathbf{e_1}` get transformed to *ds* after
-  deformation.
+  \mathbf{X}^{(2)} = dS \, \mathbf{e_1}` get transformed to a segement of length
+  *ds* after deformation.
 
 For small deformations, :math:`(ds + dS)( ds - dS) \approx 2 dS( ds - dS )`, and
 
@@ -257,8 +261,143 @@ segments is equal to twice the diagonal component of the strain tensor, the
 Lagrangian strain
 -----------------
 
+Beginning again without the intention to presume there are very small
+deformations, we start at |two_segments| and subtract
+:math:`d \mathbf{X}^{(1)} \cdot d \mathbf{X}^{(2)}` from both sides of the
+equation,
+
+.. image:: images/lagrangian.png
+  :align: center
+  :width: 11cm
+  :height: 1.634cm
+
+.. epigraph::
+
+  where :math:`\mathbf{E}^* = \frac{1}{2} ( \mathbf{F}^T \mathbf{F} - \mathbf{I})`
+  is the *Green-Lagrangian strain tensor* [Lai1993,Haupt2002]_.  This is a
+  finite strain tensor that specifies strain in terms of the reference
+  configuration.
+
+Again examininig the situation in |ds_normal_dia|, where
+:math:`d \mathbf{X}^{(1)} = d \mathbf{X}^{(2)} = d \mathbf{X} = dS \mathbf{e}_1`
+and :math:`||d\mathbf{x}|| = ds`,
+
+.. math:: ds^2 - dS^2 = 2 dS \mathbf{e}_1 \cdot \mathbf{E}^* dS \mathbf{e}_1
+
+.. math:: E_{11}^* = \frac{ ds^2 - dS^2}{2 dS^2}
+
+Similarily, if :math:`d \mathbf{X} = ds \mathbf{e}_2`,
+
+.. math:: E_{22}^* = \frac{ds^2 - dS^2}{2 dS^2}
+
+And, if we again look at |ds_perpendicular_dia|, where
+:math:`d \mathbf{X}^{(1)} = ds_1 \mathbf{e}_1` and :math:`d \mathbf{X}^{(2)} =
+dS_2 \mathbf{e_2}` deform to :math:`d \mathbf{x}^{(1)} = ds_1 \mathbf{m}` and
+:math:`d \mathbf{x}^{(2)} = ds_2 \mathbf{n}` where **m** and **n** are unit
+vectors,
+
+.. math:: ds_1 ds_2 \mathbf{m} \cdot \mathbf{n} = 2 dS_1 dS_2 \mathbf{e}_1 \cdot \mathbf{E}^* \mathbf{e}_2
+
+.. math:: E_{12}^* = \frac{ds_1 ds_2}{2 dS_1 dS_2} \cos( \mathbf{m}, \mathbf{n})
+
+The expression of :math:`\mathbf{E}^*` in terms of the displacement gradient is
+
+.. math:: \mathbf{E}^* = \frac{1}{2}( \nabla \mathbf{u} + (\nabla \mathbf{u})^T + (\nabla \mathbf{u})^T \nabla \mathbf{u} )
+
+In Einstein summation notation,
+
+.. math:: E_{ij}^* = \frac{1}{2}(\frac{\partial u_i}{\partial X_i} + \frac{\partial u_j}{\partial X_i} + \frac{1}{2} \frac{\partial u_m}{\partial X_i} \frac{\partial u_m}{\partial X_j}
+
+The explicit components in a 2D Cartesian coordinate system are,
+
+.. image:: images/lagrangian_explicit.png
+  :align: center
+  :width: 9.5cm
+  :height: 3.07cm
+
 Eulerian strain
 ---------------
+
+Instead of specifying motion in terms of the reference configuration, it can be
+specified in the deformed configuration,
+
+.. math:: d \mathbf{X} = \mathbf{F}^{-1} d \mathbf{x}
+
+where :math:`\mathbf{F}^{-1}` is the inverse of :math:`\mathbf{F}` [Lai1993]_,
+
+.. math:: \mathbf{F} = \begin{bmatrix} \dfrac{\partial X_1}{\partial x_1} & \dfrac{\partial X_1}{\partial x_2} \\ \dfrac{\partial X_2}{\partial x_1} & \dfrac{\partial X_2}{\partial x_2} \end{bmatrix}
+
+Again considering the deformation of two small segments in the volume,
+
+.. image:: images/eulerian1.png
+  :align: center
+  :width: 7cm
+  :height: 1.74cm
+
+Subtracting the above from :math:`d \mathbf{x}^{(1)} \cdot d \mathbf{x}^{(2)}`
+to again obtain an expression for the change in the inner product between the
+two segments,
+
+.. image:: images/eulerian2.png
+  :align: center
+  :width: 11cm
+  :height: 1.62cm
+
+where :math:`\mathbf{e}^* = \frac{1}{2} (\mathbf{I} - (\mathbf{FF}^T)^{-1})` is
+the *Eulerian-Almansi strain tensor* [Lai1993,Haupt2002]_. This is a finite
+strain tensor that specifies strain in terms of the deformed configurations.
+
+.. image:: images/ds_normal_eulerian_dia.png
+  :align:  center
+  :width:  11cm
+  :height: 7.97cm
+.. highlights::
+
+  |ds_normal_eulerian_dia_long|:  Two identical line segments, this time in the
+  deformed configuration, were transformed from a segment of length *dS*.
+
+As shown in |ds_normal_eulerian_dia|, if
+:math:`d \mathbf{x}^{(1)} = d\mathbf{x}^{(2)} = d \mathbf{x} = ds \mathbf{e}_1`
+and :math:`||d \mathbf{x}|| = dS`, then
+
+.. math:: ds^2 - dS^2 = 2 dS \mathbf{e}_1 \mathbf{e}^* dS \mathbf{e}_1
+
+.. math:: e_{11}^* = \frac{ds^2 - dS^2}{2 dS^2}
+
+And, when considering two segments :math:`d\mathbf{x}^{(1)} = ds_1 \mathbf{e}_1`
+and :math:`d\mathbf{x}^{(2)} = ds_2 \mathbf{e}_2` that deformed from
+:math:`d\mathbf{X}^{(1)} = dS_1 \mathbf{n}` and
+:math:`d \mathbf{X}^{(2)} = dS_2 \mathbf{m}` where **n** and **m** are unit
+vectors,
+
+.. math:: - dS_1 dS_2 \, \mathbf{n} \cdot \mathbf{m} = 2 \, ds_1 ds_2 \, \mathbf{e}_1 \cdot \mathbf{e}^* \mathbf{e}_2
+
+.. math:: e_{12}^* = \frac{ -dS_1 dS_2 \cos( \mathbf{n}, \mathbf{m} )}{2 ds_1 ds_2}
+
+Since :math:`\mathbf{F}^{-1} = \mathbf{I} - \nabla_x \mathbf{u}` [Lai1993]_
+(:math:`\nabla_x` indicates differentiation with respect to coordinates of the
+deformed configuration),
+
+.. image:: images/inverse_deformation_gradient.png
+  :align: center
+  :width: 9cm
+  :height: 1.23cm
+
+and
+
+.. math:: \mathbf{e}^* = \frac{1}{2}( \nabla_x \mathbf{u} + (\nabla_x \mathbf{u})^T - (\nabla_x \mathbf{u})^T \nabla_x \mathbf{u}
+
+In Einstein summation notation,
+
+.. math:: e_{ij}^* = \frac{1}{2}(\frac{\partial u_i}{\partial x_i} + \frac{\partial u_j}{\partial x_i} - \frac{1}{2} \frac{\partial u_m}{\partial x_i} \frac{\partial u_m}{\partial x_j}
+
+Explicitly in 2D Cartesian coordinates,
+
+.. image:: images/eulerian_explicit.png
+  :align: center
+  :width: 9.5cm
+  :height: 3.3cm
+
 
 Application in ultrasound
 =========================
