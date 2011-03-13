@@ -7,10 +7,10 @@ high-frequency reference phantoms necessary to generate quantitative ultrasound
 images with the reference phantom method.  Recently, Madsen et al. [Madsen2010]_
 developed tissue-mimicking (TM) phantoms with ultrasonic properties of human
 arteries at very high frequencies [Lockwood1991]_.  Accurate characterization of
-the acoustic properties of these new phantoms pose additional challenges
+the acoustic properties of these new phantoms poses additional challenges
 relative to the same characterization at lower frequencies.  In this chapter, we
 describe the methods applied to characterization of these phantoms.  Methods to
-determined the attenuation coefficient, phase velocity, and absolute backscatter
+determine the attenuation coefficient, phase velocity, and absolute backscatter
 coefficient are described.
 
 .. |size_distribution| replace:: Fig. 1
@@ -69,6 +69,9 @@ coefficient are described.
 
 .. |vs_screenshots_long| replace:: **Figure 14**
 
+.. |bsc| replace:: Fig. 15
+
+.. |bsc_long| replace:: **Figure 15**
 
 
 .. |attenuation_table| replace:: Table 1
@@ -153,7 +156,7 @@ to remove the :math:`A_0` constant and solve for the attenuation coefficient.
   of mounts with translational and rotational degrees of freedom.  A heater
   keeps the water at a constant 22.0º C.  For calculation of both the phase
   velocity and the attenuation coefficient, signal is collected from a
-  water-only path (shown), and a with the sample placed in the path of the
+  water-only path (shown), and with the sample placed in the path of the
   transducers (not shown).  A function generator and pulse amplifier provide
   input to the transmitting transducer, and the oscilloscope and computer used
   to record the received signal.
@@ -228,7 +231,7 @@ source of error is to plot the waveform before and after averaging, as in
 
 Frequency-dependent attenuation causes distortion at the beginning and the end
 of the tone burst.  In order to ensure that we are measuring the amplitude at
-the the narrowband portion of the signal, we calculate the root-mean-square
+the narrowband portion of the signal, we calculate the root-mean-square
 amplitude where correlation with a 20 cycle sine wave of the excitation wave is
 peaked.  If the received signal is viewed in the time-frequency plane, only the
 central portion of the tone burst is effectively narrowband.  As shown in
@@ -303,14 +306,14 @@ amplitude is,
   frequency, :math:`c_{Saran}` is the speed of sound in Saran, :math:`\alpha(f)`
   is the attenuation coefficient of the Saran Wrap in *Np/m*, and *l* is the
   thickness of each thin layer.  In our case :math:`c_{Saran}` is 2400 *m/s*,
-  :math:`\alpha (f) = 5.0 Np/m f^{1.5}`, the Saran density, :math:`\rho_{Saran}`
+  :math:`\alpha (f) [Np/m] = 5.0 \, f^{1.5}`\, the Saran density, :math:`\rho_{Saran}`
   is 1.69 *g/mL*.  Thickness of the Saran Wrap, which was 25 μm in previous
   cases, was re-measured, and the other properties, are assumed to be the same
   as those fit in Wear et al. [Wear2005]_.  Acoustic impedance, *Z*, for a
   material is the product of its density and speed of sound.  The density of the
   TM material was 1.045 g/mL for the 4000E phantom and 1.062 g/mL for the 5000E
   phantom.  Methods to obtain values for speed of sound of the test materials
-  used in the attenutation coefficient calculation are described in the next
+  used in the attenuation coefficient calculation are described in the next
   section.
 
 .. image:: images/saran_trans_coef.png
@@ -336,7 +339,7 @@ amplitude is,
 
   The thickness of the test cylinder was 5.00 mm measured with a calibrated
   micrometer.  This is significantly thinner than the larger 'hockey-puck'
-  cyclinders used at lower frequencies to limit high frequency attenuation.
+  cylinders used at lower frequencies to limit high frequency attenuation.
 
   Attenuation of water, α\ :sub:`w`, which is negligible at lower frequencies, must
   be accounted for at high frequencies.  Attenuation of water is proportional to
@@ -427,7 +430,7 @@ offset closest to a center zero-crossing is the different between the water-only
 zero crossing and the water-only start.  This ensures the same relative
 zero-crossing is used as the delay for both the water-only and the
 water-with-sample cases.  This will be true as long as the distortion at the
-front edge of the signal does not approach half a period, which has emperically
+front edge of the signal does not approach half a period, which has empirically
 proven to be a valid assumption.  |delay_times| shows the delay samples selected
 in this process at 50.0 MHz for the water-only signal and after the 5000E signal
 is inserted.
@@ -445,7 +448,7 @@ is inserted.
 
 An alternative method to the above is to take the delay to be the lag to the
 maximum of the cross-correlation of the two signals.  A more precise location of
-the cross-correlation peak can be obtained with with parabolic interpolation of
+the cross-correlation peak can be obtained with parabolic interpolation of
 the peak.  Of course, the broad-band edges of the tone burst are included in
 the cross-correlation calculation.  Results for both methods are shown in
 |sos_method|.  The calculated phase velocities are similar, but the
@@ -453,7 +456,7 @@ zero-crossing method trend is closer the expected dispersion.  According to the
 Kramers-Kronig relations [Waters2000,Mobley2003]_, increased attenuation with frequency will cause an
 increase in phase velocity with frequency.  Since attenuation increases
 monotonically with frequency, it is expected that phase velocity will increase
-monotonically with frequency.  Note, though, that the dispersion is minute
+monotonically with frequency.  Note, though, that the observed dispersion is minute
 compared to the variation found in soft tissues.  The phase velocity for both
 phantoms at 30 MHz is shown in |sos_table|.
 
@@ -576,12 +579,12 @@ display is a convenient method to ensure that these conditions are met.
 Reverberations between the transducer-water interface and the water-phantom
 interface are a possible source of artifact.  These reverberations appear to be
 present in the |vs_screenshots|\ a) B-Modes while they are not present in the RF
-plotted in |vs_screenshots|\ a) nore in |waveforms|\ a).  This is explained by the
-distinct operation of the Vevo 770 during B-Mode image acquision and Digital-RF
+plotted in |vs_screenshots|\ a) nor in |waveforms|\ a).  This is explained by the
+distinct operation of the Vevo 770 during B-Mode image acquisition and Digital-RF
 acquisition.  B-Mode acquisition for small animal imaging or the scout-window
 shown will rotate the transducers at very fast rates to achieve the 200+
 frames-per-second required for small animal imaging while continuously
-transmitting and receiving ultrasound pulses.  The reverbation does not have an
+transmitting and receiving ultrasound pulses.  The reverberation does not have an
 opportunity to dissipate in this situation.  On the other hand, Digital-RF
 operation is closer to M-Mode data collection; the positioning of the transducer
 is much slower, but the reverberations are not present in the received signal.
@@ -634,9 +637,9 @@ summing the backscatter for a single bead, :math:`BS_s(f,D)`
 multiplied by the bead number density,
 
 .. math:: BSC(f) = \sum_{i=1}^N BS_s (f, D_i) \rho_n(D_i)
-high freq paper.
 
-d amplitude attenuation coefficient is given by
+The amplitude attenuation coefficient of the thin layer covering the phantom is
+assumed to take the form
 
 .. math:: \alpha (f) = \alpha_0 \; f^{n}
 
@@ -647,55 +650,108 @@ case.
 Backscatter coefficient results
 ===============================
 
-
 Variations in the BSC versus frequency  from both phantoms are displayed in
 |bsc|.  Since the spectral plots in |backscattered_spectra| suggested there may
 be sufficient signal-to-noise ratio up to 45 MHz, analysis is displayed over the
-entire range from 0 to 60 MHz.  However, there is a sharp minimum in the pulse
-spectrum around 34 MHz which appears to be disruptive enough to compromise the
-data reduction beyond about 30 MHz.  Evidence that the pulse spectrum is causing
-the problem and not some property of the liquid-liquid reflector is that the
-variation also is detectable in the scattered spectra.  There are significant
+entire range from 0 to 50 MHz.  There are significant
 differences between the two phantoms' BSC's, which are amplified at high
-frequencies.  This relationship is observed in both the experimental and
-theoretical results.  Differences in the predicted BSC of the Faran theoretical
+frequencies.  This relationship is observed in both the Faran calculation and
+reference reflector results.  Differences in the predicted BSC of the Faran calculation
 results are much greater in the 15-30 MHz range than the 5-15 MHz range.  The
 linear slope in the log-log graph with a slope near four indicates Rayleigh
-scattering in the 8-15 MHz range.  Linear regression to the experimental data
-resulted in a slope of 3.1 and a coefficient of determination, :math:`R^2`, of
-0.96 for the 4000E phantom and 4.4 and 0.99 for the 5000E phantom.  The Rayleigh
-region extends to higher frequencies for the 5000E phantom, which is expected
+scattering in the 6-15 MHz range.  Power law regression to the experimental data
+results in a slope of 3.76 and a coefficient of determination, :math:`R^2`, of
+0.997 for the 5000E phantom.  This is expected more for the 5000E phantom
 because of the smaller bead diameter distribution evident in
 |size_distribution|.
 
-The correspondence between the 5000E theory and experiment is quite good from 5
-MHz to approximately 30 MHz, even though there appears to be significant signal
-in |backscattered_spectra| up to 45 MHz for both the phantom spectra and
-reflector spectrum.  However, values in the BSC curves deviate from both prior
-behavior and Faran values at the 34 MHz dip in the reflector spectrum.
-
 The lower BSC of the 4000E phantom may explain the noisier appearance of the
-curve.  The general trend of the 4000E BSC appears correct,
-although there are some oscillations not found in the theoretical curve.  A
-resonance in the backscattered spectrum at 4 MHz causes an artifact in the BSC
-calculation at the beginning of the curve.  Again major deviations from prior
-behavior occurs around 34 MHz.
+curve, although the dips at 21 MHz and 25.5 MHz are consistently observed with
+other sets of TM phantom and planar reflector data (not shown).  The general
+trend of the 4000E reference reflector BSC appears correct, although there are
+some oscillations not found in the Faran calculation curve.  The reference
+reflector BSC values are higher from 5-35 MHz before converging with the
+Faran calculation.  The mean and standard
+deviation of the percent difference of the 4000E reference reflector values from the
+Faran calculation values from 5-50 MHz are 53.6% ± 44.8.
+Agreement between the Faran calculation and reference reflector results for the
+5000E is very close in the 5-15 MHz range.  The reference reflector BSC values
+are higher from 15-35 MHz before also converging again.  The mean and standard
+deviation of the percent difference of the 5000E reference reflector values from the
+Faran calculation values from 5-50 MHz are 46.6% ± 27.9.
 
-.. |bsc| replace:: Fig. 5
 
-.. |bsc_caption| replace::
+.. image:: images/bsc.png
+  :align: center
+  :width: 15cm
+  :height: 7.51cm
+.. highlights::
 
-  (color online).  Absolute backscatter coefficient for the two TM phantoms examined.  A
-  theoretical curve derived from the phantom composition and Faran scattering
-  theory for spherical scatterers is displayed along with experimental results. Dashed lines are the
-  Faran predicted BSC for the acoustic properties assumed for the component
-  materials.  Curves with markers represent the experimental results.  In a), we
-  present theoretical curves for both the histogram approximation of size
-  distribution and the KDE approximation of the size distribution.  The same
-  data is present in b), but with logarithmic scaling on both axes and limiting
-  the frequency range to 25 MHz.  We only plot the KDE theoretical curves, but
-  we also show results from linear regression of the experimental data in the
-  7-15 MHz range.
+  |bsc_long|: Absolute backscatter coefficient for the two TM phantoms examined.
+  A curve derived from the phantom composition and Faran scattering theory for
+  spherical scatterers is displayed along with results phantom and planar
+  reflector RF data. Dashed lines are the Faran predicted BSC for the acoustic
+  properties assumed for the component materials.  Curves with markers represent
+  the experimental results.  In a), we present Faran curves for both the
+  histogram approximation of size distribution and the KDE approximation of the
+  size distribution.  The same data is present in b), but with logarithmic
+  scaling on both axes.  We only plot the KDE Faran curves, but we also show
+  results from power law fit of the 5000E reference reflector data in the 6-15
+  MHz range.
+
+In this chapter, methods are presented that can be used to measure the absolute
+backscatter coefficient at high frequencies.  Accurate measurement of this
+quantity has proven difficult for low frequencies [Wear2005]_, and additional
+challenges caused by alignment and attenuation make it more difficult at high
+frequencies.  There are a number of input parameters and assumptions in the
+broadband BSC reference reflector calculation that can be sources for error.
+
+Approximation of the acoustic field amplitude in the scattering volume depends
+on a model of a single element spherical capsule transducer with uniform
+apodization [Madsen1984]_.  The Vevo 770 approximates this configuration.  Ideally, the
+aperture radius and radius of curvature would be empirically determined by
+acoustic field measurements with a hydrophone.  A hydrophone with sufficiently
+small footprint for the short wavelength encountered was unavailable, so the
+geometrical properties provided by manufacturer specifications were applied.
+
+Calculation of the BSC also relies on measurement of the sample speed of sound
+and attenuation coefficient.  We saw that high sampling frequencies are required for
+precise measurement of the speed of sound, and linear interpolation of the
+zero-crossing can increase the precision of delay measurement.  Care has to be
+taken to prevent offsets in the delay from occurring due to building vibration,
+inadvertent load on the apparatus by the experimenter, or vibrations of the
+transducer from water flow from the tank heater.  Distortion of the signal at
+the pulse edges (|substitution_pulse|) makes determination of the phase velocity
+challenging for frequencies of 30 MHz or higher.  Successful attenuation
+measurement relies on alignment and sufficient signal amplitude.  The
+transducers must be placed close together to prevent excessive signal loss in the water
+path.  This requires more precise alignment of the transducers.  The
+TM specimen used for substitution needs to have a small width to prevent signal loss, but this
+also makes precise width measurement more important.  High excitation voltages
+are required to obtain adequate signal at high frequencies, but these same high
+voltages cannot also be used at lower frequencies because non-linear
+propagation will occur in water.
+
+There are three significant differences in the two phantoms examined in this
+chapter:
+the thin layer material covering the phantom and the glass bead size
+distribution and concentration.  Incorrect assumptions of the thin layer
+properties would affect the measured BSC, and incorrect assumptions on the bead
+distribution density would result in an incorrect Faran calculation.
+
+Kernel density estimation was investigated as a method to improve estimation of
+the bead diameter distribution, but this was found to have negligible effects on
+the BSC curves.  However, there was a very high sensitivity of the
+Faran BSC curves to rare, large diameter beads; a large number of diameter
+measurements were required before reasonable results were obtained.  Due to the
+cubic relationship between diameter and volume, the large diameter beads are
+significant in the calculation in the total mass of a bead distribution.  In
+turn, this affects the bead number density, which shifts the theoretical BSC
+curve up or down.  The presence of the rare, large scatterers influences the
+shape of the curve in the non-Rayleigh regions.  In practice, it is easier to
+obtain agreement between experimental and theoretical results when the bead
+diameter distribution is much smaller than the wavelength (Rayleigh scattering),
+and the distribution lacks rare outliers.
 
 ~~~~~~~~~~
 References
