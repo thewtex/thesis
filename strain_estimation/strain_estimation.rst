@@ -1,6 +1,6 @@
-====================================
-Calculating Strain from Displacement
-====================================
+===============================================
+Chapter 5: Calculating Strain from Displacement
+===============================================
 
 In this chapter, theory and techniques necessary to create strain tensor images
 from displacement images are covered with attention paid towards issues relevant
@@ -15,36 +15,40 @@ that be used for statistical analysis of plaque vulnerability.  Finally, methods
 to calculate accumulated strain in digital ultrasound strain images over the
 cardiac cycle are explained.
 
-.. |points| replace:: Fig. 1
+.. |points| replace:: Fig. 5.1
 
-.. |points_long| replace:: **Figure 1**
+.. |points_long| replace:: **Figure 5.1**
 
-.. |segments| replace:: Fig. 2
+.. |segments| replace:: Fig. 5.2
 
-.. |segments_long| replace:: **Figure 2**
+.. |segments_long| replace:: **Figure 5.2**
 
-.. |two_segments| replace:: Fig. 3
+.. |two_segments| replace:: Fig. 5.3
 
-.. |two_segments_long| replace:: **Figure 3**
+.. |two_segments_long| replace:: **Figure 5.3**
 
-.. |ds_normal_dia| replace:: Fig. 4
+.. |ds_normal_dia| replace:: Fig. 5.4
 
-.. |ds_normal_dia_long| replace:: **Figure 4**
+.. |ds_normal_dia_long| replace:: **Figure 5.4**
 
-.. |ds_perpendicular_dia| replace:: Fig. 5
+.. |ds_perpendicular_dia| replace:: Fig. 5.5
 
-.. |ds_perpendicular_dia_long| replace:: **Figure 5**
+.. |ds_perpendicular_dia_long| replace:: **Figure 5.5**
 
-.. |ds_normal_eulerian_dia| replace:: Fig. 6
+.. |ds_normal_eulerian_dia| replace:: Fig. 5.6
 
-.. |ds_normal_eulerian_dia_long| replace:: **Figure 6**
+.. |ds_normal_eulerian_dia_long| replace:: **Figure 5.6**
 
-~~~~~~~~~~~~~~~~~
-The strain tensor
-~~~~~~~~~~~~~~~~~
+.. |linear_array| replace:: Fig. 5.7
 
-Mechanical model
-================
+.. |linear_array_long| replace:: **Figure 5.7**
+
+~~~~~~~~~~~~~~~~~~~~~
+5.1 The strain tensor
+~~~~~~~~~~~~~~~~~~~~~
+
+5.1.1 Mechanical model
+======================
 
 An *in situ* plaque prior to failure is a continuous, solid-body at a gross
 level, and solid-body continuum mechanics can be applied.  Solid-body continuum
@@ -143,8 +147,8 @@ Observe that
   It is from this model that the different expressions for the strain tensor
   arise.
 
-Infinitesimal strain
---------------------
+5.1.1.1 Infinitesimal strain
+----------------------------
 
 If we have very small deformations, :math:`(\nabla \mathbf{u})^T \nabla \mathbf{u}`
 becomes negligible, and
@@ -258,8 +262,8 @@ That is, for infinitesimal strain, the decrease in angle between orthogonal
 segments is equal to twice the diagonal component of the strain tensor, the
 *shear strain* [Lai1993]_.
 
-Lagrangian strain
------------------
+5.1.1.2 Lagrangian strain
+-------------------------
 
 Beginning again without the intention to presume there are very small
 deformations, we start at |two_segments| and subtract
@@ -315,8 +319,8 @@ The explicit components in a 2D Cartesian coordinate system are,
   :width: 9.5cm
   :height: 3.07cm
 
-Eulerian strain
----------------
+5.1.1.3 Eulerian strain
+-----------------------
 
 Instead of specifying motion in terms of the reference configuration, it can be
 specified in the deformed configuration,
@@ -394,26 +398,134 @@ In Einstein summation notation,
 Explicitly in 2D Cartesian coordinates,
 
 .. image:: images/eulerian_explicit.png
-  :align: center
-  :width: 9.5cm
+  :align:  center
+  :width:  9.5cm
   :height: 3.3cm
 
 
-Application in ultrasound
-=========================
+5.1.2 Application in ultrasound
+===============================
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Methods for estimating strain from displacement
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+By applying various medical imaging modalities, strain images of tissues can be
+created by performing deformable image registration of the tissue image after
+deformation to another pre-deformation image.  This technique has been applied
+in multiple imaging modalities.  Strain in atherosclerotic tissues was imaged by
+Rogowska et al. [Rogowska2004,Rogowska2006]_ with optical coherence tomography
+and well as by others [Stamper2006,Chan2004]_.  Recently, the high resolutions
+of X-ray computed tomography (CT) were used to create high quality strain images
+of a breast phantom [Han2010]_.  Creation of displacement images in magnetic
+resonance imaging (MRI) is unique in that does not need to use traditional image
+registration techniques, but pulse sequences can generate displacement
+images using the physics of image acquisition [Fowlkes1995,Bishop1995,Hardy1995,Plewes2000,Lin2008,Korosoglou2008,Neizel2009,Shehata2010]_.
+
+Diagostic ultrasound has the longest history of calculating strain
+[Ophir2001,Ophir2000,Parker1996,Parker2011]_.  In one of the earliest papers,
+Ophir et. al. calculated strain with [Ophir1991]_
+
+.. math:: s_i = \frac{t_{i+1} - t_i}{2dz/c}
+
+.. epigraph::
+
+  where the *s*\ :sub:`i` is the strain, *t*\ :sub:`i+1` and *t*\ :sub:`i` are
+  the time shifts of windows on an A-line, *dz* is the distance between the
+  windows, and *c* is the speed of sound in tissue.  As shown in |linear_array|,
+  an A-line, an amplitude line of the signal created by sending a beam of
+  ultrasound into a tissue.  If the speed of sound in tissue is constant, this
+  dimensionless quantity is equivalent to one component of the infinitesimal
+  strain tensor described in Section 5.1.1.1.  Since this component of strain is
+  along the beam axis, it is called *axial strain*.  In an a linear array where
+  all A-lines are sent parallel directions, |linear_array|, the axial refers to
+  the same direction across the entire image.  Note that for sector arrays, this
+  may not be the case.  In the usual operation and clinical presentation of
+  linear array data, the axial direction is the vertical direction in an image.
+  If the beam steering occurs, the beams will remain parallel, but the axial
+  direction no longer corresponds to the vertical direction of the image.  
+
+.. image:: images/linear_array.png
+  :align:  center
+  :width:  11cm
+  :height: 8.89cm
+.. highlights::
+
+  |linear_array_long|: Diagram of a medical linear ultrasound array.  Small
+  transducer elements on the surface of the handheld transducer send sound
+  concentrated over a beam in the tissue, which creates a line in the image.
+  The axis of this beam determines the *axial direction* of the strain tensor,
+  and the direction orthogonal is the *lateral direction*.
+
+In conventional ultrasound imaging, a B-Mode image is formed by repeatedly
+changing the location the A-line is sent into the tissue.  In a linear array,
+the spacing of the A-lines is determined by the transducer element spatial
+density.  This direction which is orthogonal to the axial direction is the
+*lateral direction*.  In the carotid images shown in this work, the lateral
+direction corresponds to the horizontal direction.  Resolution in this direction
+is not directly determined by the excitation frequency as it is in the axial
+direction, but by the beam width.  As a consequence, resolution in this
+direction is much lower [Hansen2010]_.  Also, shifts do not depend on sound
+speed assumptions; they are statically determined by the geometry of the
+transducer.  In an *in vivo* carotid image used in this study, for example, the
+number of samples in a 40×40 mm image in the axial direction is 2076 in the
+axial direction and 244 in the lateral direction.  This near ten-fold disparity
+in the resolution is associated with the difficulty in calculating lateral
+strains.  The majority of the literature has focused on axial strains because
+the lateral strains do exhibit a useable signal-to-noise ratio.  Only recently
+algorithmic improvements, regularization such as those described in Chapter 3 or
+other improvements described in Chapters 4 and 9.
+
+*Shear strain* in ultrasound strain imaging usually refers to the strain between
+the axial and lateral directions.  Since displacement estimates in the axial direction
+are higher quality than those in the lateral directions, some have only
+calculated the derivative of displacement in the axial direction with respect to
+the lateral direction and called this *axial shear* [Thitaikumar2008a]_.
+
+Of course, while axial, lateral, and shear strain provide all components of a 2D
+strain tensor, physical tissues are 3D.  The number of independent components in a
+symmetric, second-rank tensor are
+
+.. math:: n_c = D \frac{D+1}{2}
+
+.. epigraph::
+
+  There are six components in the 3D strain tensor; two addition shear strain
+  components and one additional normal strain component.  While there is on-going
+  research to obtain these components, there are a number of technological
+  limitations at this time that prevent full population of the strain tensor with
+  ultrasound.  The third direction of a linear array, the *elevational
+  direction*, has a resolution at the level of or worse than the lateral
+  resolution.  Technology to commercially develop a 2D matrix-array of transducer
+  elements is only emerging.  Challenges here include creation of the 2D array
+  elements and acquiring the appropriate signal channel count
+  [Wygant2008,Martinez-Graullera2010]_.  In terms of motion tracking,
+  computational challenges exist in terms of data storage and processing.  Also,
+  frames rates are slower with volumetric imaging, which in some cases can allows
+  to much motion to take place in-between image sets.  However, progress in 3D
+  strain imaging is taking place [Byram2010,Po2010,Lopata2007,Rao2008,Fisher2010]_.
+  Currently, the primary benefit of 3D imaging systems is not to obtain all components
+  of the strain tensor, but to prevent tissue from moving outside of the imaging
+  plane, which makes motion tracking difficult.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.2 Methods for estimating strain from displacement
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In Section 5.1.1, it was shown how strain tensors are composed of the symmetric part of
+the displacement gradient.  Therefore, in order to compute the strain tensor,
+the displacement gradient must first be estimated.  Accurate calculation of the
+displacement gradient is a challenge for two reasons.  First, the output
+block-matching methods is a discrete instead of continuous displacement field.
+Secondly, displacement estimates are often noisy, and the differential operation
+of gradient calculation magnifies the noise.  In this section, a number of
+methods to compute the displacement gradient are examined.
 
 Finite difference based methods
 ===============================
 
+B-spline fitting
+================
+
 The least squares strain estimator
 ==================================
 
-B-spline fitting
-================
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Useful quantities derived from the strain tensor
@@ -428,9 +540,9 @@ Representation of the 2D strain tensor as an ellipse
 Combination of normal strains and shear strain into a single strain index
 =========================================================================
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Generating acculated strain from a time series
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Generating accumulated strain from a time series
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dynamic frame skip
 ==================
