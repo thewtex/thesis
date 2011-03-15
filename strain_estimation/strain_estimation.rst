@@ -550,8 +550,7 @@ vectors.
 
   |input_known_displacements_long|:  Ideal input displacements resulting from
   the mechanical model.  a) Axial displacements, b) lateral displacements, c)
-  displacement the displacement vectors represented by arrows scaled by and
-  colored by their magnitude.
+  displacement vectors represented by arrows scaled and colored by their magnitude.
 
 The ideal, known displacements are shown in |input_known_displacements|.  Axial
 displacements start from zero at the transducer surface and increase further
@@ -579,11 +578,11 @@ place between theses images is not readily apparent, but the motion tracking
 algorithm is able to determine the movement of subvolumes in the image.  Notice
 the anisotropy in resolution-- signal content is much higher in the axial
 direction than it is in the lateral direction.  This leads to higher quality
-motion estimation in the axial direction, discussed in Section 5.1.2.
+motion estimation in the axial direction, as discussed in Section 5.1.2.
 
 .. image:: images/rf_inputs.png
-  :align: center
-  :width: 10cm
+  :align:  center
+  :width:  10cm
   :height: 4.7cm
 .. highlights::
 
@@ -591,11 +590,28 @@ motion estimation in the axial direction, discussed in Section 5.1.2.
   images.  Motion tracking applied to these images generates the displacements
   in |tracked_displacements|.
 
+Displacements that define the motion between |rf_inputs|\ a) and |rf_inputs|\ b)
+are shown in |tracked_displacements|.  These images are created with the
+motion tracking algorithm described in Chapter 9.  In the next few
+subsections, methods for calculating the displacement gradient from
+|tracked_displacement| are presented and the strain that results is shown.
+
+.. image:: images/tracked_displacements.png
+  :align: center
+  :width: 16cm
+  :height: 4.91cm
+.. highlights::
+
+  |tracked_displacements_long|: Displacements that result from tracking the
+  motion in |rf_inputs|.  a) Axial displacements, b) lateral displacements, c)
+  displacement vectors represented by arrows scaled and colored by their
+  magnitude.
+
 5.2.1 Finite difference based methods
 =====================================
 
-B-spline fitting
-================
+5.2.2 B-spline fitting
+======================
 
 The least squares strain estimator
 ==================================
