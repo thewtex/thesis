@@ -47,6 +47,14 @@ cardiac cycle are explained.
 
 .. |input_known_displacements_long| replace:: **Figure 5.8**
 
+.. |expected_strains| replace:: Fig. 5.9
+
+.. |expected_strains_long| replace:: **Figure 5.9**
+
+.. |rf_inputs| replace:: Fig. 5.10
+
+.. |rf_inputs_long| replace:: **Figure 5.10**
+
 ~~~~~~~~~~~~~~~~~~~~~
 5.1 The strain tensor
 ~~~~~~~~~~~~~~~~~~~~~
@@ -549,6 +557,39 @@ The ideal, known displacements are shown in |input_known_displacements|.  Axial
 displacements start from zero at the transducer surface and increase further
 into the body.  Lateral displacements are assumed to be zero along the center
 axis of the transducer and diverge to the edges of the body.
+
+If we apply the central difference methods and the equations in Section 5.1.1.1
+to the noiseless known input displacements, |input_known_displacements|, we
+obtain the expected strains in |expected_strains|.
+
+.. image:: images/strain_input.png
+  :align: center
+  :width: 16cm
+  :height: 4.988cm
+.. highlights::
+
+  |expected_strains_long|: Strains calculated from the noiseless input
+  displacements on a hard cylindrical input model undergoing uni-axial
+  compression. a) Axial strain, b) shear strain, and c) lateral strain.
+
+The challenge arises when noise in the displacements are output from imperfect
+motion tracking.  The RF ultrasound simulation images in |rf_inputs| display the
+image content before and after deformation.  The deformation pattern that takes
+place between theses images is not readily apparent, but the motion tracking
+algorithm is able to determine the movement of subvolumes in the image.  Notice
+the anisotropy in resolution-- signal content is much higher in the axial
+direction than it is in the lateral direction.  This leads to higher quality
+motion estimation in the axial direction, discussed in Section 5.1.2.
+
+.. image:: images/rf_inputs.png
+  :align: center
+  :width: 10cm
+  :height: 4.7cm
+.. highlights::
+
+  |rf_inputs_long|: a) Pre-deformation and b) post-deformation ultrasound RF
+  images.  Motion tracking applied to these images generates the displacements
+  in |tracked_displacements|.
 
 5.2.1 Finite difference based methods
 =====================================

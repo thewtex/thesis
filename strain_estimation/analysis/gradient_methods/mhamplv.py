@@ -44,23 +44,32 @@ while l.split('=')[0].rstrip() != 'ElementDataFile':
     elif l.split('=')[0].rstrip() == 'Offset':
         offset = [ float(x) for x in l.split('=')[1].rstrip().split() ]
 
-img = np.fromfile( args.input_file, dtype=np.float64 )
+#img = np.fromfile( args.input_file, dtype=np.float64 )
+# for rf
+img = np.fromfile( args.input_file, dtype=np.int16 )
 args.input_file.close()
+print( element_spacing )
+print( img.shape )
+# for rf
+shape = (200,4096)
 img.shape = shape
 #img = img[9:-9,56:-10]
+# for rf
+img = img[:,494:3600]
 img = img.transpose()
 shape = img.shape
 
-print( offset )
 plt.imshow( img,
         cmap=args.cmap,
-        aspect=element_spacing[0]/element_spacing[1],
+        aspect='equal',
+        #aspect=element_spacing[0]/element_spacing[1],
         vmin=args.vmin,
         vmax=args.vmax,
         interpolation=args.interpolation,
-        origin='upper',
+        origin='lower',
         extent=(-offset[1]*1000, (-offset[1] + shape[1]*element_spacing[1])*1000,
-             (offset[0] + shape[0]*element_spacing[0])*1000, offset[0]*1000) )
+             (shape[0]*element_spacing[0])*1000, 0.0) )
+             #(offset[0] + shape[0]*element_spacing[0])*1000, offset[0]*1000) )
 
 plt.xlabel( 'Width [mm]' )
 plt.ylabel( 'Depth [mm]' )
@@ -70,12 +79,14 @@ class cbFormatter( mpl.ticker.ScalarFormatter ):
         return '{0}'.format( 100.* x )
 
 cb_formatter = cbFormatter()
-cb = plt.colorbar( ticks=[-0.03, -0.02, -0.01, 0.0], format=cb_formatter,
-        shrink=0.6, drawedges=False )
-cb.outline.set_marker( '' )
-cb.set_label( 'Strain Percent' )
+#cb = plt.colorbar( ticks=[-0.03, -0.02, -0.01, 0.0], format=cb_formatter,
+#cb = plt.colorbar( format=cb_formatter,
+    #shrink=0.8, drawedges=False )
+#cb = plt.colorbar( shrink=0.8, drawedges=False )
+#cb.outline.set_marker( '' )
+#cb.set_label( 'Strain [%]' )
 
 if args.output_file:
-    plt.savefig( args.output_file )
+    plt.savefig( args.output_file, dpi=150 )
 else:
     plt.show()
