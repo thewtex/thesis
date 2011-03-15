@@ -43,6 +43,10 @@ cardiac cycle are explained.
 
 .. |linear_array_long| replace:: **Figure 5.7**
 
+.. |input_known_displacements| replace:: Fig. 5.8
+
+.. |input_known_displacements_long| replace:: **Figure 5.8**
+
 ~~~~~~~~~~~~~~~~~~~~~
 5.1 The strain tensor
 ~~~~~~~~~~~~~~~~~~~~~
@@ -517,8 +521,37 @@ Secondly, displacement estimates are often noisy, and the differential operation
 of gradient calculation magnifies the noise.  In this section, a number of
 methods to compute the displacement gradient are examined.
 
-Finite difference based methods
-===============================
+A common test case for ultrasound strain imaging is the model of a hard
+cylindrical inclusion (high elastic modulus) in a soft background (low elastic
+modulus).  The inclusion exists in a cubic block, and is subject to uniform
+compression from the top while being unconstrained at the side (zero-traction
+stress boundary conditions).  Displacement is assumed to start from zero at the
+top and center of the model as if an ultrasound transducer exists there as a
+point of reference.  Details on methods to create the mechanical finite element
+and ultrasound scattering pieces of a simulation that represents this model are
+given in Chapter 3.  In this section, images resulting from 3% compression along
+the axis of deformation in this model will be used to evaluate the behavior of
+different methods to calculate the strain tensor from tracked displacement
+vectors.
+
+.. image:: images/input_known_displacements.png
+  :align: center
+  :width: 16cm
+  :height: 4.91cm
+.. highlights::
+
+  |input_known_displacements_long|:  Ideal input displacements resulting from
+  the mechanical model.  a) Axial displacements, b) lateral displacements, c)
+  displacement the displacement vectors represented by arrows scaled by and
+  colored by their magnitude.
+
+The ideal, known displacements are shown in |input_known_displacements|.  Axial
+displacements start from zero at the transducer surface and increase further
+into the body.  Lateral displacements are assumed to be zero along the center
+axis of the transducer and diverge to the edges of the body.
+
+5.2.1 Finite difference based methods
+=====================================
 
 B-spline fitting
 ================

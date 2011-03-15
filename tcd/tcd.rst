@@ -88,6 +88,25 @@ classifications [Zuromskis2008]_.
 Methods to increase the robustness of unstable data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Transcranial Doppler has been performed thus far on a few patients using a Multidop-L2 2.54g system made by DWL (Germany).
+One hour of data is collected immediately following acquisition of the carotid ultrasound data for strain imaging.
+A pair of 2 $MHz$ transducers are focused on the right and left middle cerebral arteries (MCA) at the transtemporal acoustic windows and secured with the Marc600 Transcranial Fixation System head unit.
+The Doppler gate is placed at a depth of 30 to 67 $mm$ depending on the size of the patient.
+
+The system displays the power spectrum calculated with a 128 FFT with 67\% overlap and a sampling frequency of 1 $kHz$.  The pulse repetition frequency (PRF) is 3 $kHz$.
+Additionally, the envelope of the peak velocity for both channels is displayed along with a histogram of High Intensity Transient Signal (HITS).  
+A HITS is recorded whenever the signal exceeds 3 dB over the background signal.  
+During acquisition there are multiple false-positive HITS detected because of motion artifacts.
+To address false positives, marks are added to the data indicating a possible true micro-embolic signal or a known motion artifact.  
+
+Post-processing is performed to provide further scrutiny to the collected data.
+A custom application was developed to visualize and analyze the available data show in Figure~\ref{fig:tcd}.
+Only the envelope of the peak velocities, HITS times, and marks could be retrieved from the recorded data.
+To expedite analysis of the data collected over an hour time period, three plots of the peak velocity waveform are displayed at three time scales, i.e. the entire acquisition, a 100 second window, and a 5 second window.
+Clicking on a time segment in the entire acquisition will display the indicated segment in the 100 second window, and clicking on a time segment in the 100 second will display the shaded region in the five second window. 
+Time points where the DWL detected a HITS signal are displayed as a non-overlapping dot along with text indicating the magnitude in $dB$.
+False and True marks are also displayed as non-overlapping dots, but in distinguishing colors.
+
 TCD is notorious for difficulties when attempting to obtain useable, reliable
 data.  While valuable physiological data can certainly be acquired, consistent
 collection of this data is a challenge.  McMahon et al. examined the
