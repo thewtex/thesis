@@ -48,13 +48,15 @@ img = np.fromfile( args.input_file, dtype=np.float64 )
 args.input_file.close()
 img.shape = shape
 img = img * 1000.0
-#img = img[9:-9,56:-10]
+print( img.shape )
+img = img[:,18:-18]
 img = img.transpose()
 shape = img.shape
 
 plt.imshow( img,
         cmap=args.cmap,
-        aspect=element_spacing[0]/element_spacing[1],
+        #aspect=element_spacing[0]/element_spacing[1],
+        aspect='equal',
         vmin=args.vmin,
         vmax=args.vmax,
         interpolation=args.interpolation,

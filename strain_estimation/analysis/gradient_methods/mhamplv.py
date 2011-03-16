@@ -44,18 +44,11 @@ while l.split('=')[0].rstrip() != 'ElementDataFile':
     elif l.split('=')[0].rstrip() == 'Offset':
         offset = [ float(x) for x in l.split('=')[1].rstrip().split() ]
 
-#img = np.fromfile( args.input_file, dtype=np.float64 )
-# for rf
-img = np.fromfile( args.input_file, dtype=np.int16 )
+img = np.fromfile( args.input_file, dtype=np.float64 )
 args.input_file.close()
-print( element_spacing )
-print( img.shape )
-# for rf
-shape = (200,4096)
 img.shape = shape
+img = img[:,20:-20]
 #img = img[9:-9,56:-10]
-# for rf
-img = img[:,494:3600]
 img = img.transpose()
 shape = img.shape
 
@@ -80,11 +73,11 @@ class cbFormatter( mpl.ticker.ScalarFormatter ):
 
 cb_formatter = cbFormatter()
 #cb = plt.colorbar( ticks=[-0.03, -0.02, -0.01, 0.0], format=cb_formatter,
-#cb = plt.colorbar( format=cb_formatter,
-    #shrink=0.8, drawedges=False )
+cb = plt.colorbar( format=cb_formatter,
+    shrink=0.8, drawedges=False )
 #cb = plt.colorbar( shrink=0.8, drawedges=False )
-#cb.outline.set_marker( '' )
-#cb.set_label( 'Strain [%]' )
+cb.outline.set_marker( '' )
+cb.set_label( 'Strain [%]' )
 
 if args.output_file:
     plt.savefig( args.output_file, dpi=150 )

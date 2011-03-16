@@ -55,6 +55,31 @@ cardiac cycle are explained.
 
 .. |rf_inputs_long| replace:: **Figure 5.10**
 
+.. |tracked_displacements| replace:: Fig. 5.11
+
+.. |tracked_displacements_long| replace:: **Figure 5.12**
+
+.. |central_difference_strain| replace:: Fig. 5.13
+
+.. |central_difference_strain_long| replace:: **Figure 5.13**
+
+.. |higher_order_accurate| replace:: Fig. 5.14
+
+.. |higher_order_accurate_long| replace:: **Figure 5.14**
+
+.. |gradient_recursive_gaussian_strain| replace:: Fig. 5.15
+
+.. |gradient_recursive_gaussian_strain_long| replace:: **Figure 5.15**
+
+.. |lsq_vessel| replace:: Fig. 5.16
+
+.. |lsq_vessel_long| replace:: **Figure 5.16**
+
+
+.. |higher_coefficients| replace:: Table 1
+
+.. |higher_coefficients_long| replace:: **Table 1**
+
 ~~~~~~~~~~~~~~~~~~~~~
 5.1 The strain tensor
 ~~~~~~~~~~~~~~~~~~~~~
@@ -594,12 +619,12 @@ Displacements that define the motion between |rf_inputs|\ a) and |rf_inputs|\ b)
 are shown in |tracked_displacements|.  These images are created with the
 motion tracking algorithm described in Chapter 9.  In the next few
 subsections, methods for calculating the displacement gradient from
-|tracked_displacement| are presented and the strain that results is shown.
+|tracked_displacements| are presented and the strain that results is shown.
 
 .. image:: images/tracked_displacements.png
   :align: center
   :width: 16cm
-  :height: 4.91cm
+  :height: 4.68cm
 .. highlights::
 
   |tracked_displacements_long|: Displacements that result from tracking the
@@ -610,11 +635,237 @@ subsections, methods for calculating the displacement gradient from
 5.2.1 Finite difference based methods
 =====================================
 
-5.2.2 B-spline fitting
-======================
+A common way to approximate the first derivative of a function *f*\ :sub`k` at sample
+offset *k* using finite differences is the central difference method.
 
-The least squares strain estimator
-==================================
+.. math::  f^1_0  \approx \frac{f_1 - f_{-1}} { 2 h }
+
+Where *h* is the sampling period.
+
+This expression comes from a Taylor series expansion of the component terms
+
+.. math::  f_1 = f_0 + h f^1_0 + \frac{h^2}{2!}f^2_0 + \cdots + \frac{h^n}{n!} + \mathcal{O}(h^{n+1})
+
+Where :math:`\mathcal{O}(h^{n+1})` indicates the series has been truncated after *n+1*
+terms.
+
+We also have
+
+.. math:: f_{-1} = f_0 - h f^1_0 + \mathcal{O}(h^{2})
+
+Then we see
+
+.. math::  f^1_0 = \frac{f_1 - f_{-1}} { 2 h } + \mathcal{O}(h^{2})
+
+This approximation is, therefore, *second-order accurate*.  Strain calculated
+using the central difference method to compute the displacement gradient are
+shown in |central_difference_strain|.
+
+.. image:: images/central_difference_strain.png
+  :align: center
+  :width: 16cm
+  :height: 4.74cm
+.. highlights::
+
+  |central_difference_strain_long|: Strains calculated using the central
+  difference method ot compute the displacement gradient.  a) Axial strain, b)
+  shear strain, and c) lateral strain.
+
+Other popular simple approachs for approximating the local derivative of sampled
+data include the forward difference method and the backward difference method.
+In the forward difference method,
+
+.. math::  f^1_0  \approx \frac{f_1 - f_{0}} { h }
+
+After looking at the Taylor series expansion, the forward difference method, like the backward
+difference method, is first-order accurate.
+
+.. math::  f^1_0  =  \frac{f_1 - f_{0}} { h } + \mathcal{O}(h)
+
+Higher order accurate [#]_ approximations can be made by using additional
+samples.  Various schemes will yield correct results as long as the Taylor
+series terms cancel.  When there are equally spaced functions samples, which is
+the most commonly encountered dataset and is the case for digital images, the
+coefficients are usually rational numbers because of the form of the Taylor
+series.  For instance, a central difference approximation to the first
+derivative that uses a five point kernel is
+
+.. math:: f^1_0 = \frac{f_{-2} - 8 f_{-1} + 8 f_1 - f_2}{ 12 h } + \mathcal{O}(h^4)
+
+.. [#] Here we use the terminology *order of accuracy* to refer to the number of terms used in the Taylor series approximation and *order derivative* to refer to the degree of the derivative.
+
+Khan and Ohba derived closed form expressions for higher order accurate
+approximations of an arbitrary *p*\ th order derivative [Khan1999,Khan2003]_.
+Two different sets of expressions were developed by the pair.  The newer set of
+finite difference approximations uses samples from every other sample around the
+differentiated point.  This set of approximations has the same computational
+complexity, and both approximations have linear phase and are highly accurate
+for polynomial type inputs [Khan2003]_.  However, this set of approximations has
+slightly better performance for periodic functions and functions sampled near
+the Nyquist frequency [Khan2003]_.  The second set of approximations are central
+difference type approximations that have symmetric non-zero coefficients for
+every point surrounding the sample of interest.  The coefficients alternate in
+sign and decay rapidly from their center.   The tap-coefficients, *d*, for a
+first order derivative
+
+.. image:: images/nth_order_coefficients.png
+  :align:  center
+  :width:  8cm
+  :height: 1.25cm
+
+The first sets of coefficients are explicitly given in |higher_coefficients|.
+
+======================= =========================================
+ Order of accuracy, 2N   Coefficients
+----------------------- -----------------------------------------
+ 2                       -0.5, 0.0, 0.5
+ 4                       0.08333, -0.6667, 0.0, 0.6667, -0.08333
+ 6                       -0.016667, 0.15, -0.75, 0.0, 0.75, -0.15, 0.016667
+ 8                       0.00357143, -0.0380952, 0.2, -0.8, 0.0, 0.8, -0.2, 0.0380952, -0.00357143
+ 10                      -0.000793651, 0.00992063, -0.0595238, 0.238095, -0.238095, -0.833333, 0.0 0.833333, 0.0595238, -0.00992063, 0.000793651
+======================= =========================================
+
+.. highlights::
+
+  |higher_coefficients_long|: Tap-coefficients for higher order accurate center
+  difference approximation of the first degree derivative.
+
+Strain images with order of accuracy of 6 are displayed in
+|higher_order_accurate|.
+
+.. image:: images/higher_order_strain.png
+  :align: center
+  :width: 16cm
+  :height: 4.77cm
+.. highlights::
+
+  |higher_order_accurate_long|: Cylindrical inclusion strain calculated with a 6th order-accurate central
+  difference approximation. a) Axial strain, b) shear strain, and c) lateral
+  strain.
+
+Inspecting |central_difference_strain| and |higher_order_accurate|, only subtle
+differences are observed.  There is noise present in |central_difference_strain|
+that remains present in |higher_order_accurate|.  This noise is due to
+decorrelation but also artifacts related to the regularization described in
+Chapter 3.  While the higher order-accurate calculation may be a more correct
+representation of the displacement gradients, it is sometimes primarily a more
+accurate representation of the noise present in the displacement gradients.
+In general some notable advantages have been observed, though.  Specifically,
+there are reductions in the strain noise and an increase in the strain dynamic
+range.  This behavior contrasts with the rest of the gradient calculation
+techniques discussed in this section, which tend to reduce the dynamic range
+resolution in the strain component images.  Finite difference based methods are
+also among the most computationally efficient methods.  They are implemented
+as small, fast convolution kernels.  However, they do little to filter out
+noise as the remaining techniques do.
+
+5.2.2 Derivative of Gaussian
+============================
+
+Convolution of an image with a Gaussian has a smoothing effect that removes
+high frequency content.  In two dimensions, a Gaussian is given by
+
+.. math:: g(x_1, x_2) = \frac{1}{\sqrt{2 \pi}\sigma} e^{\frac{-(x_1^2 + x_2^2)}{2\sigma^2}}
+
+It follows from the derivative theorem and the convolution theorem, that
+convolving one function with the derivative of another is equivalent to
+taking the derivative of the first and convolving with the other
+[Bracewell2000]_.
+
+.. math:: ( f \ast g )' = f' \ast g = f \ast g'
+
+Thus, we can convolve the displacement images with a derivative of a Gaussian to
+get smoothed derivatives for the strain calculation.  Since a large proportion
+of the high frequency content is often noise, this operation filters filters out
+noise.  According derivative theorem, "If *f(x)* has the Fourier transform
+*F(s)*, then *f'(x)* has the Fourier transform *i2πsF(s)*.  That is, the normal
+derivative operation, such as that achieved with finite difference operations,
+suppresses low frequency content and amplifies high frequency content since it
+is linear modulation.  The derivative of a Gaussian can suppress the negative
+effects of amplification of high frequency content.  Results of convolution with
+a 2D Gaussian are found in |gradient_recursive_gaussian_strain|.
+
+.. image:: images/gradient_recursive_gaussian_strain.png
+  :align: center
+  :width: 16cm
+  :height: 9.39cm
+.. highlights::
+
+  |gradient_recursive_gaussian_strain_long|: Strains from gradient calculation
+  with the derivative of a 2D Gaussian having a-c) σ = 1.0 mm and d-f) σ = 0.5 mm.
+
+The noise is reduced for both values of the smoothing parameter σ in
+|gradient_recursive_gaussian_strain|\ a-c) and
+|gradient_recursive_gaussian_strain|\ d-f).  Of course, with too much smoothing,
+desired structural information will be removed.
+
+5.2.4 A modified least squares strain estimator
+===============================================
+
+An alternative approach to direct filtering out high frequency content is to fit the
+data with an approximating function of known form and use the derivative of the
+approximating function.  This approach is taken in the next two subsections.
+
+The least squares strain estimator is simple, popular strain approximation
+method proposed by Kallel et. al. [Kallel1997a]_.  A piecewise linear function
+is fit to the displacement data, and the slope of this function is used in place
+of the derivative.  To obtain the derivative of the displacement along direction
+1, *u*\ :sub:`1`, with respect do direction *x*\ :sub:`1`,
+:math:`\partial u_1 / \partial x_1` around the datum *x*\ :sub:`1`\ :sup:`(0)`,
+first, the linear expression for a single datum is written,
+
+.. math:: u_1^{(0)} = m \, x_1^{(0)} + b
+
+.. epigraph::
+
+  For a five point least squares kernel in matrix form,
+
+.. math:: \begin{bmatrix} u_1^{(-2)} \\ u_1^{(-1)} \\ u_1^{(0)} \\ u_1^{(1)} \\ u_1^{(2)} \end{bmatrix} = \begin{bmatrix} x_1^{(-2)} & 1 \\ x_1^{(-1)} & 1 \\ x_1^{(0)} & 1 \\ x_1^{(1)} & 1 \\ x_1^{(2)} & 1 \end{bmatrix} \begin{bmatrix} m \\ b \end{bmatrix}
+
+.. epigraph::
+
+  If this is written as,
+
+.. math:: \mathbf{u} = \mathbf{A} \begin{bmatrix} m \\ b \end{bmatrix}
+
+.. epigraph::
+
+  Then the classic least squares solution is [Kallel1997a,WeissteinEric2011]_
+
+.. math:: \begin{bmatrix} \hat{m} \\ \hat{b} \end{bmatrix} = (\mathbf{A}^T \mathbf{A})^{-1} mathbf{A}^T \mathbf{u}
+
+.. epigraph::
+
+  This can be written as
+
+.. math:: \begin{bmatrix} \hat{m} \\ \hat{b} \end{bmatrix} = \mathbf{A}^+ \mathbf{u}
+
+.. epigraph::
+
+  where **A**\ :sup:`+` is the Moore-Penrose pseudoinverse of **A**
+  [WeissteinEric2011]_, which is found in practice using singular value
+  decomposition.  Note that if the spacing between displacement points is
+  uniform along the direction of derivation, which it is for the displacement
+  images, **A**\ :sup:`+` will not change apart from handling boundaries, and it
+  will only have to be found once for each direction of a displacement image
+  that has unique spacing.  The derivative is simply taken to be
+  :math:`\hat{m}`.
+
+.. image:: images/lsq_vessel.png
+  :align:  center
+  :width:  16cm
+  :height: 4.67cm
+.. highlights::
+
+  |lsq_vessel_long|:  Longitudinal image the left carotid of subject 157.  a)
+  B-Mode, b) tracked axial displacements, c) line profile of the displacements
+  in b) over the line overlayed on the images in a) and b).  The motion is
+  occuring during systole.  Note the discontinuity of the displacement that
+  occurs at the wall-lumen boundary around a depth of 20 mm.
+
+
+5.2.3 B-spline fitting
+======================
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
