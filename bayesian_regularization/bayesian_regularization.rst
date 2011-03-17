@@ -1,6 +1,6 @@
-======================================================================
-Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
-======================================================================
+=================================================================================
+Chapter 3: Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
+=================================================================================
 
 .. |comparison_images_phantom| replace:: Fig. 1
 

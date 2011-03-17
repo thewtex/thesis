@@ -1164,15 +1164,15 @@ the maximum principal strain,
 
 .. math:: \frac{1}{2} E \left( \lambda_1 - \lambda_2 \right)^2
 
-The latter has been used by Maurice et.  al. for the
-examination of carotid plaque [Maurice2004]_.  Note that although the
-modulus, *E*, is unknown, plaque materials that have a low *E* generally possess
-a low ultimate failure strain [Holzapfel2004]_.  Thus, a plaque region with a high
-energy metric is likely near the failure strain if it has a high modulus  and
-high failure strain or if it has a low modulus and low failure strain.  Since
-*E* is unknown, the 'total strain energy' and 'distortional energy' calculated
-is only proportional the these quantities.  However, this may be sufficient
-because of the material properties of the plaque constituents.
+The latter has been used by Maurice et.  al. for the examination of carotid
+plaque [Maurice2004]_.  Note that although the modulus, *E*, is unknown, plaque
+materials that have a low *E* generally possess a low ultimate failure strain
+[Holzapfel2004]_.  Thus, a plaque region with a high energy metric is likely
+near the failure strain if it has a high modulus  and high failure strain or if
+it has a low modulus and low failure strain.  In other words, since *E* is
+unknown, the 'total strain energy' and 'distortional energy' calculated is only
+proportional the these quantities.  However, this may be sufficient because of
+the material properties of the plaque constituents.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 5.4 Generating accumulated strain from a time series
@@ -1181,7 +1181,53 @@ because of the material properties of the plaque constituents.
 5.4.1 Dynamic frame skip
 ========================
 
-As discussed in 
+As seen in the *SNRe* results in Chapter 3, Fig. 3.3, and Chapter 4, Fig. 4.1,
+the ability for an algorithm to achieve a good strain image signal-to-noise
+ratio depends on the magnitude of the strain.  This was explored theoretically
+and experimentally by Varghese et al. [Varghese1997]_.  If the amount of
+deformation in the image is too low, electronic and quantization noise prevent
+determination of the motion in the image with precision [Varghese1997]_.  If
+the deformation is too high, the image pair will decorrelate [Varghese1997]_.
+
+When data is collected *in vivo*, a series of image frames are collected.  To
+obtain high quality motion tracking, frame pairs should be chosen that have the
+amount of deforamtion that will yield the highest quality results.  Motion
+tracking does not need to occur between consecutive frames.  The most
+appropriate frame skip between the pre-deformation image and the
+post-deformation image should be chosen.
+
+When the mechanical load on the tissues being imaged comes from cardiac
+pulsations, the strain rate in an image sequence is non-constant.  A higher
+strain rate occurs during systole, and a lower strain occurs at end diastole.
+To retain optimal tracking over a sequence of images spanning the cardiac cycle,
+a dynamic frame skip is applied that uses a short frame skip when the strain
+rate is high, and a long frame skip with strain rate is slow.
+
+To apply an automatic method to ascertain an ideal frame skip, the optimal
+deformation must be defined in a quantifiable way.  This is application
+specific.  For example, when the objective is to get a strain image of a breast
+tissue abnormality, the frame average strain may be a good measure.  When
+imaging carotid plaques, we are only interested in the strain inside the plaque.
+There is relatively little deformation in the skin and muscle near the transducer,
+but the deformation in these areas should not determine the frame skip.  Also,
+there may be apparently high strain in the region of the lumen, but the tracking
+in this area is unreliable.  The criteria that determines the frame skip in this
+work is based on the axial strain in a sub-region of the image.  The top
+and bottom portions are removed from the region-of-interest (ROI) because the skip and
+fat near the transducer are not the target tissue of interest and because
+attenuation decreases signal quality at depths beyond the vessel.  The frame
+skip is dynamically increased or decreased based an absolute ROI axial strain
+threshold.  Peak-hopping errors generally are also undesirable, which will present
+as unrealistically high strains.  Peak-hopping is acceptable in the lumen,
+however, so and additional frame skip criteria is percent axial strain pixels in
+the ROI over a threshold.
+
+When it is time to track the next frame pair in a sequences, the previous frame
+skip is initially attempted.  If both criteria are below threshold, the frame
+skip is increased until they exceed threshold, and the prior tracking result is
+used.  If either criteria are above threshold, the frame skip is decrease until
+they are below threshold.
+
 
 5.4.2 Eulerian approach to accumulated strain
 =============================================
@@ -1202,3 +1248,5 @@ it is difficult to infer the zero stress state, although Masson et al. obtained
 reasonable results given a number of modeling assumptions for a healthy common
 carotid artery [Masson2008]_.  For this reason, an end diastolic image state is
 taken as the reference state.
+
+todo
