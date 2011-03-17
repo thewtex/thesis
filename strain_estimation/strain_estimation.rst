@@ -71,9 +71,17 @@ cardiac cycle are explained.
 
 .. |gradient_recursive_gaussian_strain_long| replace:: **Figure 5.15**
 
-.. |lsq_vessel| replace:: Fig. 5.16
+.. |lsq| replace:: 5.16
 
-.. |lsq_vessel_long| replace:: **Figure 5.16**
+.. |lsq_long| replace:: **Figure 5.16**
+
+.. |lsq_vessel| replace:: Fig. 5.17
+
+.. |lsq_vessel_long| replace:: **Figure 5.17**
+
+.. |lsq_vessel_axial_strain| replace:: Fig. 5.18
+
+.. |lsq_vessel_axial_strain_long| replace:: **Figure 5.18**
 
 
 .. |higher_coefficients| replace:: Table 1
@@ -851,6 +859,20 @@ first, the linear expression for a single datum is written,
   that has unique spacing.  The derivative is simply taken to be
   :math:`\hat{m}`.
 
+.. image:: images/lsq_strain.png
+  :align: center
+  :width: 16cm
+  :height: 9.51cm
+.. highlights::
+
+  |lsq_long|: Strain images using local linear least squares fit to the
+  displacement data.  a-c) 5 point least squares kernel.  d-f) 7 point least
+  squares kernel.
+
+Results from the linear least squares technique are shown in |lsq|.  Similar tot
+the derivate of gaussian results, high frequency noise is removed.  Again, a
+longer kernel results in greater noise suppression but lower resolution.
+
 .. image:: images/lsq_vessel.png
   :align:  center
   :width:  16cm
@@ -862,6 +884,49 @@ first, the linear expression for a single datum is written,
   in b) over the line overlayed on the images in a) and b).  The motion is
   occuring during systole.  Note the discontinuity of the displacement that
   occurs at the wall-lumen boundary around a depth of 20 mm.
+
+In most tissues, such as breast tissue, the deformation is continuous and
+differentiable.  Deformation in the arteries, however, exhibits discontinuities
+in its motion.  In a longitudal view of the artery, |lsq_vessel|, opposing
+arterial walls move in opposite directions.  There is a discontinuity in the at the
+artery-lumen boundary.  A motion tracking algorithm may follow the motion of
+blood or, more likely, signal in the area of the lumen that is from out-of-plane
+arterial tissue picked up by the wide elevational profile of the ultrasound
+beam.  Alternatively, the motion tracking algorithm may track the motion of
+reverberations in the area of the lumen.  In our experience, the tracked
+displacement is mostly continuous apart from the posterior wall-lumen boundary
+where divergence is recorded.  This pattern is shown in |lsq_vessel|\ b) and
+with greater detail in |lsq_vessel|\ c).  If the support of a derivative kernel
+operator operator passes over this discontinuity, erroreous values will extend
+from the discontinuity almost the length of the kernel in both directions from
+the discontinuity.
+
+To address this condition, the linear least squares implementation can be
+modified.  If the number of consecutive displacement samples with the same sign
+exceed half the width of the kernel, only these samples can be used in the
+linear least squares fit.  In this way, values from only one side or the other
+of the discontinuity are used for the local gradient estimate.  Axial strain
+results of this modified least squares method applied to the carotid artery are
+shown in |lsq_vessel_axial_strain|.  The effects of the discontinuity are
+greatly reduced without affecting other parts of the image.  Correctly
+estimating the strain in this area is important since we are most interested in
+the strain in the vessel wall.  Note that is still a small positive streak at
+the vessel-wall border.  Close inspection reveals that this streak is primarily
+within the lumen.  Its source can be observed in |lsq_vessel|\ c) in the segment
+following the sharp discontinuity.  It is possibly explained by the finite match-block
+kernel length or possibility the way the regularization algorithm (Chapter 3)
+encourages continuity.
+
+.. image:: images/lsq_vessel_axial_strain.png
+  :align: center
+  :width:  11cm
+  :height: 4.80cm
+.. highlights::
+
+  |lsq_vessel_axial_strain_long|:  Axial strain in the vessel show in
+  |lsq_vessel|.  a) Strain calculated with the standard linear least squares
+  method. b) Strain calculated with the modified linear least squares method
+  described in the text.
 
 
 5.2.3 B-spline fitting
