@@ -83,6 +83,10 @@ cardiac cycle are explained.
 
 .. |lsq_vessel_axial_strain_long| replace:: **Figure 5.18**
 
+.. |bspline_strain| replace:: Fig. 5.19
+
+.. |bspline_strain_long| replace:: **Figure 5.19**
+
 
 .. |higher_coefficients| replace:: Table 1
 
@@ -807,14 +811,14 @@ The noise is reduced for both values of the smoothing parameter σ in
 |gradient_recursive_gaussian_strain|\ d-f).  Of course, with too much smoothing,
 desired structural information will be removed.
 
-5.2.4 A modified least squares strain estimator
+5.2.3 A modified least-squares strain estimator
 ===============================================
 
 An alternative approach to direct filtering out high frequency content is to fit the
 data with an approximating function of known form and use the derivative of the
 approximating function.  This approach is taken in the next two subsections.
 
-The least squares strain estimator is simple, popular strain approximation
+The least-squares strain estimator is simple, popular strain approximation
 method proposed by Kallel et. al. [Kallel1997a]_.  A piecewise linear function
 is fit to the displacement data, and the slope of this function is used in place
 of the derivative.  To obtain the derivative of the displacement along direction
@@ -826,7 +830,7 @@ first, the linear expression for a single datum is written,
 
 .. epigraph::
 
-  For a five point least squares kernel in matrix form,
+  For a five point least-squares kernel in matrix form,
 
 .. math:: \begin{bmatrix} u_1^{(-2)} \\ u_1^{(-1)} \\ u_1^{(0)} \\ u_1^{(1)} \\ u_1^{(2)} \end{bmatrix} = \begin{bmatrix} x_1^{(-2)} & 1 \\ x_1^{(-1)} & 1 \\ x_1^{(0)} & 1 \\ x_1^{(1)} & 1 \\ x_1^{(2)} & 1 \end{bmatrix} \begin{bmatrix} m \\ b \end{bmatrix}
 
@@ -838,7 +842,7 @@ first, the linear expression for a single datum is written,
 
 .. epigraph::
 
-  Then the classic least squares solution is [Kallel1997a,WeissteinEric2011]_
+  Then the classic least-squares solution is [Kallel1997a,WeissteinEric2011]_
 
 .. math:: \begin{bmatrix} \hat{m} \\ \hat{b} \end{bmatrix} = (\mathbf{A}^T \mathbf{A})^{-1} mathbf{A}^T \mathbf{u}
 
@@ -865,11 +869,11 @@ first, the linear expression for a single datum is written,
   :height: 9.51cm
 .. highlights::
 
-  |lsq_long|: Strain images using local linear least squares fit to the
-  displacement data.  a-c) 5 point least squares kernel.  d-f) 7 point least
+  |lsq_long|: Strain images using local linear least-squares fit to the
+  displacement data.  a-c) 5 point least-squares kernel.  d-f) 7 point least
   squares kernel.
 
-Results from the linear least squares technique are shown in |lsq|.  Similar tot
+Results from the linear least-squares technique are shown in |lsq|.  Similar tot
 the derivate of gaussian results, high frequency noise is removed.  Again, a
 longer kernel results in greater noise suppression but lower resolution.
 
@@ -901,12 +905,12 @@ operator operator passes over this discontinuity, erroreous values will extend
 from the discontinuity almost the length of the kernel in both directions from
 the discontinuity.
 
-To address this condition, the linear least squares implementation can be
+To address this condition, the linear least-squares implementation can be
 modified.  If the number of consecutive displacement samples with the same sign
 exceed half the width of the kernel, only these samples can be used in the
-linear least squares fit.  In this way, values from only one side or the other
+linear least-squares fit.  In this way, values from only one side or the other
 of the discontinuity are used for the local gradient estimate.  Axial strain
-results of this modified least squares method applied to the carotid artery are
+results of this modified least-squares method applied to the carotid artery are
 shown in |lsq_vessel_axial_strain|.  The effects of the discontinuity are
 greatly reduced without affecting other parts of the image.  Correctly
 estimating the strain in this area is important since we are most interested in
@@ -924,13 +928,69 @@ encourages continuity.
 .. highlights::
 
   |lsq_vessel_axial_strain_long|:  Axial strain in the vessel show in
-  |lsq_vessel|.  a) Strain calculated with the standard linear least squares
-  method. b) Strain calculated with the modified linear least squares method
+  |lsq_vessel|.  a) Strain calculated with the standard linear least-squares
+  method. b) Strain calculated with the modified linear least-squares method
   described in the text.
 
-
-5.2.3 B-spline fitting
+5.2.4 B-spline fitting
 ======================
+
+Instead of approximating the displacement field with a piecewise linear
+function, the displacement field can be approximated with piecewise continuous
+spline.  This function is more appealing than a piecewise linear fit for several
+reasons.  First, the splines are constructed to be piecewise continuous
+[Boehm2002,Schwarz2007]_.  Second, if a B-spline is used, the first derivative will be
+continuous if if the order of the spline is two or higher [Boehm2002,Schwarz2007]_.  Third,
+the greater flexibility of higher order polynomials should decrease the loss in
+resolution observed linear least-squares strain estimator [Khadem2007]_.  Khadem
+and Setarehdan applied this method in 1D to determine axial strains
+[Khadem2007]_.  A piecewise continuous polynomial spline was fix to the discrete
+noisy displacement data, and the derivative of the resulting polynomial was used
+as the derivative of the underlying displacement [Khadem2007]_.  D'hooge et al.
+performed a similar procedure with a cubic B-spline approximation to tracked
+M-Mode data to obtain strain rates in a gelatin phantom [Dhooge2002]_.  In both
+articles, the spline did not interpolate the underlying displacement data, but
+it was fit by minimizing a term involving the squared difference with the
+sampled data and another regularizing term involving the square of the second
+derivative of the underlying function.  Applying a higher weight to the later
+term will increase the smoothness of the result.
+
+In what follows, a least-squares 2D cubic B-spline approximation based on the
+work of Tustison et al. is applied the displacement data [Tustison2005]_.  Once
+the fit is performed, the gradient of the resulting function can be found
+analytically anywhere in the image domain.  The method is parameterized by the
+number of B-spline control points.  In the results presented in |bspline_strain|,
+control point density is expressed as the ratio of control point spacing to the
+displacement sample spacing.
+
+.. image:: images/bspline_strain.png
+  :align: center
+  :width: 16cm
+  :height: 9.6cm
+.. highlights::
+
+  |bspline_strain_long|:  Strains resulting from the cylindrical inclusion model
+  using a cubic B-spline least squares fit to calculate the displacement
+  gradient.  a-c) control point spacing to displacement sample spacing ratio of
+  1.5.  d-f) control point spacing to displacement sample spacing ratio of 1.8.
+
+While smoothing is present in |bspline_strain|, there is also very noticeable
+and unacceptable oscillation artifacts.  The artifacts are greatest in the axial
+strain images.  When the control point spacing is increased, the frequency of
+the artifacts decreases.  The presence of these artifacts can be explained by
+two sources.  A numerical insufficiency in the current implementation of the
+regularization method described in Chapter 3 causes bias toward integer sample
+displacements.  The higher order polynomial function fit exaggerates this bias
+and causes extensive oscillations.  Runge's phenomenon [Maes2011]_ states that
+higher order polynomial fitting functions may actually result in poorer
+performance because of the oscillations that result.  This can be attributed to
+the increased extrema (*n*-1 for a polynomial of order *n*) that are required
+with increasing polynomial orders.  In order for B-spline fitting to be
+successful in this algorithm, a few actions could be taken.  First, the bias
+artifacts could be reduced or eliminated with a reimplentation of the
+regularization algorithm.  Also, smoothness of the B-spline could by enforced by
+adding a regularization term to the fit that penalizes the presence of the *L2*
+norm of the second derivative.
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -939,6 +999,41 @@ Useful quantities derived from the strain tensor
 
 Principal strains
 =================
+
+Since strain is a tensor instead of a scalar, it is not rotation invariant.
+Consequently, for the same tissue deformation, the axial strain in a certain
+volume of tissue will change depending on the orientation of the beam axis
+relative to the tissue.  When a tensor is subject to a linear transformation,
+such as a rotation, the transformed tensor is given by [Lai1993]_,
+
+.. math:: [ \mathbf{Q} ]^T [ \mathbf{T} ] [ \mathbf{Q} ]
+
+.. epigraph::
+
+  when **Q** is the transformation on the tensor **T**.  There is a
+  particular rotation of the strain tensor **E** that provides a more
+  transparent interpretation of the tensor.
+
+Recall that when
+
+.. math:: \mathbf{E} \mathbf{n} = \lambda \mathbf{n}
+
+if **E** is a tensor, **n** is a vector, and λ is a scalar, **n** is called
+an eigenvector of **E**, and λ is an eigenvalues of **E**.  Basic linear states
+that every real, symmetric tensor will have eigenvalues and corresponding
+eigenvectors that are mutually perpendicular [Lai1993]_.  Since the strain
+tensor is a real, symmetric tensor, it has eigenvalues and eigenvectors.  If
+unit length eigenvectors are used as the columns of a transformation matrix
+for the associated tensor, the the transformed result will be a diagonal matrix
+whose entries are the eigenvalues.  The eigenvalues of **E** are called the
+*principal strains* of **E**, and the eigenvectors of **E** are called the
+*principal directions* of **E** [Lai1993]_.
+
+Rotating a tensor is equivalent to looking at the tensor in a different
+coordinate system orientation.  With this in mind, the principal directions
+define the most convenient orientation to view a strain tensor. The principal
+strains have the largest possible magnitude of normal strain.  No shear strains
+are present.
 
 Representation of the 2D strain tensor as an ellipse
 ====================================================
