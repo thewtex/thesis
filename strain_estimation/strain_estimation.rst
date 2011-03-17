@@ -1124,12 +1124,64 @@ uniaxial compression (examined in Section 5.2) is shown in |strain_ellipses|.
 5.3.3 Combination of normal strains and shear strain into a single strain index
 ===============================================================================
 
+It is easier to perform statistical hypothesis testing with a single, scalar
+strain statistic than with the full second-order tensor.  With the appropriate
+scalar quantity derived from the tensor, comparisons can be made to other
+metrics that quantify plaque vulnerability, and a number that indexes likliness
+of plaque rupture will hopefully be obtained.  The three strain tensor
+components estimated from a 2D image can be combined into a single strain index
+using metrics developed in the field of material plasticity theory.  In material
+plasticity theory, a yield criteria prescribes the point a deformed material
+will no longer return to its original state after the load is removed
+[Srinath2003]_.  Yield criteria that have been studied for engineering materials
+include the maximum principal strain, the maximum shear stress (Tresca yield
+criteria), the total strain energy, or the distortion energy (von Mises yield
+criteria) [Srinath2003]_.  These criteria compare a single index to a material
+dependent threshold that determines the transition point from elastic
+(recoverable) to plastic (non-recoverable) deformation.  They are most often
+given in stress form, but here their 2D strain analogs are used with our 2D
+strain tensor imaging algorithm data.  For example, given λ\ :sub:`1` and
+λ\ :sub:`2`, the ordered principal strains, strain metrics to examine include
+the maximum principal strain,
+
+.. math:: max\left\{ | \lambda_1 | , | \lambda_2 | \right\}
+
+.. epigraph::
+
+  the maximum shear strain,
+
+.. math:: \lambda_1 - \lambda_2
+
+.. epigraph::
+
+  total strain energy,
+
+.. math:: \frac{1}{2} E \left( \lambda_1^2 + \lambda_2^2 \right)
+
+.. epigraph::
+
+  and the distortional energy,
+
+.. math:: \frac{1}{2} E \left( \lambda_1 - \lambda_2 \right)^2
+
+The latter has been used by Maurice et.  al. for the
+examination of carotid plaque [Maurice2004]_.  Note that although the
+modulus, *E*, is unknown, plaque materials that have a low *E* generally possess
+a low ultimate failure strain [Holzapfel2004]_.  Thus, a plaque region with a high
+energy metric is likely near the failure strain if it has a high modulus  and
+high failure strain or if it has a low modulus and low failure strain.  Since
+*E* is unknown, the 'total strain energy' and 'distortional energy' calculated
+is only proportional the these quantities.  However, this may be sufficient
+because of the material properties of the plaque constituents.
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 5.4 Generating accumulated strain from a time series
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 5.4.1 Dynamic frame skip
 ========================
+
+As discussed in 
 
 5.4.2 Eulerian approach to accumulated strain
 =============================================
