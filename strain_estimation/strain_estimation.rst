@@ -87,6 +87,10 @@ cardiac cycle are explained.
 
 .. |bspline_strain_long| replace:: **Figure 5.19**
 
+.. |strain_ellipses| replace:: Fig. 5.20
+
+.. |strain_ellipses_long| replace:: **Figure 5.20**
+
 
 .. |higher_coefficients| replace:: Table 1
 
@@ -993,12 +997,12 @@ adding a regularization term to the fit that penalizes the presence of the *L2*
 norm of the second derivative.
 
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Useful quantities derived from the strain tensor
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3 Useful quantities derived from the strain tensor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Principal strains
-=================
+5.3.1 Principal strains
+=======================
 
 Since strain is a tensor instead of a scalar, it is not rotation invariant.
 Consequently, for the same tissue deformation, the axial strain in a certain
@@ -1035,21 +1039,100 @@ define the most convenient orientation to view a strain tensor. The principal
 strains have the largest possible magnitude of normal strain.  No shear strains
 are present.
 
-Representation of the 2D strain tensor as an ellipse
-====================================================
+5.3.2 Representation of the 2D strain tensor as an ellipse
+==========================================================
 
-Combination of normal strains and shear strain into a single strain index
-=========================================================================
+In section 5.1, it was shown that a strain tensor describes the change in
+relationship between two small vectors in a body.  Second-rank tensors in
+general are characterized in how they modify two vectors.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Generating accumulated strain from a time series
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Another second-rank tensor of importance in medical imaging is the diffusion
+tensor.  This tissue property has proven to be a useful tool for exploring
+neural physiology and pathology with MRI [Filler2009]_.  Diffusion of water molecules
+can cause a decay in the received echo amplitude because of their displacement
+in the spatially varying gradient, which is given by [Basser1994a]_
 
-Dynamic frame skip
-==================
+.. math:: \ln \left[ \frac{A(TE)}{A(0)} \right]  = -\gamma^2 \left[ \delta^2( \Delta - \frac{\delta}{3}) + \frac{\varepsilon^3}{30} - \frac{\delta}{\varepsilon}^2{6} \right] \mathbf{g}^T \mathbf{D} \mathbf{g}
 
-Eulerian approach to accumulated strain
-=======================================
+.. epigraph::
+
+  where *A(TE)* is the amplitude of the magnetization at the time of the echo,
+  :math:`\gamma^2 \left[ \delta^2( \Delta - \frac{\delta}{3}) +
+  \frac{\varepsilon^3}{30} - \frac{\delta}{\varepsilon}^2{6} \right]` are a set
+  of pulse sequence parameters, **g** is the vector of the magnetic-field
+  gradients, and **D** is the diffusion tensor.  Like the strain tensor, the
+  diffusion tensor is symmetric and real, so it has eigenvalues, λ\ :sub:`i`,
+  and eigenvectors [Basser1994]_.  The eigenvectors are the principal
+  diffusivity directions and and the eigenvalues are the principal diffusivities
+  [Basser1994]_.  The largest principal diffusivity can identify neural tissue's
+  fiber track direction as the principal direction associated with that
+  eigenvalue [Basser1994]_.
+
+If the inverse of the diffusion tensor, whose eigenvectors are the the same as
+**D** and whose eigenvalues are 1/ λ\ :sub:`i`, applied in a quadratic operation on
+the direction **x** and set equal to a constant, the expression represents the
+relative diffusivity in direction **x** [Basser1994]_.  If the matrix has been
+diagonalized, the expression has the form,
+
+.. math:: \frac{x_1^2}{\lambda_1^2} + \frac{x_2^2}{\lambda_2^2} + \frac{x_3^2}{\lambda_3} = 1
+
+.. epigraph::
+
+  This expression describes an ellipsoid with λ\ :sub:`1`, λ\ :sub:`2`, and λ\ :sub:`3`, being the lengths of the principal axes [Roe1993]_.  The ellipsoid represents the diffusivity in any given direction, **x**.
+
+As discussed in the derivation of the strain tensor in Section 5.1.1,
+the quadratic operation of the strain tensor on a differential line segment in a
+body effectively relates the stretching or compression of that segment.  As with
+the diffusion tensor, the strain tensor can be visualized as an ellipse in 2D or
+an ellipsoid in 3D [Sosa2009,Roe1993]_.  This representation is called a *Lamé ellipsoid* [Sosa2009]_.
+
+Note that this geometrical representation does not always strictly follow from
+the strain tensor.  The diffusion tensor is positive definite [Basser1994]_,
+i.e. its determinate is always positive and its eigenvalues are always
+positive.  This is not true for the strain tensor; the principal strains can be
+positive (stretching) or negative (compression).  In fact, due to the Poisson
+effect [Srinath2003]_, stretching of a material in one direction often causes
+stresses that drive compressions in the orthogonal directions, the signs of the
+principle strains are usually varied.  In 2D, if one of the principal strains
+is negative, the expression is no longer represented by an ellipse but by a
+hyperbola,
+
+.. math:: \frac{x_1^2}{\lambda_1^2} - \frac{x_2^2}{\lambda_2^2} = 1
+
+In 3D, if one of the principal strains are negative the quadratic expression
+specifies a hyperboloid of one sheet, and if two of the principal strains are
+negative, then the quadric surface is a hyperboloid of two sheets [Roe1993]_.
+Unfortunately, hyperboloids are not closed surfaces, and it is difficult to
+represent object as a glyph.  Therefore, the strain is represented as a ellipse
+or ellipsoid where the lengths of the principal axes are the absolute value of
+the principal strains, and the orientation of the ellipse is specified by the
+principal directions.  An interpretation of the ellipse is therefore the
+stretching or compression that occurs in a given direction.  Visualization of
+the noiseless strain tensor image for a cylindrical inclusion undergoing
+uniaxial compression (examined in Section 5.2) is shown in |strain_ellipses|.
+
+.. image:: images/strain_ellipses.png
+  :align: center
+  :width: 10cm
+  :height: 10.36cm
+.. highlights::
+
+  |strain_ellipses_long|:  Visualization of the strain tensor field for a
+  cylindrical inclusion undergoing uniaxial compression.
+
+
+5.3.3 Combination of normal strains and shear strain into a single strain index
+===============================================================================
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4 Generating accumulated strain from a time series
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+5.4.1 Dynamic frame skip
+========================
+
+5.4.2 Eulerian approach to accumulated strain
+=============================================
 
 Since strain is a measure of the distortion of an object relative to a reference
 strain, the *reference state* must be defined.  Experimentalists whom attempt to

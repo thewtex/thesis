@@ -453,7 +453,7 @@ the peak.  Of course, the broad-band edges of the tone burst are included in
 the cross-correlation calculation.  Results for both methods are shown in
 |sos_method|.  The calculated phase velocities are similar, but the
 zero-crossing method trend is closer the expected dispersion.  According to the
-Kramers-Kronig relations [Waters2000,Mobley2003]_, increased attenuation with frequency will cause an
+Kramers-Krönig relations [Waters2000,Mobley2003]_, increased attenuation with frequency will cause an
 increase in phase velocity with frequency.  Since attenuation increases
 monotonically with frequency, it is expected that phase velocity will increase
 monotonically with frequency.  Note, though, that the observed dispersion is minute
