@@ -95,6 +95,10 @@ cardiac cycle are explained.
 
 .. |strain_ellipses_long| replace:: **Figure 5.20**
 
+.. |frame_skip| replace:: Fig. 5.21
+
+.. |frame_skip_long| replace:: **Figure 5.21**
+
 
 .. |higher_coefficients| replace:: Table 1
 
@@ -243,8 +247,8 @@ For Cartesian coordinates in Einstein notation,
 We can elucidate the physical meaning of the infinitesimal strain tensor by
 examining special cases for :math:`d \mathbf{X}^{(1)}` and :math:`d
 \mathbf{X}^{(2)}`.  First, let us consider when :math:`d \mathbf{X}^{(1)} = d
-\mathbf{X}^{(2)} = dS \, \mathbf{e_1}` where :math:`\mathbf{e_1}` is the unit
-basis in direction 1 and *dS* is the length of :math:`d \mathbf{X}`, and *ds* is
+\mathbf{X}^{(2)} = dS \, \mathbf{e_1}` where **e**\ :sub:`1` is the unit
+basis in direction 1 and *dS* is the length of *d*\ **X**, and *ds* is
 the deformed length of :math:`d \mathbf{x}^{(1)} = d \mathbf{x}^{(2)}`.
 
 .. image:: images/ds_normal.png
@@ -259,17 +263,17 @@ the deformed length of :math:`d \mathbf{x}^{(1)} = d \mathbf{x}^{(2)}`.
 .. highlights::
 
   |ds_normal_dia_long|: Two line segments, :math:`d \mathbf{X}^{(1)} = d
-  \mathbf{X}^{(2)} = dS \, \mathbf{e_1}` get transformed to a segement of length
+  \mathbf{X}^{(2)} = dS \, \mathbf{e_1}` get transformed to a segment of length
   *ds* after deformation.
 
 For small deformations, :math:`(ds + dS)( ds - dS) \approx 2 dS( ds - dS )`, and
 
 .. math:: \frac{ ds - dS }{dS} = \mathbf{e_1} \cdot \mathbf{E} \mathbf{e_1} = E_{11}
 
-Therefore, :math:`E_{11}` is equal to the unit elongation (or shortening) for the segment
-in the direction of :math:`\mathbf{e_1}`.  Similarily, :math:`E_{22}` is the
+Therefore, *E*\ :sub:`11` is equal to the unit elongation (or shortening) for the segment
+in the direction of **e**\ :sub:`1`.  Similarly, *E* :sub:`22` is the
 unit elongation for the segment that is in the direction of
-:math:`\mathbf{e_2}`.  These diagonal elements of **E** constitute the
+**e**\ :sub:`2`.  These diagonal elements of **E** constitute the
 *normal strains* [Lai1993]_.  Note that
 
 .. math:: 100 \, \frac{ds - dS}{dS} \equiv \% \mbox{ elongation of } dS
@@ -293,7 +297,7 @@ investigate perpendicular segments.
 Let :math:`d \mathbf{X}^{(1)} = dS_1 \, \mathbf{e_2}` and :math:`d
 \mathbf{X}^{(2)} = dS_2 \, \mathbf{e_2}`, :math:`\Vert d \mathbf{x}^{(1)} \Vert = ds_1`,
 :math:`\Vert d \mathbf{x}^{(2)} \Vert = ds_2`, and the angle between
-:math:`\mathbf{x}^{(1)}` and :math:`\mathbf{x}^{(2)}` is :math:`\theta`.
+:math:`\mathbf{x}^{(1)}` and :math:`\mathbf{x}^{(2)}` is θ.
 
 .. image:: images/ds_perpendicular.png
   :align: center
@@ -303,7 +307,7 @@ Let :math:`d \mathbf{X}^{(1)} = dS_1 \, \mathbf{e_2}` and :math:`d
 .. epigraph::
 
   If we define :math:`\theta = \pi / 2 - \gamma`, then :math:`\gamma` is the
-  change in argle that occurs between :math:`\mathbf{x}^{(1)}` and :math:`\mathbf{x}^{(2)}`.
+  change in angle that occurs between :math:`\mathbf{x}^{(1)}` and :math:`\mathbf{x}^{(2)}`.
 
 .. math:: \sin \gamma = \cos( \pi / 2 - \gamma )
 
@@ -339,7 +343,7 @@ equation,
   finite strain tensor that specifies strain in terms of the reference
   configuration.
 
-Again examininig the situation in |ds_normal_dia|, where
+Again examining the situation in |ds_normal_dia|, where
 :math:`d \mathbf{X}^{(1)} = d \mathbf{X}^{(2)} = d \mathbf{X} = dS \mathbf{e}_1`
 and :math:`||d\mathbf{x}|| = ds`,
 
@@ -347,7 +351,7 @@ and :math:`||d\mathbf{x}|| = ds`,
 
 .. math:: E_{11}^* = \frac{ ds^2 - dS^2}{2 dS^2}
 
-Similarily, if :math:`d \mathbf{X} = ds \mathbf{e}_2`,
+Similarly, if :math:`d \mathbf{X} = ds \, \mathbf{e}_2`,
 
 .. math:: E_{22}^* = \frac{ds^2 - dS^2}{2 dS^2}
 
@@ -384,7 +388,7 @@ specified in the deformed configuration,
 
 .. math:: d \mathbf{X} = \mathbf{F}^{-1} d \mathbf{x}
 
-where :math:`\mathbf{F}^{-1}` is the inverse of :math:`\mathbf{F}` [Lai1993]_,
+where **F**\ :sup:`-1` is the inverse of **F** [Lai1993]_,
 
 .. math:: \mathbf{F} = \begin{bmatrix} \dfrac{\partial X_1}{\partial x_1} & \dfrac{\partial X_1}{\partial x_2} \\ \dfrac{\partial X_2}{\partial x_1} & \dfrac{\partial X_2}{\partial x_2} \end{bmatrix}
 
@@ -475,7 +479,7 @@ resonance imaging (MRI) is unique in that does not need to use traditional image
 registration techniques, but pulse sequences can generate displacement
 images using the physics of image acquisition [Fowlkes1995,Bishop1995,Hardy1995,Plewes2000,Lin2008,Korosoglou2008,Neizel2009,Shehata2010]_.
 
-Diagostic ultrasound has the longest history of calculating strain
+Diagnostic ultrasound has the longest history of calculating strain
 [Ophir2001,Ophir2000,Parker1996,Parker2011]_.  In one of the earliest papers,
 Ophir et. al. calculated strain with [Ophir1991]_
 
@@ -554,8 +558,8 @@ symmetric, second-rank tensor are
   elements and acquiring the appropriate signal channel count
   [Wygant2008,Martinez-Graullera2010]_.  In terms of motion tracking,
   computational challenges exist in terms of data storage and processing.  Also,
-  frames rates are slower with volumetric imaging, which in some cases can allows
-  to much motion to take place in-between image sets.  However, progress in 3D
+  frames rates are slower with volumetric imaging, which in some cases can allow
+  too much motion to take place in-between image sets.  However, progress in 3D
   strain imaging is taking place [Byram2010,Po2010,Lopata2007,Rao2008,Fisher2010]_.
   Currently, the primary benefit of 3D imaging systems is not to obtain all components
   of the strain tensor, but to prevent tissue from moving outside of the imaging
@@ -632,7 +636,7 @@ obtain the expected strains in |expected_strains|.
 The challenge arises when noise in the displacements are output from imperfect
 motion tracking.  The RF ultrasound simulation images in |rf_inputs| display the
 image content before and after deformation.  The deformation pattern that takes
-place between theses images is not readily apparent, but the motion tracking
+place between these images is not readily apparent, but the motion tracking
 algorithm is able to determine the movement of subvolumes in the image.  Notice
 the anisotropy in resolution-- signal content is much higher in the axial
 direction than it is in the lateral direction.  This leads to higher quality
@@ -701,10 +705,10 @@ shown in |central_difference_strain|.
 .. highlights::
 
   |central_difference_strain_long|: Strains calculated using the central
-  difference method ot compute the displacement gradient.  a) Axial strain, b)
+  difference method to compute the displacement gradient.  a) Axial strain, b)
   shear strain, and c) lateral strain.
 
-Other popular simple approachs for approximating the local derivative of sampled
+Other popular simple approaches for approximating the local derivative of sampled
 data include the forward difference method and the backward difference method.
 In the forward difference method,
 
@@ -809,7 +813,7 @@ taking the derivative of the first and convolving with the other
 
 Thus, we can convolve the displacement images with a derivative of a Gaussian to
 get smoothed derivatives for the strain calculation.  Since a large proportion
-of the high frequency content is often noise, this operation filters filters out
+of the high frequency content is often noise, this operation filters out
 noise.  According derivative theorem, "If *f(x)* has the Fourier transform
 *F(s)*, then *f'(x)* has the Fourier transform *i2πsF(s)*.  That is, the normal
 derivative operation, such as that achieved with finite difference operations,
@@ -865,7 +869,7 @@ first, the linear expression for a single datum is written,
 
   Then the classic least-squares solution is [Kallel1997a,WeissteinEric2011]_
 
-.. math:: \begin{bmatrix} \hat{m} \\ \hat{b} \end{bmatrix} = (\mathbf{A}^T \mathbf{A})^{-1} mathbf{A}^T \mathbf{u}
+.. math:: \begin{bmatrix} \hat{m} \\ \hat{b} \end{bmatrix} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{u}
 
 .. epigraph::
 
@@ -894,8 +898,8 @@ first, the linear expression for a single datum is written,
   displacement data.  a-c) 5 point least-squares kernel.  d-f) 7 point least
   squares kernel.
 
-Results from the linear least-squares technique are shown in |lsq|.  Similar tot
-the derivate of gaussian results, high frequency noise is removed.  Again, a
+Results from the linear least-squares technique are shown in |lsq|.  Similar to
+the derivate of Gaussian results, high frequency noise is removed.  Again, a
 longer kernel results in greater noise suppression but lower resolution.
 
 .. image:: images/lsq_vessel.png
@@ -907,12 +911,12 @@ longer kernel results in greater noise suppression but lower resolution.
   |lsq_vessel_long|:  Longitudinal image the left carotid of subject 157.  a)
   B-Mode, b) tracked axial displacements, c) line profile of the displacements
   in b) over the line overlayed on the images in a) and b).  The motion is
-  occuring during systole.  Note the discontinuity of the displacement that
+  occurring during systole.  Note the discontinuity of the displacement that
   occurs at the wall-lumen boundary around a depth of 20 mm.
 
 In most tissues, such as breast tissue, the deformation is continuous and
 differentiable.  Deformation in the arteries, however, exhibits discontinuities
-in its motion.  In a longitudal view of the artery, |lsq_vessel|, opposing
+in its motion.  In a longitudinal view of the artery, |lsq_vessel|, opposing
 arterial walls move in opposite directions.  There is a discontinuity in the at the
 artery-lumen boundary.  A motion tracking algorithm may follow the motion of
 blood or, more likely, signal in the area of the lumen that is from out-of-plane
@@ -922,7 +926,7 @@ reverberations in the area of the lumen.  In our experience, the tracked
 displacement is mostly continuous apart from the posterior wall-lumen boundary
 where divergence is recorded.  This pattern is shown in |lsq_vessel|\ b) and
 with greater detail in |lsq_vessel|\ c).  If the support of a derivative kernel
-operator operator passes over this discontinuity, erroreous values will extend
+operator passes over this discontinuity, erroneous values will extend
 from the discontinuity almost the length of the kernel in both directions from
 the discontinuity.
 
@@ -961,7 +965,7 @@ function, the displacement field can be approximated with piecewise continuous
 spline.  This function is more appealing than a piecewise linear fit for several
 reasons.  First, the splines are constructed to be piecewise continuous
 [Boehm2002,Schwarz2007]_.  Second, if a B-spline is used, the first derivative will be
-continuous if if the order of the spline is two or higher [Boehm2002,Schwarz2007]_.  Third,
+continuous if the order of the spline is two or higher [Boehm2002,Schwarz2007]_.  Third,
 the greater flexibility of higher order polynomials should decrease the loss in
 resolution observed linear least-squares strain estimator [Khadem2007]_.  Khadem
 and Setarehdan applied this method in 1D to determine axial strains
@@ -1045,7 +1049,7 @@ that every real, symmetric tensor will have eigenvalues and corresponding
 eigenvectors that are mutually perpendicular [Lai1993]_.  Since the strain
 tensor is a real, symmetric tensor, it has eigenvalues and eigenvectors.  If
 unit length eigenvectors are used as the columns of a transformation matrix
-for the associated tensor, the the transformed result will be a diagonal matrix
+for the associated tensor, the transformed result will be a diagonal matrix
 whose entries are the eigenvalues.  The eigenvalues of **E** are called the
 *principal strains* of **E**, and the eigenvectors of **E** are called the
 *principal directions* of **E** [Lai1993]_.
@@ -1080,12 +1084,12 @@ in the spatially varying magnetic-field gradient, which is given by [Basser1994a
   gradients, and **D** is the diffusion tensor.  Like the strain tensor, the
   diffusion tensor is symmetric and real, so it has eigenvalues, λ\ :sub:`i`,
   and eigenvectors [Basser1994]_.  The eigenvectors are the principal
-  diffusivity directions and and the eigenvalues are the principal diffusivities
+  diffusivity directions and the eigenvalues are the principal diffusivities
   [Basser1994]_.  The largest principal diffusivity can identify neural tissue's
   fiber track direction as the principal direction associated with that
   eigenvalue [Basser1994]_.
 
-If the inverse of the diffusion tensor, whose eigenvectors are the the same as
+If the inverse of the diffusion tensor, whose eigenvectors are the same as
 **D** and whose eigenvalues are 1/ λ\ :sub:`i`, are applied in a quadric operation on
 the vector **x** and set equal to a constant, the expression represents the
 relative diffusivity in direction **x** [Basser1994]_.  If the matrix has been
@@ -1144,7 +1148,7 @@ uniaxial compression (examined in Section 5.2) is shown in |strain_ellipses|.
 It is easier to perform statistical hypothesis testing with a single, scalar
 strain statistic than with the full second-order tensor.  With the appropriate
 scalar quantity derived from the tensor, comparisons can be made to other
-metrics that quantify plaque vulnerability, and a number that indexes likliness
+metrics that quantify plaque vulnerability, and a number that indexes likeliness
 of plaque rupture will hopefully be obtained.  The three strain tensor
 components estimated from a 2D image can be combined into a single strain index
 using metrics developed in the field of material plasticity theory.  In material
@@ -1208,7 +1212,7 @@ the deformation is too high, the image pair will decorrelate [Varghese1997]_.
 
 When data is collected *in vivo*, a series of image frames are collected.  To
 obtain high quality motion tracking, frame pairs should be chosen that have the
-amount of deforamtion that will yield the highest quality results.  Motion
+amount of deformation that will yield the highest quality results.  Motion
 tracking does not need to occur between consecutive frames.  The most
 appropriate frame skip between the pre-deformation image and the
 post-deformation image should be chosen.
@@ -1246,13 +1250,13 @@ used.  An exception to the prior behavior is a halt to the increase in the frame
 skip if the magnitude of the strain decreases, which could occur during the
 transition from systole to diastole or at the dichrotic notch.  On the other
 hand, if either criteria are above threshold, the frame skip is decreased until
-they are below threshold.o
+they are below threshold.
 
 .. image:: images/frame_skip.png
   :align: center
   :width: 7cm
   :height: 5.24cm
-.. highlights:
+.. highlights::
 
   |frame_skip_long|:  Frame skip for tracking of subject 157's left carotid over
   the period of a single cardiac cycle.  A small frame skip is used during
@@ -1331,3 +1335,7 @@ are recorded as real numbers, this system handles subpixel displacements well.
 Note that the mesh is warped prior to adding the incremental strain for a given
 frame because we are using Eulerian-Almansi strain instead of Green-Lagrangian
 strain.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.5 References
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
