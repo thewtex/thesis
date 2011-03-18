@@ -43,19 +43,23 @@ cardiac cycle are explained.
 
 .. |linear_array_long| replace:: **Figure 5.7**
 
-.. |input_known_displacements| replace:: Fig. 5.8
+.. |cylinder| replace:: Fig. 5.8
 
-.. |input_known_displacements_long| replace:: **Figure 5.8**
+.. |cylinder_long| replace:: **Figure 5.8**
 
-.. |expected_strains| replace:: Fig. 5.9
+.. |input_known_displacements| replace:: Fig. 5.9
 
-.. |expected_strains_long| replace:: **Figure 5.9**
+.. |input_known_displacements_long| replace:: **Figure 5.9**
 
-.. |rf_inputs| replace:: Fig. 5.10
+.. |expected_strains| replace:: Fig. 5.10
 
-.. |rf_inputs_long| replace:: **Figure 5.10**
+.. |expected_strains_long| replace:: **Figure 5.10**
 
-.. |tracked_displacements| replace:: Fig. 5.11
+.. |rf_inputs| replace:: Fig. 5.11
+
+.. |rf_inputs_long| replace:: **Figure 5.11**
+
+.. |tracked_displacements| replace:: Fig. 5.12
 
 .. |tracked_displacements_long| replace:: **Figure 5.12**
 
@@ -570,11 +574,24 @@ Secondly, displacement estimates are often noisy, and the differential operation
 of gradient calculation magnifies the noise.  In this section, a number of
 methods to compute the displacement gradient are examined.
 
+.. image:: images/cylinder_stress2.jpg
+  :align: center
+  :width: 9cm
+  :height: 7.02cm
+.. highlights::
+  
+  |cylinder_long|: Illustration of the mechanical model from which the
+  displacements and strains in this chapter are studied.  A block with
+  homogeneous stiffness has a hard cylindrical inclusion embedded within.
+  The block is compressed uniaxially with a plate and pre- and post-deformation
+  images are made of the transverse plan of the cylinder with a transducer
+  placed at the top of the assembly.
+
 A common test case for ultrasound strain imaging is the model of a hard
 cylindrical inclusion (high elastic modulus) in a soft background (low elastic
 modulus).  The inclusion exists in a cubic block, and is subject to uniform
 compression from the top while being unconstrained at the side (zero-traction
-stress boundary conditions).  Displacement is assumed to start from zero at the
+stress boundary conditions), |cylinder|.  Displacement is assumed to start from zero at the
 top and center of the model as if an ultrasound transducer exists there as a
 point of reference.  Details on methods to create the mechanical finite element
 and ultrasound scattering pieces of a simulation that represents this model are
@@ -1050,7 +1067,7 @@ Another second-rank tensor of importance in medical imaging is the diffusion
 tensor.  This tissue property has proven to be a useful tool for exploring
 neural physiology and pathology with MRI [Filler2009]_.  Diffusion of water molecules
 can cause a decay in the received echo amplitude because of their displacement
-in the spatially varying gradient, which is given by [Basser1994a]_
+in the spatially varying magnetic-field gradient, which is given by [Basser1994a]_
 
 .. math:: \ln \left[ \frac{A(TE)}{A(0)} \right]  = -\gamma^2 \left[ \delta^2( \Delta - \frac{\delta}{3}) + \frac{\varepsilon^3}{30} - \frac{\delta}{\varepsilon}^2{6} \right] \mathbf{g}^T \mathbf{D} \mathbf{g}
 
@@ -1069,8 +1086,8 @@ in the spatially varying gradient, which is given by [Basser1994a]_
   eigenvalue [Basser1994]_.
 
 If the inverse of the diffusion tensor, whose eigenvectors are the the same as
-**D** and whose eigenvalues are 1/ λ\ :sub:`i`, applied in a quadratic operation on
-the direction **x** and set equal to a constant, the expression represents the
+**D** and whose eigenvalues are 1/ λ\ :sub:`i`, are applied in a quadric operation on
+the vector **x** and set equal to a constant, the expression represents the
 relative diffusivity in direction **x** [Basser1994]_.  If the matrix has been
 diagonalized, the expression has the form,
 
@@ -1081,7 +1098,7 @@ diagonalized, the expression has the form,
   This expression describes an ellipsoid with λ\ :sub:`1`, λ\ :sub:`2`, and λ\ :sub:`3`, being the lengths of the principal axes [Roe1993]_.  The ellipsoid represents the diffusivity in any given direction, **x**.
 
 As discussed in the derivation of the strain tensor in Section 5.1.1,
-the quadratic operation of the strain tensor on a differential line segment in a
+the quadric operation of the strain tensor on a differential line segment in a
 body effectively relates the stretching or compression of that segment.  As with
 the diffusion tensor, the strain tensor can be visualized as an ellipse in 2D or
 an ellipsoid in 3D [Sosa2009,Roe1993]_.  This representation is called a *Lamé ellipsoid* [Sosa2009]_.
@@ -1092,7 +1109,7 @@ i.e. its determinate is always positive and its eigenvalues are always
 positive.  This is not true for the strain tensor; the principal strains can be
 positive (stretching) or negative (compression).  In fact, due to the Poisson
 effect [Srinath2003]_, stretching of a material in one direction often causes
-stresses that drive compressions in the orthogonal directions, the signs of the
+stresses that drive compressions in the orthogonal directions, and the signs of the
 principle strains are usually varied.  In 2D, if one of the principal strains
 is negative, the expression is no longer represented by an ellipse but by a
 hyperbola,
@@ -1103,7 +1120,7 @@ In 3D, if one of the principal strains are negative the quadratic expression
 specifies a hyperboloid of one sheet, and if two of the principal strains are
 negative, then the quadric surface is a hyperboloid of two sheets [Roe1993]_.
 Unfortunately, hyperboloids are not closed surfaces, and it is difficult to
-represent object as a glyph.  Therefore, the strain is represented as a ellipse
+visualize it as a glyph.  Therefore, the strain is represented as a ellipse
 or ellipsoid where the lengths of the principal axes are the absolute value of
 the principal strains, and the orientation of the ellipse is specified by the
 principal directions.  An interpretation of the ellipse is therefore the
@@ -1113,7 +1130,7 @@ uniaxial compression (examined in Section 5.2) is shown in |strain_ellipses|.
 
 .. image:: images/strain_ellipses.png
   :align: center
-  :width: 10cm
+  :width:  10cm
   :height: 10.36cm
 .. highlights::
 
@@ -1225,8 +1242,45 @@ the ROI over a threshold.
 When it is time to track the next frame pair in a sequences, the previous frame
 skip is initially attempted.  If both criteria are below threshold, the frame
 skip is increased until they exceed threshold, and the prior tracking result is
-used.  If either criteria are above threshold, the frame skip is decrease until
-they are below threshold.
+used.  An exception to the prior behavior is a halt to the increase in the frame
+skip if the magnitude of the strain decreases, which could occur during the
+transition from systole to diastole or at the dichrotic notch.  On the other
+hand, if either criteria are above threshold, the frame skip is decreased until
+they are below threshold.o
+
+.. image:: images/frame_skip.png
+  :align: center
+  :width: 7cm
+  :height: 5.24cm
+.. highlights:
+
+  |frame_skip_long|:  Frame skip for tracking of subject 157's left carotid over
+  the period of a single cardiac cycle.  A small frame skip is used during
+  systole when the strain rate is high, and a larger frame skip is used during
+  diastole when the strain rate is small.  The maximum frame skip was limited to
+  six frames.
+
+For the purposes of creating a video to view the tracked results, it is more
+convenient to have the displacement and strain images available at regular time
+steps.  Standard video encoding and decoding software assume a constant frame
+rate.  If a dynamic frame skip is used, displacement images must be interpolated at the
+shortest period between tracked frames.  Incremental displacement images are interpolated
+to the original framerate with the following algorithm:
+
+1.  Set a frame counter *i* to 1.
+2.  Calculate the fraction of displacement remaining, *p*, as *(n-i)/(n-i+1)*, where *n*
+    is the frame skip.
+3.  The output displacement for the current frame is (1-p) multiplied by the
+    remaining displacement.
+4.  This remaining displacement is multiplied by *p*.
+5.  A correction field is calculated the inverse of the prior frame
+    displacement.
+6.  Warp the remaining displacement by the correction field.
+7.  Increment *i* and repeat at step 2. until *i = n*.
+
+This process is not trivial because the displacement image is defined on a
+grid with uniform spacing.  The inverse displacement field is calculated with
+the algorithm given by Chen et al. [Chen2008]_.
 
 
 5.4.2 Eulerian approach to accumulated strain
@@ -1249,4 +1303,31 @@ reasonable results given a number of modeling assumptions for a healthy common
 carotid artery [Masson2008]_.  For this reason, an end diastolic image state is
 taken as the reference state.
 
-todo
+To get the strain that occurs over a cardiac cycle, the deformations
+calculated with the dynamic frame skip tracking must be accumulated.  Since the
+strains observed in a cardiac cycle are typically large, > 0.05, accumulating
+infinitesimal strain (Section 5.1.1.1) is inappropriate.  Since the
+displacements are calculated incrementally, the reference material is always
+changing, and Eulerian-Almansi strain tensor should be accumulated because it
+consistently specifies strain in terms of the spatial configuration [Haupt2002]_.
+
+Two additional factors make calculation of the accumulated strain non-trivial.
+First, the displacement and strain fields are discretely sampled and saved as
+digital data.  Secondly, the plaque moves in its location with the image over
+the cardiac cycle.  To address these challenges, a particle method is applied to
+the purpose of finding the accumulated strain.  First the plaque ROI is
+segmented by a radiologist at end-diastole with MITK, the medical interaction
+toolkit [Maleike2009]_.  This creates a binary label image.  All the points in
+the binary image labeled as plaque are used to create a quadrilateral mesh.
+Accumulated strain and accumulated displacement is then calculated over the
+points in the mesh.  For every frame, the mesh is first warped by the
+incremental displacement by translating coordinates of the points in the mesh.
+This translation is determined via bilinear interpolation of the incremental
+displacement vector image.  The incremental strain or incremental displacement
+for each point in the mesh is found with bilinear interpolation and added to the
+accumulated strain or accumulated displacement for that point (particle).  This
+process is repeated for every frame.  Since coordinates of particles in the mesh
+are recorded as real numbers, this system handles subpixel displacements well.
+Note that the mesh is warped prior to adding the incremental strain for a given
+frame because we are using Eulerian-Almansi strain instead of Green-Lagrangian
+strain.

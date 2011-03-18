@@ -12,7 +12,7 @@ STYLESODTPATH=../formatting/$(STYLESODT)
 
 PAPER=strain_estimation
 
-all: $(PAPER).odt
+all: $(PAPER).doc
 
 $(PAPER)_w_math.rst: $(PAPER).rst
 	$(IMGMATHHACK) $(PAPER).rst $(PAPER)_w_math.rst
