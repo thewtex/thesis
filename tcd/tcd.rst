@@ -123,11 +123,11 @@ TCD is notorious for difficulties when attempting to obtain useable, reliable
 data.  While valuable physiological data can certainly be acquired, consistent
 collection of this data is a challenge.  McMahon et al. examined the
 reproducibility of TCD acquisition of MCA velocities [McMahon2007]_.
-Intraobserver variablity was high, and interobserver variability was even
+Intraobserver variability was high, and interobserver variability was even
 higher.  On the whole, and Bland-Altman analysis resulted in a 95% limit of
 agreement of ±36.7 cm/s [McMahon2007]_.  The experience of ultrasonographer can
 be critically important, and in that study inter-observer variance between
-experienced practioners was ±22.1 cm/s.  Other factors that can compromise
+experienced practitioners was ±22.1 cm/s.  Other factors that can compromise
 success include environmental factors and patient compliance [McMahon2007]_. 
 
 During acquisition there are multiple false-positive HITS detected due to motion
@@ -137,7 +137,7 @@ This adds important contextual information for retrospective analysis that is
 otherwise lost.  Artifacts can result from the operator making adjustments to the
 transducer position, which is the most common source of movement artifacts.
 There are also many types of motion artifacts that come from the patient:
-head movement, teeth clenching, or snooring, for example.  Secure, stable positioning
+head movement, teeth clenching, or snoring, for example.  Secure, stable positioning
 of the head unit is one of the most critical factors for consistent velocity
 waveform acquisition, and failure of the head unit will cause artifacts or loss
 of signal.  For this device, a velocity spike occurs when changing the gate
@@ -149,23 +149,23 @@ An important practical component of successful data acquisition is patient
 compliance.  Voluntary patient participation is more difficult to attain in the
 context of anxiety over recent ischemic events or upcoming surgery.  The battery
 of other tests clinically required to diagnose their condition can lead to test
-fatique.  Subjects generally find motivation when they become informed of the
+fatigue.  Subjects generally find motivation when they become informed of the
 research purpose of the study during the informed consent process.  Retaining
 subject participation and compliance requires attention to the subject's needs.
 While pressure the skull from the head unit is unavoidable, patient comfort to
 the rest of their body helps during the hour long acquisition.  A reclined,
 padded bed with a pillow allows ideal positioning for both the patient and
 ultrasonographer.  While reclined in a flat position for an extended period, a
-cushion beneath the patient's knee's improves back discomfort.  Real and
+cushion beneath the patient's knees improves back discomfort.  Real and
 perceived burden to the subject are reduced by attention to the environment and
 time.  Professional candor and dress impart patient confidence.  Comfort is also
-assured by scanning in a private room in the clinic or at a facility adjactent
+assured by scanning in a private room in the clinic or at a facility adjacent
 to it.  Presentation of the scanning room also makes an impression, so efforts
 are made to ensure cleanliness and removal or concealment of coarse research
 apparatus that may appear threatening or unsafe.  Efforts are made to reduce
 the time spent for the entire examination; non-critical aspects of the
 examination are removed, and the entire procedure protocol is defined
-beforehand.  Boredom is a problem as the only task at hard is absence of
+beforehand.  Boredom is a problem as the only task at hand is absence of
 movement.  Reduced lighting in the room helps many subjects to fall asleep,
 although snoring adds artifacts to the TCD signal.
 
@@ -194,25 +194,25 @@ signal.
 
 Post-processing is performed to provide further scrutiny to the collected data.
 A custom application was developed to visualize and analyze the available data
-show in |tcd_ui|.  Interrogating the file system with the native DOS filesystem
-or the BG-Rescue Linux [Giannone2010]_ floppy disk distribution, the files were
-found to be saved at the *D:\DATA* location.  For every session, sets of files
-are saved with the *NLA* prefix followed by unique integer incremented for every
-session.  The filename extension has the pattern *T*, followed by a letter
-indicating the file type, followed by a number starting from zero.  This number
-is incremented every time recording is stopped or started during a session.  Two
-filetypes were found to be of interest: *TX?* and *TW?* where *?* is the
-acquisition number per session.  The *TX?* files are plain text files that
-contain system setting information and events.  |tx_content| has some example
-content from a *TX?* file.  This file first starts with some parameters related
-to the acquisition such as the patient name and machine settings such as the
-pulse repetition frequency (PRF) in Hz, velocity curve sampling frequency in Hz,
-and the Doppler frequency.  Also contained in the *TW?* are HITS are operator
-mark events, one per line.  A HITS events consists of a the time the event
-occured, in hundredths of seconds after the start of acquisition, the string
-'HIT', the amplitude of the HITS in dB, the system clock time, and other
+show in |tcd_ui|.  Interrogating the file system with the native DOS operating
+system or the BG-Rescue Linux [Giannone2010]_ floppy disk distribution, the
+files were found to be saved at the *D:\\DATA* location.  For every session, sets
+of files are saved with the *NLA* prefix followed by unique integer incremented
+for every session.  The filename extension has the pattern *T*, followed by a
+letter indicating the file type, followed by a number starting from zero.  This
+number is incremented every time recording is stopped or started during a
+session.  Two filetypes were found to be of interest: *TX?* and *TW?* where *?*
+is the acquisition number per session.  The *TX?* files are plain text files
+that contain system setting information and events.  |tx_content| has some
+example content from a *TX?* file.  This file first starts with some parameters
+related to the acquisition such as the patient name and machine settings such as
+the pulse repetition frequency (PRF) in Hz, velocity curve sampling frequency in
+Hz, and the Doppler frequency.  Also contained in the *TW?* are HITS are
+operator mark events, one per line.  A HITS events consists of a the time the
+event occurred, in hundredths of seconds after the start of acquisition, the
+string 'HIT', the amplitude of the HITS in dB, the system clock time, and other
 numbers.  These are algorithmically detected HITS, many of which may be
-artifacts.  A mark event consists of the time the event occured, in hundredths
+artifacts.  A mark event consists of the time the event occurred, in hundredths
 of seconds after the start of acquisition, the mark number, and the system clock
 time.  Velocity envelope data was found in the *TW?* binary file.  This file
 alternates between left and right channels in 64 sample segments.  Each velocity
@@ -220,7 +220,7 @@ sample is a two byte signed integer.  With a sampling rate of 100 Hz, and two
 bytes per sample, a one hour sessions contains *1,440,000*.  This allows the
 data to be exported on a single 3.5" floppy disk, which has a capacity of
 1,474,560 bytes per disk, for further examination.  If the file size exceeds
-disk capacity, the Unix *split* and *cat* programs can be used to transder the
+disk capacity, the Unix *split* and *cat* programs can be used to transfer the
 dataset in pieces.
 
 :: 
@@ -252,7 +252,7 @@ dataset in pieces.
 
   |tx_content_long|: Example content of Multidop-L2 *TX?* file.
 
-A GUI was built to retrospectivly inspect the recorded data using PyQt4
+A GUI was built to retrospectively inspect the recorded data using PyQt4
 [Various2011]_ and Veusz [Sanders2010]_.  To expedite analysis of the data
 collected over an hour time period, three plots of the peak velocity waveform
 are displayed at three time scales, i.e. the entire acquisition, a 100 second
@@ -269,16 +269,16 @@ Microemboli and peak velocity results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Microemboli HITS results for subjects where there is reasonable confidence in the
-reliability of the counts are enumerated in |hits_table|.  These results are are
+reliability of the counts are enumerated in |hits_table|.  These results are
 for up to one hour monitoring prior to surgery.  Subject 142 and 143 were
 monitored both before and after ECA.  Four HITS were noted for Subject 142 prior
 to surgery and no HITS were detected after surgery.  Subject 143 had no HITS
 detected before or after ECA.  Only guarded confidence is placed in a subset of
 the data collected because of factors that prevented the collection of
-consisent, reliable signal.  Secure positioning of the transducers by the head
+consitent, reliable signal.  Secure positioning of the transducers by the head
 unit proved to be of critical importance.  Alignment of the acoustic beam with
 MCA flow is very sensitive to both the position along the acoustic window and
-the orientation of the transducer.  If the head unit cannot securly anchor the
+the orientation of the transducer.  If the head unit cannot securely anchor the
 transducer with the skull, constant transducer re-adjustment is required, which
 results in poor signal and motion artifacts.  The age of the machine also bring
 into question reliability of the electronics.
@@ -366,7 +366,7 @@ Velocity envelope results are recorded in |velocity_table|. Peak systolic
 velocity (PSV), peak diastolic velocity (PDV), and the time-average-peak (TAP)
 are shown.  There is a large amount of variation across subjects.  Some this
 variation can be attributed to natural variations due to demographics.
-Velocities in females is relatively higher than males, and velocity on the left
+Velocities in females are relatively higher than males, and velocity on the left
 side is slightly higher than the right side [Farhoudi2010]_.  Variation may also
 be due to atherosclerotic effects on hemodynamics.  Changes in the TCD measured
 MCA PSV were correlated with MCA stenosis in a study that validated its findings
@@ -376,10 +376,10 @@ stenosis [Tang2005b]_.  When there is diffuse stenosis of 50% or higher, PSV
 exceeded 140 m/s in roughly a quarter of the subjects, but in 54% of the
 subjects the peak systolic velocity was less than 50 cm/s [Tang2005b]_.  Note
 that two subjects, 150 and 161, exhibited very high unilateral velocities.
-Right MCA pulsitility index, (PSV - EDV)/MV, where MV is the mean velocity, has
-been found to have a positive correlation with a global cognative function test
+Right MCA pulsatility index, (PSV - EDV)/MV, where MV is the mean velocity, has
+been found to have a positive correlation with a global cognitive function test
 in patients with congestive heart failure [Jesus2006]_.  Finally, some
-velocities may be artifactually low because of errors in assumptions about the
+velocities may be artificially low because of errors in assumptions about the
 Doppler angle.  The Doppler frequency shift, *f*\ :sub:`d` is given by [Zagzebski1996]_,
 
 .. math:: f_d = \frac{ 2 f_t V \cos \theta}{c}
@@ -398,3 +398,7 @@ Doppler angle.  The Doppler frequency shift, *f*\ :sub:`d` is given by [Zagzebsk
   dictated solely by the maximum velocity obtained.   Good signal can only be
   attained by positioning the transducer where there is adequate acoustic window,
   and orientating it so the beam intersects a sufficient blood volume.
+
+~~~~~~~~~~~~~~
+References
+~~~~~~~~~~~~~~
