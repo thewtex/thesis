@@ -216,7 +216,12 @@ artifacts.  A mark event consists of the time the event occured, in hundredths
 of seconds after the start of acquisition, the mark number, and the system clock
 time.  Velocity envelope data was found in the *TW?* binary file.  This file
 alternates between left and right channels in 64 sample segments.  Each velocity
-sample is a two byte signed integer.
+sample is a two byte signed integer.  With a sampling rate of 100 Hz, and two
+bytes per sample, a one hour sessions contains *1,440,000*.  This allows the
+data to be exported on a single 3.5" floppy disk, which has a capacity of
+1,474,560 bytes per disk, for further examination.  If the file size exceeds
+disk capacity, the Unix *split* and *cat* programs can be used to transder the
+dataset in pieces.
 
 :: 
 
@@ -263,65 +268,133 @@ dots, but in distinguishing colors.
 Microemboli and peak velocity results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Right MCA pulsitility index has been found to have a positive correlation with
-a global cognative function test in patients with congestive heart failure
-[Jesus2006]_.
+Microemboli HITS results for subjects where there is reasonable confidence in the
+reliability of the counts are enumerated in |hits_table|.  These results are are
+for up to one hour monitoring prior to surgery.  Subject 142 and 143 were
+monitored both before and after ECA.  Four HITS were noted for Subject 142 prior
+to surgery and no HITS were detected after surgery.  Subject 143 had no HITS
+detected before or after ECA.  Only guarded confidence is placed in a subset of
+the data collected because of factors that prevented the collection of
+consisent, reliable signal.  Secure positioning of the transducers by the head
+unit proved to be of critical importance.  Alignment of the acoustic beam with
+MCA flow is very sensitive to both the position along the acoustic window and
+the orientation of the transducer.  If the head unit cannot securly anchor the
+transducer with the skull, constant transducer re-adjustment is required, which
+results in poor signal and motion artifacts.  The age of the machine also bring
+into question reliability of the electronics.
 
-================= ======== ========= ================= ================= ================
-Subject Number    Side      TAP       Peak Systolic     Peak Diastolic    Signal Quality
-                            [cm/s]    Velocity [cm/s]   Velocity [cm/s]
------------------ -------- --------- ----------------- ----------------- ----------------
-140               Chan 1   11.3       22.6             6.746             fair
-140               Chan 2   1.8        NS               NS                poor
-142               Chan 1   42.3       71.0             30.3              good
-142               Chan 2   56.7       101.0            37.2              good
-142(post-ECA)     Chan 1   27.0       55.3             19.5              good
-142(post-ECA)     Chan 2   23.9       43.4             17.2              good
-143               Chan 1   11.6       17.7             9.6               fair
-143               Chan 2   NS         NS               NS                poor
-143(post-ECA)     Chan 1   11.2       30.9             5.3               fair
-143(post-ECA)     Chan 2   19         42.8             8.2               fair
-145               Chan 1   8.0        16.1             3.4               fair
-145               Chan 2   8.8        36.7             8.9               fair
-146               Chan 1   3.7        21.4             3.2               fair
-146               Chan 2   7.4        25.5             3.5               fair
-147               Chan 1   8.9        17.9             3.2               good
-147               Chan 2   31.9       61.4             18.7              good
-148               Chan 1   11.1       18.7             8.3               good
-148               Chan 2   3.7        16.0             NS                fair
-149               Chan 1   NS         NS               NS                poor
-149               Chan 2   21.3       29.9             15.1              good
-150               Chan 1   87.5       153.8            60.6              good
-150               Chan 2   40.5       74.3             27.7              good
-           151    Chan 1       16.4    32.62             9.915            fair
-           151    Chan 2       13.7    NS               NS                poor
-           153    Chan 1       48.7    77.72            33.45             good
-           153    Chan 2       19.9    37.99             9.613            fair
-           154    Chan 1       46.4    84.35            33.65             good
-           154    Chan 2       31.4    47.27            23.81             good
-           156    Chan 1       12.7    21.63             8.315            good
-           156    Chan 2       15.5    26.17            11.04             good
-           157    Chan 1       39      67.24            29.21             good
-           157    Chan 2       47.1    62.7             36.59             good
-           158    Chan 1       17.3    26.4             12.0              good
-           158    Chan 2       24.4    38.31            19.29             good
-           159    Chan 1       36.7    56.6             25.44             good
-           159    Chan 2       51.3    81.68            34.56             good
-           160    Chan 1       19.5    45.63            10.15             good
-           160    Chan 2       21.9    47.04              8.262           good
-           161    Chan 1       97.5   182.5              48.18            good
-           161    Chan 2      115.1   212.8              55.75            good
-           162    Chan 1       22     47.52              13.46            good
-           162    Chan 2       23     48.46               9.681           good
-================= ======== ========= ================= ================= ================
+.. epigraph::
 
-Natural variations are also common.  Velocities in females is relatively higher
-than males, and velocity on the left side is slightly higher than the right side
-[Farhoudi2010]_.  Changes in the TCD measured MCA peak systolic velocity were
-correlated with MCA stenosis in a study that validated its findings with
-magnetic resonance angiography [Tang2005b]_.  In cases of focal MCA stenosis,
-peak systolic velocities of 140 m/s or higher correlate with a 50% or higher
-level of stenosis [Tang2005b]_.  When there is diffuse stenosis of 50% or
-higher, peak systolic velocities exceeded 140 m/s in roughly a quarter of the
-subjects, but in 54% of the subjects the peak systolic velocity was less than 50
-cm/s [Tang2005b]_.
+  ============== ======
+  Subject Number  HITS
+  -------------- ------
+  142             4
+  143             0
+  146             1
+  147             8
+  148             0
+  149             1
+  150             0
+  151             0
+  161             0
+  162             1
+  ============== ======
+
+.. highlights::
+
+  |hits_table_long|: TCD detected microemboli HITS per subject.  Only subjects
+  with reasonable confidence in the results are enumerated.
+
+.. epigraph:: 
+
+  =============== ========== ========= ================= ================= ================
+  Subject Number    Side      TAP       Peak Systolic     Peak Diastolic    Signal Quality
+                              [cm/s]    Velocity [cm/s]   Velocity [cm/s]
+  --------------- ---------- --------- ----------------- ----------------- ----------------
+  140               Left     11.3       22.6             6.7               Fair
+  140               Right    1.8        NS               NS                Poor
+  142               Left     42.3       71.0             30.3              Good
+  142               Right    56.7       101.0            37.2              Good
+  142(post-ECA)     Left     27.0       55.3             19.5              Good
+  142(post-ECA)     Right    23.9       43.4             17.2              Good
+  143               Left     11.6       17.7             9.6               Fair
+  143               Right    NS         NS               NS                Poor
+  143(post-ECA)     Left     11.2       30.9             5.3               Fair
+  143(post-ECA)     Right    19         42.8             8.2               Fair
+  145               Left     8.0        16.1             3.4               Fair
+  145               Right    8.8        36.7             8.9               Fair
+  146               Left     3.7        21.4             3.2               Fair
+  146               Right    7.4        25.5             3.5               Fair
+  147               Left     8.9        17.9             3.2               Good
+  147               Right    31.9       61.4             18.7              Good
+  148               Left     11.1       18.7             8.3               Good
+  148               Right    3.7        16.0             NS                Fair
+  149               Left     NS         NS               NS                Poor
+  149               Right    21.3       29.9             15.1              Good
+  150               Left     87.5       153.8            60.6              Good
+  150               Right    40.5       74.3             27.7              Good
+  151               Left     16.4       32.6             9.9               Fair
+  151               Right    13.7       NS               NS                Poor
+  153               Left     48.7       77.7             33.4              Good
+  153               Right    19.9       37.9             9.6               Fair
+  154               Left     46.4       84.3             33.6              Good
+  154               Right    31.4       47.2             23.8              Good
+  156               Left     12.7       21.6             8.31              Good
+  156               Right    15.5       26.1             11.0              Good
+  157               Left     39.0       67.2             29.2              Good
+  157               Right    47.1       62.7             36.5              Good
+  158               Left     17.3       26.4             12.0              Good
+  158               Right    24.4       38.3             19.2              Good
+  159               Left     36.7       56.6             25.4              Good
+  159               Right    51.3       81.7             34.5              Good
+  160               Left     19.5       45.63            10.1              Good
+  160               Right    21.9       47.04            8.2               Good
+  161               Left     97.5       182.5            48.1              Good
+  161               Right    115.1      212.8            55.7              Good
+  162               Left     22.0       47.52            13.4              Good
+  162               Right    23.0       48.46            9.6               Good
+  =============== ========== ========= ================= ================= ================
+
+.. highlights::
+
+  |velocity_table_long|: Peak velocities as assessed with the analysis software,
+  |tcd_ui|.  Measurements are given bilaterally for each side of the subject.  The
+  peak velocities in cm/s are shown along with the quality of the signal.  No
+  usable signal is indicated with *NS*.
+
+Velocity envelope results are recorded in |velocity_table|. Peak systolic
+velocity (PSV), peak diastolic velocity (PDV), and the time-average-peak (TAP)
+are shown.  There is a large amount of variation across subjects.  Some this
+variation can be attributed to natural variations due to demographics.
+Velocities in females is relatively higher than males, and velocity on the left
+side is slightly higher than the right side [Farhoudi2010]_.  Variation may also
+be due to atherosclerotic effects on hemodynamics.  Changes in the TCD measured
+MCA PSV were correlated with MCA stenosis in a study that validated its findings
+with magnetic resonance angiography [Tang2005b]_.  In cases of focal MCA
+stenosis, PSV of 140 m/s or higher correlate with a 50% or higher level of
+stenosis [Tang2005b]_.  When there is diffuse stenosis of 50% or higher, PSV
+exceeded 140 m/s in roughly a quarter of the subjects, but in 54% of the
+subjects the peak systolic velocity was less than 50 cm/s [Tang2005b]_.  Note
+that two subjects, 150 and 161, exhibited very high unilateral velocities.
+Right MCA pulsitility index, (PSV - EDV)/MV, where MV is the mean velocity, has
+been found to have a positive correlation with a global cognative function test
+in patients with congestive heart failure [Jesus2006]_.  Finally, some
+velocities may be artifactually low because of errors in assumptions about the
+Doppler angle.  The Doppler frequency shift, *f*\ :sub:`d` is given by [Zagzebski1996]_,
+
+.. math:: f_d = \frac{ 2 f_t V \cos \theta}{c}
+
+.. epigraph::
+
+  It is a function of the transmit frequency, *f*\ :sub:`t`, the blood velocity,
+  *V*, the speed of sound in tissue, *c*, and the angle between the axis of the
+  beam and the direction of flow, θ.  During TCD, this Doppler angle is assumed to be
+  zero, i.e. the transducer axis is assumed to be parallel to the MCA at the
+  pulse gate.  This contrasts to imaging with an array transducer where the
+  B-Mode image can be used to estimate this angle.  Although the MCA may be
+  close to being parallel, it is not necessarily the case.  The MCA can be
+  tortuous, and its orientation relative acoustic window varies over its course
+  along the lateral sulcus.  Position and orientation of the transducer is not
+  dictated solely by the maximum velocity obtained.   Good signal can only be
+  attained by positioning the transducer where there is adequate acoustic window,
+  and orientating it so the beam intersects a sufficient blood volume.
