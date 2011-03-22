@@ -33,6 +33,10 @@ Finally, case studies of a few subjects are presented.
 
 .. |plaque_regions_long| replace:: **Figure 9.5**
 
+.. |strain_plots| replace:: Fig. 9.6
+
+.. |strain_plots_long| replace:: **Figure 9.6**
+
 
 
 .. |downsampling_schedule| replace:: Table 9.1
@@ -405,6 +409,31 @@ to calculate the principal strains, Section 5.3.1.  The principal strains are
 used to evaluate the strain metrics described in Section 5.3.3: maximum
 principal strain, maximum shear strain, total strain energy, and distortional
 energy.
+
+Plots of the strain components and strain metrics for subject 157 are shown in
+|strain_plots|.  Twenty randomly selected particles in a plaque ROI are selected
+and theirs accumulated strain values plotted again time.  Possibly due to
+movement in and out of the imaging plane or motion tracking errors, a drift in
+the accumulated strain is often observed [Shi2007]_.  If there is out-of-plane
+motion, a particle is neither accumulating over the same volume of tissue.  To
+compensate for this, the offset at the end of the cycle is linearly removed from
+every curve.  All quantities should start from zero and return to zero if the
+system is steady-state.  While is true in that the tissue obviously remains in
+tact over the examination, some real drift may exist due to breathing, muscle
+tone, etc.  Components of the strain tensor can have positive or negative
+sign, but all strain metrics should be strictly positive.
+
+.. image:: images/strain_plots.png
+  :align: center
+  :width: 16cm
+  :height: 13.9cm
+.. highlights::
+
+  |strain_plots_long|: Strain components and strain metrics for data collected
+  on the left side of subject 157.  Curves are shown for twenty randomly
+  selected particles in the ROI.  a) Maximum principal strain, b) maximum shear
+  strain, c) total strain energy, d) distortional energy, e) axial strain, f)
+  lateral strain, and g) shear strain.
 
 Over the cardiac, the three components of the strain tensor, the maximum
 principal strain, maximum shear strain, total strain energy, and distortional
