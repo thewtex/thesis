@@ -188,6 +188,38 @@ amount of this improvement increases with the increase in strain magnitude.
 Displacement estimation
 ~~~~~~~~~~~~~~~~~~~~~~~
 
+Motion tracking is performed with a hierarchical block-matching technique,
+implemented in C++.  A multi-resolution, multi-threaded block-matching
+framework is implemented on top of the InsightToolkit [Ibanez2005,Yoo2002]_.
+The similarity metric used for comparing a matching-block in the pre-deformation
+image in its search region in the post-deformation image is normalized
+cross-correlation.  Recursive Bayesian regularization, described in Chapter 3,
+is used to improve the quality of the tracked displacements at each level.
+Parabolic interpolation is used to find subsample displacements at the upper
+levels, and windowed-sinc interpolation with numerical optimization, decribed in
+Chapter 4, is used to find subsample displacements at the final level.  The
+A central-difference gradient with an order of accuracy of 4, explained in
+Section 5.2.1, is used to estimate strains at the higher levels where
+displacement vector sampling is very coarse.  Strains at the higher levels are
+used to remove peak-hopping pixels and scale the matching-block in subsequent
+levels.  
+
+Displacements are tracked from a continuous sequence of RF data collected on the
+longitudinal views of the carotid with the Siemens Antares clinical ultrasound
+system (Siemens Ultrasound, Mountain View, CA, USA).  Patients are scanned prior
+to endarterectomy after receiving informed consent on a protocol approved by the
+University of Wisconsin-Madison Institutional Review Board (IRB).  The Antares
+VFX13-5 transducer is excited at 11.4 MHz to collect RF at a sampling rate of 40
+MHz to a depth of 4 cm.
+
+Values of the parameters used in the algorithm are summarized in the
+configuration file shown in |displacement_sequence_options|.
+Upsampling on the input two byte signed integer input RF data is performed with
+windowed-sinc interpolation.  The size of the matching-block is specified in
+samples.  To ensure the window is center on a point, the length of the
+matching-block is specified as a radius so that the length of the window is *2 r
++ 1* if *r* is the radius.
+
 ::
 
   # displacement-sequence options input file.
@@ -271,14 +303,17 @@ Displacement estimation
       inverseDeformationIterations: 15
   ...
 
-.. highlights:: 
+.. highlights::
 
   |displacement_sequence_options_long|: Relevant sections from the algorithm configuration file
-  for motion tracking used to analyze the plaques studied in this chapter.  
+  for motion tracking used to analyze the plaques studied in this chapter.
 
 ~~~~~~~~~~~~~~~~~
 Strain estimation
 ~~~~~~~~~~~~~~~~~
+
+Strains at the final level are estimated using the modified least
+squares estimator described in Section 5.2.3.
 
 ~~~~~~~~~~
 References

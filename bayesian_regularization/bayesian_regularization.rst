@@ -403,7 +403,7 @@ A uniform elastic modulus tissue-mimicking ultrasound phantom was tested.
 Frames of data were continuously collected as the unconstrained phantom was
 deformed with an acrylic plate.  The plate was  fitted with a transducer at the
 center and translated using a linear motion table.  The phantom was scanned
-using a Siemen's S2000 (Siemens Ultrasound, Mountain View, CA, USA) clinical
+using a Siemens S2000 (Siemens Ultrasound, Mountain View, CA, USA) clinical
 ultrasound system equipped with a VFX9-4 transducer and the plane through the
 center of the sphere imaged.  The transducer was excited at 8.9 MHz and
 RF data was sampled at 40 MHz to a depth of 5.5 cm.
