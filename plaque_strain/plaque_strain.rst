@@ -139,6 +139,21 @@ the same at the top level and the bottom level, the search region still shrinks
 in physical size since the matching-block size is specified in pixels and
 decimation occurs between levels.
 
+While search region restriction can improve robustness, this is not true if
+there is poor motion tracking in the upper levels.  If inaccurate motion
+tracking occurs at upper levels, the erroreous displacement will propagate to
+levels.  To counter this phentomenon, erroreous displacements are detected and
+replaced before using them to initialize the center of the search region at
+lower levels.  Peak-hopping errors present themselves as irrationally high
+strains because they cause a discontinuity in the estimated displacement field.
+To prevent the propagation of peak-hopping errors, a strain image is generated
+at the higher levels.  Pixels whose strain magnitude exceed a threshold are
+marked for replacement.  Displacements are then linearly interpolated across a
+cluster of errant pixels if the pixels are in the center of the image, or the
+are extrapolated with the slope of the closest good displacement pixels at the
+edge of the image.  This process is repeated to remove any outliers that remain
+or were introduced.
+
 Inter-level matching-block scaling
 =====================================
 
