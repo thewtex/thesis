@@ -1089,11 +1089,17 @@ in the spatially varying magnetic-field gradient, which is given by [Basser1994a
   fiber track direction as the principal direction associated with that
   eigenvalue [Basser1994]_.
 
-If the inverse of the diffusion tensor, whose eigenvectors are the same as
-**D** and whose eigenvalues are 1/ λ\ :sub:`i`, are applied in a quadric operation on
-the vector **x** and set equal to a constant, the expression represents the
-relative diffusivity in direction **x** [Basser1994]_.  If the matrix has been
-diagonalized, the expression has the form,
+The probability density function that a molecule diffuses from location **x**\
+:sub:`0` to position **x** at time *τ* is given by [Basser1994]_,
+
+.. math:: \rho( \mathbf{x} | \mathbf{x}_0, \tau ) = \frac{1}{\sqrt{|\mathbf{D}(\tau)|(4\pi \tau)^3)}} \exp \left[ \frac{-(\mathbf{x} - \mathbf{x}_0)^T \mathbf{D}^{-1}(\tau)(\mathbf{x} - \mathbf{x}_0)}{4 \tau}\right]
+
+The probability of displacement of a molecule is dependent on the inverse of the
+diffusion tensor, whose eigenvectors are the same as **D** and whose eigenvalues
+are 1/ λ\ :sub:`i`.  If the inverse diffusion tensor is applied in a quadric operation on the vector **x** and
+set equal to a constant, the expression represents the relative diffusivity in
+direction **x** [Basser1994]_.  If the matrix has been diagonalized, the
+expression has the form,
 
 .. math:: \frac{x_1^2}{\lambda_1^2} + \frac{x_2^2}{\lambda_2^2} + \frac{x_3^2}{\lambda_3} = 1
 
