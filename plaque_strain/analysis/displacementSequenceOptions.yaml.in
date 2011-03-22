@@ -1,0 +1,103 @@
+# displacement-sequence options input file.
+---
+files:
+  # The input image.  It should be a 3D image where the first two dimensions
+  # are space, and the third dimension is time.
+  sequenceImage: @SEQUENCE_IMAGE@
+  # File name prefix for output files.
+  outputPrefix:  @OUTPUT_PREFIX@
+
+parameters:
+  # Any point with a strain component above the given value in the higher levels
+  # will have its displacement interpolated by surrounding areas.
+  maximumAbsStrainAllowed: 0.075
+  # Control point spacing to image spacing in the approximating B-spline strain
+  # calculation.  A numerical gradient calculator is used if this is set to 1.0.
+  controlPointRatio: 1.0
+  # Upsampling ratio of the input images.
+  upsample: [ 2.0, 2.0 ]
+  # Axial direction of the image.
+  axialDirection: 1
+
+  # Related to the matching block.
+  block:
+    # Block Radius at the top level.
+    topBlockRadius:    [ 15, 28 ]
+    # Block Radius in at the bottom level.
+    bottomBlockRadius: [ 10, 18 ]
+    # Block overlap. 1.0 is no overlap. 0.5 is 50% overlap.
+    blockOverlap:      1.0
+    # In the multiresolution method, scale the matching block by the strain
+    # estimated at higher levels.
+    scaleByStrain:     true
+
+  # Related to the search region.
+  searchRegion:
+    # Search region radius at the top level is the following factor times the block radius.
+    # The factors at intermediate levels between the top level and bottom level
+    # are linearly interpolated.
+    topFactor:     [ 2.2, 1.4 ]
+    # Search region radius at the bottom level is the following factor times the block radius.
+    bottomFactor:  [ 1.1, 1.1 ]
+
+  # Related to the Bayesian regularization.
+  regularization:
+    # Strain regularization parameter.
+    strainSigma: [ 0.07, 0.07 ]
+    # Maximum number of iterations during regularization at the bottom level.
+    maximumIterations: 3
+
+  # Related to the sequential calculation of displacements.
+  sequence:
+    # The index of the first frame to use as the fixed image.  A value of -1
+    # indicates the use of the first index available.  Counts from 0.
+    startFrame: @START_FRAME@
+    # The index of the last frame to use as the moving image.  A value of -1
+    # indicates the use of the last index available.  Counts from 0.
+    endFrame:   @END_FRAME@
+    # In the case of a static frame skip, this value is the number of frames
+    # to between the fixed and moving frame during analysis.  In the case of
+    # a dynamic frame skip, i.e. doDynamicFrameSkip = true, the following
+    # value is the maximum number of frames to skip.
+    frameSkip:          6
+    # Use a dynamic frame skip.  See also 'frameSkip'.  If this value is set
+    # to true, the frame skip is varied throughout the sequence by using the
+    # strain between the fixed and moving image.
+    doDynamicFrameSkip: true
+    # In a dynamic frame skip analysis, the maximum absolute strain *in the axial direction* that should be observed in
+    # a frame skip for best quality.  This value should be the maximum strain
+    # that good motion tracking is expected.  The the observed maximum strain is
+    # smaller than this value, then the frame skip is increased.
+    maximumAbsFrameStrain: 0.05
+    # In a dynamic frame skip analysis, the percentage of pixels that are
+    # allowed over the the maximumABSFrameStrain before the frame skip is
+    # decreased.
+    percentFrameStrainOverMaximumStrain: 2.0
+    # We crop the region for the above two strain characteristics to be examined
+    # by the following fractional values on both the upper and lower bounds of
+    # both directions.
+    dynamicStrainCharacteristicsCrop: [ 0.1, 0.30 ]
+    # Number of iterations when calculating the inverse displacement for
+    # calculating incremental displacements from larger frame skips.
+    inverseDeformationIterations: 15
+
+# Options related the amount of output.
+verbosity:
+  # Write images of the search region sizes at every level.
+  writeSearchRegionImages:           false
+  # Write individual component displacement images in addition to the single
+  # displacement vector image.
+  writeDisplacementVectorComponents: false
+  # Output of a similarity metric image.
+  similarityImage:
+    # Target point for examination in physical units.
+    targetPoint: [ 0.0166789, 0.0375 ]
+  # Related to the sequential calculation of displacements.
+  sequence:
+    # Write a sequence image of the differences between the fixed image and
+    # the moving image transformed by the calculated displacements.
+    writeDifferenceImages: true
+    # Write a CSV file with the first column being the fixed image index, and
+    # the second column being the frame skip used.
+    writeSkipSequence:     true
+...

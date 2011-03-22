@@ -1,0 +1,33 @@
+# StrainSequence options input file.
+---
+# The file path prefix.  The input is assumed to be
+#   <filePrefix>_Version_<version_stamp>_DisplacementVectorSequence.mha
+# or
+#   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*DisplacementVectors.mha
+# This output will be
+#   <filePrefix>_Version_<version_stamp>_StrainTensorSequence.mha
+#   <filePrefix>_Version_<version_stamp>_OrderedPrincipalStrainSequence.mha
+#   <filePrefix>_Version_<version_stamp>_EstimatedStrainTensorSequence.mha
+#   <filePrefix>_Version_<version_stamp>_EstimatedOrderedPrincipalStrainSequence.mha
+# or
+#   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*StrainTensors.mha
+#   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*OrderedPricipalStrains.mha
+#   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*EstimatedStrainTensors.mha
+#   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*EstimatedOrderedPricipalStrains.mha
+filePrefix: @FILE_PREFIX@
+# The method used to calcuate the gradient.  Valid values are "GRADIENT" for a
+# numerical gradient calculation or "BSPLINE" for a B-spline approximation
+# gradient. "LEASTSQUARES" for modified linear least squares.
+method: LEASTSQUARES
+# The ratio of B-spline control points to displacement points.  One value for
+# each direction.  This parameter is only relevant when method = BSPLINE.
+bSplineControlPointRatio: [1.2, 1.1]
+# The radius for performing median filtering on the displacement components.
+# Each value with the isotropic radius for the corresponding radius component.
+# A value of 0 indicates no median filtering will be applied.
+displacementMedianFilterRadius: [1, 1]
+# The radius for calculating the linear least squares line fit when calculating
+# the displacement gradients.  This parameter is only relevant when method =
+# LEASTSQUARES.
+leastSquaresStrainRadius: [3, 3]
+...
