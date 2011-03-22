@@ -1282,7 +1282,7 @@ to the original framerate with the following algorithm:
 6.  Warp the remaining displacement by the correction field.
 7.  Increment *i* and repeat at step 2. until *i = n*.
 
-This process is not trivial because the displacement image is defined on a
+This process is non-trivial because the displacement image is defined on a
 grid with uniform spacing.  The inverse displacement field is calculated with
 the algorithm given by Chen et al. [Chen2008]_.
 
@@ -1335,6 +1335,16 @@ are recorded as real numbers, this system handles subpixel displacements well.
 Note that the mesh is warped prior to adding the incremental strain for a given
 frame because we are using Eulerian-Almansi strain instead of Green-Lagrangian
 strain.
+
+.. image:: images/pat157_points.png
+  :align: center
+  :width: 16cm
+  :height: 4.3317cm
+.. highlights::
+
+  |points_long|: Mesh warping for subject 157.  a) Segmented plaque in the
+  longitudinal view. b) A mesh of particles is created from the segmented ROI.
+  c) The mesh is warped by the incremental tracked displacements.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 5.5 References
