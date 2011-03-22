@@ -25,6 +25,10 @@ Finally, case studies of a few subjects are presented.
 
 .. |displacement_sequence_options_long| replace:: **Figure 9.3**
 
+.. |strain_sequence_options| replace:: Fig. 9.4
+
+.. |strain_sequence_options_long| replace:: **Figure 9.4**
+
 
 
 .. |downsampling_schedule| replace:: Table 9.1
@@ -210,7 +214,9 @@ system (Siemens Ultrasound, Mountain View, CA, USA).  Patients are scanned prior
 to endarterectomy after receiving informed consent on a protocol approved by the
 University of Wisconsin-Madison Institutional Review Board (IRB).  The Antares
 VFX13-5 transducer is excited at 11.4 MHz to collect RF at a sampling rate of 40
-MHz to a depth of 4 cm.
+MHz to a depth of 4 cm.  A dynamic frame skip and displacement interpolation
+algorithm, explained in Section 5.4.1, generates a sequence incremental
+displacement images that are evenly spaced in time.
 
 Values of the parameters used in the algorithm are summarized in the
 configuration file shown in |displacement_sequence_options|.
@@ -312,8 +318,60 @@ matching-block is specified as a radius so that the length of the window is *2 r
 Strain estimation
 ~~~~~~~~~~~~~~~~~
 
-Strains at the final level are estimated using the modified least
-squares estimator described in Section 5.2.3.
+Eulerian incremental frame-to-frame strains at the final level are estimated
+using the modified least squares estimator described in Section 5.2.3.  Prior to
+strain estimation, the displacements are filtered with a small 3×3 median filter
+to remove outliers.  Parameters of the strain sequence estimation are shown in
+the configuration file, |strain_sequence_options|.  Note that the output file
+names contain a reference to the input data they were derived from, a version
+stamp, and a description of their content.  The version stamp is from a source
+code versioning system (VCS), and it is a unique identifier that can be used to
+obtain the state of the source code when the given results were produced.  The
+input data identifier, source code version, and algorithmic parameters in the
+configuration file constitute full provenance of the analysis, which ensures
+repeatability and reproducibility.
+
+::
+
+  # strain-sequence options input file.
+  ---
+  # The file path prefix.  The input is assumed to be
+  #   <filePrefix>_Version_<version_stamp>_DisplacementVectorSequence.mha
+  # or
+  #   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*DisplacementVectors.mha
+  # The output will be
+  #   <filePrefix>_Version_<version_stamp>_StrainTensorSequence.mha
+  #   <filePrefix>_Version_<version_stamp>_OrderedPrincipalStrainSequence.mha
+  #   <filePrefix>_Version_<version_stamp>_EstimatedStrainTensorSequence.mha
+  #   <filePrefix>_Version_<version_stamp>_EstimatedOrderedPrincipalStrainSequence.mha
+  # or
+  #   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*StrainTensors.mha
+  #   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*OrderedPricipalStrains.mha
+  #   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*EstimatedStrainTensors.mha
+  #   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*EstimatedOrderedPrincipalStrains.mha
+  filePrefix: @FILE_PREFIX@
+  # The method used to calcuate the gradient.  Valid values are "GRADIENT" for a
+  # numerical gradient calculation or "BSPLINE" for a B-spline approximation
+  # gradient. "LEASTSQUARES" for modified linear least squares.
+  method: LEASTSQUARES
+  # The ratio of B-spline control points to displacement points.  One value for
+  # each direction.  This parameter is only relevant when method = BSPLINE.
+  bSplineControlPointRatio: [1.2, 1.1]
+  # The radius for performing median filtering on the displacement components.
+  # Each value with the isotropic radius for the corresponding radius component.
+  # A value of 0 indicates no median filtering will be applied.
+  displacementMedianFilterRadius: [1, 1]
+  # The radius for calculating the linear least squares line fit when calculating
+  # the displacement gradients.  This parameter is only relevant when method =
+  # LEASTSQUARES.
+  leastSquaresStrainRadius: [3, 3]
+  ...
+
+.. highlights::
+
+  |strain_sequence_options_long|: Configuration file showing the parameters used
+  to calculate incremental strain tensor images from the sequence if incremental
+  tracked displacements.
 
 ~~~~~~~~~~
 References
