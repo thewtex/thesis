@@ -29,6 +29,10 @@ Finally, case studies of a few subjects are presented.
 
 .. |strain_sequence_options_long| replace:: **Figure 9.4**
 
+.. |plaque_regions| replace:: Fig. 9.5
+
+.. |plaque_regions_long| replace:: **Figure 9.5**
+
 
 
 .. |downsampling_schedule| replace:: Table 9.1
@@ -372,6 +376,52 @@ repeatability and reproducibility.
   |strain_sequence_options_long|: Configuration file showing the parameters used
   to calculate incremental strain tensor images from the sequence if incremental
   tracked displacements.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Calculation of derived quantities
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The final purpose of non-invasive *in vivo* characterization of carotid plaque
+deformation is to generate a quantity that indicates vulnerability to failure,
+thrombogenesis, and ultimately ischemic burden.  A number of quantities are
+derived from the strain tensor over the cardiac cycle as potential indicators of
+vulnerability.  First, ROIs that segment the plaque are created by a
+radiologist.  These ROIs are drawn in a B-Mode image generated from the same RF
+data used to perform motion tracking.  B-Modes and color flow images taken with
+clinical imaging features of the scanning system at the time of acquisition are
+also available to the radiologist to help distingush atherosclerotic plaque from
+the lumen and surrounding tissues.  Three end-diastolic frames in a dataset are
+segemented, which delineates two complete cardiac cycles.  Contiguous regions are segmented in the
+image at end-diastole.   Often
+there will be two components corresponding to an anterior and posterior
+component.  However, a highly stenotic plaque may be segmented as a single
+connected component.  Also, due to acoustic shadowing, a plaque may be subdivided into
+more than two connected components where signal has a reasonable amplitude.
+
+A binary connected component image is transformed into a mesh.  Strains tensors
+and displacement vectors are accumulated on particles in the mesh as described
+in Section 5.4.2.  Eigenanalysis is performed on the accumulated strain tensors
+to calculate the principal strains, Section 5.3.1.  The principal strains are
+used to evaluate the strain metrics described in Section 5.3.3: maximum
+principal strain, maximum shear strain, total strain energy, and distortional
+energy.
+
+Over the cardiac, the three components of the strain tensor, the maximum
+principal strain, maximum shear strain, total strain energy, and distortional
+energy vary over time and over a contiguous region.  For each of these values,
+three scalar statistics are calculated per cardiac cycle.  The mean peak-to-peak
+value reflects the average strain in a region.  Since material failure is likely
+to occur at a location of high strain, the 90\ :sup:`th` percentile of the
+peak-to-peak value is also calculated.  A 90\ :sup:`th` percentile is used
+instead of the absolute maximum because outliers sometimes arise from part of
+the ROI crossing into the lumen or movement out-of-plane.  Third, the standard
+deviation of the particle peak-to-peak value is found.  This is because strain
+heterogenaity may mark the presence of highly varying strains beyond the
+resolution of the system.  These three values are found for all strain metrics
+and strain components, but also for the magnitude of the time-derivative of all
+strain metrics and strain components.  The time-derivative is considered because
+it is hypothesized that viscoelastic behavior may also contribute to the
+fatigue failure process.
 
 ~~~~~~~~~~
 References
