@@ -3,10 +3,10 @@ Chapter 5: Calculating Strain from Displacement
 ===============================================
 
 In this chapter, theory and techniques necessary to create strain tensor images
-from displacement images are covered with attention paid towards issues relevant
-to strain imaging of the carotid artery with external ultrasound.  First, how
-the definition of the strain tensor arises in continuum mechanics and the
-physical explanation that follows is reviewed.  The nomenclature as it is
+from displacement images are described with attention paid towards issues relevant
+to strain imaging of the carotid artery with external ultrasound.  First,
+the definition of the strain tensor in continuum mechanics and the
+physical explanation that follows is reviewed.  The nomenclature as it
 applies to diagnostic ultrasound strain imaging is covered.  Next, a number of
 methods to estimate the displacement gradient, which is needed to calculate the
 strain tensor, are presented.  Once the strain tensor has been estimated,
@@ -125,16 +125,16 @@ deformation of the body.
 .. highlights::
 
   |points_long|: 2D solid body at reference time *t*\ :sub:`0`, and after motion
-  at time *t*.  The vector **X** defines the position of point P(t\ :sub:`0`\ )
+  at time *t*.  The vector **X** defines the position of point *P*\ (*t*\ :sub:`0`\ )
   in the reference configuration, and the vector **x** defines the point's
   position after motion.  The vector **u** is the difference between the two
-  vectors and the displacement of P.
+  vectors and the displacement of *P*.
 
-Consider a point, P, within a body at the time t\ :sub:`0` whose location is
-defined by the vector **X**.  Motion occurs and P(t) is now located at **x**.
+Consider a point, *P*, within a body at the time *t*\ :sub:`0` whose location is
+defined by the vector **X**.  Motion occurs and *P*\ (*t*) is now located at **x**.
 That is, :math:`\mathbf{x} = \mathbf{x}( \mathbf{X}, t )` and
 :math:`\mathbf{x} ( \mathbf{X}, t_0 ) = \mathbf{X} )`.  Here **X** defines the
-reference configuration.  We will consider the location of P after motion occurs
+reference configuration.  We will consider the location of *P* after motion occurs
 to be the reference location plus a displacement, **u**, i.e.
 
 .. math:: \mathbf{x} = \mathbf{X} + \mathbf{u}( \mathbf{X}, t )
@@ -145,12 +145,12 @@ to be the reference location plus a displacement, **u**, i.e.
   :height: 7.965cm
 .. highlights::
 
-  |segments_long|:  A different length segment extending from point P to point Q
-  in the reference configuration, d\ **X**, and after deformation, d\ **x**.
+  |segments_long|:  A different length segment extending from point *P* to point *Q*
+  in the reference configuration, *d*\ **X**, and after deformation, *d*\ **x**.
 
 Let us examine the motion of infinitesimally small line segments within the
-body.  The line segment at **X**, d\ **X**, at time *t* becomes d\ **x**.  This
-is illustrated in |segments|.  The nearby point Q is located in the post- and
+body.  The line segment at **X**, *d*\ **X**, at time *t* becomes *d*\ **x**.  This
+is illustrated in |segments|.  The nearby point *Q* is located in the post- and
 pre-deformation states at
 
 .. math:: \mathbf{x} + d\mathbf{x} = \mathbf{X} + d\mathbf{X} + \mathbf{u}( \mathbf{X} + d\mathbf{X}, t )
@@ -164,9 +164,7 @@ pre-deformation states at
 .. epigraph::
 
   This can be expressed with the second-order tensor called the displacement
-  gradient [Lai1993]_, :math:`\nabla \mathbf{u}`.  In 2D Cartesian coordinates,
-
-  In 2D Cartesian coordinates,
+  gradient [Lai1993]_, :math:`\nabla \mathbf{u}`.  In 2D Cartesian coordinates:
 
 .. math:: \nabla \mathbf{u} = \begin{bmatrix} \dfrac{\partial u_1}{\partial X_1} & \dfrac{\partial u_1}{\partial X_2} \\ \dfrac{\partial u_2}{\partial X_1} & \dfrac{\partial u_2}{\partial X_2} \end{bmatrix}
 
@@ -211,7 +209,7 @@ Observe that
 5.1.1.1 Infinitesimal strain
 ----------------------------
 
-If we have very small deformations, :math:`(\nabla \mathbf{u})^T \nabla \mathbf{u}`
+If there are very small deformations, :math:`(\nabla \mathbf{u})^T \nabla \mathbf{u}`
 becomes negligible, and
 
 .. math:: \mathbf{F}^T \mathbf{F} \approx \mathbf{I} + \nabla \mathbf{u} + (\nabla \mathbf{u})^T \equiv \mathbf{I} + 2 \mathbf{E}
@@ -225,7 +223,7 @@ becomes negligible, and
 Note that **E** is a second-rank tensor since :math:`\nabla \mathbf{u}` is a
 second-rank tensor, and it is symmetric because we have the transpose added to
 itself.  The tensor **E** is the *infinitesimal strain* [Lai1993]_, also known as
-*engineering strain* or *small strain*.  We then have
+*engineering strain* or *small strain*.  We then have:
 
 .. math:: d \mathbf{x}^{(1)} \cdot d \mathbf{x}^{(2)} = d \mathbf{X}^{(1)} \cdot d \mathbf{X}^{(2)} + 2 d \mathbf{X}^{(1)} \cdot \mathbf{E} d \mathbf{X}^{(2)}
 
@@ -291,7 +289,7 @@ investigate perpendicular segments.
   :height: 7.97cm
 .. highlights::
 
-  |ds_perpendicular_dia_long|:  Relative change that occurs that are orthogonal
+  |ds_perpendicular_dia_long|:  Relative change that occurs, which is orthogonal
   in the reference configuration.
 
 Let :math:`d \mathbf{X}^{(1)} = dS_1 \, \mathbf{e_2}` and :math:`d
@@ -326,10 +324,10 @@ segments is equal to twice the diagonal component of the strain tensor, the
 5.1.1.2 Lagrangian strain
 -------------------------
 
-Beginning again without the intention to presume there are very small
+Beginning again without presuming there are very small
 deformations, we start at |two_segments| and subtract
 :math:`d \mathbf{X}^{(1)} \cdot d \mathbf{X}^{(2)}` from both sides of the
-equation,
+equation:
 
 .. image:: images/lagrangian.png
   :align: center
@@ -408,9 +406,11 @@ two segments,
   :width: 11cm
   :height: 1.62cm
 
-where :math:`\mathbf{e}^* = \frac{1}{2} (\mathbf{I} - (\mathbf{FF}^T)^{-1})` is
-the *Eulerian-Almansi strain tensor* [Lai1993,Haupt2002]_. This is a finite
-strain tensor that specifies strain in terms of the deformed configurations.
+.. epigraph::
+
+  where :math:`\mathbf{e}^* = \frac{1}{2} (\mathbf{I} - (\mathbf{FF}^T)^{-1})` is
+  the *Eulerian-Almansi strain tensor* [Lai1993,Haupt2002]_. This is a finite
+  strain tensor that specifies strain in terms of the deformed configurations.
 
 .. image:: images/ds_normal_eulerian_dia.png
   :align:  center
@@ -419,7 +419,7 @@ strain tensor that specifies strain in terms of the deformed configurations.
 .. highlights::
 
   |ds_normal_eulerian_dia_long|:  Two identical line segments, this time in the
-  deformed configuration, were transformed from a segment of length *dS*.
+  deformed configuration, are transformed from a segment of length *dS*.
 
 As shown in |ds_normal_eulerian_dia|, if
 :math:`d \mathbf{x}^{(1)} = d\mathbf{x}^{(2)} = d \mathbf{x} = ds \mathbf{e}_1`
@@ -454,7 +454,7 @@ and
 
 In Einstein summation notation,
 
-.. math:: e_{ij}^* = \frac{1}{2}(\frac{\partial u_i}{\partial x_i} + \frac{\partial u_j}{\partial x_i} - \frac{1}{2} \frac{\partial u_m}{\partial x_i} \frac{\partial u_m}{\partial x_j}
+.. math:: e_{ij}^* = \frac{1}{2}(\frac{\partial u_i}{\partial x_i} + \frac{\partial u_j}{\partial x_i}) - \frac{1}{2} \frac{\partial u_m}{\partial x_i} \frac{\partial u_m}{\partial x_j}
 
 Explicitly in 2D Cartesian coordinates,
 
@@ -468,11 +468,11 @@ Explicitly in 2D Cartesian coordinates,
 ===============================
 
 By applying various medical imaging modalities, strain images of tissues can be
-created by performing deformable image registration of the tissue image after
+created by performing deformable image registration of tissue after
 deformation to another pre-deformation image.  This technique has been applied
 in multiple imaging modalities.  Strain in atherosclerotic tissues was imaged by
 Rogowska et al. [Rogowska2004,Rogowska2006]_ with optical coherence tomography
-and well as by others [Stamper2006,Chan2004]_.  Recently, the high resolutions
+as well as by others [Stamper2006,Chan2004]_.  Recently, the high resolutions
 of X-ray computed tomography (CT) were used to create high quality strain images
 of a breast phantom [Han2010]_.  Creation of displacement images in magnetic
 resonance imaging (MRI) is unique in that does not need to use traditional image
@@ -481,25 +481,25 @@ images using the physics of image acquisition [Fowlkes1995,Bishop1995,Hardy1995,
 
 Diagnostic ultrasound has the longest history of calculating strain
 [Ophir2001,Ophir2000,Parker1996,Parker2011]_.  In one of the earliest papers,
-Ophir et. al. calculated strain with [Ophir1991]_
+Ophir et al. [Ophir1991]_ calculated strain using:
 
 .. math:: s_i = \frac{t_{i+1} - t_i}{2dz/c}
 
 .. epigraph::
 
-  where the *s*\ :sub:`i` is the strain, *t*\ :sub:`i+1` and *t*\ :sub:`i` are
+  where the *s*\ :sub:`i` is the local strain, *t*\ :sub:`i+1` and *t*\ :sub:`i` are
   the time shifts of windows on an A-line, *dz* is the distance between the
   windows, and *c* is the speed of sound in tissue.  As shown in |linear_array|,
-  an A-line, an amplitude line of the signal created by sending a beam of
+  an A-line, denotes an amplitude line of the radio-frequency (RF) echo-signal created by sending a beam of
   ultrasound into a tissue.  If the speed of sound in tissue is constant, this
-  dimensionless quantity is equivalent to one component of the infinitesimal
+  dimensionless quantity is equivalent to a single component of the infinitesimal
   strain tensor described in Section 5.1.1.1.  Since this component of strain is
-  along the beam axis, it is called *axial strain*.  In an a linear array where
-  all A-lines are sent parallel directions, |linear_array|, the axial refers to
+  along the beam axis, it is also called the *axial strain*.  In a linear array where
+  all A-lines are acquired along parallel directions, as shown in |linear_array|, the  term axial refers to
   the same direction across the entire image.  Note that for sector arrays, this
   may not be the case.  In the usual operation and clinical presentation of
-  linear array data, the axial direction is the vertical direction in an image.
-  If the beam steering occurs, the beams will remain parallel, but the axial
+  linear array data, the axial direction is the vertical or depth direction in an image.
+  If beam steering occurs, the beams will remain parallel, but the axial
   direction no longer corresponds to the vertical direction of the image.  
 
 .. image:: images/linear_array.png
@@ -515,39 +515,40 @@ Ophir et. al. calculated strain with [Ophir1991]_
   and the direction orthogonal is the *lateral direction*.
 
 In conventional ultrasound imaging, a B-Mode image is formed by repeatedly
-changing the location the A-line is sent into the tissue.  In a linear array,
+changing the location of the ultrasound beam sent into the tissue.  In a linear array,
 the spacing of the A-lines is determined by the transducer element spatial
-density.  This direction which is orthogonal to the axial direction is the
+density or pitch.  This direction which is orthogonal to the axial direction is the
 *lateral direction*.  In the carotid images shown in this work, the lateral
-direction corresponds to the horizontal direction.  Resolution in this direction
+direction corresponds to the horizontal direction in the B-mode image.  Resolution in this direction
 is not directly determined by the excitation frequency as it is in the axial
 direction, but by the beam width.  As a consequence, resolution in this
 direction is much lower [Hansen2010]_.  Also, shifts do not depend on sound
 speed assumptions; they are statically determined by the geometry of the
-transducer.  In an *in vivo* carotid image used in this study, for example, the
+transducer.  In *in vivo* carotid images used in this study, for example, the
 number of samples in a 40×40 mm image in the axial direction is 2076 in the
 axial direction and 244 in the lateral direction.  This near ten-fold disparity
 in the resolution is associated with the difficulty in calculating lateral
 strains.  The majority of the literature has focused on axial strains because
-the lateral strains do exhibit a useable signal-to-noise ratio.  Only recently
-algorithmic improvements, regularization such as those described in Chapter 3 or
-other improvements described in Chapters 4 and 9.
+the lateral strains do not exhibit a useable signal-to-noise ratio.  Only until recently
+have algorithmic improvements, such as regularization described in Chapter 3 or
+other improvements described in Chapters 4 and 9, enabled the use of the
+lateral strain component.
 
 *Shear strain* in ultrasound strain imaging usually refers to the strain between
 the axial and lateral directions.  Since displacement estimates in the axial direction
-are higher quality than those in the lateral directions, some have only
+are of higher quality than those in the lateral directions, some have only
 calculated the derivative of displacement in the axial direction with respect to
 the lateral direction and called this *axial shear* [Thitaikumar2008a]_.
 
 Of course, while axial, lateral, and shear strain provide all components of a 2D
 strain tensor, physical tissues are 3D.  The number of independent components in a
-symmetric, second-rank tensor are
+symmetric, second-rank tensor is:
 
 .. math:: n_c = D \frac{D+1}{2}
 
 .. epigraph::
 
-  There are six components in the 3D strain tensor; two addition shear strain
+  Note that there are six components in the 3D strain tensor; two addition shear strain
   components and one additional normal strain component.  While there is on-going
   research to obtain these components, there are a number of technological
   limitations at this time that prevent full population of the strain tensor with
@@ -555,13 +556,13 @@ symmetric, second-rank tensor are
   direction*, has a resolution at the level of or worse than the lateral
   resolution.  Technology to commercially develop a 2D matrix-array of transducer
   elements is only emerging.  Challenges here include creation of the 2D array
-  elements and acquiring the appropriate signal channel count
+  elements and acquiring the appropriate channel count in the system
   [Wygant2008,Martinez-Graullera2010]_.  In terms of motion tracking,
   computational challenges exist in terms of data storage and processing.  Also,
-  frames rates are slower with volumetric imaging, which in some cases can allow
-  too much motion to take place in-between image sets.  However, progress in 3D
+  frames rates are slower with volumetric imaging, which in some cases allow
+  too much motion to take place between image sets.  However, progress in 3D
   strain imaging is taking place [Byram2010,Po2010,Lopata2007,Rao2008,Fisher2010]_.
-  Currently, the primary benefit of 3D imaging systems is not to obtain all components
+  Currently, the primary benefit of 3D imaging systems are not necessarily to obtain all components
   of the strain tensor, but to prevent tissue from moving outside of the imaging
   plane, which makes motion tracking difficult.
 
@@ -572,8 +573,8 @@ symmetric, second-rank tensor are
 In Section 5.1.1, it was shown how strain tensors are composed of the symmetric part of
 the displacement gradient.  Therefore, in order to compute the strain tensor,
 the displacement gradient must first be estimated.  Accurate calculation of the
-displacement gradient is a challenge for two reasons.  First, the output
-block-matching methods is a discrete instead of continuous displacement field.
+displacement gradient is a challenge for two reasons.  First, the output of
+block-matching methods is discrete instead of continuous displacement fields.
 Secondly, displacement estimates are often noisy, and the differential operation
 of gradient calculation magnifies the noise.  In this section, a number of
 methods to compute the displacement gradient are examined.
@@ -586,20 +587,20 @@ methods to compute the displacement gradient are examined.
   
   |cylinder_long|: Illustration of the mechanical model from which the
   displacements and strains in this chapter are studied.  A block with
-  homogeneous stiffness has a hard cylindrical inclusion embedded within.
+  homogeneous stiffness has a stiffer cylindrical inclusion embedded within.
   The block is compressed uniaxially with a plate and pre- and post-deformation
-  images are made of the transverse plan of the cylinder with a transducer
+  images are made of the transverse plane of the cylinder with a transducer
   placed at the top of the assembly.
 
-A common test case for ultrasound strain imaging is the model of a hard
-cylindrical inclusion (high elastic modulus) in a soft background (low elastic
+A common test case for ultrasound strain imaging is the model of a stiffer
+cylindrical inclusion (high elastic modulus) embedded in a soft background (low elastic
 modulus).  The inclusion exists in a cubic block, and is subject to uniform
 compression from the top while being unconstrained at the side (zero-traction
-stress boundary conditions), |cylinder|.  Displacement is assumed to start from zero at the
+stress boundary conditions), as shown in |cylinder|.  Displacement is assumed to start from zero at the
 top and center of the model as if an ultrasound transducer exists there as a
 point of reference.  Details on methods to create the mechanical finite element
-and ultrasound scattering pieces of a simulation that represents this model are
-given in Chapter 3.  In this section, images resulting from 3% compression along
+and ultrasound scattering parts of a simulation that represents this model are
+described in Chapter 3.  In this section, images resulting from a 3% compression along
 the axis of deformation in this model will be used to evaluate the behavior of
 different methods to calculate the strain tensor from tracked displacement
 vectors.
@@ -616,8 +617,8 @@ vectors.
 
 The ideal, known displacements are shown in |input_known_displacements|.  Axial
 displacements start from zero at the transducer surface and increase further
-into the body.  Lateral displacements are assumed to be zero along the center
-axis of the transducer and diverge to the edges of the body.
+into the phantom.  Lateral displacements are assumed to be zero along the center
+axis of the transducer and diverge to the edges of the phantom.
 
 If we apply the central difference methods and the equations in Section 5.1.1.1
 to the noiseless known input displacements, |input_known_displacements|, we
@@ -633,11 +634,11 @@ obtain the expected strains in |expected_strains|.
   displacements on a hard cylindrical input model undergoing uni-axial
   compression. a) Axial strain, b) shear strain, and c) lateral strain.
 
-The challenge arises when noise in the displacements are output from imperfect
-motion tracking.  The RF ultrasound simulation images in |rf_inputs| display the
+The challenge arises when noise in the displacements are present from imperfect
+motion tracking.  RF ultrasound simulation images in |rf_inputs| display
 image content before and after deformation.  The deformation pattern that takes
 place between these images is not readily apparent, but the motion tracking
-algorithm is able to determine the movement of subvolumes in the image.  Notice
+algorithm is able to determine the movement of regions in the image.  Notice
 the anisotropy in resolution-- signal content is much higher in the axial
 direction than it is in the lateral direction.  This leads to higher quality
 motion estimation in the axial direction, as discussed in Section 5.1.2.
@@ -656,7 +657,7 @@ Displacements that define the motion between |rf_inputs|\ a) and |rf_inputs|\ b)
 are shown in |tracked_displacements|.  These images are created with the
 motion tracking algorithm described in Chapter 9.  In the next few
 subsections, methods for calculating the displacement gradient from
-|tracked_displacements| are presented and the strain that results is shown.
+|tracked_displacements| are presented and the strain that results shown.
 
 .. image:: images/tracked_displacements.png
   :align: center
@@ -677,14 +678,18 @@ offset *k* using finite differences is the central difference method.
 
 .. math::  f^1_0  \approx \frac{f_1 - f_{-1}} { 2 h }
 
-Where *h* is the sampling period.
+.. epigraph::
+
+  where *h* is the sampling period.
 
 This expression comes from a Taylor series expansion of the component terms
 
 .. math::  f_1 = f_0 + h f^1_0 + \frac{h^2}{2!}f^2_0 + \cdots + \frac{h^n}{n!} + \mathcal{O}(h^{n+1})
 
-Where :math:`\mathcal{O}(h^{n+1})` indicates the series has been truncated after *n+1*
-terms.
+.. epigraph::
+
+  where :math:`\mathcal{O}(h^{n+1})` indicates the series has been truncated after *n+1*
+  terms.
 
 We also have
 
@@ -695,7 +700,7 @@ Then we see
 .. math::  f^1_0 = \frac{f_1 - f_{-1}} { 2 h } + \mathcal{O}(h^{2})
 
 This approximation is, therefore, *second-order accurate*.  Strain calculated
-using the central difference method to compute the displacement gradient are
+using the central difference method to compute the displacement gradient is
 shown in |central_difference_strain|.
 
 .. image:: images/central_difference_strain.png
@@ -721,8 +726,8 @@ difference method, is first-order accurate.
 
 Higher order accurate [#]_ approximations can be made by using additional
 samples.  Various schemes will yield correct results as long as the Taylor
-series terms cancel.  When there are equally spaced functions samples, which is
-the most commonly encountered dataset and is the case for digital images, the
+series terms cancel.  When there are equally spaced function samples, which are
+the most commonly encountered dataset and are the case for digital images, the
 coefficients are usually rational numbers because of the form of the Taylor
 series.  For instance, a central difference approximation to the first
 derivative that uses a five point kernel is
@@ -732,18 +737,19 @@ derivative that uses a five point kernel is
 .. [#] Here we use the terminology *order of accuracy* to refer to the number of terms used in the Taylor series approximation and *order derivative* to refer to the degree of the derivative.
 
 Khan and Ohba derived closed form expressions for higher order accurate
-approximations of an arbitrary *p*\ th order derivative [Khan1999,Khan2003]_.
-Two different sets of expressions were developed by the pair.  The newer set of
+approximations of an arbitrary *p*\ :sup:`th` order derivative [Khan1999,Khan2003]_.
+Two different sets of expressions were developed.  The newer set of
 finite difference approximations uses samples from every other sample around the
 differentiated point.  This set of approximations has the same computational
 complexity, and both approximations have linear phase and are highly accurate
-for polynomial type inputs [Khan2003]_.  However, this set of approximations has
+for polynomial type inputs [Khan2003]_.  However, these set of approximations
+have
 slightly better performance for periodic functions and functions sampled near
-the Nyquist frequency [Khan2003]_.  The second set of approximations are central
+the Nyquist frequency [Khan2003]_.  The second set of approximations is central
 difference type approximations that have symmetric non-zero coefficients for
 every point surrounding the sample of interest.  The coefficients alternate in
 sign and decay rapidly from their center.   The tap-coefficients, *d*, for a
-first order derivative
+first order derivative are:
 
 .. image:: images/nth_order_coefficients.png
   :align:  center
@@ -782,12 +788,12 @@ Strain images with order of accuracy of 6 are displayed in
 
 Inspecting |central_difference_strain| and |higher_order_accurate|, only subtle
 differences are observed.  There is noise present in |central_difference_strain|
-that remains present in |higher_order_accurate|.  This noise is due to
-decorrelation but also artifacts related to the regularization described in
+that remains present in |higher_order_accurate|.  This noise is due not only to
+signal decorrelation but also artifacts related to the regularization described in
 Chapter 3.  While the higher order-accurate calculation may be a more correct
 representation of the displacement gradients, it is sometimes primarily a more
 accurate representation of the noise present in the displacement gradients.
-In general some notable advantages have been observed, though.  Specifically,
+In general some notable advantages have been observed.  Specifically,
 there are reductions in the strain noise and an increase in the strain dynamic
 range.  This behavior contrasts with the rest of the gradient calculation
 techniques discussed in this section, which tend to reduce the dynamic range
@@ -814,7 +820,7 @@ taking the derivative of the first and convolving with the other
 Thus, we can convolve the displacement images with a derivative of a Gaussian to
 get smoothed derivatives for the strain calculation.  Since a large proportion
 of the high frequency content is often noise, this operation filters out
-noise.  According derivative theorem, "If *f(x)* has the Fourier transform
+noise.  According to the derivative theorem, "If *f(x)* has the Fourier transform
 *F(s)*, then *f'(x)* has the Fourier transform *i2πsF(s)*.  That is, the normal
 derivative operation, such as that achieved with finite difference operations,
 suppresses low frequency content and amplifies high frequency content since it
@@ -834,17 +840,17 @@ a 2D Gaussian are found in |gradient_recursive_gaussian_strain|.
 The noise is reduced for both values of the smoothing parameter σ in
 |gradient_recursive_gaussian_strain|\ a-c) and
 |gradient_recursive_gaussian_strain|\ d-f).  Of course, with too much smoothing,
-desired structural information will be removed.
+desired structural information also will be removed.
 
 5.2.3 A modified least-squares strain estimator
 ===============================================
 
-An alternative approach to direct filtering out high frequency content is to fit the
+An alternative approach to direct filtering out of the high frequency content is to fit the
 data with an approximating function of known form and use the derivative of the
 approximating function.  This approach is taken in the next two subsections.
 
 The least-squares strain estimator is simple, popular strain approximation
-method proposed by Kallel et. al. [Kallel1997a]_.  A piecewise linear function
+method proposed by Kallel et al. [Kallel1997a]_.  A piecewise linear function
 is fit to the displacement data, and the slope of this function is used in place
 of the derivative.  To obtain the derivative of the displacement along direction
 1, *u*\ :sub:`1`, with respect do direction *x*\ :sub:`1`,
@@ -879,7 +885,7 @@ first, the linear expression for a single datum is written,
 
 .. epigraph::
 
-  where **A**\ :sup:`+` is the Moore-Penrose pseudoinverse of **A**
+  where **A**\ :sup:`+` is the Moore-Penrose pseudo-inverse of **A**
   [WeissteinEric2011]_, which is found in practice using singular value
   decomposition.  Note that if the spacing between displacement points is
   uniform along the direction of derivation, which it is for the displacement
@@ -910,14 +916,14 @@ longer kernel results in greater noise suppression but lower resolution.
 
   |lsq_vessel_long|:  Longitudinal image the left carotid of subject 157.  a)
   B-Mode, b) tracked axial displacements, c) line profile of the displacements
-  in b) over the line overlayed on the images in a) and b).  The motion is
+  in b) over the line overlaid on the images in a) and b).  The motion is
   occurring during systole.  Note the discontinuity of the displacement that
   occurs at the wall-lumen boundary around a depth of 20 mm.
 
 In most tissues, such as breast tissue, the deformation is continuous and
 differentiable.  Deformation in the arteries, however, exhibits discontinuities
 in its motion.  In a longitudinal view of the artery, |lsq_vessel|, opposing
-arterial walls move in opposite directions.  There is a discontinuity in the at the
+arterial walls move in opposite directions.  There is a discontinuity at the
 artery-lumen boundary.  A motion tracking algorithm may follow the motion of
 blood or, more likely, signal in the area of the lumen that is from out-of-plane
 arterial tissue picked up by the wide elevational profile of the ultrasound
@@ -932,7 +938,7 @@ the discontinuity.
 
 To address this condition, the linear least-squares implementation can be
 modified.  If the number of consecutive displacement samples with the same sign
-exceed half the width of the kernel, only these samples can be used in the
+exceeds half the width of the kernel, only these samples can be used in the
 linear least-squares fit.  In this way, values from only one side or the other
 of the discontinuity are used for the local gradient estimate.  Axial strain
 results of this modified least-squares method applied to the carotid artery are
@@ -962,21 +968,21 @@ encourages continuity.
 
 Instead of approximating the displacement field with a piecewise linear
 function, the displacement field can be approximated with piecewise continuous
-spline.  This function is more appealing than a piecewise linear fit for several
+spline fitting.  This function is more appealing than a piecewise linear fit for several
 reasons.  First, the splines are constructed to be piecewise continuous
 [Boehm2002,Schwarz2007]_.  Second, if a B-spline is used, the first derivative will be
 continuous if the order of the spline is two or higher [Boehm2002,Schwarz2007]_.  Third,
 the greater flexibility of higher order polynomials should decrease the loss in
-resolution observed linear least-squares strain estimator [Khadem2007]_.  Khadem
+resolution observed with the linear least-squares strain estimator [Khadem2007]_.  Khadem
 and Setarehdan applied this method in 1D to determine axial strains
-[Khadem2007]_.  A piecewise continuous polynomial spline was fix to the discrete
+[Khadem2007]_.  A piecewise continuous polynomial spline was fit to the discrete
 noisy displacement data, and the derivative of the resulting polynomial was used
 as the derivative of the underlying displacement [Khadem2007]_.  D'hooge et al.
-performed a similar procedure with a cubic B-spline approximation to tracked
+performed a similar procedure with a cubic B-spline approximation to track
 M-Mode data to obtain strain rates in a gelatin phantom [Dhooge2002]_.  In both
 articles, the spline did not interpolate the underlying displacement data, but
 it was fit by minimizing a term involving the squared difference with the
-sampled data and another regularizing term involving the square of the second
+sampled data and another regularization term involving the square of the second
 derivative of the underlying function.  Applying a higher weight to the later
 term will increase the smoothness of the result.
 
@@ -999,7 +1005,7 @@ displacement sample spacing.
   gradient.  a-c) control point spacing to displacement sample spacing ratio of
   1.5.  d-f) control point spacing to displacement sample spacing ratio of 1.8.
 
-While smoothing is present in |bspline_strain|, there is also very noticeable
+While smoothing is present in |bspline_strain|, there are also very noticeable
 and unacceptable oscillation artifacts.  The artifacts are greatest in the axial
 strain images.  When the control point spacing is increased, the frequency of
 the artifacts decreases.  The presence of these artifacts can be explained by
@@ -1012,7 +1018,7 @@ performance because of the oscillations that result.  This can be attributed to
 the increased extrema (*n*-1 for a polynomial of order *n*) that are required
 with increasing polynomial orders.  In order for B-spline fitting to be
 successful in this algorithm, a few actions could be taken.  First, the bias
-artifacts could be reduced or eliminated with a reimplentation of the
+artifacts could be reduced or eliminated with a re-implementation of the
 regularization algorithm.  Also, smoothness of the B-spline could by enforced by
 adding a regularization term to the fit that penalizes the presence of the *L2*
 norm of the second derivative.
@@ -1035,7 +1041,7 @@ such as a rotation, the transformed tensor is given by [Lai1993]_,
 
 .. epigraph::
 
-  when **Q** is the transformation on the tensor **T**.  There is a
+  where **Q** is the transformation on the tensor **T**.  There is a
   particular rotation of the strain tensor **E** that provides a more
   transparent interpretation of the tensor.
 
@@ -1043,16 +1049,18 @@ Recall that when
 
 .. math:: \mathbf{E} \mathbf{n} = \lambda \mathbf{n}
 
-if **E** is a tensor, **n** is a vector, and λ is a scalar, **n** is called
-an eigenvector of **E**, and λ is an eigenvalues of **E**.  Basic linear states
-that every real, symmetric tensor will have eigenvalues and corresponding
-eigenvectors that are mutually perpendicular [Lai1993]_.  Since the strain
-tensor is a real, symmetric tensor, it has eigenvalues and eigenvectors.  If
-unit length eigenvectors are used as the columns of a transformation matrix
-for the associated tensor, the transformed result will be a diagonal matrix
-whose entries are the eigenvalues.  The eigenvalues of **E** are called the
-*principal strains* of **E**, and the eigenvectors of **E** are called the
-*principal directions* of **E** [Lai1993]_.
+.. epigraph::
+
+  if **E** is a tensor, **n** is a vector, and λ is a scalar, **n** is called
+  an eigenvector of **E**, and λ is an eigenvalues of **E**.  Basic linear algebra states
+  that every real, symmetric tensor will have eigenvalues and corresponding
+  eigenvectors that are mutually perpendicular [Lai1993]_.  Since the strain
+  tensor is a real, symmetric tensor, it has eigenvalues and eigenvectors.  If
+  unit length eigenvectors are used as the columns of a transformation matrix
+  for the associated tensor, the transformed result will be a diagonal matrix
+  whose entries are the eigenvalues.  The eigenvalues of **E** are called the
+  *principal strains* of **E**, and the eigenvectors of **E** are called the
+  *principal directions* of **E** [Lai1993]_.
 
 Rotating a tensor is equivalent to looking at the tensor in a different
 coordinate system orientation.  With this in mind, the principal directions
@@ -1065,7 +1073,7 @@ are present.
 
 In section 5.1, it was shown that a strain tensor describes the change in
 relationship between two small vectors in a body.  Second-rank tensors in
-general are characterized in how they modify two vectors.
+general are characterized by how they modify these two vectors.
 
 Another second-rank tensor of importance in medical imaging is the diffusion
 tensor.  This tissue property has proven to be a useful tool for exploring
@@ -1120,17 +1128,17 @@ positive.  This is not true for the strain tensor; the principal strains can be
 positive (stretching) or negative (compression).  In fact, due to the Poisson
 effect [Srinath2003]_, stretching of a material in one direction often causes
 stresses that drive compressions in the orthogonal directions, and the signs of the
-principle strains are usually varied.  In 2D, if one of the principal strains
+principal strains are usually varied.  In 2D, if one of the principal strains
 is negative, the expression is no longer represented by an ellipse but by a
 hyperbola,
 
 .. math:: \frac{x_1^2}{\lambda_1^2} - \frac{x_2^2}{\lambda_2^2} = 1
 
-In 3D, if one of the principal strains are negative the quadratic expression
+In 3D, if one of the principal strains is negative the quadratic expression
 specifies a hyperboloid of one sheet, and if two of the principal strains are
 negative, then the quadric surface is a hyperboloid of two sheets [Roe1993]_.
 Unfortunately, hyperboloids are not closed surfaces, and it is difficult to
-visualize it as a glyph.  Therefore, the strain is represented as a ellipse
+visualize it as a glyph.  Therefore, the strain is represented as an ellipse
 or ellipsoid where the lengths of the principal axes are the absolute value of
 the principal strains, and the orientation of the ellipse is specified by the
 principal directions.  An interpretation of the ellipse is therefore the
@@ -1191,14 +1199,14 @@ the maximum principal strain,
 
 .. math:: \frac{1}{2} E \left( \lambda_1 - \lambda_2 \right)^2
 
-The latter has been used by Maurice et.  al. for the examination of carotid
+The latter has been used by Maurice et al. for the examination of carotid
 plaque [Maurice2004]_.  Note that although the modulus, *E*, is unknown, plaque
 materials that have a low *E* generally possess a low ultimate failure strain
 [Holzapfel2004]_.  Thus, a plaque region with a high energy metric is likely
 near the failure strain if it has a high modulus  and high failure strain or if
 it has a low modulus and low failure strain.  In other words, since *E* is
 unknown, the 'total strain energy' and 'distortional energy' calculated is only
-proportional the these quantities.  However, this may be sufficient because of
+proportional to these quantities.  However, this may be sufficient because of
 the material properties of the plaque constituents.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1208,7 +1216,7 @@ the material properties of the plaque constituents.
 5.4.1 Dynamic frame skip
 ========================
 
-As seen in the *SNRe* results in Chapter 3, Fig. 3.3, and Chapter 4, Fig. 4.1,
+As seen in the elastographic signal-to-noise ratio (*SNRe*) results in Chapter 3, Fig. 3.3, and Chapter 4, Fig. 4.1,
 the ability for an algorithm to achieve a good strain image signal-to-noise
 ratio depends on the magnitude of the strain.  This was explored theoretically
 and experimentally by Varghese et al. [Varghese1997]_.  If the amount of
@@ -1225,22 +1233,22 @@ post-deformation image should be chosen.
 
 When the mechanical load on the tissues being imaged comes from cardiac
 pulsations, the strain rate in an image sequence is non-constant.  A higher
-strain rate occurs during systole, and a lower strain occurs at end diastole.
+strain rate occurs during systole, and a lower strain rate occurs at end diastole.
 To retain optimal tracking over a sequence of images spanning the cardiac cycle,
 a dynamic frame skip is applied that uses a short frame skip when the strain
 rate is high, and a long frame skip with strain rate is slow.
 
-To apply an automatic method to ascertain an ideal frame skip, the optimal
+To apply an automatic method that ascertains an ideal frame skip, the optimal
 deformation must be defined in a quantifiable way.  This is application
 specific.  For example, when the objective is to get a strain image of a breast
 tissue abnormality, the frame average strain may be a good measure.  When
 imaging carotid plaques, we are only interested in the strain inside the plaque.
 There is relatively little deformation in the skin and muscle near the transducer,
 but the deformation in these areas should not determine the frame skip.  Also,
-there may be apparently high strain in the region of the lumen, but the tracking
+there may be apparently high strain in the region of the lumen, but tracking
 in this area is unreliable.  The criteria that determines the frame skip in this
 work is based on the axial strain in a sub-region of the image.  The top
-and bottom portions are removed from the region-of-interest (ROI) because the skip and
+and bottom portions are removed from the region-of-interest (ROI) because the skin and
 fat near the transducer are not the target tissue of interest and because
 attenuation decreases signal quality at depths beyond the vessel.  The frame
 skip is dynamically increased or decreased based an absolute ROI axial strain
@@ -1249,7 +1257,7 @@ as unrealistically high strains.  Peak-hopping is acceptable in the lumen,
 however, so and additional frame skip criteria is percent axial strain pixels in
 the ROI over a threshold.
 
-When it is time to track the next frame pair in a sequences, the previous frame
+When it is time to track the next frame pair in a sequence, the previous frame
 skip is initially attempted.  If both criteria are below threshold, the frame
 skip is increased until they exceed threshold, and the prior tracking result is
 used.  An exception to the prior behavior is a halt to the increase in the frame
@@ -1275,7 +1283,7 @@ convenient to have the displacement and strain images available at regular time
 steps.  Standard video encoding and decoding software assume a constant frame
 rate.  If a dynamic frame skip is used, displacement images must be interpolated at the
 shortest period between tracked frames.  Incremental displacement images are interpolated
-to the original framerate with the following algorithm:
+to the original frame rate with the following algorithm:
 
 1.  Set a frame counter *i* to 1.
 2.  Calculate the fraction of displacement remaining, *p*, as *(n-i)/(n-i+1)*, where *n*
@@ -1326,8 +1334,8 @@ First, the displacement and strain fields are discretely sampled and saved as
 digital data.  Secondly, the plaque moves in its location with the image over
 the cardiac cycle.  To address these challenges, a particle method is applied to
 the purpose of finding the accumulated strain.  First the plaque ROI is
-segmented by a radiologist at end-diastole with MITK, the medical interaction
-toolkit [Maleike2009]_.  This creates a binary label image.  All the points in
+segmented by a radiologist at end-diastole with the medical interaction
+toolkit (MITK) [Maleike2009]_.  This creates a binary label image.  All the points in
 the binary image labeled as plaque are used to create a quadrilateral mesh.
 Accumulated strain and accumulated displacement is then calculated over the
 points in the mesh.  For every frame, the mesh is first warped by the
