@@ -13,10 +13,16 @@ excised plaques which result from endarterectomy.  Finally, we present initial
 Parametric images of excised plaque
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As mentioned in the background section, strain imaging holds promise because it is a direct measure of the local load the tissue is experiencing as opposed to approaches where measurements or assumptions of composition, geometry, and loading are used in a computational model or statistical classification to imply loading.
-An advantage to this approach is that errors from modeling simplifications and parameter measurements do not accumulate as significantly.
-The reference phantom method is analogous for ultrasonic tissue parameter characterization.
-Diffraction effects are measured empirically in a phantom environment similar to that expected \textit{in situ} with minimal modeling or assumptions.
+As mentioned in the Chapter 2, strain imaging holds promise because it is a
+direct measure of the local load the tissue is experiencing as opposed to
+approaches where measurements or assumptions of composition, geometry, and
+loading are used in a computational model or statistical classification to imply
+loading.  An advantage to this approach is that errors from modeling
+simplifications and parameter measurements do not accumulate as significantly.
+The reference phantom method is analogous for ultrasonic tissue parameter
+characterization.  Diffraction effects are measured empirically in a phantom
+environment similar to that expected *in situ* with minimal modeling or
+assumptions.
 
 Approximately two weeks following the \textit{in vivo} carotid ultrasound examination and TCD recording, patients undergo surgery for plaque excision.
 Endarterectomy specimens are retrieved immediately following surgery for scanning and returned the same day to pathology for analysis and histology preparation.
