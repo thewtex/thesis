@@ -473,11 +473,11 @@ the ROI crossing into the lumen or movement out-of-plane.  Third, the standard
 deviation of the particle peak-to-peak value is found.  This is because strain
 heterogeneity may mark the presence of highly varying strains beyond the
 resolution of the system.  These three values are found for all strain metrics
-and strain components, but also for the magnitude of the time-derivative of all
-strain metrics and strain components.  The time-derivative is considered because
-it is hypothesized that viscoelastic behavior may also contribute to the
-fatigue failure process.  Strain values for five subjects are tabulated in
-Appendix B.
+and strain components.  The mean, 90\ :sup:`th` percentile, and standard
+deviation of the sum of the magnitude of the time-derivative is also computed.
+The time-derivative is considered because it is hypothesized that viscoelastic
+behavior may also contribute to the fatigue failure process.  Strain values for
+five subjects are tabulated in Appendix B.
 
 ~~~~~~~~~~~~~~~~~~~~~~
 *In vivo* case studies
