@@ -86,7 +86,7 @@ though multiple registration operations are performed at every level, including
 the finest level is at the original image resolution, the overall motion tracking
 method is often quicker than a single non-hierarchical registration.  By
 initializing the search close to the true displacements at finer levels, the
-solution space that must be examined in a more computationally taxing settings
+solution space that must be examined in a more computationally taxing setting
 is greatly reduced.  Also, local minima in the solution associated with the high
 frequency content in the fine resolution images are avoided.  This improves
 robustness of the algorithm.
@@ -108,7 +108,7 @@ using displacements at coarser levels to initialized the search region at finer
 levels, Bai et al., combined the cross-correlation results from window lengths
 at multiple levels to determined the displacements at the finest level
 [Bai1999]_.  Basarab et al. found that iterative application of a
-multi-resolution can improves results even more [Basarab2008]_.  Chen et al.
+multi-resolution can improve results even more [Basarab2008]_.  Chen et al.
 applied the multi-level approach to a quality-guided (seed propagation)
 algorithm [Chen2010a]_.
 
@@ -125,16 +125,16 @@ similar role.
 In this work a multi-level block-matching algorithm is used for motion tracking
 of carotid plaque images.  Displacements tracked at coarser levels are
 interpolated to initialize the search region location at lower levels.  Image
-sets at every level are created with a scale-space representation of the the
+sets at every level are created with a scale-space representation of the
 images [Lindeberg1994]_.  The scale-space representation is chosen because it
-has many desireable properties including the *non-enhancement* property, i.e.
+has many desirable properties including the *non-enhancement* property, i.e.
 local extrema are not enhanced [Lindeberg1994]_.  If the local extrema are
 enhanced, the artificial feature may be tracked by the similarity metric.  Each
 level in the scale-space is created by filtering the input radio-frequency (RF)
 image with discrete Gaussian that has a variance *(f/2)*\ :sup:`2` if *f* is
 the decimation factor.  A three-level image pyramid is created.  The decimation
 factor for each level is given in |downsampling_schedule|.  Since image content
-is much more dense in the axial direction, higher decimation is allowed in that
+is much denser in the axial direction, higher decimation is allowed in that
 direction.  An example set of scale-space images are shown in |scalespace|.
 
 .. image:: images/scalespace.png
@@ -144,7 +144,7 @@ direction.  An example set of scale-space images are shown in |scalespace|.
 .. highlights::
 
   |scalespace_long|:  Scale-space images for multi-resolution motion tracking.
-  Carotid plaque RF data in the longitudal view for subject 157 is shown.
+  Carotid plaque RF data in the longitudinal view for subject 157 is shown.
   The levels, whose decimation factors are given in |downsampling_schedule|,
   are a) level 1, b) level 2, and c) level 3.
 
@@ -158,7 +158,7 @@ Level        Axial decimation factor  Lateral decimation factor
 
 .. highlights::
 
-  |downsampling_schedule_long|: Downsampling schedule for the multi-resolution
+  |downsampling_schedule_long|: Downsampling schedule for multi-resolution
   image registration.
 
 Search region refinement
@@ -168,7 +168,7 @@ As previously mentioned, restriction of a matching-block's search region as
 finer levels in the pyramid are explored can increase the robustness of
 tracking.  For the results explored in this chapter, a simple linear function
 was applied the search region size from the coarsest level to the finest level.
-The value of these parameters are shown in |displacement_sequence_options|.  The
+The value of these parameters is shown in |displacement_sequence_options|.  The
 search region size is expressed as a factor of the matching-block size, and it is
 greater than 1.  Note that even if the search region factor was specified to be
 the same at the top level and the bottom level, the search region still shrinks
@@ -177,15 +177,15 @@ decimation occurs between levels.
 
 While search region restriction can improve robustness, this is not true if
 there is poor motion tracking in the upper levels.  If inaccurate motion
-tracking occurs at upper levels, the erroreous displacement will propagate to
-levels.  To counter this phentomenon, erroreous displacements are detected and
+tracking occurs at upper levels, the erroneous displacement will propagate to
+levels.  To counter this phenomenon, erroneous displacements are detected and
 replaced before using them to initialize the center of the search region at
 lower levels.  Peak-hopping errors present themselves as irrationally high
 strains because they cause a discontinuity in the estimated displacement field.
 To prevent the propagation of peak-hopping errors, a strain image is generated
-at the higher levels.  Pixels whose strain magnitude exceed a threshold are
+at the higher levels.  Pixels whose strain magnitude exceeds a threshold are
 marked for replacement.  Displacements are then linearly interpolated across a
-cluster of errant pixels if the pixels are in the center of the image, or the
+cluster of errant pixels if the pixels are in the center of the image, or they
 are extrapolated with the slope of the closest good displacement pixels at the
 edge of the image.  This process is repeated to remove any outliers that remain
 or were introduced.
@@ -204,11 +204,13 @@ after anisotropically scaling the block by a factor
 
 .. math:: s_i = 1 + e_{ii}^*
 
-where the scaling factor is one plus the normal strain in that direction if the
-strain is small.  Improvement of the strain *SNRe*, described in detail in
-Chapter 3 and 4, for a uniform phantom is demonstrated in |companding|.  There
-is a significant improvement in the *SNRe* when scaling the matching block.  The
-amount of this improvement increases with the increase in strain magnitude.
+.. epigraph::
+
+  where the scaling factor is one plus the normal strain in that direction if the
+  strain is small.  Improvement of the strain *SNRe*, described in detail in
+  Chapter 3 and 4, for a uniform phantom is demonstrated in |companding|.  There
+  is a significant improvement in the *SNRe* when scaling the matching block.  The
+  amount of this improvement increases with the increase in strain magnitude.
 
 .. image:: images/companding.png
   :align: center
@@ -232,7 +234,7 @@ image in its search region in the post-deformation image is normalized
 cross-correlation.  Recursive Bayesian regularization, described in Chapter 3,
 is used to improve the quality of the tracked displacements at each level.
 Parabolic interpolation is used to find subsample displacements at the upper
-levels, and windowed-sinc interpolation with numerical optimization, decribed in
+levels, and windowed-sinc interpolation with numerical optimization, described in
 Chapter 4, is used to find subsample displacements at the final level.  The
 A central-difference gradient with an order of accuracy of 4, explained in
 Section 5.2.1, is used to estimate strains at the higher levels where
@@ -325,7 +327,7 @@ matching-block is specified as a radius so that the length of the window is *2 r
       doDynamicFrameSkip: true
       # In a dynamic frame skip analysis, the maximum absolute strain *in the axial direction* that should be observed in
       # a frame skip for best quality.  This value should be the maximum strain
-      # that good motion tracking is expected.  The the observed maximum strain is
+      # that good motion tracking is expected.  The observed maximum strain is
       # smaller than this value, then the frame skip is increased.
       maximumAbsFrameStrain: 0.05
       # In a dynamic frame skip analysis, the percentage of pixels that are
@@ -382,7 +384,7 @@ repeatability and reproducibility.
   #   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*EstimatedStrainTensors.mha
   #   <filePrefix>_Version_<version_stamp>_TrackedMovingFrame*EstimatedOrderedPrincipalStrains.mha
   filePrefix: @FILE_PREFIX@
-  # The method used to calcuate the gradient.  Valid values are "GRADIENT" for a
+  # The method used to calculate the gradient.  Valid values are "GRADIENT" for a
   # numerical gradient calculation or "BSPLINE" for a B-spline approximation
   # gradient. "LEASTSQUARES" for modified linear least squares.
   method: LEASTSQUARES
@@ -417,14 +419,14 @@ vulnerability.  First, ROIs that segment the plaque are created by a
 radiologist.  These ROIs are drawn in a B-Mode image generated from the same RF
 data used to perform motion tracking.  B-Modes and color flow images taken with
 clinical imaging features of the scanning system at the time of acquisition are
-also available to the radiologist to help distingush atherosclerotic plaque from
+also available to the radiologist to help distinguish atherosclerotic plaque from
 the lumen and surrounding tissues.  Three end-diastolic frames in a dataset are
-segemented, which delineates two complete cardiac cycles.  Contiguous regions are segmented in the
+segmented, which delineates two complete cardiac cycles.  Contiguous regions are segmented in the
 image at end-diastole.   Often
 there will be two components corresponding to an anterior and posterior
 component.  However, a highly stenotic plaque may be segmented as a single
 connected component.  Also, due to acoustic shadowing, a plaque may be subdivided into
-more than two connected components where signal has a reasonable amplitude.
+more than two connected components where signal has reasonable amplitudes.
 
 A binary connected component image is transformed into a mesh.  Strains tensors
 and displacement vectors are accumulated on particles in the mesh as described
@@ -442,8 +444,8 @@ the accumulated strain is often observed [Shi2007]_.  If there is out-of-plane
 motion, a particle is neither accumulating over the same volume of tissue.  To
 compensate for this, the offset at the end of the cycle is linearly removed from
 every curve.  All quantities should start from zero and return to zero if the
-system is steady-state.  While is true in that the tissue obviously remains in
-tact over the examination, some real drift may exist due to breathing, muscle
+system is steady-state.  While is true in that the tissue obviously remains intact
+over the examination, some real drift may exist due to breathing, muscle
 tone, etc.  Components of the strain tensor can have positive or negative
 sign, but all strain metrics should be strictly positive.
 
@@ -469,7 +471,7 @@ peak-to-peak value is also calculated.  A 90\ :sup:`th` percentile is used
 instead of the absolute maximum because outliers sometimes arise from part of
 the ROI crossing into the lumen or movement out-of-plane.  Third, the standard
 deviation of the particle peak-to-peak value is found.  This is because strain
-heterogenaity may mark the presence of highly varying strains beyond the
+heterogeneity may mark the presence of highly varying strains beyond the
 resolution of the system.  These three values are found for all strain metrics
 and strain components, but also for the magnitude of the time-derivative of all
 strain metrics and strain components.  The time-derivative is considered because
@@ -497,7 +499,7 @@ Hypoechoic plaque with high strain
   :height: 17.0cm
 .. highlights::
 
-  |hypoechoic_long|: Hypoechoic plaque, often classified as 'soft' plaque, that
+  |hypoechoic_long|: A hypoechoic atherosclerotic mass, often classified as 'soft' plaque, that
   exhibits high strain throughout the plaque.  a) Accumulated displacement
   vectors (movement is primarily in superior direction), b) strain tensor
   ellipses, c) maximum absolute principal strain, d) maximum shear strain, e)
@@ -536,13 +538,13 @@ Importance of geometry
   and f) distortional energy.
 
 As discussed in Section 2.2 and 2.3, the dominant focus of various imaging and other
-diagostic techniques is on identification of plaque composition.  While
+diagnostic techniques is on identification of plaque composition.  While
 composition may be an important factor in plaque vulnerability, it is not the
 only factor.  In |geometry|, a plaque with a relatively homogeneous B-Mode
 echogenicity is shown, which implies that its composition may be homogeneous.
 However, when mechanical loading is applied via the pulse pressure, a
-hetergeneous strain distribution results.  Strain in highest in the center of
-the larger anterior plaque region and fallos off towards it edges.  The area of
+heterogeneous strain distribution results.  Strain is highest in the center of
+the larger anterior plaque region and falls off towards its edges.  The area of
 the posterior plaque segment that protrudes into the lumen experiences much
 higher strain than other areas.
 
@@ -584,17 +586,17 @@ Strain at the plaque-adventitia interface
 .. highlights::
 
   |wallshear_long|: High strain near the interface of the plaque with the
-  surrounding tissue that occurs with lateral motion of the plaque.  a) strain
+  surrounding tissue that occurs with lateral motion of the plaque.  a) Strain
   tensor ellipses, b) maximum absolute principal strain, c) maximum shear
   strain, d) axial strain, e) shear strain, f) and lateral strain.
 
 Recall that angiogenesis has also been proposed as a possible factor leading to
 plaque vulnerability [McCarthy1999,Lusby1982,Hiyama2010,Vicenzini2007]_.  As
 plaques become larger, the vasa vasorum that provided blood to the artery wall
-can grow to feed the enlarged tissue.  This fissues are expected to cause
+can grow to feed the enlarged tissue.  These fissures are expected to cause
 instability associated with the adventitia-plaque boundary where the angiogenesis
-originates.  |wallshear| shows high strains at this location occuring during
-lateral motion of the plaque that may be associated with this phenomena.  These
+originates.  |wallshear| shows high strains at this location occurring during
+lateral motion of the plaque that may be associated with this phenomenon.  These
 images are from the left side of Subject 156.
 
 Examining the strain tensor ellipses or the strain metric images, we easily
@@ -604,10 +606,10 @@ strain is not apparent in the axial or lateral strain images.  Note that the
 ellipses are orientated at an angle of 3π/4 because of the orientation and
 deformation of the plaque.  This off-axis orientation explains why the strain is
 best reflected in the shear strain component in this case.  If the plaque was
-orientated in a more horizonal direction relative to the transducer, the strain
+orientated in a more horizontal direction relative to the transducer, the strain
 would then arise in the lateral component.
 
-Again, not that the area of the anterior plaque that protrudes into the lumen is
+Again, note that the area of the anterior plaque that protrudes into the lumen is
 subject to high strains.
 
 Calcific plaque with shadowing
@@ -630,15 +632,15 @@ acoustic shadowing on these images of the left side of Subject 158.  As the
 displacement vectors indicate in |shadowing|\ a), this plaque undergoes a
 torsional motion when subject to the pressure pulse.  Very little strain occurs
 in the highly calcified region that causes the shadowing.  In other areas of the
-the plaque that appear to have heterogenous calcification, very high strains
-occur.  Examination of the strain time series suggest that this may result from a
-combination of heterogenous calcification, morphology, and hemodynamics.
+the plaque that appear to have heterogeneous calcification, very high strains
+occur.  Examination of the strain time series suggests that this may result from a
+combination of heterogeneous calcification, morphology, and hemodynamics.
 
 This case also illustrates a limitation of non-invasive externally applied
 ultrasound imaging.  Motion tracking cannot be performed when calcific plaques
 attenuate the ultrasound beam to undetectable levels.  Furthermore, the 2D
 imaging method can only capture a small subset of the imaging planes available.
-For a heterogenous structure like carotid plaques, a critical region may be
+For a heterogeneous structure like carotid plaques, a critical region may be
 overlooked.  Additionally, not all components of the 3D strain tensor are
 captured.  Strain imaging in the transverse plaque is made more difficult by the
 motion pattern that occurs in this direction and refraction of the beam by the
@@ -658,15 +660,14 @@ Artifact from out-of-plane motion
   absolute principal strain, d) maximum shear strain, e) total strain energy,
   and f) distortional energy.
 
-Finally, a case where artifactually high strains occur with data from the left
+Finally, a case where artifactual high strains occur with data from the left
 side of Subject 153 is displayed in |out_of_plane|.  At the edge of ROIs such as
-this on, the vessel is twisting away from the plane of the transducer.  This has
+this one, the vessel is twisting away from the plane of the transducer.  This has
 multiple negative effects.  Out-of-plane motion is increased, which causes
-tracking image decorrelation and increases strain image noise.  Out-of-plane
+image decorrelation and increases strain image noise.  Out-of-plane
 motion also means a particle does not track the same volume of tissue over time.
 Furthermore, orientation of the principal axes of the strains accumulated may
-change over the cardiac cycle, which will not result in the correct
-accumulation.
+differ, which will not result in the correct accumulation.
 
 
 ~~~~~~~~~~
