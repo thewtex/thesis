@@ -1,6 +1,9 @@
-=======================================
-High Frequency Phantom Characterization
-=======================================
+===================================================
+Chapter 6 : High Frequency Phantom Characterization
+===================================================
+
+.. sectnum::
+  :prefix: 6.
 
 Next, we describe methods to characterize the acoustic properties of
 high-frequency reference phantoms necessary to generate quantitative ultrasound
@@ -13,74 +16,74 @@ describe the methods applied to characterization of these phantoms.  Methods to
 determine the attenuation coefficient, phase velocity, and absolute backscatter
 coefficient are described.
 
-.. |size_distribution| replace:: Fig. 1
+.. |size_distribution| replace:: Fig. 6.1
 
-.. |size_distribution_long| replace:: **Figure 1**
+.. |size_distribution_long| replace:: **Figure 6.1**
 
-.. |substitution_apparatus| replace:: Fig. 2
+.. |substitution_apparatus| replace:: Fig. 6.2
 
-.. |substitution_apparatus_long| replace:: **Figure 2**
+.. |substitution_apparatus_long| replace:: **Figure 6.2**
 
-.. |panametrics_spectrum| replace:: Fig. 3
+.. |panametrics_spectrum| replace:: Fig. 6.3
 
-.. |panametrics_spectrum_long| replace:: **Figure 3**
+.. |panametrics_spectrum_long| replace:: **Figure 6.3**
 
-.. |average_waveform| replace:: Fig. 4
+.. |average_waveform| replace:: Fig. 6.4
 
-.. |average_waveform_long| replace:: **Figure 4**
+.. |average_waveform_long| replace:: **Figure 6.4**
 
-.. |substitution_pulse| replace:: Fig. 5
+.. |substitution_pulse| replace:: Fig. 6.5
 
-.. |substitution_pulse_long| replace:: **Figure 5**
+.. |substitution_pulse_long| replace:: **Figure 6.5**
 
-.. |spectrogram_fig| replace:: Fig. 6
+.. |spectrogram_fig| replace:: Fig. 6.6
 
-.. |spectrogram_fig_long| replace:: **Figure 6**
+.. |spectrogram_fig_long| replace:: **Figure 6.6**
 
-.. |saran_trans_coef| replace:: Fig. 7
+.. |saran_trans_coef| replace:: Fig. 6.7
 
-.. |saran_trans_coef_long| replace:: **Figure 7**
+.. |saran_trans_coef_long| replace:: **Figure 6.7**
 
-.. |attenuation_plot| replace:: Fig. 8
+.. |attenuation_plot| replace:: Fig. 6.8
 
-.. |attenuation_plot_long| replace:: **Figure 8**
+.. |attenuation_plot_long| replace:: **Figure 6.8**
 
-.. |delay_times| replace:: Fig. 9
+.. |delay_times| replace:: Fig. 6.9
 
-.. |delay_times_long| replace:: **Figure 9**
+.. |delay_times_long| replace:: **Figure 6.9**
 
-.. |sos_method| replace:: Fig. 10
+.. |sos_method| replace:: Fig. 6.10
 
-.. |sos_method_long| replace:: **Figure 10**
+.. |sos_method_long| replace:: **Figure 6.10**
 
-.. |backscattered_spectra| replace:: Fig. 11
+.. |backscattered_spectra| replace:: Fig. 6.11
 
-.. |backscattered_spectra_long| replace:: **Figure 11**
+.. |backscattered_spectra_long| replace:: **Figure 6.11**
 
-.. |harmonics| replace:: Fig. 12
+.. |harmonics| replace:: Fig. 6.12
 
-.. |harmonics_long| replace:: **Figure 12**
+.. |harmonics_long| replace:: **Figure 6.12**
 
-.. |waveforms| replace:: Fig. 13
+.. |waveforms| replace:: Fig. 6.13
 
-.. |waveforms_long| replace:: **Figure 13**
+.. |waveforms_long| replace:: **Figure 6.13**
 
-.. |vs_screenshots| replace:: Fig. 14
+.. |vs_screenshots| replace:: Fig. 6.14
 
-.. |vs_screenshots_long| replace:: **Figure 14**
+.. |vs_screenshots_long| replace:: **Figure 6.14**
 
-.. |bsc| replace:: Fig. 15
+.. |bsc| replace:: Fig. 6.15
 
-.. |bsc_long| replace:: **Figure 15**
+.. |bsc_long| replace:: **Figure 6.15**
 
 
-.. |attenuation_table| replace:: Table 1
+.. |attenuation_table| replace:: Table 6.1
 
-.. |attenuation_table_long| replace:: **Table 1**
+.. |attenuation_table_long| replace:: **Table 6.1**
 
-.. |sos_table| replace:: Table 2
+.. |sos_table| replace:: Table 6.2
 
-.. |sos_table_long| replace:: **Table 2**
+.. |sos_table_long| replace:: **Table 6.2**
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 Tissue-mimicking phantoms

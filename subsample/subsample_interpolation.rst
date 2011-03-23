@@ -1,7 +1,6 @@
 ===================================================================
-Chapter 4 : Unbiased Subsample Displacement Interpolation 
+Chapter 4 : Unbiased Subsample Displacement Interpolation
 ===================================================================
-
 
 .. sectnum::
   :prefix: 4.
