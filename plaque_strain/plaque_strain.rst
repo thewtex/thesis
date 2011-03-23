@@ -37,6 +37,30 @@ Finally, case studies of a few subjects are presented.
 
 .. |strain_plots_long| replace:: **Figure 9.6**
 
+.. |hypoechoic| replace:: Fig 9.7
+
+.. |hypoechoic_long| replace:: **Figure 9.7**
+
+.. |geometry| replace:: Fig. 9.8
+
+.. |geometry_long| replace:: **Figure 9.8**
+
+.. |turbulence| replace:: Fig. 9.9
+
+.. |turbulence_long| replace:: **Figure 9.9**
+
+.. |wallshear| replace:: Fig. 9.10
+
+.. |wallshear_long| replace:: **Figure 9.10**
+
+.. |shadowing| replace:: Fig. 9.11
+
+.. |shadowing_long| replace:: **Figure 9.11**
+
+.. |out_of_plane| replace:: Fig. 9.12
+
+.. |out_of_plane_long| replace:: **Figure 9.12**
+
 
 
 .. |downsampling_schedule| replace:: Table 9.1
@@ -450,7 +474,200 @@ resolution of the system.  These three values are found for all strain metrics
 and strain components, but also for the magnitude of the time-derivative of all
 strain metrics and strain components.  The time-derivative is considered because
 it is hypothesized that viscoelastic behavior may also contribute to the
-fatigue failure process.
+fatigue failure process.  Strain values for five subjects are tabulated in
+Appendix B.
+
+~~~~~~~~~~~~~~~~~~~~~~
+*In vivo* case studies
+~~~~~~~~~~~~~~~~~~~~~~
+
+In this section, six *in vivo* plaque case studies are examined that demonstrate
+different behaviors.  These results suggest that strain imaging may measure the end
+effect of many factors that influence plaque vulnerability: composition
+(|hypoechoic|), morphology, (|geometry|), hemodynamics (|turbulence|), and
+angiogenesis (|wallshear|).  Limitations due to shadowing, |shadowing|, and
+out-of-plane motion, |out_of_plane|, are also illustrated.
+
+Hypoechoic plaque with high strain
+==================================
+
+.. image:: images/pat154rightbulblongcont_20091019090048_Cycle1_Version_963d653_hypoechoic.png
+  :align: center
+  :width: 14cm
+  :height: 17.0cm
+.. highlights::
+
+  |hypoechoic_long|: Hypoechoic plaque, often classified as 'soft' plaque, that
+  exhibits high strain throughout the plaque.  a) Accumulated displacement
+  vectors (movement is primarily in superior direction), b) strain tensor
+  ellipses, c) maximum absolute principal strain, d) maximum shear strain, e)
+  total strain energy, and f) distortional energy.
+
+As discussed in Section 2.3.1, hypo-echoic B-Mode presentation is associated
+with lipid or hemorrhagic plaque content.  It has traditionally been
+hypothesized that soft plaques may be a sign of vulnerability.  In |hypoechoic|,
+a hypoechoic plaque from the right side of Subject 154 is shown to have high strains throughout the plaque.  Strain
+in the posterior plaque segment (found at deeper in the image), is higher than
+the anterior plaque segment.  This pattern is common, and could be related to
+material properties of the tissue surrounding the anterior
+segment compared to the material properties surrounding the posterior segment,
+or it could be related to the compression supplied by the transducer
+[Maurice2008a]_.  The mean peak-to-peak maximum absolute principal strain is
+0.23 and the 90\ :sup:`th` percentile is 0.41 in the posterior segment (Table B.1).
+There is little difference in the distribution of the strain metrics in this
+case with the possible exception of the total strain energy, which is more
+reserved in the anterior segment.  Displacements illustrated in |hypoechoic|\ a)
+are large and predominantly lateral, which underscores the need for good lateral
+tracking.
+
+Importance of geometry
+======================
+
+.. image:: images/pat157lefticalongcont_20100111092227_Cycle1_Version_963d653_geometry.png
+  :align: center
+  :width: 14cm
+  :height: 17.23cm
+.. highlights::
+
+  |geometry_long|: Strain pattern in an echogenically homogeneous plaque that
+  varies depending on the geometry of the plaque and its position relative to
+  blood flow. a) Displacement vectors, b) strain tensor ellipses, c) maximum
+  absolute principal strain, d) maximum shear strain, e) total strain energy,
+  and f) distortional energy.
+
+As discussed in Section 2.2 and 2.3, the dominant focus of various imaging and other
+diagostic techniques is on identification of plaque composition.  While
+composition may be an important factor in plaque vulnerability, it is not the
+only factor.  In |geometry|, a plaque with a relatively homogeneous B-Mode
+echogenicity is shown, which implies that its composition may be homogeneous.
+However, when mechanical loading is applied via the pulse pressure, a
+hetergeneous strain distribution results.  Strain in highest in the center of
+the larger anterior plaque region and fallos off towards it edges.  The area of
+the posterior plaque segment that protrudes into the lumen experiences much
+higher strain than other areas.
+
+Subtle but significant differences in the strain metrics shown in |geometry|\
+c)-f) are apparent.  The squared terms in the total strain energy and
+distortional energy accentuate the locations of highest strain compared to the
+maximum absolute principal strain and the maximum shear strain.  These images
+are from the left side of Subject 157.
+
+Strain with turbulent flow
+==========================
+
+.. image:: images/153.US.CV.1.13.2009.10.07.13.14.20.15625.23705888_turbulence.png
+  :align: center
+  :width: 14cm
+  :height: 17.3cm
+.. highlights::
+
+  |turbulence_long|: High strain adjacent to turbulent flow that follows a
+  narrow inlet in the ICA.  a) Color flow from the scanner interface, b) strain
+  tensor ellipses, c) maximum absolute principal strain, d) maximum shear strain, e)
+  total strain energy, and f) distortional energy.
+
+|geometry| emphasizes that geometry is a factor in plaque vulnerability, and
+strain imaging captures that factor.  |turbulence| suggests that hemodynamics
+are also a factor in vulnerability.  Aliasing in the color flow image,
+|turbulence|\ a), can be attributed to the turbulent flow that occurs as the
+blood squeezes through the small patency in the plaque at the base of the
+internal carotid artery (ICA).  High strain is seen in the plaque immediately
+adjacent to this location of turbulent flow.
+
+Strain at the plaque-adventitia interface
+=========================================
+
+.. image:: images/pat156lefticalongcont_20100113095826_Cycle0_Version_963d653_wallshear.png
+  :align: center
+  :width: 14cm
+  :height: 17.2cm
+.. highlights::
+
+  |wallshear_long|: High strain near the interface of the plaque with the
+  surrounding tissue that occurs with lateral motion of the plaque.  a) strain
+  tensor ellipses, b) maximum absolute principal strain, c) maximum shear
+  strain, d) axial strain, e) shear strain, f) and lateral strain.
+
+Recall that angiogenesis has also been proposed as a possible factor leading to
+plaque vulnerability [McCarthy1999,Lusby1982,Hiyama2010,Vicenzini2007]_.  As
+plaques become larger, the vasa vasorum that provided blood to the artery wall
+can grow to feed the enlarged tissue.  This fissues are expected to cause
+instability associated with the adventitia-plaque boundary where the angiogenesis
+originates.  |wallshear| shows high strains at this location occuring during
+lateral motion of the plaque that may be associated with this phenomena.  These
+images are from the left side of Subject 156.
+
+Examining the strain tensor ellipses or the strain metric images, we easily
+locate the areas of high strain.  A single component of the strain tensor does
+not always provide sufficient information.  In this case, for example, the high
+strain is not apparent in the axial or lateral strain images.  Note that the
+ellipses are orientated at an angle of 3π/4 because of the orientation and
+deformation of the plaque.  This off-axis orientation explains why the strain is
+best reflected in the shear strain component in this case.  If the plaque was
+orientated in a more horizonal direction relative to the transducer, the strain
+would then arise in the lateral component.
+
+Again, not that the area of the anterior plaque that protrudes into the lumen is
+subject to high strains.
+
+Calcific plaque with shadowing
+==============================
+
+.. image:: images/pat158leftbulblongcont_20100315132656_Cycle1_Version_963d653_shadowing.png
+  :align: center
+  :width: 15cm
+  :height: 17.8cm
+.. highlights::
+
+  |shadowing_long|: Low strain in a calcific plaque, but high strain in other
+  areas.  a) Displacement vectors, b) strain tensor ellipses, c) maximum
+  absolute principal strain, d) maximum shear strain, e) total strain energy,
+  and f) distortional energy.
+
+It is well know that calcific plaques are associated with high acoustic
+attenuation and that they are extremely hard.  The high attenuation explains the
+acoustic shadowing on these images of the left side of Subject 158.  As the
+displacement vectors indicate in |shadowing|\ a), this plaque undergoes a
+torsional motion when subject to the pressure pulse.  Very little strain occurs
+in the highly calcified region that causes the shadowing.  In other areas of the
+the plaque that appear to have heterogenous calcification, very high strains
+occur.  Examination of the strain time series suggest that this may result from a
+combination of heterogenous calcification, morphology, and hemodynamics.
+
+This case also illustrates a limitation of non-invasive externally applied
+ultrasound imaging.  Motion tracking cannot be performed when calcific plaques
+attenuate the ultrasound beam to undetectable levels.  Furthermore, the 2D
+imaging method can only capture a small subset of the imaging planes available.
+For a heterogenous structure like carotid plaques, a critical region may be
+overlooked.  Additionally, not all components of the 3D strain tensor are
+captured.  Strain imaging in the transverse plaque is made more difficult by the
+motion pattern that occurs in this direction and refraction of the beam by the
+artery wall [Hansen2009a,Hansen2010a]_.
+
+Artifact from out-of-plane motion
+=================================
+
+.. image:: images/pat153lefticalongcont_20091007094020_Cycle0_Version_963d653_out_of_plane.png
+  :align: center
+  :width: 14cm
+  :height: 17.1cm
+.. highlights::
+
+  |out_of_plane_long|: High accumulated strain artifacts attributable to
+  out-of-plane motion. a) Displacement vectors, b) strain tensor ellipses, c) maximum
+  absolute principal strain, d) maximum shear strain, e) total strain energy,
+  and f) distortional energy.
+
+Finally, a case where artifactually high strains occur with data from the left
+side of Subject 153 is displayed in |out_of_plane|.  At the edge of ROIs such as
+this on, the vessel is twisting away from the plane of the transducer.  This has
+multiple negative effects.  Out-of-plane motion is increased, which causes
+tracking image decorrelation and increases strain image noise.  Out-of-plane
+motion also means a particle does not track the same volume of tissue over time.
+Furthermore, orientation of the principal axes of the strains accumulated may
+change over the cardiac cycle, which will not result in the correct
+accumulation.
+
 
 ~~~~~~~~~~
 References

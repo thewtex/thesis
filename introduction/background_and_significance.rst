@@ -1,7 +1,9 @@
-=========================
-Human Health Significance
-=========================
+=====================================
+Chapter 2 : Human Health Significance
+=====================================
 
+.. sectnum::
+  :prefix: 2.
 
 In this chapter we describe the role diagnostic medical ultrasound plays in
 addressing public health needs related to diagnosis of plaque burden in the
