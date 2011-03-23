@@ -25,12 +25,14 @@ measures = ['Peak-to-peak mean',
 col_start = 1
 for s in strain_types:
     with open(s + '.csv', 'w') as f:
+        f.write('ROI identification, ')
         for m in measures[:-1]:
                 f.write(m + ', ')
         f.write(measures[-1] + '\n')
         a = np.loadtxt(results_file, usecols=np.arange(col_start, col_start + 6),
                 delimiter=',')
         for i in range(a.shape[0]):
+            f.write(ids[i].strip().replace('_', ' ') + ', ')
             for j in range(a.shape[1] - 1):
                 f.write('{0:.3}'.format(a[i,j]) + ', ')
             f.write('{0:.3}'.format(a[i,a.shape[1] - 1]) + '\n')

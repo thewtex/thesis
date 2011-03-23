@@ -1,56 +1,56 @@
-Peak-to-peak mean, Peak-to-peak 90th percentile, Peak-to-peak std. dev., Sum of absolute derivative mean, Sum of absolute derivative 90th percentile, Sum of absolute derivative std. dev.
-0.0103, 0.0177, 0.00565, 0.998, 1.61, 0.48
-0.0207, 0.0456, 0.0164, 1.85, 3.89, 1.36
-0.0108, 0.0206, 0.00577, 0.979, 1.76, 0.474
-0.0248, 0.052, 0.0254, 2.24, 4.56, 2.15
-0.0143, 0.0281, 0.0106, 1.26, 2.28, 0.944
-0.0219, 0.0405, 0.0124, 1.85, 3.3, 0.967
-0.0116, 0.0209, 0.00652, 1.07, 1.81, 0.566
-0.0167, 0.0345, 0.0121, 1.55, 2.99, 1.01
-0.0178, 0.0296, 0.00847, 1.57, 2.46, 0.712
-0.0318, 0.0718, 0.0363, 2.82, 6.31, 2.94
-0.0112, 0.0179, 0.00565, 1.0, 1.52, 0.45
-0.0173, 0.0323, 0.0098, 1.53, 2.72, 0.804
-0.0875, 0.133, 0.036, 7.59, 11.3, 2.9
-0.0605, 0.152, 0.0521, 5.53, 13.5, 4.63
-0.0766, 0.12, 0.0357, 6.5, 10.1, 2.94
-0.0513, 0.147, 0.0507, 4.47, 12.4, 4.2
-0.0216, 0.0369, 0.00984, 1.8, 2.97, 0.727
-0.0628, 0.103, 0.0281, 5.69, 9.01, 2.39
-0.0111, 0.0176, 0.0052, 1.64, 2.71, 0.79
-0.0147, 0.0244, 0.00668, 1.86, 2.97, 0.795
-0.0515, 0.0818, 0.0194, 5.4, 8.28, 1.86
-0.0846, 0.168, 0.0548, 8.39, 15.7, 4.76
-0.117, 0.195, 0.0579, 10.1, 16.7, 4.85
-0.227, 0.408, 0.126, 19.7, 35.0, 10.7
-0.0431, 0.0676, 0.0259, 4.55, 7.65, 2.27
-0.0761, 0.142, 0.0437, 6.8, 12.4, 3.69
-0.0688, 0.125, 0.0346, 6.15, 11.5, 3.0
-0.0678, 0.115, 0.0307, 6.66, 12.2, 3.36
-0.0304, 0.0446, 0.01, 2.98, 4.12, 0.793
-0.0316, 0.0511, 0.0146, 3.36, 5.78, 1.53
-0.0888, 0.164, 0.0454, 7.93, 14.3, 3.93
-0.121, 0.221, 0.0764, 10.6, 18.9, 6.41
-0.167, 0.327, 0.148, 14.6, 28.9, 12.7
-0.142, 0.293, 0.128, 12.3, 24.7, 10.6
-0.0714, 0.114, 0.0316, 6.8, 9.95, 2.48
-0.0589, 0.0911, 0.0275, 5.54, 8.26, 2.33
-0.0749, 0.123, 0.0341, 7.26, 11.0, 2.76
-0.0581, 0.0813, 0.0252, 5.45, 7.34, 2.01
-0.0491, 0.0872, 0.0278, 4.93, 8.34, 2.61
-0.0598, 0.106, 0.0351, 6.66, 11.1, 3.95
-0.0609, 0.113, 0.033, 5.44, 9.7, 2.71
-0.101, 0.173, 0.0498, 8.99, 14.8, 4.11
-0.0634, 0.102, 0.0278, 5.29, 8.35, 2.19
-0.0992, 0.2, 0.0664, 8.46, 16.7, 5.54
-0.0482, 0.0788, 0.0245, 4.61, 6.87, 1.95
-0.079, 0.144, 0.0448, 7.57, 13.8, 4.11
-0.0421, 0.0704, 0.0196, 3.12, 5.05, 1.31
-0.113, 0.204, 0.0575, 8.78, 14.9, 3.81
-0.079, 0.147, 0.0425, 5.78, 10.0, 2.85
-0.04, 0.0712, 0.0217, 2.94, 4.94, 1.58
-0.117, 0.219, 0.0627, 7.62, 12.8, 3.48
-0.0539, 0.0757, 0.0185, 4.31, 5.81, 1.19
-0.0296, 0.045, 0.0117, 2.08, 3.08, 0.73
-0.0998, 0.142, 0.0364, 7.53, 10.1, 2.23
-0.0292, 0.048, 0.0144, 2.02, 3.28, 1.01
+ROI identification, Peak-to-peak mean, Peak-to-peak 90th percentile, Peak-to-peak std. dev., Sum of absolute derivative mean, Sum of absolute derivative 90th percentile, Sum of absolute derivative std. dev.
+pat153leftbulblongcont 20091007093219 Cycle0 MeshComponent0, 0.0103, 0.0177, 0.00565, 0.998, 1.61, 0.48
+pat153leftbulblongcont 20091007093219 Cycle0 MeshComponent1, 0.0207, 0.0456, 0.0164, 1.85, 3.89, 1.36
+pat153leftbulblongcont 20091007093219 Cycle1 MeshComponent0, 0.0108, 0.0206, 0.00577, 0.979, 1.76, 0.474
+pat153leftbulblongcont 20091007093219 Cycle1 MeshComponent1, 0.0248, 0.052, 0.0254, 2.24, 4.56, 2.15
+pat153lefticalongcont 20091007093955 Cycle0 MeshComponent0, 0.0143, 0.0281, 0.0106, 1.26, 2.28, 0.944
+pat153lefticalongcont 20091007093955 Cycle0 MeshComponent1, 0.0219, 0.0405, 0.0124, 1.85, 3.3, 0.967
+pat153lefticalongcont 20091007093955 Cycle1 MeshComponent0, 0.0116, 0.0209, 0.00652, 1.07, 1.81, 0.566
+pat153lefticalongcont 20091007093955 Cycle1 MeshComponent1, 0.0167, 0.0345, 0.0121, 1.55, 2.99, 1.01
+pat153lefticalongcont 20091007094020 Cycle0 MeshComponent0, 0.0178, 0.0296, 0.00847, 1.57, 2.46, 0.712
+pat153lefticalongcont 20091007094020 Cycle0 MeshComponent1, 0.0318, 0.0718, 0.0363, 2.82, 6.31, 2.94
+pat153lefticalongcont 20091007094020 Cycle1 MeshComponent0, 0.0112, 0.0179, 0.00565, 1.0, 1.52, 0.45
+pat153lefticalongcont 20091007094020 Cycle1 MeshComponent1, 0.0173, 0.0323, 0.0098, 1.53, 2.72, 0.804
+pat153rightbulblongcont 20091007085547 Cycle0 MeshComponent0, 0.0875, 0.133, 0.036, 7.59, 11.3, 2.9
+pat153rightbulblongcont 20091007085547 Cycle0 MeshComponent1, 0.0605, 0.152, 0.0521, 5.53, 13.5, 4.63
+pat153rightbulblongcont 20091007085547 Cycle1 MeshComponent0, 0.0766, 0.12, 0.0357, 6.5, 10.1, 2.94
+pat153rightbulblongcont 20091007085547 Cycle1 MeshComponent1, 0.0513, 0.147, 0.0507, 4.47, 12.4, 4.2
+pat154lefticalongcont 20091019093212 Cycle0 MeshComponent0, 0.0216, 0.0369, 0.00984, 1.8, 2.97, 0.727
+pat154lefticalongcont 20091019093212 Cycle0 MeshComponent1, 0.0628, 0.103, 0.0281, 5.69, 9.01, 2.39
+pat154lefticalongcont 20091019093212 Cycle1 MeshComponent0, 0.0111, 0.0176, 0.0052, 1.64, 2.71, 0.79
+pat154lefticalongcont 20091019093212 Cycle1 MeshComponent1, 0.0147, 0.0244, 0.00668, 1.86, 2.97, 0.795
+pat154rightbulblongcont 20091019090048 Cycle0 MeshComponent0, 0.0515, 0.0818, 0.0194, 5.4, 8.28, 1.86
+pat154rightbulblongcont 20091019090048 Cycle0 MeshComponent1, 0.0846, 0.168, 0.0548, 8.39, 15.7, 4.76
+pat154rightbulblongcont 20091019090048 Cycle1 MeshComponent0, 0.117, 0.195, 0.0579, 10.1, 16.7, 4.85
+pat154rightbulblongcont 20091019090048 Cycle1 MeshComponent1, 0.227, 0.408, 0.126, 19.7, 35.0, 10.7
+pat156leftbulblongcont 20100113095320 Cycle0 MeshComponent0, 0.0431, 0.0676, 0.0259, 4.55, 7.65, 2.27
+pat156leftbulblongcont 20100113095320 Cycle1 MeshComponent0, 0.0761, 0.142, 0.0437, 6.8, 12.4, 3.69
+pat156lefticalongcont 20100113095826 Cycle0 MeshComponent0, 0.0688, 0.125, 0.0346, 6.15, 11.5, 3.0
+pat156lefticalongcont 20100113095826 Cycle0 MeshComponent1, 0.0678, 0.115, 0.0307, 6.66, 12.2, 3.36
+pat156lefticalongcont 20100113095826 Cycle1 MeshComponent0, 0.0304, 0.0446, 0.01, 2.98, 4.12, 0.793
+pat156lefticalongcont 20100113095826 Cycle1 MeshComponent1, 0.0316, 0.0511, 0.0146, 3.36, 5.78, 1.53
+pat156rightbulblongcont 20100113093433 Cycle0 MeshComponent0, 0.0888, 0.164, 0.0454, 7.93, 14.3, 3.93
+pat156rightbulblongcont 20100113093433 Cycle1 MeshComponent0, 0.121, 0.221, 0.0764, 10.6, 18.9, 6.41
+pat156righticalongcont 20100113094331 Cycle0 MeshComponent0, 0.167, 0.327, 0.148, 14.6, 28.9, 12.7
+pat156righticalongcont 20100113094331 Cycle1 MeshComponent0, 0.142, 0.293, 0.128, 12.3, 24.7, 10.6
+pat157lefticalongcont 20100111092227 Cycle0 MeshComponent0, 0.0714, 0.114, 0.0316, 6.8, 9.95, 2.48
+pat157lefticalongcont 20100111092227 Cycle0 MeshComponent1, 0.0589, 0.0911, 0.0275, 5.54, 8.26, 2.33
+pat157lefticalongcont 20100111092227 Cycle1 MeshComponent0, 0.0749, 0.123, 0.0341, 7.26, 11.0, 2.76
+pat157lefticalongcont 20100111092227 Cycle1 MeshComponent1, 0.0581, 0.0813, 0.0252, 5.45, 7.34, 2.01
+pat157rightbulblongcont 20100111085732 Cycle0 MeshComponent0, 0.0491, 0.0872, 0.0278, 4.93, 8.34, 2.61
+pat157rightbulblongcont 20100111085732 Cycle0 MeshComponent1, 0.0598, 0.106, 0.0351, 6.66, 11.1, 3.95
+pat157rightbulblongcont 20100111085732 Cycle1 MeshComponent0, 0.0609, 0.113, 0.033, 5.44, 9.7, 2.71
+pat157rightbulblongcont 20100111085732 Cycle1 MeshComponent1, 0.101, 0.173, 0.0498, 8.99, 14.8, 4.11
+pat157righticalongcont 20100111090329 Cycle0 MeshComponent0, 0.0634, 0.102, 0.0278, 5.29, 8.35, 2.19
+pat157righticalongcont 20100111090329 Cycle0 MeshComponent1, 0.0992, 0.2, 0.0664, 8.46, 16.7, 5.54
+pat157righticalongcont 20100111090329 Cycle1 MeshComponent0, 0.0482, 0.0788, 0.0245, 4.61, 6.87, 1.95
+pat157righticalongcont 20100111090329 Cycle1 MeshComponent1, 0.079, 0.144, 0.0448, 7.57, 13.8, 4.11
+pat158leftbulblongcont 20100315132656 Cycle0 MeshComponent0, 0.0421, 0.0704, 0.0196, 3.12, 5.05, 1.31
+pat158leftbulblongcont 20100315132656 Cycle0 MeshComponent1, 0.113, 0.204, 0.0575, 8.78, 14.9, 3.81
+pat158leftbulblongcont 20100315132656 Cycle0 MeshComponent2, 0.079, 0.147, 0.0425, 5.78, 10.0, 2.85
+pat158leftbulblongcont 20100315132656 Cycle1 MeshComponent0, 0.04, 0.0712, 0.0217, 2.94, 4.94, 1.58
+pat158leftbulblongcont 20100315132656 Cycle1 MeshComponent1, 0.117, 0.219, 0.0627, 7.62, 12.8, 3.48
+pat158leftbulblongcont 20100315132656 Cycle1 MeshComponent2, 0.0539, 0.0757, 0.0185, 4.31, 5.81, 1.19
+pat158lefticalongcont 20100315133214 Cycle0 MeshComponent0, 0.0296, 0.045, 0.0117, 2.08, 3.08, 0.73
+pat158lefticalongcont 20100315133214 Cycle0 MeshComponent1, 0.0998, 0.142, 0.0364, 7.53, 10.1, 2.23
+pat158lefticalongcont 20100315133214 Cycle1 MeshComponent0, 0.0292, 0.048, 0.0144, 2.02, 3.28, 1.01

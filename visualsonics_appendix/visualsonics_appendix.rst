@@ -1,8 +1,8 @@
 =============================================
-High-frequency 3D Data Analysis
+Appendix A : High-frequency 3D Data Analysis
 =============================================
 
-In this section we describe methods used to adapt a commercial
+This section describes methods to adapt a commercial
 high-frequency scanner system to perform 3D imaging research.
 
 .. |vs_plaque_system| replace:: Fig. 1
