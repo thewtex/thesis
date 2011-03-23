@@ -17,13 +17,17 @@ plaques are presented.
 
 .. |apparatus_long| replace:: **Figure 7.1**
 
-.. |pat142| replace:: Fig. 7.2
+.. |envelope| replace:: Fig. 7.2
 
-.. |pat142_long| replace:: **Figure 7.2**
+.. |envelope_long| replace:: **Figure 7.2**
 
-.. |pat144| replace:: Fig. 7.3
+.. |pat142| replace:: Fig. 7.3
 
-.. |pat144_long| replace:: **Figure 7.3**
+.. |pat142_long| replace:: **Figure 7.3**
+
+.. |pat144| replace:: Fig. 7.4
+
+.. |pat144_long| replace:: **Figure 7.4**
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -117,6 +121,68 @@ for arterial plaque specimens according values reported in the literature
 Log compression and linear interpolation were applied to the displayed IBS.
 Identical dynamic ranges and color transform functions were used in all corresponding images.
 
+~~~~~~~~~~~~~~~~~~~~~
+B-Mode image creation
+~~~~~~~~~~~~~~~~~~~~~
+
+The received pulse-echo signal, RF data, is
+highly oscillatory.  An envelope of the RF data reflects local scattering
+amplitude, and this is what comprises a B-Mode image.
+
+.. image:: images/envelope.png
+  :align: center
+  :width: 8cm
+  :height: 5.25
+.. highlights::
+
+  |envelope_long|: Sample RF signal and its corresponding envelope.
+
+Calculation of the RF envelope is often performed with the analytic signal.  The
+analytic signal is used to decompose a signal into its local amplitude and local
+phase [Felsberg2001,Woo2008a]_ [#]_.  The analytic signal, *f*\ :sub:`A`\ *(x)*, of a real
+signal, *f(x)*, is defined to be
+
+.. math::  f_A(x) = f(x) - i \, f_H (x)
+
+.. [#] Local phase is a 1D concept, and the analytic signal is not defined for multi-dimensional signals.  To split a multi-dimensional image into structural and energetic information, see the monogenic signal [Felsberg2001]_.
+
+Where *f*\ :sub:`H`\ *(x)* is the Hilbert Transform of *f(x)* given by
+
+.. math::  f_H(x) = \frac{1} {\pi} \int_{-\infty}^{\infty} \frac {f(x')}{x' - x} \, dx'
+
+The Hilbert Transform can be calculated without performing
+convolution by applying the following property in Fourier space,
+
+.. math::  F_H(\xi) = F(\xi) \cdot i \, \text{sgn} (\xi)
+
+As a result, the analytic signal's representation in Fourier space is
+
+.. image:: images/bmodeeqn1.png
+  :align: center
+  :width: 7cm
+  :height: 1.99cm
+
+Even though it does not have ideal properties when applied to a discrete
+signal [Bracewell2000]_ an approach to calculate the analytic signal is then
+to calculate the Fourier Transform, multiply the first half by two, multiply the
+second half by zero, and take the inverse Fourier Transform.
+
+For narrow band signals, the local phase, *ϕ(x)*, and the local energy,
+*A(x)*, of *f(x)* can be interpreted as [Felsberg2001]_
+
+.. image:: images/bmodeeqn2.png
+  :align: center
+  :width: 7cm
+  :height: 1.92cm
+
+After the envelope, *A(x)*, is calculated, post-processing can be performed.
+The majority of an ultrasound image's content is speckle, random scattering
+caused by scatterers much smaller than the excitation wave.  Speckle's amplitude has
+a Rayleigh distribution [Wagner1983]_.  Since the Rayleigh distribution is
+skewed to lower values and a small proportion of the amplitudes have very large
+values, a logarithmic intensity transform is commonly applied to the envelope to
+improve image contrast.
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 3D high frequency plaque volumes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,10 +207,15 @@ are shown in the following figures.
   To reduce saturation from numerous calcified areas, data was collected with -10 dB gain relative to |pat142|\ a), which explains the larger impact of electronic noise in c).
   }}
 
-Subject 142 shows a possible high-risk plaque with an extensive hemorrhagic area that may have been the result of recent rupture events.
-There were strong indications of inflammation when this plaque was removed.
-The backscatter coefficient is consistently low throughout the hemorrhagic areas.
-The result for Subject 144 on the other hand, depicts a likely stable plaque with smooth, unulcerated walls and strong fibrous and calcified tissue throughout.
+Subject 142 shows a possible high-risk plaque with an extensive hemorrhagic area
+that may have been the result of recent rupture events.  There were strong
+indications of inflammation when this plaque was removed.  The backscatter
+coefficient is consistently low throughout the hemorrhagic areas.  This
+condition that is typically considered high risk is re-enforced by the fact that
+microembolic signals were detected with transcranial Doppler for Subject 142
+(Table 8.1).  The result for Subject 144 on the other hand, depicts a likely
+stable plaque with smooth, unulcerated walls and strong fibrous and calcified
+tissue throughout.
 
 The tip of the flow divider, also known as the tuning fork, can be easily
 located in these images.  This fiducial marker can be used to identify the
