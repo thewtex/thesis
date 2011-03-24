@@ -627,22 +627,13 @@ C-reactive protein, another inflammation marker, correlates with increased
 intima-media thickness [Benbir2005]_.  These high stress states may lead to
 fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
 
-|holzapfel_intima| shows a tensile test performed by Holzapfel on diseased
-intima sectioned from cadaver iliac arteries [Holzapfel2004]_.  As the graph
+Stress-stretch curves ([Holzapfel2004]_ Fig. 6) were created by Holzapfel during a tensile test on diseased
+intima sectioned from cadaver iliac arteries.  As the graphs
 progresses from the origin, the stretch and stress is increased on the tissue
 until the tissue fractures at the curve's termination.  The point in the curve
 farthest from the origin defines the stretch at which failure occurs, ultimate
 tensile stretch :math:`\lambda_{ult}`, and the stress at which failure
 occurs, ultimate tensile stress, :math:`\sigma_{ult}`.
-
-.. figure:: introduction/figures/holzapfel_intima.png
-  :width: 8cm
-  :height: 5.8cm
-  :align: center
-
-  Tensile test on diseased intima. [Holzapfel2004]_
-
-.. |holzapfel_intima| replace:: Figure 1
 
 Many of the atherosclerosis diagnostic imaging techniques have focused on
 imaging of plaque composition, which determines the elastic modulus.  While the
@@ -656,7 +647,7 @@ parameter of interest.
 Recently, ultrasonic strain imaging techniques have been applied to imaging of
 the carotid arteries.  Strain imaging creates an *in vivo* map of strain, a
 parameter directly related to tissue stretch or contraction, drawn on the
-abscissa in |holzapfel_intima|.  Vulnerable plaques have a higher extensibility
+abscissa in the mechanical tests in [Holzapfel2004]_.  Vulnerable plaques have a higher extensibility
 and a lower ultimate stress [Lendon1991,Holzapfel2004]_.  Therefore, strain
 imaging directly measures a parameter that determines how close a plaque is to
 failure [Tang2005]_.  This contrasts with other characterization methods that
@@ -914,7 +905,4 @@ plaque disruption.
 ~~~~~~~~~~
 References
 ~~~~~~~~~~
-
-.. sectnum::
-
 
