@@ -1077,7 +1077,7 @@ general are characterized by how they modify these two vectors.
 
 Another second-rank tensor of importance in medical imaging is the diffusion
 tensor.  This tissue property has proven to be a useful tool for exploring
-neural physiology and pathology with MRI [Filler2009]_.  Diffusion of water molecules
+neural physiology and pathology with MRI.  Diffusion of water molecules
 can cause a decay in the received echo amplitude because of their displacement
 in the spatially varying magnetic-field gradient, which is given by [Basser1994a]_
 
@@ -1095,7 +1095,7 @@ in the spatially varying magnetic-field gradient, which is given by [Basser1994a
   diffusivity directions and the eigenvalues are the principal diffusivities
   [Basser1994]_.  The largest principal diffusivity can identify neural tissue's
   fiber track direction as the principal direction associated with that
-  eigenvalue [Basser1994]_.
+  eigenvalue [Pierpaoli1996,Basser1994]_.
 
 The probability density function that a molecule diffuses from location **x**\
 :sub:`0` to position **x** at time *τ* is given by [Basser1994]_,
@@ -1109,7 +1109,7 @@ set equal to a constant, the expression represents the relative diffusivity in
 direction **x** [Basser1994]_.  If the matrix has been diagonalized, the
 expression has the form,
 
-.. math:: \frac{x_1^2}{\lambda_1^2} + \frac{x_2^2}{\lambda_2^2} + \frac{x_3^2}{\lambda_3} = 1
+.. math:: \frac{x_1^2}{\lambda_1^2} + \frac{x_2^2}{\lambda_2^2} + \frac{x_3^2}{\lambda_3^2} = 1
 
 .. epigraph::
 
@@ -1123,7 +1123,7 @@ an ellipsoid in 3D [Sosa2009,Roe1993]_.  This representation is called a *Lamé 
 
 Note that this geometrical representation does not always strictly follow from
 the strain tensor.  The diffusion tensor is positive definite [Basser1994]_,
-i.e. its determinate is always positive and its eigenvalues are always
+i.e. its determinant is always positive and its eigenvalues are always
 positive.  This is not true for the strain tensor; the principal strains can be
 positive (stretching) or negative (compression).  In fact, due to the Poisson
 effect [Srinath2003]_, stretching of a material in one direction often causes
