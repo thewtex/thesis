@@ -1,6 +1,9 @@
-=================================================================================
-Chapter 3: Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
-=================================================================================
+==================================================================================
+Chapter 3 : Recursive Bayesian Regularization Applied to Ultrasound Strain Imaging
+==================================================================================
+
+.. sectnum::
+  :prefix: 3.
 
 .. |comparison_images_phantom| replace:: Fig. 1
 
@@ -40,10 +43,12 @@ block-matching approach to deformable image registration.  Then we review
 regularization algorithms that have been implemented in the literature.  Next,
 we describe the iterative probabilistic approach taken in this work.  Finally,
 we present results on simulations, phantoms, and carotid strain image case
-studies.
+studies.  This chapter is adapted from McCormick, M. Rubert, N. and Varghese, T.
+*Bayesian Regularization Applied to Ultrasound Strain Image*.  IEEE Transactions
+in Biomedical Engineering.  2011.  In Press.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Improvement of Strain Image Quality with Regularization
+Improvement of strain image quality with regularization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The deformable image registration problem is common in medical imaging
@@ -126,7 +131,7 @@ may not have derivatives in the image intensity in all directions, and it is
 difficult to determine displacement in directions where gradients are small.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Prior Efforts in Regularization
+Prior efforts in regularization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Peak hopping errors and degradation in the quality of the strain image results
@@ -232,7 +237,7 @@ Where *α* is a scaling factor related to the local strain and *u* is the local
 displacement.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Recursive Bayesian Regularization
+Recursive Bayesian regularization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We will examine a regularization approach that attempts to optimize the
@@ -393,10 +398,10 @@ in Bayes' Theorem, which is accounted for by re-normalization after taking the
 exponential of the posterior probability.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Experimental Methods and Results
+Experimental methods and results
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Uniform Strain Simulations and Phantoms
+Uniform strain simulations and phantoms
 =======================================
 
 A uniform elastic modulus tissue-mimicking ultrasound phantom was tested.
@@ -483,7 +488,7 @@ occur at high strains and causes large signal decorrelation.  Note that for very
 low strains, 0.5%, the Bayesian regularization causes a regression in
 performance.
 
-Circular Inclusion Simulations and Phantoms
+Circular inclusion simulations and phantoms
 ===========================================
 
 A TM ultrasound elastography phantom subject to uniform deformation was imaged
@@ -682,7 +687,7 @@ images are more consistent in |optimization_plot|\ (c) than |optimization_plot|\
 which suggest SRS may be a more consistent parameter than
 :math:`\sigma_u`.
 
-Addressing a Carotid Reverberation
+Addressing a carotid reverberation
 ==================================
 
 While the Bayesian regularization is effective at removing decorrelation
@@ -806,7 +811,7 @@ Finally, at the third iteration, the local tissue mode dominates in
 |iteration_3|\ b) and |iteration_3|\ c).
 
 
-Improvement of Carotid Strain Images
+Improvement of carotid strain images
 ====================================
 
 In order to examine the performance from data closer to what is expected in
@@ -1016,7 +1021,4 @@ images of the carotid artery where reverberations are abundant.
 ~~~~~~~~~~
 References
 ~~~~~~~~~~
-
-.. sectnum::
-
 

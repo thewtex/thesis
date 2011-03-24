@@ -1122,8 +1122,8 @@ the diffusion tensor, the strain tensor can be visualized as an ellipse in 2D or
 an ellipsoid in 3D [Sosa2009,Roe1993]_.  This representation is called a *Lamé ellipsoid* [Sosa2009]_.
 
 Note that this geometrical representation does not always strictly follow from
-the strain tensor.  The diffusion tensor is positive definite [Basser1994]_,
-i.e. its determinant is always positive and its eigenvalues are always
+the strain tensor.  The diffusion tensor is positive definite [Basser1994]_;
+therefore, its determinant is always positive and its eigenvalues are always
 positive.  This is not true for the strain tensor; the principal strains can be
 positive (stretching) or negative (compression).  In fact, due to the Poisson
 effect [Srinath2003]_, stretching of a material in one direction often causes

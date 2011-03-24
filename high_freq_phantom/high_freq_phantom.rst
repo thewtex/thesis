@@ -14,7 +14,10 @@ the acoustic properties of these new phantoms poses additional challenges
 relative to the same characterization at lower frequencies.  In this chapter, we
 describe the methods applied to characterization of these phantoms.  Methods to
 determine the attenuation coefficient, phase velocity, and absolute backscatter
-coefficient are described.
+coefficient are described.  This chapter is adapted from McCormick, M, Madsen,
+E., Deaner, M., and Varghese, T.  *Absolute Backscatter Measurements of
+Tissue-Mimicking Phantoms in the 5-45 MHz Frequency Range*.  Journal of the
+Acoustical Society of America.  In Review.
 
 .. |size_distribution| replace:: Fig. 6.1
 

@@ -293,7 +293,7 @@ corresponding region within *in vivo* data.
 
 |pat154| and |pat158| show plaques attained from surgery that are used as
 strain case
-studies in Chapter 9.  Subject 154, |pat154|, is used as an example of a plaque
+studies in Chapter 9.  Subject 154, |pat154| and Fig. 9.10, is used as an example of a plaque
 with a 'soft' hypoechoic presentation and that has high strain.  Both the gross
 pathological appearance corroborates this assessment as does the 3D ultrasound
 characterization.  The gross pathology shows a smooth, relatively homogeneous
@@ -302,14 +302,14 @@ weight in comparison to the gross pathological image in |pat144|.  The IBSC imag
 has low backscatter coefficients and is homogeneous with the exception of a few
 small pockets.
 
-In contrast to Subject 154, a large acoustic shadow marks the B-Mode in Figure 9.11.  Very
+In contrast to Subject 154, a large acoustic shadow marks the B-Mode in Fig. 9.14.  Very
 little strain is seen in the calcified region.  However, other regions of the
 plaque do not exhibit the same shadowing, and some have very high strains.
 The gross pathology in |pat158|\ a) and b) give a complex presentation with at
 least one region of hemorrhage/necrosis clearly visible in |pat158|\ b).  The ultrasound also
 shows a complex presentation with IBSC values consistent with calcific regions
 at the bifurcation and along one side of the ICA segment.  It is possible that
-the focal, calcific region may explain the shadowing in Figure 9.11 while the
+the focal, calcific region may explain the shadowing in Fig. 9.14 while the
 hemorrhagic regions could be the source of high strains.  The noise present
 in the ultrasound images of Subject 158 is explained by known malfunction of the
 transducer at that time.
@@ -327,3 +327,4 @@ latter.
 ~~~~~~~~~~
 References
 ~~~~~~~~~~
+
