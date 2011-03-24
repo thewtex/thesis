@@ -38,4 +38,3 @@ for s in strain_types:
             f.write('{0:.3}'.format(a[i,a.shape[1] - 1]) + '\n')
 
     col_start += 6
-

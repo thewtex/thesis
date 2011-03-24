@@ -1,0 +1,5 @@
+<ColorMap name="plaque_bmode" space="RGB">
+  <Point x="0" o="0" r="0" g="0" b="0"/>
+  <Point x="130.847" o="0.001" r="0.503578" g="0.503578" b="0.503578"/>
+  <Point x="255" o="0.117647" r="1" g="1" b="1"/>
+</ColorMap>

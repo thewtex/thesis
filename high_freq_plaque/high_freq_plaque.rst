@@ -29,6 +29,14 @@ plaques are presented.
 
 .. |pat144_long| replace:: **Figure 7.4**
 
+.. |pat154| replace:: Fig. 7.5
+
+.. |pat154_long| replace:: **Figure 7.5**
+
+.. |pat158| replace:: Fig. 7.6
+
+.. |pat158_long| replace:: **Figure 7.6**
+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Creation of parametric images of excised plaque
@@ -100,7 +108,7 @@ larger inter-frame spacing because of memory limitations, although the
 resolution in the elevational direction is nominally 140 μm for the RMV710B
 transducer.
 
-IBS images are created with a reference phantom created by Dr. Ernest Madsen
+Integrated backscatter coefficient (IBSC) images are created with a reference phantom created by Dr. Ernest Madsen
 from UW-Madison.  The reference phantom is made of the 5000E material
 characterized in Chapter 6.  The reference phantom was scanned with the same
 transducer and system settings as utilized for scanning the plaque specimen.
@@ -118,7 +126,7 @@ for arterial plaque specimens according values reported in the literature
 
 .. math::   BSC_s(f) = \frac{BSC_r(f) S_s(f)}{S_r(f)}
 
-Log compression and linear interpolation were applied to the displayed IBS.
+Log compression and linear interpolation were applied to the displayed IBSC.
 Identical dynamic ranges and color transform functions were used in all corresponding images.
 
 ~~~~~~~~~~~~~~~~~~~~~
@@ -159,8 +167,8 @@ As a result, the analytic signal's representation in Fourier space is
 
 .. image:: images/bmodeeqn1.png
   :align: center
-  :width: 7cm
-  :height: 1.99cm
+  :width: 6cm
+  :height: 1.70cm
 
 Even though it does not have ideal properties when applied to a discrete
 signal [Bracewell2000]_ an approach to calculate the analytic signal is then
@@ -172,8 +180,8 @@ For narrow band signals, the local phase, *ϕ(x)*, and the local energy,
 
 .. image:: images/bmodeeqn2.png
   :align: center
-  :width: 7cm
-  :height: 1.92cm
+  :width: 6cm
+  :height: 1.65cm
 
 After the envelope, *A(x)*, is calculated, post-processing can be performed.
 The majority of an ultrasound image's content is speckle, random scattering
@@ -188,38 +196,133 @@ improve image contrast.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gross photographic images taken prior to ultrasound scanning, B-mode images
-derived from the RF, and integrated backscatter (IBS) images for two patients
+derived from the RF, and integrated backscatter coefficient (IBSC) images for two patients
 are shown in the following figures.
 
+.. image:: images/pat142.png
+  :align: center
+  :width: 15cm
+  :height: 19.3cm
 .. highlights::
 
   |pat142_long|: Images taken from the plaque excised from Subject 142.
   A large, diffuse hemorrhagic region shows decreased backscatter.
   a) Gross photographic image, b) close-up gross image, c) B-Mode
-  volume rendering, and d) integrated backscatter volume rendering.
+  volume rendering, d) integrated backscatter volume rendering, e) B-Mode
+  tri-planar view, and f) IBSC tri-planar view.
 
+.. image:: images/pat144.png
+  :align:  center
+  :width:  15cm
+  :height: 19.0cm
 .. highlights::
 
-  |pat144_long|: Images of the excised plaque from Subject 144.
-  The gross photographs in a) and b) show a primarily fibrous plaque with some calcified areas.
-  The ultrasound B-Mode, c), and IBS, d),  show the presence of fibrous and calcified areas well.
-  Segments from the catheter sheath are seen in the front and back of c) and d).
-  To reduce saturation from numerous calcified areas, data was collected with -10 dB gain relative to |pat142|\ a), which explains the larger impact of electronic noise in c).
-  }}
+  |pat144_long|: Images of the excised plaque from Subject 144.  The gross
+  photographs in a) and b) show a primarily fibrous plaque with some calcified
+  areas.  The ultrasound B-Mode, c) and e), and IBSC, d) and f),  show the presence of fibrous
+  and calcified areas well.  Segments from the catheter sheath are seen in the
+  front and back of c) and d).  To reduce saturation from numerous calcified
+  areas, data was collected with -10 dB gain relative to |pat142|\ a), which
+  explains the larger impact of electronic noise in c).
+
+Beware of the presence of the catheter used to suspend the plaques in these
+images.  It is clearly visible as a high intensity cylinder.  In Subject 142,
+|pat142|, it is visible on the right and rear in the volume renderings.  The
+catheter protrudes from the tips along the axis of the internal carotid artery
+(ICA) segment for Subject 144, |pat144|.  It extends deeply into the bulb and
+ICA segment of Subject 154, |pat154|.  It reaches from the start of the bulb up
+into the bifurcation on one side and only slightly penetrates the ICA for Subject
+158, |pat158|.  In general, the IBSC images look 'cleaner' than the B-Mode
+images with similar to the same resolution.  This can be attributed to the
+removal of speckle in the IBSC.
 
 Subject 142 shows a possible high-risk plaque with an extensive hemorrhagic area
 that may have been the result of recent rupture events.  There were strong
 indications of inflammation when this plaque was removed.  The backscatter
 coefficient is consistently low throughout the hemorrhagic areas.  This
-condition that is typically considered high risk is re-enforced by the fact that
-microembolic signals were detected with transcranial Doppler for Subject 142
-(Table 8.1).  The result for Subject 144 on the other hand, depicts a likely
-stable plaque with smooth, unulcerated walls and strong fibrous and calcified
-tissue throughout.
+condition that is typically considered high risk and the high risk assessment is
+re-enforced by the fact that microembolic signals were detected with
+transcranial Doppler for Subject 142 (Table 8.1).  The result for Subject 144 on
+the other hand, depicts a likely stable plaque with smooth, un-ulcerated walls
+and strong fibrous and calcified tissue throughout.  Note the abundance of very
+high magnitude IBSC in Subject 144 because of calcifications.  In a pathologist's
+independent assessment of histopathological slides of the same specimens,
+Subject 142 was found to have approximately 5% calcified content, while Subject
+144 was found to have 55% calcified content.  This is consistent with the
+ultrasound results in |pat142| and |pat144|.
+
+The system receive gain was set 10 dB higher during the acquisition of |pat142|
+than of |pat144|.  This reduced the amount of saturated signal due to the
+calcifications.  However, this also increases the relative amplitude of
+electronic noise, which is most evident in the B-Mode volume rendering,
+|pat144|\ c).  The purpose and benefits of the reference phantom methods are
+clear here-- |pat144|\ d) is not duly affected by this change in the system
+settings.  Since the electronic is equivalently elevated in the reference
+phantom signal, the change is nullified in terms of the output image.  In
+comparison to the B-Mode image, the IBSC image is a more consistent
+representation of the object being profiled than the apparatus used to create
+the image.
 
 The tip of the flow divider, also known as the tuning fork, can be easily
 located in these images.  This fiducial marker can be used to identify the
-corresponding region in *in vivo* data.
+corresponding region within *in vivo* data.
+
+.. image:: images/pat154.png
+  :align: center
+  :width: 15cm
+  :height: 18.7cm
+.. highlights::
+
+  |pat154_long|: The excised plaque from Subject 154.  *In vivo* strain
+  characterization of this subject is shown in Figure 9.7.
+  a) Gross photographic image, b) close-up gross image, c) B-Mode
+  volume rendering, d) integrated backscatter volume rendering, e) B-Mode
+  tri-planar view, and f) IBSC tri-planar view.
+
+.. image:: images/pat158.png
+  :align: center
+  :width: 15cm
+  :height: 19.07cm
+.. highlights::
+
+  |pat158_long|: The excised plaque from Subject 158.  *In vivo* strain
+  characterization of this subject is shown in Figure 9.11.
+  a) Gross photographic image, b) close-up gross image, c) B-Mode
+  volume rendering, d) integrated backscatter volume rendering, e) B-Mode
+  tri-planar view, and f) IBSC tri-planar view.
+
+|pat154| and |pat158| show plaques attained from surgery that are used as
+strain case
+studies in Chapter 9.  Subject 154, |pat154|, is used as an example of a plaque
+with a 'soft' hypoechoic presentation and that has high strain.  Both the gross
+pathological appearance corroborates this assessment as does the 3D ultrasound
+characterization.  The gross pathology shows a smooth, relatively homogeneous
+lipid and fibrous color.  It is evident that the structure deforms under its own
+weight in comparison to the gross pathological image in |pat144|.  The IBSC image
+has low backscatter coefficients and is homogeneous with the exception of a few
+small pockets.
+
+In contrast to Subject 154, a large acoustic shadow marks the B-Mode in Figure 9.11.  Very
+little strain is seen in the calcified region.  However, other regions of the
+plaque do not exhibit the same shadowing, and some have very high strains.
+The gross pathology in |pat158|\ a) and b) give a complex presentation with at
+least one region of hemorrhage/necrosis clearly visible in |pat158|\ b).  The ultrasound also
+shows a complex presentation with IBSC values consistent with calcific regions
+at the bifurcation and along one side of the ICA segment.  It is possible that
+the focal, calcific region may explain the shadowing in Figure 9.11 while the
+hemorrhagic regions could be the source of high strains.  The noise present
+in the ultrasound images of Subject 158 is explained by known malfunction of the
+transducer at that time.
+
+In conclusion, 3D, high-frequency parametric ultrasound images may be a useful
+tool for plaque characterization.  At a minimum, calcified areas can be
+identified.  It was shown that the use of the reference phantom method improved
+the quality and content of the images.  With a 3D volume, easy correlations are
+made between shapes in the gross pathology images and the ultrasound images.  In
+the future, this data may be useful for registering histopathology slides
+against regions within *in vitro* high-frequency ultrasound images, which in turn
+may be registered again external ultrasound to quantify the composition in the
+latter.
 
 ~~~~~~~~~~
 References
