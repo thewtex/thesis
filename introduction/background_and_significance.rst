@@ -5,19 +5,18 @@ Chapter 2 : Human Health Significance
 .. sectnum::
   :prefix: 2.
 
-In this chapter we describe the role diagnostic medical ultrasound plays in
-addressing public health needs related to diagnosis of plaque burden in the
-carotid artery that may predispose a patient to a stroke.  Specifically, we
-focus on stroke due to carotid atherosclerotic disease with increased vessel
-stenosis or embolization being primary causative factors.  First, we describe
-the prevalence and pathology of stroke.  We describe the current status of
-prevention and treatment measures.  We review current methods to access stroke
-risk by describing these techniques, the physiological target they aim to
-quantify, status of development, and effectiveness.  In this chapter, we focus
-primarily on imaging methods.  A thorough literature review describes research
-efforts in medical ultrasound imaging for carotid plaque detection and
-characterization.  Finally, we present the approach taken in this dissertation
-in the context of prior research efforts.
+In this chapter, the role diagnostic medical ultrasound plays in addressing
+public health needs related to diagnosis of carotid plaque burden are discussed.
+Specifically, focus is placed on stroke due to carotid atherosclerotic disease
+with increased vessel stenosis or embolization being primary causative factors.
+First, the prevalence and pathology of stroke is described.  The
+current status of prevention and treatment measures are reviewed.  Current methods
+to access stroke risk are reviewed by describing these techniques, the physiological target
+they aim to quantify, status of development, and effectiveness.  In this
+chapter, focus is placed primarily on imaging methods.  A thorough literature review
+describes research efforts in medical ultrasound imaging for carotid plaque
+detection and characterization.  Finally, the approach taken in this
+dissertation is presented in the context of prior research efforts.
 
 
 
