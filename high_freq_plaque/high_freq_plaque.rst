@@ -274,7 +274,7 @@ corresponding region within *in vivo* data.
 .. highlights::
 
   |pat154_long|: The excised plaque from Subject 154.  *In vivo* strain
-  characterization of this subject is shown in Figure 9.7.
+  characterization of this subject is shown in Figure 9.10.
   a) Gross photographic image, b) close-up gross image, c) B-Mode
   volume rendering, d) integrated backscatter volume rendering, e) B-Mode
   tri-planar view, and f) IBSC tri-planar view.
@@ -286,7 +286,7 @@ corresponding region within *in vivo* data.
 .. highlights::
 
   |pat158_long|: The excised plaque from Subject 158.  *In vivo* strain
-  characterization of this subject is shown in Figure 9.11.
+  characterization of this subject is shown in Figure 9.14.
   a) Gross photographic image, b) close-up gross image, c) B-Mode
   volume rendering, d) integrated backscatter volume rendering, e) B-Mode
   tri-planar view, and f) IBSC tri-planar view.

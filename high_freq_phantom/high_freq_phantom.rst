@@ -6,18 +6,21 @@ Chapter 6 : High Frequency Phantom Characterization
   :prefix: 6.
 
 Next, we describe methods to characterize the acoustic properties of
-high-frequency reference phantoms necessary to generate quantitative ultrasound
-images with the reference phantom method.  Recently, Madsen et al. [Madsen2010]_
-developed tissue-mimicking (TM) phantoms with ultrasonic properties of human
-arteries at very high frequencies [Lockwood1991]_.  Accurate characterization of
-the acoustic properties of these new phantoms poses additional challenges
-relative to the same characterization at lower frequencies.  In this chapter, we
-describe the methods applied to characterization of these phantoms.  Methods to
-determine the attenuation coefficient, phase velocity, and absolute backscatter
-coefficient are described.  This chapter is adapted from McCormick, M, Madsen,
-E., Deaner, M., and Varghese, T.  *Absolute Backscatter Measurements of
-Tissue-Mimicking Phantoms in the 5-45 MHz Frequency Range*.  Journal of the
-Acoustical Society of America.  In Review.
+high-frequency reference phantoms that are necessary to generate parametric
+imaging based on quantitative ultrasound features with the reference phantom
+method.  Recently, Madsen et al. [Madsen2010]_ developed tissue-mimicking (TM)
+phantoms with ultrasonic properties of human arteries at very high frequencies
+[Lockwood1991]_.  Accurate characterization of the acoustic properties of these
+new phantoms poses additional challenges relative to the same characterization
+at lower frequencies.  In this chapter, we describe the methods applied to
+characterization of these phantoms.  Methods to determine the attenuation
+coefficient, phase velocity, and absolute backscatter coefficient are
+described. [#]_
+
+.. [#] This chapter is adapted from McCormick, M, Madsen,
+  E., Deaner, M., and Varghese, T.  *Absolute Backscatter Measurements of
+  Tissue-Mimicking Phantoms in the 5-45 MHz Frequency Range*.  Journal of the
+  Acoustical Society of America.  In Review.
 
 .. |size_distribution| replace:: Fig. 6.1
 
@@ -52,6 +55,8 @@ Acoustical Society of America.  In Review.
 .. |attenuation_plot_long| replace:: **Figure 6.8**
 
 .. |delay_times| replace:: Fig. 6.9
+
+.. |delay_times_start| replace:: Figure 6.9
 
 .. |delay_times_long| replace:: **Figure 6.9**
 
@@ -137,19 +142,19 @@ proportional to the amplitude of the pulse,
 
 .. epigraph::
 
-  where :math:`\alpha` is the attenuation coefficient.  The amplitude of the
+  where α denotes the attenuation coefficient.  The amplitude of the
   acoustic wave decreases exponentially with time,
 
 .. math:: A(t) = A_0 \exp( -\alpha z )
 
 .. epigraph::
 
-  if :math:`A_0` is the initial wave amplitude.
+  if *A*\ :sub:`0` is the initial wave amplitude.
 
 To measure the attenuation coefficient with the substitution method, we measure
-the wave amplitude in a water-only path and after insertion of a sample with
+the wave amplitude in a water-only path and after insertion of a TM sample with
 known thickness.  Taking the ratio of the equation in both situations allows us
-to remove the :math:`A_0` constant and solve for the attenuation coefficient.
+to remove the *A*\ :sub:`0` constant and solve for the attenuation coefficient.
 
 .. image:: images/substitution_apparatus.png
   :width:  14cm
@@ -157,14 +162,14 @@ to remove the :math:`A_0` constant and solve for the attenuation coefficient.
   :align:  center
 .. highlights::
 
-  |substitution_apparatus_long|:  Water tank used for making methods with the
-  substitution technique.  The transducers are suspended in the tank by a system
-  of mounts with translational and rotational degrees of freedom.  A heater
-  keeps the water at a constant 22.0º C.  For calculation of both the phase
-  velocity and the attenuation coefficient, signal is collected from a
-  water-only path (shown), and with the sample placed in the path of the
+  |substitution_apparatus_long|:  Water tank with experimental apparatus for
+  the narrowband substitution technique.  The transducers are suspended
+  in the tank by a system of mounts with translational and rotational degrees of
+  freedom.  A heater keeps the water at a constant 22.0º C.  For calculation of
+  both the phase velocity and the attenuation coefficient, signal is collected
+  from a water-only path (shown), and with the sample placed in the path of the
   transducers (not shown).  A function generator and pulse amplifier provide
-  input to the transmitting transducer, and the oscilloscope and computer used
+  input to the transmitting transducer, and the oscilloscope and computer are
   to record the received signal.
 
 The experimental apparatus layout is illustrated in |substitution_apparatus|.
@@ -175,12 +180,13 @@ at a controlled 22.0 °C by a Haake DC10 heater (Thermo Fisher Scientific Inc.).
 Especially at high frequencies, it is important to temporarily turn off the
 circulating heater during signal acquisition to reduce vibrations that would
 impact time delays and cause jitter while averaging sweeps.  For the same
-reasons, it is critical to ensure the experimenter does not making contact with
+reasons, it is critical to ensure the experimenter does not make contact with
 the water tank while data is collected.
 
 A Wavetek model 81 Function Generator is set to burst mode to generate a
 sinusoid tone burst of 30 wavelengths.  In the *narrowband* substitution method,
-measurements are made independently at individual frequencies.  This frequency
+measurements are made independently at individual frequencies.  The narrowband
+measurement frequency
 is the frequency of the sine waves in the tone burst.  While a theoretical
 narrowband input would be a continuous sinusoid for all time, the signal can
 effectively be considered narrow band near the center of the tone burst where
@@ -259,8 +265,8 @@ tone burst.
   with the center frequency at 40 MHz.  Time is relative to excitation at the
   source transducer and the plotted time axes limits are kept consistent to
   demonstrate time shifts.  Amplitudes are kept consistent at each frequency,
-  but the excitation amplitude was adjusted with frequency so sufficient
-  signal-to-noise ratio was obtained without saturation and non-linear
+  but the excitation amplitude is adjusted with frequency so sufficient
+  signal-to-noise ratio is obtained without saturation and non-linear
   propagation.  The dramatic effect of non-linear attenuation on the signal
   shape can be seen in d).
 
@@ -296,7 +302,7 @@ amplitude is,
   sample.  When constructing the substitution method sample, the material used
   is the same as that produced during creation of the backscatter phantom but is
   covered by 12.2 μm thick Saran Wrap® film inside an acrylic cylinder.  The
-  transmission coefficient, while nearly constant a lower frequencies, deviates
+  transmission coefficient, while nearly constant at lower frequencies, deviates
   at high frequencies, as shown in |saran_trans_coef|.  The transmission
   coefficient, *T*, is given by [Wear2005]_
 
@@ -307,14 +313,14 @@ amplitude is,
 
 .. epigraph::
 
-  where :math:`Z_w`, :math:`Z_s`, and :math:`Z_{Saran}`, are the acoustic
-  impedances of water, the sample, and Saran Wrap respectively, f is the
-  frequency, :math:`c_{Saran}` is the speed of sound in Saran, :math:`\alpha(f)`
+  where *Z*\ :sub:`w`, *Z*\ :sub:`s`, and *Z*\ :sub:`Saran`, are the acoustic
+  impedances of water, the sample, and Saran Wrap respectively, *f* is the
+  frequency, *c*\ :sub:`Saran` is the speed of sound in Saran, *α(f)*
   is the attenuation coefficient of the Saran Wrap in *Np/m*, and *l* is the
-  thickness of each thin layer.  In our case :math:`c_{Saran}` is 2400 *m/s*,
-  :math:`\alpha (f) [Np/m] = 5.0 \, f^{1.5}`\, the Saran density, :math:`\rho_{Saran}`
+  thickness of each thin layer.  In our case *c*\ :sub:`Saran` is 2400 *m/s*,
+  :math:`\alpha (f) [Np/m] = 5.0 \, f^{1.5}`\, the Saran density, ρ\ :sub:`Saran`
   is 1.69 *g/mL*.  Thickness of the Saran Wrap, which was 25 μm in previous
-  cases, was re-measured, and the other properties, are assumed to be the same
+  cases, is re-measured, and the other properties, are assumed to be the same
   as those fit in Wear et al. [Wear2005]_.  Acoustic impedance, *Z*, for a
   material is the product of its density and speed of sound.  The density of the
   TM material was 1.045 g/mL for the 4000E phantom and 1.062 g/mL for the 5000E
@@ -335,21 +341,21 @@ amplitude is,
 .. epigraph::
 
   Again, the attenuation coefficient, α, in dB/cm is calculated using the signal
-  amplitude in the absence of the sample, A\ :sub:`w`, the signal amplitude with the sample in place, A\
+  amplitude in the absence of the sample, *A*\ :sub:`w`, the signal amplitude with the sample in place, *A*\
   :sub:`s`.  Taking the two equations that define the attenuation in water-only and
   water-with-sample cases and dividing them,
-  solving for :math:`\alpha`, and placing the result in decibels per centimeter,
+  solving for α, and placing the result in decibels per centimeter,
   we obtain:
 
-  .. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
+.. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
 
-  The thickness of the test cylinder was 5.00 mm measured with a calibrated
-  micrometer.  This is significantly thinner than the larger 'hockey-puck'
-  cylinders used at lower frequencies to limit high frequency attenuation.
+The thickness of the test cylinder was 5.00 mm measured with a calibrated
+micrometer.  This is significantly thinner than the larger 'hockey-puck'
+cylinders used at lower frequencies to limit high frequency attenuation.
 
-  Attenuation of water, α\ :sub:`w`, which is negligible at lower frequencies, must
-  be accounted for at high frequencies.  Attenuation of water is proportional to
-  the square of frequency from 3-70 MHz [Kay1995]_, and in dB/cm is
+Attenuation of water, α\ :sub:`w`, which is negligible at lower frequencies, must
+be accounted for at high frequencies.  Attenuation of water is proportional to
+the square of frequency from 3-70 MHz [Kay1995]_, and in dB/cm is
 
 .. math:: \alpha_w (f) [dB/cm] = 2.08e^{-3} \, f^2
 
@@ -358,7 +364,7 @@ amplitude is,
   when *f* is in MHz.
 
 Results of attenuation coefficient characterization for both the 4000E and 5000E
-phantom can be found in |attenuation_plot|.  Values from fitting to a power law model
+phantom is shown in |attenuation_plot|.  Values from fitting to a power law model
 
 .. math:: \alpha (f) [dB/cm] = \alpha_0 f^n
 
@@ -395,18 +401,18 @@ degree; for instance, fat has a lower sound speed (1478 m/s) and tendon has a hi
 (1670 m/s) [Culjat2010]_.  However, the canonical sound speed assumed by
 clinical scanners for soft tissues is 1540 m/s.
 
-The speed of sound is then obtained by inserting the change in time delay, Δt,
-and sample thickness, d, into the following equation [Wear2007]_
+The speed of sound is then obtained by inserting the change in time delay, Δ*t*,
+and sample thickness, *d*, into the following equation [Wear2007]_
 
 .. math:: c = \frac{c_w}{1 + \frac{c_w \Delta t}{ d }}
 
 .. epigraph::
 
-  if :math:`\Delta t` is the difference in the time delay between
-  water-with-sample and water-only cases, :math:`t_w - t_s`.  The speed of sound
-  in pure water, c\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
+  if Δ*t* is the difference in the time delay between
+  water-with-sample and water-only cases, *t*\ :sub:`w` - *t*\ :sub:`s`.  The speed of sound
+  in pure water, *c*\ :sub:`w`\ , at 22º C is 1488.3 m/s [DelGrosso1972]_.
 
-Considerable changes in the shape of the pulse occurred because of frequency
+Considerable changes in the shape of the pulse occur because of frequency
 dependent attenuation (see |substitution_pulse|).  As with the attenuation
 coefficient, this poses challenges to measuring the quantity needed to calculate
 the speed of sound, the time delay of a tone burst.  When measuring the delay of
@@ -437,7 +443,7 @@ zero crossing and the water-only start.  This ensures the same relative
 zero-crossing is used as the delay for both the water-only and the
 water-with-sample cases.  This will be true as long as the distortion at the
 front edge of the signal does not approach half a period, which has empirically
-proven to be a valid assumption.  |delay_times| shows the delay samples selected
+proven to be a valid assumption.  |delay_times_start| shows the delay samples selected
 in this process at 50.0 MHz for the water-only signal and after the 5000E signal
 is inserted.
 
@@ -462,7 +468,7 @@ zero-crossing method trend is closer the expected dispersion.  According to the
 Kramers-Krönig relations [Waters2000,Mobley2003]_, increased attenuation with frequency will cause an
 increase in phase velocity with frequency.  Since attenuation increases
 monotonically with frequency, it is expected that phase velocity will increase
-monotonically with frequency.  Note, though, that the observed dispersion is minute
+monotonically with frequency.  Although, the observed dispersion is minute
 compared to the variation found in soft tissues.  The phase velocity for both
 phantoms at 30 MHz is shown in |sos_table|.
 
@@ -492,7 +498,7 @@ phantoms at 30 MHz is shown in |sos_table|.
 Absolute backscatter estimation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this chapter, calculation of the absolute backscatter coefficient (BSC), the differential
+Calculation of the absolute backscatter coefficient (BSC), the differential
 scattering cross section per unit volume at a scattering angle of 180 degrees,
 follows the method described by Chen et al. [Chen1993,Madsen1984]_.  Using a
 single element ultrasound transducer, pulses were propagated through water and
@@ -503,13 +509,13 @@ materials.
 
 .. math::  BSC (f) \approx \frac{\langle V_g(f) V_g^*(f) \rangle}{C^2 \Vert T(f) B_0(f) \Vert^2 \int \int \int \Vert A(\mathbf{r}, f ) \Vert^4 d \mathbf{r} }
 
-The backscattered signal V\ :sub:`g`'s spectrum is averaged from many
-uncorrelated locations in the phantom to obtain the power spectrum.  The term C
-is a constant that accounts for windowing of the signal, and is 0.63 for the
-Hamming Window.  A(r,f) is the complex superposition coefficient determined by
+The backscattered signal *V*\ :sub:`g`'s spectrum is averaged from many
+uncorrelated locations in the phantom to obtain the power spectrum.  The term
+*C* is a constant that accounts for windowing of the signal, and is 0.63 for the
+Hamming Window.  *A(r,f)* is the complex superposition coefficient determined by
 the geometric properties of the transducer.  A planar reflector is then used to
-determine :math:`T(f) B_0(f)`, where :math:`T(f)` is the complex transfer
-function of the transducer, and :math:`B_0(f)` is the complex superposition
+determine *T(f) B*\ :sub:`0`\ *(f)*, where *T(f)* represents the complex transfer
+function of the transducer, and *B*\ :sub:`0`\ *(f)* is the complex superposition
 coefficient for the uniform monopole radiator assumed to exist on the transducer
 surface [Madsen1984]_.
 
@@ -519,7 +525,7 @@ Generation of spectra
 The transducer used for backscatter analysis was the 710B on a Vevo 770 scanning
 system (VisualSonics, Inc., Toronto, Canada).  Further details on the methods
 used to adapt the Vevo 770 for quantitative ultrasound imaging research can be
-found in Appendix TODO.  This transducer has a center frequency of about 25 MHz,
+found in Appendix A.  This transducer has a center frequency of about 25 MHz,
 and a broad bandwidth, 82% fractional bandwidth at -6dB, as illustrated in
 |backscattered_spectra|.  The transducer active element is a spherical cap with
 a projected aperture of 3.5 mm and 15.0 mm radius of curvature.  The received
@@ -567,7 +573,7 @@ spectrum as shown in |harmonics|.
 
 The single element transducer can be moved laterally and elevationally, and 1200
 independent Fourier spectra of the scattering instances are averaged to obtain
-the backscattered power spectrum, |backscattered_spectra|.  The 5000E phantom is
+the backscattered power spectrum, shown in |backscattered_spectra|.  The 5000E phantom is
 covered with a thin Saran Wrap® layer as previously described in the
 substitution experiment, and the 4000E phantom was covered with a 128 μm-thick
 TPX® (polymethyl-pentene) layer.  A TPX® layer is advantageous relative to a
@@ -575,28 +581,30 @@ Saran layer because of its low reflection coefficient, which minimizes
 reverberation effects especially at higher frequencies.  The gated window for
 spectral analysis in the phantom is placed at the focus beyond the surface in an
 area free from any reverberation artifacts and devoid from the high amplitude
-response at the surface of the TM phantom.  To verify these conditions, the
-online Visualsonics Digital-RF user interface and saved data are utilized.
+response at the surface of the TM phantom.  To verify these conditions, data is
+collected using the
+online Visualsonics Digital-RF user interface and saved data are utilized for
+analysis.
 Sample waveforms from the gate used in calculation of the phantom spectra are
 shown in |waveforms|\ a) and b).  The reflection waveform from the reference
 planar interface is shown in |waveforms|\ c).  Also, screenshots from during
-acquisition, |vs_screenshots|, demonstrate use of the system's real-time B-Mode
-display is a convenient method to ensure that these conditions are met.
+acquisition, e.g. |vs_screenshots|, demonstrate use of the system's real-time B-Mode
+display, which is a convenient method to ensure that these conditions are met.
 Reverberations between the transducer-water interface and the water-phantom
 interface are a possible source of artifact.  These reverberations appear to be
-present in the |vs_screenshots|\ a) B-Modes while they are not present in the RF
-plotted in |vs_screenshots|\ a) nor in |waveforms|\ a).  This is explained by the
+present in the |vs_screenshots|\ a) B-Modes images while they are not present in the RF
+plotted in |vs_screenshots|\ a) nor in |waveforms|\ a).  This appears to be is explained by the
 distinct operation of the Vevo 770 during B-Mode image acquisition and Digital-RF
-acquisition.  B-Mode acquisition for small animal imaging or the scout-window
+acquisition.  For B-Mode acquisition for small animal imaging, the scout-window
 shown will rotate the transducers at very fast rates to achieve the 200+
 frames-per-second required for small animal imaging while continuously
 transmitting and receiving ultrasound pulses.  The reverberation does not have an
 opportunity to dissipate in this situation.  On the other hand, Digital-RF
 operation is closer to M-Mode data collection; the positioning of the transducer
-is much slower, but the reverberations are not present in the received signal.
+is much slower, and the reverberations are not present in the received signal.
 In the B-Mode and RF we note the presence of larger scatterers in the 4000E
 phantom relative to the 5000E phantom, which is consistent with
-the diameter distribution in |size_distribution|.
+the diameter distribution shown in |size_distribution|.
 
 .. image:: images/waveforms.png
   :align: center
@@ -609,12 +617,12 @@ the diameter distribution in |size_distribution|.
 
 .. image:: images/vs_screenshots.png
   :align: center
-  :width: 15cm
-  :height: 6.02cm
+  :width: 16cm
+  :height: 6.42cm
 .. highlights::
 
   |vs_screenshots_long|:  Screenshots in Digital-RF mode on the Vevo 770 when
-  collecting phantom data from the a) 4000E and b) 5000E.
+  collecting phantom data from the a) 4000E and b) 5000E phantoms.
 
 Faran scattering model
 ======================
@@ -626,21 +634,25 @@ and the glass bead longitudinal speed of sound is 5572 m/s, with a density of
 is 6.0 kg/m\ :sup:`3` and 15.6 kg/m\ :sup:`3` for the 4000E and 5000E
 phantom, respectively.  Superposition using the diameter distribution given in
 |size_distribution| is assumed.  The total mass of the diameter distribution,
-:math:`m_g`, is
+*m*\ :sub:`g`, is
 
 .. math:: m_g = \rho_m \sum_{i=1}^N \frac{\pi}{6} D_i^3 g(D_i), \; \; \; \; \; D_1 = 0,\: D_N = D_{max}
 
-where :math:`\rho_m` is the bead mass density, :math:`D` is the diameter of
-the bead, and :math:`g(D)` is the diameter distribution.
-We next calculate the bead number density - the number of beads of a given
-diameter per unit volume.  The bead number density, :math:`\rho_n(D)`, is
+.. epigraph::
+
+  where ρ\ :sub:`m` is the bead mass density, *D* is the diameter of
+  the bead, and *g(D)* is the diameter distribution.
+  We next calculate the bead number density - the number of beads of a given
+  diameter per unit volume.  The bead number density, ρ\ :sub:`n`\ *(D)*, is
 
 .. math:: \rho_n (D) = \frac{\rho_V}{m_g} g(D)
 
-where :math:`\rho_V` is the bead concentration (mass per unit volume).
-The backscatter coefficient, a function of frequency :math:`f`, results from
-summing the backscatter for a single bead, :math:`BS_s(f,D)`
-multiplied by the bead number density,
+.. epigraph::
+
+  where ρ\ :sub:`V` is the bead concentration (mass per unit volume).
+  The backscatter coefficient, a function of frequency *f*, results from
+  summing the backscatter for a single bead, *BS*\ :sub:`s`\ *(f,D)*
+  multiplied by the bead number density,
 
 .. math:: BSC(f) = \sum_{i=1}^N BS_s (f, D_i) \rho_n(D_i)
 
@@ -649,9 +661,11 @@ assumed to take the form
 
 .. math:: \alpha (f) = \alpha_0 \; f^{n}
 
-where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.285` and n  = 1.285 for the 4000E
-TM phantom α\ :sub:`0`  = 5.0 Np/m/MHz\ :sup:`1.5` and n  = 1.5 in the 5000E
-case.
+.. epigraph::
+
+  where α\ :sub:`0`  = 2.26 Np/m/MHz\ :sup:`1.285` and n  = 1.285 for the 4000E
+  TM phantom α\ :sub:`0`  = 5.0 Np/m/MHz\ :sup:`1.5` and n  = 1.5 in the 5000E
+  case.
 
 Backscatter coefficient results
 ===============================
@@ -674,14 +688,14 @@ because of the smaller bead diameter distribution evident in
 The lower BSC of the 4000E phantom may explain the noisier appearance of the
 curve, although the dips at 21 MHz and 25.5 MHz are consistently observed with
 other sets of TM phantom and planar reflector data (not shown).  The general
-trend of the 4000E reference reflector BSC appears correct, although there are
+trend of the 4000E reference reflector BSC appears to be correct, although there are
 some oscillations not found in the Faran calculation curve.  The reference
-reflector BSC values are higher from 5-35 MHz before converging with the
+reflector BSC values are higher in the 5-35 MHz frequency range before converging with the
 Faran calculation.  The mean and standard
 deviation of the percent difference of the 4000E reference reflector values from the
 Faran calculation values from 5-50 MHz are 53.6% ± 44.8.
 Agreement between the Faran calculation and reference reflector results for the
-5000E is very close in the 5-15 MHz range.  The reference reflector BSC values
+5000E is very close in the 5-15 MHz frequency range.  The reference reflector BSC values
 are higher from 15-35 MHz before also converging again.  The mean and standard
 deviation of the percent difference of the 5000E reference reflector values from the
 Faran calculation values from 5-50 MHz are 46.6% ± 27.9.
@@ -708,7 +722,7 @@ Faran calculation values from 5-50 MHz are 46.6% ± 27.9.
 In this chapter, methods are presented that can be used to measure the absolute
 backscatter coefficient at high frequencies.  Accurate measurement of this
 quantity has proven difficult for low frequencies [Wear2005]_, and additional
-challenges caused by alignment and attenuation make it more difficult at high
+challenges caused by alignment and attenuation make it significantly more difficult at high
 frequencies.  There are a number of input parameters and assumptions in the
 broadband BSC reference reflector calculation that can be sources for error.
 
@@ -727,11 +741,11 @@ zero-crossing can increase the precision of delay measurement.  Care has to be
 taken to prevent offsets in the delay from occurring due to building vibration,
 inadvertent load on the apparatus by the experimenter, or vibrations of the
 transducer from water flow from the tank heater.  Distortion of the signal at
-the pulse edges (|substitution_pulse|) makes determination of the phase velocity
+the pulse edges, as shown in |substitution_pulse|, makes determination of the phase velocity
 challenging for frequencies of 30 MHz or higher.  Successful attenuation
-measurement relies on alignment and sufficient signal amplitude.  The
+measurement relies on proper alignment and sufficient signal amplitude.  The
 transducers must be placed close together to prevent excessive signal loss in the water
-path.  This requires more precise alignment of the transducers.  The
+path.  This requires precise alignment of the transducers.  The
 TM specimen used for substitution needs to have a small width to prevent signal loss, but this
 also makes precise width measurement more important.  High excitation voltages
 are required to obtain adequate signal at high frequencies, but these same high
@@ -745,7 +759,7 @@ distribution and concentration.  Incorrect assumptions of the thin layer
 properties would affect the measured BSC, and incorrect assumptions on the bead
 distribution density would result in an incorrect Faran calculation.
 
-Kernel density estimation was investigated as a method to improve estimation of
+Kernel density estimation is investigated as a method to improve estimation of
 the bead diameter distribution, but this was found to have negligible effects on
 the BSC curves.  However, there was a very high sensitivity of the
 Faran BSC curves to rare, large diameter beads; a large number of diameter

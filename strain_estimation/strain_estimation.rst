@@ -1,6 +1,6 @@
-===============================================
-Chapter 5: Calculating Strain from Displacement
-===============================================
+================================================
+Chapter 5 : Calculating Strain from Displacement
+================================================
 
 In this chapter, theory and techniques necessary to create strain tensor images
 from displacement images are described with attention paid towards issues relevant
@@ -100,9 +100,9 @@ cardiac cycle are explained.
 .. |frame_skip_long| replace:: **Figure 5.21**
 
 
-.. |higher_coefficients| replace:: Table 1
+.. |higher_coefficients| replace:: Table 5.1
 
-.. |higher_coefficients_long| replace:: **Table 1**
+.. |higher_coefficients_long| replace:: **Table 5.1**
 
 ~~~~~~~~~~~~~~~~~~~~~
 5.1 The strain tensor

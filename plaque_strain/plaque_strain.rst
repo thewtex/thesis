@@ -449,6 +449,16 @@ connected component.  Also, due to acoustic shadowing, a plaque may be
 subdivided into more than two connected components where the echo signal has reasonable
 amplitudes.
 
+.. image:: images/pat157lefticalongcont_20100111092227_Cycle1_Version_963d653_Points_RenderedMesh_0000.png
+  :align: center
+  :width: 10cm
+  :height: 7.25cm
+.. highlights::
+
+  |plaque_regions_long|: Subject 157 ROIs where the particle strains explored in
+  |strain_axial_plot| - |strain_metric_plot|, are tracked over the cardiac
+  cycle.
+
 A binary connected component image is transformed into a mesh.  Strains tensors
 and displacement vectors are accumulated on particles in the mesh as described
 in Section 5.4.2.  Eigen analysis is performed on the accumulated strain tensors
@@ -478,7 +488,7 @@ criteria best decribes the failure process.
 .. highlights::
 
   |strain_axial_plot_long|:  Axial strain over the cardiac cycle for 20 randomly
-  selected particles from ROIs highlighted in |geometry|.
+  selected particles from ROIs highlighted in |plaque_regions|.
 
 .. image:: images/strain_shear_plot.png
   :align: center
@@ -487,7 +497,7 @@ criteria best decribes the failure process.
 .. highlights::
 
   |strain_shear_plot_long|:  Shear strain over the cardiac cycle for 20 randomly
-  selected particles from ROIs highlighted in |geometry|.
+  selected particles from ROIs highlighted in |plaque_regions|.
 
 .. image:: images/strain_lateral_plot.png
   :align: center
@@ -496,12 +506,12 @@ criteria best decribes the failure process.
 .. highlights::
 
   |strain_lateral_plot_long|:  Shear strain over the cardiac cycle for 20 randomly
-  selected particles from ROIs highlighted in |geometry|.
+  selected particles from ROIs highlighted in |plaque_regions|.
 
 
 Plots of the strain components and strain metrics for Subject 157 are shown in
 |strain_axial_plot| - |strain_metric_plots|.  Twenty randomly selected
-particles, i.e. mesh points, in the ROIs shown in |geometry| are singled out and
+particles, i.e. mesh points, in the ROIs shown in |plaque_regions| are singled out and
 their accumulated strain values plotted against time.  Possibly due to movement
 in and out of the imaging plane or motion tracking errors, a drift in the
 accumulated strain is often observed [Shi2007]_.  When there is significant
@@ -513,7 +523,8 @@ steady-state.  While is true in that the tissue obviously remains intact over
 the examination, some real drift may exist due to breathing, muscle tone, etc.
 
 Recall from Section 5.1.2 that axial strain refers the normal component of the
-strain tensor along the axis of the ultrasound beam.  In this case, |geometry|,
+strain tensor along the axis of the ultrasound beam.  In this case,
+|plaque_regions| and |geometry|,
 the ultrasound axial direction is to some degree aligned with the radial
 direction of the vessel.  As blood pressure increases, compression is expected
 in the radial direction [Hansen2010]_, which is consistent with the mostly
@@ -554,7 +565,7 @@ here.
 .. highlights::
 
   |strain_metric_plots_long|: Strain metrics over the cardiac cycle for 20 randomly
-  selected particles from ROIs highlighted in |geometry|.
+  selected particles from ROIs highlighted in |plaque_regions|.
   a) Maximum principal strain, :math:`max\left\{ | \lambda_1 | , | \lambda_2 | \right\}`, 
   b) maximum shear strain, :math:`\lambda_1 - \lambda_2`,
   c) total strain energy, :math:`\frac{1}{2} E \left( \lambda_1^2 + \lambda_2^2 \right)`,

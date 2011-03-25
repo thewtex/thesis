@@ -206,7 +206,7 @@ patient to patient with hypertension, pulsatility, and turbulence influenced by
 the bifurcation and plaque morphology.
 
 All these factors that have been intuitively been associated with plaque
-vulnerability are explained formally by a quanity arising from solid mechanics
+vulnerability are explained formally by a quantity arising from solid mechanics
 models of the underlying physical behavior, local stress concentration.  Stress
 concentrators have received exhaustive attention in the Materials Science and
 Engineering discipline because of their relationship to material failure.  They
