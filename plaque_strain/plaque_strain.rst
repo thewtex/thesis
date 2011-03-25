@@ -12,7 +12,7 @@ described.  This includes an explanation of how the algorithms described in
 Chapters 3, 4, and 5 are applied as an integrated algorithm.
 Additionally, new features are covered, including the hierarchical framework for
 increasing motion tracking robustness.
-Finally, case studies of a exemplar subjects are presented.
+Finally, case studies of exemplar subjects are presented.
 
 .. |scalespace| replace:: Fig. 9.1
 
@@ -111,7 +111,7 @@ frequency content in the fine resolution images are avoided.  This improves
 robustness of the algorithm.
 
 Multi-resolution methods have also been applied to ultrasound strain imaging.  Yeung
-et al. and Pellot-Barakat et al. developed a multilevel regularized,
+et al. and Pellot-Barakat et al. have developed multilevel regularized,
 block-matching algorithm for tracking ultrasound speckle
 [Yeung1998,Pellot-Barakat2004]_.  In Yeung et al., coarser level images
 were not subsampled on the premise that high-frequency speckle information would
@@ -216,7 +216,7 @@ Inter-level matching-block scaling
 Signal de-correlation within a matching-block is partially caused by the strain within
 the block [Varghese1996]_.  The de-correlation of the matching-block can be
 reduced by appropriate scaling, 'companding',  the matching block by the local strain
-[Chaturvedi1998,Chaturvedi1998]_.  In the hierarchical construct, the strain
+[Chaturvedi1998,Chaturvedi1998a]_.  In the hierarchical construct, the strain
 found at higher levels can be used to stretch or compress the matching block
 before performing cross-correlation at lower levels.  This is applied to this
 algorithm by resampling the matching-block with windowed-sinc interpolation
@@ -227,7 +227,7 @@ after anisotropically scaling the block by a factor
 .. epigraph::
 
   where the scaling factor is one plus the normal strain in that direction if the
-  strain is small.  Improvement of the strain *SNRe*, described in
+  strain is small.  Improvement of the strain signal-to-noise ratio (*SNRe*), described in
   Chapters 3 and 4, for a uniform phantom is demonstrated in |companding|.  There
   is a significant improvement in the *SNRe* when scaling the matching block.  The
   amount of this improvement increases with the increase in strain magnitude.
@@ -435,9 +435,9 @@ The final purpose of non-invasive *in vivo* characterization of carotid plaque
 deformation is to generate a quantity that indicates vulnerability to failure or
 plaque rupture, thrombogenesis, and ultimately ischemic burden.  A number of
 quantities are derived from the strain tensor over the cardiac cycle as
-potential indicators of plaque vulnerability.  First, ROIs that segment the plaque are
+potential indicators of plaque vulnerability.  First, regions-of-interest (ROIs) that segment the plaque are
 created by a radiologist.  These ROIs are drawn in a B-Mode image generated from
-the same RF data used to perform motion tracking.  B-Modes and color flow images
+the same RF data used to perform motion tracking.  B-Mode and color flow images
 taken with clinical imaging features of the scanning system at the time of
 acquisition are also available to the radiologist to help distinguish
 atherosclerotic plaque from the lumen and surrounding tissues.  Three
@@ -456,7 +456,7 @@ amplitudes.
 .. highlights::
 
   |plaque_regions_long|: Subject 157 ROIs where the particle strains explored in
-  |strain_axial_plot| - |strain_metric_plot|, are tracked over the cardiac
+  |strain_axial_plot| - |strain_metric_plots|, are tracked over the cardiac
   cycle.
 
 A binary connected component image is transformed into a mesh.  Strains tensors
@@ -473,13 +473,13 @@ strain suggests that the tissue can only withstand a certain normal strain.
 Maximum shear strain assumes the material can only withstand a certain shear
 strain.  For a given strain tensor, there is one direction where the maximum
 normal strain occurs and the maximum shear strain occurs, and the maximum
-principle and shear strain give the values of these quantites in that direction.
-Total strain energy and distortional energy yield criteria imply that failure is
+principal and shear strain give the values of these quanities in that direction.
+Total strain energy and distortional energy yield criteria implying that failure is
 an energy dependent process.  Plaque is a complex material that contains
-cholesterolic, fibrous, calcific, smooth muscle, and hemorrhagic components connected into an
+cholesterole, fibrous, calcified, smooth muscle, and hemorrhagic components connected into an
 amorphous mass.  It is also living tissue that dynamically changes its content and
-connectedness in response to processes like remodeling and inflammation.  Therefore, it is difficult to predict *a priori* which yield
-criteria best decribes the failure process.
+connectedness in response to processes like remodeling and inflammation.  Therefore, it is difficult to predict *a priori* the yield
+criteria that best describes the failure process.
 
 .. image:: images/strain_axial_plot.png
   :align: center
@@ -530,7 +530,7 @@ direction of the vessel.  As blood pressure increases, compression is expected
 in the radial direction [Hansen2010]_, which is consistent with the mostly
 negative strains observed at systole in |strain_axial_plot|.
 
-In contrast, the shear strains shown in |strain_shear_plot|, are primarily
+In contrast, the shear strains shown in |strain_shear_plot| are primarily
 positive.  As indicated by the displacement vectors in |geometry|\ a), the
 tissue is consistently sheared from left-to-right in the image,
 inferior-to-superior in the subject, for both the anterior and posterior ROI.
@@ -553,7 +553,7 @@ separation of high strains is accented in the distortional energy plot of
 piecewise linear pattern in all plots is attributed to the dynamic frame skip
 technique, Section 5.4.1.  The linearity validates the incremental displacement
 interpolation algorithm in Section 5.4.1, and the increased duration of the
-piecewise segments during diastole shows shows success in the automatic strain
+piecewise segments during diastole shows success in the automatic strain
 assessment method.  Some improvements could be made to the automatic strain
 assessment method to decrease the frame skip slightly at the end of systole
 here.
@@ -628,8 +628,8 @@ or it could be related to the compression supplied by the transducer
 0.23 and the 90\ :sup:`th` percentile is 0.41 in the posterior segment (Table B.1).
 There is little difference in the distribution of the strain metrics in this
 case with the possible exception of the total strain energy, which is more
-reserved in the anterior segment.  This strain tensor ellipses allow
-easy comprehension of the magnitude, orientation, and distribution of th strain.
+reserved in the anterior segment.  These strain tensor ellipses allow
+easy comprehension of the magnitude, orientation, and distribution of the strain.
 The changing orientation of the ellipses explain the contours of low strain
 metric amplitude in |hypoechoic|\ c)-f); low strain metric amplitude occurs as transitions in the orientation of deformation.  Displacements illustrated in |hypoechoic|\ a)
 are large and predominantly lateral, which underscores the need for good lateral
@@ -728,8 +728,8 @@ would then arise in the lateral component.
 Again, note that the area of the anterior plaque that protrudes into the lumen is
 subject to high strains.
 
-Calcific plaque with shadowing
-==============================
+Calcified plaque with shadowing
+===============================
 
 .. image:: images/pat158leftbulblongcont_20100315132656_Cycle1_Version_963d653_shadowing.png
   :align: center
@@ -737,12 +737,12 @@ Calcific plaque with shadowing
   :height: 17.8cm
 .. highlights::
 
-  |shadowing_long|: Low strain in a calcific plaque, but high strain in other
+  |shadowing_long|: Low strain in a calcified plaque, but high strain in other
   areas.  a) Displacement vectors, b) strain tensor ellipses, c) maximum
   absolute principal strain, d) maximum shear strain, e) total strain energy,
   and f) distortional energy.
 
-It is well known that calcific plaques are associated with high acoustic
+It is well known that calcified plaques are associated with high acoustic
 attenuation and that they are extremely stiff.  The increased attenuation explains the
 acoustic shadowing on these images of the left side of Subject 158.  As the
 displacement vectors indicate in |shadowing|\ a), this plaque undergoes a
@@ -753,7 +753,7 @@ occur.  Examination of the strain time series suggests that this may result from
 combination of heterogeneous calcification, morphology, and hemodynamics.
 
 This case also illustrates a limitation of non-invasive externally applied
-ultrasound imaging.  Motion tracking cannot be performed when calcific plaques
+ultrasound imaging.  Motion tracking cannot be performed when calcified plaques
 attenuate the ultrasound beam to undetectable levels.  Furthermore, the 2D
 imaging method can only capture a small subset of the imaging planes available.
 For a heterogeneous structure like carotid plaques, a critical region may be

@@ -5,11 +5,11 @@ Chapter 8 : Transcranial Doppler Monitoring of the Middle Cerebral Artery
 .. sectnum::
   :prefix: 8.
 
-In this chapter, we discuss how transcranial Doppler ultrasound (TCD) is used to
-provide additional insight into the neurophysiology of patients prior to
-endarterectomy.  First, a review is given of the ways TCD is applied in a
+In this chapter, we discuss transcranial Doppler ultrasound (TCD), and how it
+provides additional insight into the neurophysiology of patients prior to
+carotid endarterectomy.  First, a review is provied of the application of TCD in a
 clinical monitoring and research setting.  Next, techniques to increase the
-reliability of data collected in this are covered.  Finally, the microemboli and
+reliability of data collected are covered.  Finally, microemboli and
 peak velocity data collected as part of this study are presented.
 
 .. |tcd_ui| replace:: Fig. 8.1
@@ -17,6 +17,8 @@ peak velocity data collected as part of this study are presented.
 .. |tcd_ui_long| replace:: **Figure 8.1**
 
 .. |tx_content| replace:: Fig 8.2
+
+.. |tx_content_start| replace:: Figure 8.2
 
 .. |tx_content_long| replace:: **Figure 8.2**
 
@@ -33,42 +35,44 @@ peak velocity data collected as part of this study are presented.
 Physiological insights from transcranial Doppler
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-TCD is a useful tool in research and clinical
-situations where monitoring of intracranial blood flow is desired.  For example,
-TCD is used in psychology experiments [Sorond2008]_, evaluating the potential
-for sickle cell stroke [Melo2008]_, estimation of intracranial
-pressure [Rasulo2008]_, and inpatient
-monitoring [McDermid2008,Rasulo2008]_.  TCD can be brought bedside or in
-surgery, is cost-effective, has very good temporal resolution, can collect data
-for extended time periods, and is non-invasive.  However, there are limitations
-associated with its use.  For 10% to 30% of patients, the acoustic window is
-too thick to obtain adequate signals, it is sensitive to motion, and it can be
-difficult to locate vessels with the single element transducer.  Collection and
-analysis of TCD data is also labor intensive and time
-consuming [Kwee2008,Rasulo2008]_.
+TCD is a useful tool in research and clinical situations where monitoring of
+intracranial blood flow is desired.  For example, TCD is used in psychology
+experiments [Sorond2008]_, for evaluating the potential for sickle cell stroke
+[Melo2008]_, estimation of intracranial pressure [Rasulo2008]_, and inpatient
+monitoring [McDermid2008,Rasulo2008]_.  TCD is amenable to bedside monitoring or
+in surgery, is cost-effective, has very good temporal resolution, can collect
+data for extended time periods, and is non-invasive.  However, there are
+limitations associated with its use.  For 10% to 30% of patients, the acoustic
+window in the skull is too thick to obtain adequate signals, it is sensitive to
+motion, and it can be difficult to locate vessels with the single element
+transducer.  Collection and analysis of TCD data is also labor intensive and
+time consuming [Kwee2008,Rasulo2008]_.
 
 The purpose of TCD in this study is to detect microemboli originating from
-vulnerable carotid plaque.  A microemboli passing through the MCA will result in
+vulnerable carotid plaque.  A microemboli passing through the middle cerebral
+artery (MCA) will result in
 what is termed a microembolic ultrasonic signals (MES) or high intensity
 transient signals (HITS).  TCD provides a non-invasive *in vivo*
 validation of the vulnerability assessment of plaque tissue obtained with strain
 imaging.  Microemboli detected with TCD have been connected to peri-operative
 symptoms of ipsilateral cerebral ischemia [Levi1997,Spencer1997]_.
 
-Furthermore, MES predict future ischemic events such as episodic stroke, TIA, or
+Furthermore, MES predict future ischemic events such as episodic stroke,
+transient ischemic attack (TIA) or
 migraines [Ritter2008,Jesurum2008,Zuromskis2008,Siebler1995]_. In a typical
 single one hour session, 43% of symptomatic cases and 10% of asymptomatic
 cases will show one or more MES [Ritter2008]_.  If a MES is seen with an
 asymptomatic case, the risk of stroke or TIA in the future increases
 significantly [Markus2005,Ritter2008]_. In addition, recent evidence
-reinforces the supposition that microemboli causes Alzheimer's disease and
+reinforces the supposition that microemboli cause Alzheimer's disease and
 vascular cognitive dementias or
 impairment [Purandare2006a,Purandare2006,Purandare2007]_.
 
-Microemboli may originate from locations other than the carotid, such as a PFO,
+Microemboli may originate from locations other than the carotid, such as a
+patent foramen ovale (PFO),
 other types of right to left shunts other than a PFO, mechanical heart valves,
 atrial fibrillation, or congestive heart disease.  However, for elderly
-patients, the most common source is thought to be the carotid.  Unlike emboli of
+patients, the most common source is thought to be carotid plaques.  Unlike emboli of
 cardiac origin, microemboli from the carotid should be unilateral and
 ipsilateral to the vulnerable carotid.
 
@@ -91,7 +95,7 @@ for MES are transient signals, lasting less than 300 milliseconds, at least 3dB
 higher than the background blood flow signal, unidirectional in velocity, and
 accompanied by an audible 'snap', 'chirp', or 'moan' [CCNICHS1995]_.
 
-A similar study was performed by Zuromskis et. al. [Zuromskis2008]_ where the
+A similar study was performed by Zuromskis et al. [Zuromskis2008]_ where the
 relationship between MES and traditional ultrasonic vulnerability metrics,
 echogenicity and blood flow velocities, was examined.  The conclusion of that
 study was as follows: Despite optimum standard anti-platelet therapy, cerebral
@@ -111,11 +115,11 @@ Methods to increase the robustness of unstable data
 Examination room protocol
 ===============================
 
-Transcranial Doppler was performed thus far on a 19 patients using a Multidop-L2
+TCD was performed thus far on a 19 patients using a Multidop-L2
 2.54g system made by DWL (Germany).  One hour of data is collected immediately
 following acquisition of the carotid ultrasound data for strain imaging.  A pair
-of 2 MHz transducers are focused on the right and left middle cerebral
-arteries (MCA) at the transtemporal acoustic windows and secured with the
+of 2 MHz transducers are focused on the right and left
+MCA at the transtemporal acoustic windows and secured with the
 Marc600 Transcranial Fixation System head unit.  The Doppler gate is placed at a
 depth of 30 to 67 mm depending on the size of the patient.
 
@@ -188,7 +192,7 @@ signal.
   |tcd_ui_long|: TCD post-processing software viewing subject 150.  A
   hierarchical view of the peak velocity data is shown with the shortest time
   scale on the top plot.  Contextual marks made during acquisition, some of
-  which can be seen in the lower plot, are displacement as a dot with the
+  which can be seen in the lower plot, are displayed as a dot with the
   machine recorded time.  In this dataset, unilateral elevated peak velocities
   as well as arrhythmia can be observed.
 
@@ -203,12 +207,12 @@ letter indicating the file type, followed by a number starting from zero.  This
 number is incremented every time recording is stopped or started during a
 session.  Two filetypes were found to be of interest: *TX?* and *TW?* where *?*
 is the acquisition number per session.  The *TX?* files are plain text files
-that contain system setting information and events.  |tx_content| has some
+that contain system setting information and events.  |tx_content_start| presents some
 example content from a *TX?* file.  This file first starts with some parameters
 related to the acquisition such as the patient name and machine settings such as
-the pulse repetition frequency (PRF) in Hz, velocity curve sampling frequency in
+the PRF in Hz, velocity curve sampling frequency in
 Hz, and the Doppler frequency.  Also contained in the *TW?* are HITS are
-operator mark events, one per line.  A HITS events consists of a the time the
+operator mark events, one per line.  A HITS event consists of the time the
 event occurred, in hundredths of seconds after the start of acquisition, the
 string 'HIT', the amplitude of the HITS in dB, the system clock time, and other
 numbers.  These are algorithmically detected HITS, many of which may be
@@ -252,7 +256,7 @@ dataset in pieces.
 
   |tx_content_long|: Example content of Multidop-L2 *TX?* file.
 
-A GUI was built to retrospectively inspect the recorded data using PyQt4
+A graphical user interface (GUI) was built to retrospectively inspect the recorded data using PyQt4
 [Various2011]_ and Veusz [Sanders2010]_.  To expedite analysis of the data
 collected over an hour time period, three plots of the peak velocity waveform
 are displayed at three time scales, i.e. the entire acquisition, a 100 second
@@ -271,14 +275,14 @@ Microemboli and peak velocity results
 Microemboli HITS results for subjects where there is reasonable confidence in the
 reliability of the counts are enumerated in |hits_table|.  These results are
 for up to one hour monitoring prior to surgery.  Subject 142 and 143 were
-monitored both before and after ECA.  Four HITS were noted for Subject 142 prior
+monitored both before and after carotid endarterectomy (CEA).  Four HITS were noted for Subject 142 prior
 to surgery and no HITS were detected after surgery.  Subject 143 had no HITS
-detected before or after ECA.  Only guarded confidence is placed in a subset of
+detected before or after CEA.  Only guarded confidence is placed in a subset of
 the data collected because of factors that prevented the collection of
 consitent, reliable signal.  Secure positioning of the transducers by the head
 unit proved to be of critical importance.  Alignment of the acoustic beam with
 MCA flow is very sensitive to both the position along the acoustic window and
-the orientation of the transducer.  If the head unit cannot securely anchor the
+orientation of the transducer.  If the head unit cannot securely anchor the
 transducer with the skull, constant transducer re-adjustment is required, which
 results in poor signal and motion artifacts.  The age of the machine also bring
 into question reliability of the electronics.
@@ -315,12 +319,12 @@ into question reliability of the electronics.
   140               Right    1.8        NS               NS                Poor
   142               Left     42.3       71.0             30.3              Good
   142               Right    56.7       101.0            37.2              Good
-  142(post-ECA)     Left     27.0       55.3             19.5              Good
-  142(post-ECA)     Right    23.9       43.4             17.2              Good
+  142(post-CEA)     Left     27.0       55.3             19.5              Good
+  142(post-CEA)     Right    23.9       43.4             17.2              Good
   143               Left     11.6       17.7             9.6               Fair
   143               Right    NS         NS               NS                Poor
-  143(post-ECA)     Left     11.2       30.9             5.3               Fair
-  143(post-ECA)     Right    19         42.8             8.2               Fair
+  143(post-CEA)     Left     11.2       30.9             5.3               Fair
+  143(post-CEA)     Right    19         42.8             8.2               Fair
   145               Left     8.0        16.1             3.4               Fair
   145               Right    8.8        36.7             8.9               Fair
   146               Left     3.7        21.4             3.2               Fair

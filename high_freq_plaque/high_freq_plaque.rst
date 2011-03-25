@@ -5,10 +5,11 @@ Chapter 7 : High-frequency Plaque Characterization
 .. sectnum::
   :prefix: 7.
 
-High-frequency ultrasound imaging is useful for examining small objects -- it
+High-frequency ultrasound imaging is useful for examining tissue structures and
+inhomogeneitites like calcifications -- it
 has the advantage of high resolution at the expense of low penetration.  In this
 chapter new high frequency imaging techniques are explored for interrogation of
-the excised plaques which result from endarterectomy.  First the materials and
+the excised plaques which result from carotid endarterectomy procedures.  First the materials and
 methods used to create these images are described.  Note that many other details
 are found in Appendix A.  Then, initial 3D parametric images of the excised
 plaques are presented.
@@ -30,6 +31,8 @@ plaques are presented.
 .. |pat144_long| replace:: **Figure 7.4**
 
 .. |pat154| replace:: Fig. 7.5
+
+.. |pat154_start| replace:: Figure 7.5
 
 .. |pat154_long| replace:: **Figure 7.5**
 
@@ -58,7 +61,7 @@ examination and TCD recording, patients undergo surgery for plaque excision.
 Endarterectomy specimens are retrieved immediately following surgery for
 scanning and returned the same day to pathology for analysis and histology
 preparation.  Samples are examined in a water bath and suspended between two
-catheter sheaths.  A picture of the experimental setup is shown in |apparatus|.
+catheter sheaths.  A photograph  of the experimental setup is shown in |apparatus|.
 
 .. image:: images/apparatus.png
   :align: center
@@ -73,12 +76,12 @@ catheter sheaths.  A picture of the experimental setup is shown in |apparatus|.
   stepper motor moves the transducer parallel to the longitudinal direction of
   the plaque.
 
-VisualSonics Vevo 770 is used for ultrasound radiofrequency acquisition.  The
+VisualSonics Vevo 770 is used for the high frequency ultrasound radiofrequency acquisition.  The
 system for 3D collection and processing of RF data on the Vevo 770 is described
 in Appendix A.
 
 The transducer selected is a RMV710B that has a center frequency of 25 $MHz$,
-which is on the lower end the center frequency for available transducers.  This
+which is on the lower end of the center frequency for available transducers.  This
 transducer outputs frequencies up to 37.5 MHz, with an axial resolution of 70
 μm, lateral resolution of 140 μm, focal length 15 mm, and a maximum
 field of view of 20.0 mm.  The RMV710B is selected because the frequency is
@@ -95,20 +98,17 @@ specimen.  Some longer plaques may require larger inter-frame spacing because of
 memory limitations, although the resolution in the elevational direction is
 nominally 140 μm for the RMV710B transducer.
 
-Each
-acquisition consists of 250 beam lines separated by approximately 60 μm, 2128
-samples (3.9 mm), and up to 250 frames separated by 200 μm to 100 μm
-depending on the length of the plaque specimen.  For the lengths of the plaques
+For the lengths of the plaques
 scanned, which ranged from approximately 20 mm to 40 mm, this filled the
 system limits on acquisition.  The collection of a single 3D data set covering an entire
-plaque takes approximately one to two hours.  Resulting files are approximately 150 per
+plaque takes approximately one to two hours.  Resulting files are approximately 150 μm per
 volumetric slice.  Three to five volumetric slices are required to encompass
 the majority of an excised plaque's volume.  Some longer plaques may require
 larger inter-frame spacing because of memory limitations, although the
 resolution in the elevational direction is nominally 140 μm for the RMV710B
 transducer.
 
-Integrated backscatter coefficient (IBSC) images are created with a reference phantom created by Dr. Ernest Madsen
+Integrated backscatter coefficient (IBSC) images are created with a reference phantom created by Dr. Ernest L. Madsen, PhD
 from UW-Madison.  The reference phantom is made of the 5000E material
 characterized in Chapter 6.  The reference phantom was scanned with the same
 transducer and system settings as utilized for scanning the plaque specimen.
@@ -116,37 +116,38 @@ This includes the plastic covering over the transducer that prevents
 contamination of the transducer by plaque. Reference power spectra are obtained
 by averaging 30 lines per plane over 60 planes.  Fourier spectra with 50%
 overlap are calculated using a Fast Fourier Transform with 128 Hamming windowed
-points (240 μm), and the bandwidth used ranged from 6.6 MHz to 29.6 MHz where
-the spectrum was flat.  The BSC of the reference phantom is interpolated from
+points (240 μm), and the bandwidth used ranged from 6.6 MHz to 29.6 MHz.
+The BSC of the reference phantom is interpolated from
 the values measured with the reference reflector in Chapter 6.  Attenuation in
-the plaque was assumed to be the same as reference phantom, which is reasonable
-for arterial plaque specimens according values reported in the literature
+the plaque specimen was assumed to be the same as reference phantom, which is reasonable
+for arterial plaque specimens based on values reported in the literature
 [Hoskins2007,Lockwood1991]_ The backscatter was calculated using the expression
-[Liu2007]_
+[Liu2007]_, below:
 
 .. math::   BSC_s(f) = \frac{BSC_r(f) S_s(f)}{S_r(f)}
 
-Log compression and linear interpolation were applied to the displayed IBSC.
+Log compression and linear interpolation were applied to the displayed IBSC
+images.
 Identical dynamic ranges and color transform functions were used in all corresponding images.
 
 ~~~~~~~~~~~~~~~~~~~~~
 B-Mode image creation
 ~~~~~~~~~~~~~~~~~~~~~
 
-The received pulse-echo signal, RF data, is
+The received pulse-echo signal, that is RF data, is
 highly oscillatory.  An envelope of the RF data reflects local scattering
 amplitude, and this is what comprises a B-Mode image.
 
 .. image:: images/envelope.png
   :align: center
   :width: 8cm
-  :height: 5.25
+  :height: 5.25cm
 .. highlights::
 
   |envelope_long|: Sample RF signal and its corresponding envelope.
 
 Calculation of the RF envelope is often performed with the analytic signal.  The
-analytic signal is used to decompose a signal into its local amplitude and local
+analytic signal is used to decompose a signal into its local amplitude and 
 phase [Felsberg2001,Woo2008a]_ [#]_.  The analytic signal, *f*\ :sub:`A`\ *(x)*, of a real
 signal, *f(x)*, is defined to be
 
@@ -154,7 +155,9 @@ signal, *f(x)*, is defined to be
 
 .. [#] Local phase is a 1D concept, and the analytic signal is not defined for multi-dimensional signals.  To split a multi-dimensional image into structural and energetic information, see the monogenic signal [Felsberg2001]_.
 
-Where *f*\ :sub:`H`\ *(x)* is the Hilbert Transform of *f(x)* given by
+.. epigraph::
+
+  where *f*\ :sub:`H`\ *(x)* is the Hilbert Transform of *f(x)* given by
 
 .. math::  f_H(x) = \frac{1} {\pi} \int_{-\infty}^{\infty} \frac {f(x')}{x' - x} \, dx'
 
@@ -175,7 +178,7 @@ signal [Bracewell2000]_ an approach to calculate the analytic signal is then
 to calculate the Fourier Transform, multiply the first half by two, multiply the
 second half by zero, and take the inverse Fourier Transform.
 
-For narrow band signals, the local phase, *ϕ(x)*, and the local energy,
+For narrow band signals, the local phase, :math:`\phi(x)`, and the local energy,
 *A(x)*, of *f(x)* can be interpreted as [Felsberg2001]_
 
 .. image:: images/bmodeeqn2.png
@@ -185,9 +188,9 @@ For narrow band signals, the local phase, *ϕ(x)*, and the local energy,
 
 After the envelope, *A(x)*, is calculated, post-processing can be performed.
 The majority of an ultrasound image's content is speckle, random scattering
-caused by scatterers much smaller than the excitation wave.  Speckle's amplitude has
+caused by scatterers much smaller than the excitation wavelength, which follow
 a Rayleigh distribution [Wagner1983]_.  Since the Rayleigh distribution is
-skewed to lower values and a small proportion of the amplitudes have very large
+skewed to lower values and a very small proportion of the amplitudes having very large
 values, a logarithmic intensity transform is commonly applied to the envelope to
 improve image contrast.
 
@@ -225,15 +228,15 @@ are shown in the following figures.
   areas, data was collected with -10 dB gain relative to |pat142|\ a), which
   explains the larger impact of electronic noise in c).
 
-Beware of the presence of the catheter used to suspend the plaques in these
+Note the presence of the catheter used to suspend the plaques in these
 images.  It is clearly visible as a high intensity cylinder.  In Subject 142,
-|pat142|, it is visible on the right and rear in the volume renderings.  The
+as seen in |pat142|, it is visible on the right and rear in the volume renderings.  The
 catheter protrudes from the tips along the axis of the internal carotid artery
-(ICA) segment for Subject 144, |pat144|.  It extends deeply into the bulb and
-ICA segment of Subject 154, |pat154|.  It reaches from the start of the bulb up
+(ICA) segment for Subject 144, shown in |pat144|.  It extends deeply into the bulb and
+ICA segment of Subject 154, as seen in |pat154|.  It reaches from the start of the bulb up
 into the bifurcation on one side and only slightly penetrates the ICA for Subject
-158, |pat158|.  In general, the IBSC images look 'cleaner' than the B-Mode
-images with similar to the same resolution.  This can be attributed to the
+158, in |pat158|.  In general, the IBSC images look 'cleaner' than the B-Mode
+images with similar spatial resolution.  This can be attributed to the
 removal of speckle in the IBSC.
 
 Subject 142 shows a possible high-risk plaque with an extensive hemorrhagic area
@@ -246,22 +249,22 @@ transcranial Doppler for Subject 142 (Table 8.1).  The result for Subject 144 on
 the other hand, depicts a likely stable plaque with smooth, un-ulcerated walls
 and strong fibrous and calcified tissue throughout.  Note the abundance of very
 high magnitude IBSC in Subject 144 because of calcifications.  In a pathologist's
-independent assessment of histopathological slides of the same specimens,
+independent assessment of the histopathological slides of the same specimens,
 Subject 142 was found to have approximately 5% calcified content, while Subject
 144 was found to have 55% calcified content.  This is consistent with the
 ultrasound results in |pat142| and |pat144|.
 
-The system receive gain was set 10 dB higher during the acquisition of |pat142|
-than of |pat144|.  This reduced the amount of saturated signal due to the
+The system receive gain was set 10 dB higher during the acquisition of plaques
+in |pat142|
+than that for |pat144|.  This reduced the amount of saturated signal due to the
 calcifications.  However, this also increases the relative amplitude of
 electronic noise, which is most evident in the B-Mode volume rendering,
-|pat144|\ c).  The purpose and benefits of the reference phantom methods are
-clear here-- |pat144|\ d) is not duly affected by this change in the system
-settings.  Since the electronic is equivalently elevated in the reference
+shown in |pat144|\ c).  The purpose and benefits of the reference phantom methods are
+clearly illustrated in |pat144|\ d), which is not duly affected by this change in the system
+settings.  Since the electronic noise is equivalently elevated in the reference
 phantom signal, the change is nullified in terms of the output image.  In
 comparison to the B-Mode image, the IBSC image is a more consistent
-representation of the object being profiled than the apparatus used to create
-the image.
+representation of the object being profiled.
 
 The tip of the flow divider, also known as the tuning fork, can be easily
 located in these images.  This fiducial marker can be used to identify the
@@ -291,9 +294,9 @@ corresponding region within *in vivo* data.
   volume rendering, d) integrated backscatter volume rendering, e) B-Mode
   tri-planar view, and f) IBSC tri-planar view.
 
-|pat154| and |pat158| show plaques attained from surgery that are used as
+|pat154_start| and |pat158| show plaques attained from surgery that are used as
 strain case
-studies in Chapter 9.  Subject 154, |pat154| and Fig. 9.10, is used as an example of a plaque
+studies in Chapter 9.  Subject 154, in |pat154| and Fig. 9.10, is used as an example of a plaque
 with a 'soft' hypoechoic presentation and that has high strain.  Both the gross
 pathological appearance corroborates this assessment as does the 3D ultrasound
 characterization.  The gross pathology shows a smooth, relatively homogeneous
@@ -303,7 +306,7 @@ has low backscatter coefficients and is homogeneous with the exception of a few
 small pockets.
 
 In contrast to Subject 154, a large acoustic shadow marks the B-Mode in Fig. 9.14.  Very
-little strain is seen in the calcified region.  However, other regions of the
+little strain is seen in the calcific region.  However, other regions of the
 plaque do not exhibit the same shadowing, and some have very high strains.
 The gross pathology in |pat158|\ a) and b) give a complex presentation with at
 least one region of hemorrhage/necrosis clearly visible in |pat158|\ b).  The ultrasound also
@@ -311,11 +314,11 @@ shows a complex presentation with IBSC values consistent with calcific regions
 at the bifurcation and along one side of the ICA segment.  It is possible that
 the focal, calcific region may explain the shadowing in Fig. 9.14 while the
 hemorrhagic regions could be the source of high strains.  The noise present
-in the ultrasound images of Subject 158 is explained by known malfunction of the
+in the ultrasound images of Subject 158 is explained by a known malfunction of the
 transducer at that time.
 
 In conclusion, 3D, high-frequency parametric ultrasound images may be a useful
-tool for plaque characterization.  At a minimum, calcified areas can be
+tool for plaque characterization.  At a minimum, calcific areas can be
 identified.  It was shown that the use of the reference phantom method improved
 the quality and content of the images.  With a 3D volume, easy correlations are
 made between shapes in the gross pathology images and the ultrasound images.  In
