@@ -10,7 +10,7 @@ This appendix lists the plaque strain statistics described in Section 9.4.
 
 .. highlights::
 
-  **Table B.1**: Maximum absolute principal strain estimatess.
+  **Table B.1**: Maximum absolute principal strain estimates.
 
 .. csv-table::
   :widths: 50, 15, 15, 15, 15, 15, 15
@@ -26,7 +26,7 @@ This appendix lists the plaque strain statistics described in Section 9.4.
 
 .. highlights::
 
-  **Table B.3**: Distortional energie estimates.
+  **Table B.3**: Distortional energy estimates.
 
 .. csv-table::
   :widths: 50, 15, 15, 15, 15, 15, 15
@@ -34,7 +34,7 @@ This appendix lists the plaque strain statistics described in Section 9.4.
 
 .. highlights::
 
-  **Table B.4**: Total strain energie estimates.
+  **Table B.4**: Total strain energy estimates.
 
 .. csv-table::
   :widths: 50, 15, 15, 15, 15, 15, 15
