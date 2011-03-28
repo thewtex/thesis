@@ -7,7 +7,7 @@ ODTRESPACE=odt-respace
 RST2ODT=rst2odt.py
 UNOCONV=unoconv
 
-STYLESODT=styles.odt
+STYLESODT=styles_landscape.odt
 STYLESODTPATH=../formatting/$(STYLESODT)
 
 PAPER=in_vivo_appendix
