@@ -97,7 +97,7 @@ described. [#]_
 Tissue-mimicking phantoms
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The TM phantoms examined in this chapter were produced as reference phantoms for
+The TM phantoms examined in this chapter are produced as reference phantoms for
 use at high frequencies [Madsen2010]_.  Each phantom is macroscopically uniform.
 The base material of the phantoms consists of a mixture of agarose, propylene
 glycol, Germall Plus (preservative), and ultra-filtered whole bovine milk.
@@ -107,11 +107,12 @@ different diameter distributions (catalog numbers 4000E and 5000E, Potter
 Industries, Inc., Valley Forge, Pennsylvania, USA).  The two phantoms will
 henceforth be referenced as the '4000E phantom' and '5000E phantom',
 respectively.  The diameter distributions of the two glass bead categories that
-are utilized in these phantoms are shown in |size_distribution|. The diameters
-were measured by placing beads in an agarose suspension and viewing under an optical
-microscope.  Approximately 500 diameter measurements were made for each bead
-source.  We show the diameter percentage calculated by binning the measurements
-and dividing by the total frequency.  We also show the percentage calculated
+are utilized in these phantoms are shown in |size_distribution|; mean scatterer
+diameters of the 4000E and 5000E phantoms are 5.40 μm and 5.16 μm, respectively. The diameters
+are measured by placing beads in an agarose suspension and viewing under an optical
+microscope.  Approximately 500 diameter measurements are made for each bead
+source.  The diameter percentage is calculated by binning the measurements
+and dividing by the total frequency.  The percentage is also calculated
 with the kernel density estimation (KDE) technique [Rosenblatt1956,Parzen1962a]_; a Gaussian kernel is used
 with bandwidth automatically calculated using the method of Silverman
 [Silverman1986]_.
@@ -133,7 +134,7 @@ The concentration of the 4000E bead is 6.00 g/L, and that of the 5000E beads is
 Attenuation characterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Attenuation was measured with the standard narrowband substitution technique
+Attenuation is measured with the standard narrowband substitution technique
 [AIUM1995,Madsen1999]_.  Attenuation, the rate of decrease in amplitude with
 depth, *z* of the amplitude, *A*, of an pressure pulse is assumed to be linearly
 proportional to the amplitude of the pulse,
@@ -205,7 +206,7 @@ MA, USA).  The transducers are aligned by peaking the received signal with a
 micrometer controlled translation unit (Ardel Kinematic Inc., Stratford, CT,
 USA) and gimbal mount (Newport Oriel, Stratford, CT, USA). The transducers are
 separated by a relatively close 42 μs delay (62.5 mm signal propagation path) to
-prevent attenuation of the signal.  The transducer, serial numbers 630314 and
+prevent attenuation of the signal.  These transducers, serial numbers 630314 and
 630315, are well matched in their spectral response with a -6 dB bandwidth from
 28 MHz to 65 MHz as shown in |panametrics_spectrum|.  In practice we find that
 sufficient signal can be obtained from 10 MHz to 70 MHz.
@@ -267,7 +268,7 @@ tone burst.
   demonstrate time shifts.  Amplitudes are kept consistent at each frequency,
   but the excitation amplitude is adjusted with frequency so sufficient
   signal-to-noise ratio is obtained without saturation and non-linear
-  propagation.  The dramatic effect of non-linear attenuation on the signal
+  propagation.  The dramatic effect of frequency-dependent attenuation on the signal
   shape can be seen in d).
 
 .. image:: images/spectrogram_fig.png
@@ -349,7 +350,7 @@ amplitude is,
 
 .. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
 
-The thickness of the test cylinder was 5.00 mm measured with a calibrated
+The thickness of the test cylinder is 5.00 mm as measured with a calibrated
 micrometer.  This is significantly thinner than the larger 'hockey-puck'
 cylinders used at lower frequencies to limit high frequency attenuation.
 
@@ -431,21 +432,21 @@ water-with-sample signal.  First, we find the delay to a zero-crossing at the
 center of the water-only tone burst.  To locate this zero-crossing, we first
 find the 'start' of the received tone burst.  The 'start' of the tone is where
 the signal exceeds the electronic noise that comes before the tone burst.  The
-noise level was quantified by measuring the standard error of the first 100
-samples of the received waveform.  The start of the signal was taken as the
-sample where the received signal exceeded eight times the noise standard error.
-An approximate center of the pulse is found by moving 15 periods past the start.
-The closest zero-crossing was linearly interpolated from the samples to obtain a
-precise delay for the water-only signal.  The procedure is repeated for the
-water-with-sample signal, but instead of moving 15 periods past the start, the
-offset closest to a center zero-crossing is the different between the water-only
-zero crossing and the water-only start.  This ensures the same relative
-zero-crossing is used as the delay for both the water-only and the
-water-with-sample cases.  This will be true as long as the distortion at the
-front edge of the signal does not approach half a period, which has empirically
-proven to be a valid assumption.  |delay_times_start| shows the delay samples selected
-in this process at 50.0 MHz for the water-only signal and after the 5000E signal
-is inserted.
+noise level is quantified by measuring the standard deviation of the first 100
+samples of the received waveform.  The start of the signal is taken as the
+sample where the received signal exceeds eight times the noise standard
+deviation.  An approximate center of the pulse is found by moving 15 periods
+past the start.  The closest zero-crossing is linearly interpolated from the
+samples to obtain a precise delay for the water-only signal.  The procedure is
+repeated for the water-with-sample signal, but instead of moving 15 periods past
+the start, the offset is the closest zero-crossing to the difference between the
+water-only zero-crossing and the water-only start.  This ensures the same
+relative zero-crossing in the tone burst is used as the delay for both the
+water-only and the water-with-sample cases.  This will be true as long as the
+distortion at the front edge of the signal does not approach half a period,
+which has empirically proven to be a valid assumption.  |delay_times_start|
+shows the delay samples selected in this process at 50.0 MHz for the water-only
+signal and after the 5000E signal is inserted.
 
 .. image:: images/delay_times.png
   :align: center
@@ -501,9 +502,9 @@ Absolute backscatter estimation
 Calculation of the absolute backscatter coefficient (BSC), the differential
 scattering cross section per unit volume at a scattering angle of 180 degrees,
 follows the method described by Chen et al. [Chen1993,Madsen1984]_.  Using a
-single element ultrasound transducer, pulses were propagated through water and
+single element ultrasound transducer, pulses are propagated through water and
 into the material of interest, and the spectrum of the received backscattered
-signal voltage determined the BSC after correcting for characteristics of the
+signal voltage determines the BSC after correcting for characteristics of the
 transducer, instrumentation properties, and ultrasonic properties of intervening
 materials.
 
@@ -544,8 +545,8 @@ signal was digitized at 420 MS/s with 12 bit precision.
 The Vevo 770, designed for high frequency imaging of small
 animal targets, is easily saturated when presented with signal from a strong
 planar reflector that experiences the relatively weak attenuation of a water path.  To
-prevent saturation, we use a liquid-liquid interface where the two liquids have closely matched
-acoustic impedances [Hall2001]_.  The interface reported by Hall et
+prevent saturation, a liquid-liquid interface where the two liquids have closely matched
+acoustic impedances is used [Hall2001]_.  The interface reported by Hall et
 al. [Hall2001]_ was recreated, which consists of a brominated hydrocarbon mixture covered by
 water.  The hydrocarbon consisted of 39.018% by weight 1-bromoheptane (99%
 purity, Acros Organics, New Jersey, USA) and
@@ -555,7 +556,7 @@ coefficient is 0.0138 [Hall2001]_.  An additional receive gain of -5.0 dB in
 the planar reflector case relative to the TM phantom signal gain is still required.
 The reflector was carefully aligned with a gimbal mount to obtain the highest possible amplitude for the
 backscattered signal.  To prevent non-linear effects, planar reflector and TM
-phantom signal is collected with a 10% transducer power.  At 10% power, a
+phantom signal is collected at 10% transmit power.  At 10% power, a
 reasonable tradeoff is achieved that reduces non-linear effects in the planar
 reflector signal while leaving sufficient signal-to-noise ratio in the TM
 phantom signals.  At higher transmit powers, harmonics introduce lobes into the
@@ -640,16 +641,16 @@ phantom, respectively.  Superposition using the diameter distribution given in
 
 .. epigraph::
 
-  where ρ\ :sub:`m` is the bead mass density, *D* is the diameter of
+  where *ρ*\ :sub:`m` is the bead mass density, *D* is the diameter of
   the bead, and *g(D)* is the diameter distribution.
   We next calculate the bead number density - the number of beads of a given
-  diameter per unit volume.  The bead number density, ρ\ :sub:`n`\ *(D)*, is
+  diameter per unit volume.  The bead number density, *ρ*\ :sub:`n`\ *(D)*, is
 
 .. math:: \rho_n (D) = \frac{\rho_V}{m_g} g(D)
 
 .. epigraph::
 
-  where ρ\ :sub:`V` is the bead concentration (mass per unit volume).
+  where *ρ*\ :sub:`V` is the bead concentration (mass per unit volume).
   The backscatter coefficient, a function of frequency *f*, results from
   summing the backscatter for a single bead, *BS*\ :sub:`s`\ *(f,D)*
   multiplied by the bead number density,
@@ -680,7 +681,7 @@ reference reflector results.  Differences in the predicted BSC of the Faran calc
 results are much greater in the 15-30 MHz range than the 5-15 MHz range.  The
 linear slope in the log-log graph with a slope near four indicates Rayleigh
 scattering in the 6-15 MHz range.  Power law regression to the experimental data
-results in a slope of 3.76 and a coefficient of determination, :math:`R^2`, of
+results in a slope of 3.76 and a coefficient of determination, *R*\ :sup:`2`, of
 0.997 for the 5000E phantom.  This is expected more for the 5000E phantom
 because of the smaller bead diameter distribution evident in
 |size_distribution|.
@@ -692,12 +693,12 @@ trend of the 4000E reference reflector BSC appears to be correct, although there
 some oscillations not found in the Faran calculation curve.  The reference
 reflector BSC values are higher in the 5-35 MHz frequency range before converging with the
 Faran calculation.  The mean and standard
-deviation of the percent difference of the 4000E reference reflector values from the
+deviation of the absolute percent difference of the 4000E reference reflector values from the
 Faran calculation values from 5-50 MHz are 53.6% ± 44.8.
 Agreement between the Faran calculation and reference reflector results for the
 5000E is very close in the 5-15 MHz frequency range.  The reference reflector BSC values
 are higher from 15-35 MHz before also converging again.  The mean and standard
-deviation of the percent difference of the 5000E reference reflector values from the
+deviation of the absolute percent difference of the 5000E reference reflector values from the
 Faran calculation values from 5-50 MHz are 46.6% ± 27.9.
 
 
