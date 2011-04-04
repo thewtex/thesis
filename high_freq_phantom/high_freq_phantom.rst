@@ -643,8 +643,8 @@ phantom, respectively.  Superposition using the diameter distribution given in
 
   where *ρ*\ :sub:`m` is the bead mass density, *D* is the diameter of
   the bead, and *g(D)* is the diameter distribution.
-  We next calculate the bead number density - the number of beads of a given
-  diameter per unit volume.  The bead number density, *ρ*\ :sub:`n`\ *(D)*, is
+  Next, the bead number density - the number of beads of a given
+  diameter per unit volume - is calculated.  The bead number density, *ρ*\ :sub:`n`\ *(D)*, is
 
 .. math:: \rho_n (D) = \frac{\rho_V}{m_g} g(D)
 
