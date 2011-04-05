@@ -388,7 +388,7 @@ specified in the deformed configuration,
 
 where **F**\ :sup:`-1` is the inverse of **F** [Lai1993]_,
 
-.. math:: \mathbf{F} = \begin{bmatrix} \dfrac{\partial X_1}{\partial x_1} & \dfrac{\partial X_1}{\partial x_2} \\ \dfrac{\partial X_2}{\partial x_1} & \dfrac{\partial X_2}{\partial x_2} \end{bmatrix}
+.. math:: \mathbf{F}^{-1} = \begin{bmatrix} \dfrac{\partial X_1}{\partial x_1} & \dfrac{\partial X_1}{\partial x_2} \\ \dfrac{\partial X_2}{\partial x_1} & \dfrac{\partial X_2}{\partial x_2} \end{bmatrix}
 
 Again considering the deformation of two small segments in the volume,
 
