@@ -6,7 +6,21 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
 
+from mpl_toolkits.axes_grid1.inset_locator import mark_inset
+from mpl_toolkits.axes_grid1.inset_locator import zoomed_inset_axes
+
 parser = argparse.ArgumentParser( description='Display a MetaImageFile in a Matplotlib figure.' )
+
+#mpl.rcParams['axes.edgecolor'] = 'white'
+#mpl.rcParams['axes.labelcolor'] = 'white'
+#mpl.rcParams['axes.facecolor'] = 'black'
+#mpl.rcParams['figure.facecolor'] = 'black'
+#mpl.rcParams['savefig.facecolor'] = 'black'
+#mpl.rcParams['xtick.color'] = 'white'
+#mpl.rcParams['ytick.color'] = 'white'
+#ec="0.8"
+ec="0.2"
+
 
 parser.add_argument( 'input_file', type=argparse.FileType('rb') )
 parser.add_argument( '-f', '--figure-size', nargs=2, type=float )
@@ -22,7 +36,9 @@ parser.add_argument( '-i', '--interpolation', type=str, choices=['nearest',
 args = parser.parse_args()
 
 if args.figure_size:
-    plt.figure( 1, figsize=(args.figure_size[0], args.figure_size[1]) )
+    fig = plt.figure( 1, figsize=(args.figure_size[0], args.figure_size[1]) )
+else:
+    fig = plt.figure(1)
 
 if args.labelsize:
     mpl.rc( 'axes', labelsize = args.labelsize )
@@ -55,7 +71,11 @@ img.shape = shape
 #img = img.transpose()
 shape = img.shape
 
-plt.imshow( img,
+ax = fig.add_subplot(111)
+extent = (offset[0], offset[0] + shape[1]*element_spacing[0],
+             offset[1] + shape[0]*element_spacing[1], offset[1])
+
+ax.imshow( img,
         cmap=args.cmap,
         aspect='equal',
         #aspect=element_spacing[0]/element_spacing[1],
@@ -63,11 +83,12 @@ plt.imshow( img,
         vmax=args.vmax,
         interpolation=args.interpolation,
         origin='lower',
-        extent=(offset[0], offset[0] + shape[1]*element_spacing[0],
-             offset[1] + shape[0]*element_spacing[1], offset[1]) )
+        extent=extent
+        )
         #extent=(-offset[1]*1000, (-offset[1] + shape[1]*element_spacing[1])*1000,
              #(shape[0]*element_spacing[0])*1000, 0.0) )
              #(offset[0] + shape[0]*element_spacing[0])*1000, offset[0]*1000) )
+
 
 plt.xlabel( 'Width [mm]' )
 plt.ylabel( 'Depth [mm]' )
@@ -83,6 +104,23 @@ class cbFormatter( mpl.ticker.ScalarFormatter ):
 ##cb = plt.colorbar( shrink=0.8, drawedges=False )
 #cb.outline.set_marker( '' )
 #cb.set_label( 'Strain [%]' )
+
+axins = zoomed_inset_axes(ax, 4, loc=1)
+axins.imshow(img, extent=extent, origin='lower',
+        vmin = args.vmin,
+        vmax = args.vmax,
+        interpolation = args.interpolation,
+        cmap = args.cmap,
+        aspect='equal')
+
+x1, x2, y1, y2 = 10.0, 15.0, 30.0, 25.0
+axins.set_xlim(x1, x2)
+axins.set_ylim(y1, y2)
+
+plt.xticks(visible=False)
+plt.yticks(visible=False)
+
+mark_inset(ax, axins, loc1=2, loc2=4, fc='none', ec=ec)
 
 if args.output_file:
     plt.savefig( args.output_file, dpi=150 )
