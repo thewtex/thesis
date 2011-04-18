@@ -79,7 +79,7 @@ we present results on simulations, phantoms, and carotid strain image case
 studies.  [#]_
 
 .. [#] This chapter is adapted from McCormick, M. Rubert, N. and Varghese, T.
-  *Bayesian Regularization Applied to Ultrasound Strain Image*.  IEEE Transactions
+  *Bayesian Regularization Applied to Ultrasound Strain Imaging*.  IEEE Transactions
   in Biomedical Engineering.  2011.  In Press.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

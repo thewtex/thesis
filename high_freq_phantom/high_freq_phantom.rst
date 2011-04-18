@@ -18,8 +18,8 @@ coefficient, phase velocity, and absolute backscatter coefficient are
 described. [#]_
 
 .. [#] This chapter is adapted from McCormick, M, Madsen,
-  E., Deaner, M., and Varghese, T.  *Absolute Backscatter Measurements of
-  Tissue-Mimicking Phantoms in the 5-45 MHz Frequency Range*.  Journal of the
+  E., Deaner, M., and Varghese, T.  *Absolute Backscatter Coefficient Estimates of
+  Tissue-Mimicking Phantoms in the 5-50 MHz Frequency Range*.  Journal of the
   Acoustical Society of America.  In Review.
 
 .. |size_distribution| replace:: Fig. 6.1
