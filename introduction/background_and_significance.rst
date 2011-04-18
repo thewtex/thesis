@@ -6,7 +6,7 @@ Chapter 2 : Human Health Significance
   :prefix: 2.
 
 In this chapter, the role diagnostic medical ultrasound plays in addressing
-public health needs related to diagnosis of carotid plaque burden are discussed.
+public health needs related to carotid plaque burden are discussed.
 Specifically, focus is placed on stroke due to carotid atherosclerotic disease
 with increased vessel stenosis or embolization being primary causative factors.
 First, the prevalence and pathology of stroke is described.  The
@@ -48,7 +48,7 @@ widespread presence and increasing importance to quality of life as life
 expectancy continues to be prolonged cannot be understated
 [Hachinski2006,Hennerici2004]_.  Recent evidence has emerged suggesting that
 cerebral emboli may be a cause or accelerator for cognitive decline associated
-with Alzheimer's [Purandare2006a,Purandare2006,Purandare2007]_.  Some
+with Alzheimer's disease [Purandare2006a,Purandare2006,Purandare2007]_.  Some
 researchers have termed the Alzheimer's/vascular disease combination as 'mixed
 dementia', and it has gained increased recognition as the cause of mild
 cognitive impairment observed with aging
@@ -61,7 +61,7 @@ ischemic stroke has led to the suggestion that embolic ischemia may increase
 migraine risk [Zotto2008,Agostoni2007,Schoenen2006]_.  For example, Jesurum et
 al. [Jesurum2008]_ found that migraine with aura can be relieved when the source
 of ischemia causing emboli, a right-to-left shunt via a patent foramen ovale
-(PFO), is closed even partially with surgery. 
+(PFO), is closed even partially with surgery.
 
 While the effects of stroke are far reaching, there are only a few basic causes.
 The pathogenesis of stroke can be classified into four categories
@@ -70,8 +70,8 @@ hemorrhage from an arteriovenous malformation, and brain infarction, which is
 also referenced as *ischemic stroke*.  Mechanisms of cerebral infarction are
 further divided into subcategories, namely, thrombotic, embolic, and
 hemodynamic.  Thrombotic infarction usually occurs with a thrombosis that forms
-around an atherosclerotic plaque occlude blood flow.  This can occur with the
-larger cerebral arteries that possess extensive cerebrovascular disease. 
+around an atherosclerotic plaque, which occludes blood flow.  This can occur with the
+larger cerebral arteries that possess extensive cerebrovascular disease.
 
 Emboli causing brain infarction can have many origins.  One source of emboli is
 the heart.  Cardioembolic stroke can be due to many conditions.  Atrial
@@ -80,19 +80,21 @@ disease or mechanical valve replacement can result in thrombosis with free
 passage to the brain.  Strokes that were previously labeled idiopathic,
 paradoxical, or crypotogenic, are now thought to be primarily caused by a patent
 foramen ovale (PFO).  A PFO occurs when the shunt in the fetus's atrial septum,
-for bypassing circulation to the lungs, fails to close after birth.  A clot
+which bypasses circulation to the lungs, fails to close after birth.  A clot
 within the shunt or a peripheral venous thrombus that has bypassed the lungs
 could then find its way to cerebral tissue [Whisnant1990]_.  Finally,
 hemodynamic brain infarctions refer to hypoperfusion due to plaque stenosis or
-occlusion.  The stroke pathogenesis targeted in this work are emboli originating
+occlusion.
+
+The stroke pathogenesis targeted in this work are emboli originating
 from carotid plaque.  This is one of the more common causes of stroke,
 underlying over 50% of strokes [Nikic2006,Rothwell2000]_.  The carotid artery is
 the main conduit of blood to the brain.  In humans there is a left and right
 common carotid artery (CCA) that bifurcates in the upper neck into the internal
 carotid artery (ICA) and the external carotid artery (ECA).  The diameter of the
-CCA is typical 0.5 mm although age and atherosclerosis can increase diameter
+CCA is typically 0.5 mm although age and atherosclerosis can increase diameter
 through remodeling [Eigenbrodt2006]_.  Large muscular arteries are prone to
-develop atherosclerosis and areas of hemodynamic disturbance are inherently
+develop atherosclerosis, and areas of hemodynamic disturbance are inherently
 susceptible to atherosclerosis, so plaque invariably develops around the
 bifurcation at the carotid bulb.
 
@@ -142,8 +144,6 @@ identify and stratify stroke risk from embolic carotid plaque.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Clinical carotid ultrasound and plaque characterization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
 
 Vulnerable plaque
 =================
