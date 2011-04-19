@@ -159,7 +159,7 @@ overlying fibrous cap, inflammatory infiltrate, and other factors
 Morphologically, the appearance of ulceration is also associated with plaque
 vulnerability [Groenholdt1999,Park1998]_.  Ulceration is an irregularity in the
 surface of the plaque.  In addition to inducing stress concentrations,
-ulcerations expose thrombogenic layers of the plaque and provide a surface for a
+ulcerations expose thrombogenic layers of the plaque and provide a surface for
 thrombus to develop on.  Another factor that can lead to increased plaque
 vulnerability is angiogenesis.  Neoangiogensis refers to the formation of small
 blood vessels from the vasa vasorum that result from large and complex
@@ -235,8 +235,8 @@ Histology
 Histological classification of excised
 plaques have shown that hemorrhage, ulceration, and lipid rich plaques have an
 association with amaurosis fugax, TIA, or stroke. [Groenholdt1999]_ Fresh
-thrombi especially have a connection with ischemic infarction. [Lusby1982]_
-Also, as previously mentioned, inflammatory markers are also related to stroke
+thrombi, especially, have a connection with ischemic infarction. [Lusby1982]_
+Also, as previously mentioned, inflammatory markers are related to stroke
 symptoms.  Histology is the most common gold standard for imaging modalities
 that try to determine tissue composition, ulceration, microstructure, and
 biochemical markers.
@@ -289,7 +289,7 @@ acute symptomatic vs. recently symptomatic vs. asymptomatic patients
 detection of ulceration [Yu2009]_.  Even though MRI imaging of composition holds
 promise, there is room for improvement: an attempt to correlate plaque
 morphology and composition as measured on both arteries of 40 patients did not
-find that the MRI images along could not predict the severity of white matter
+find that the MRI images alone could not predict the severity of white matter
 ischemia as measured using FLAIR MRI images [Patterson2009]_.
 
 Contrast can be further improved and neovascularization visualized with
@@ -307,7 +307,7 @@ to calculate displacements in MR strain imaging is similar to the technique used
 calculate blood velocity in phase-contrast magnetic resonance angiography.
 Dephasing that occurs during a bipolar gradient is proportional to the
 displacements of the tissue.  Early work studied the porcine aorta and found
-than when displacements estimated were compared to fiducial markers on the
+that when displacements estimated were compared to fiducial markers on the
 luminal wall, a strain of 10% would have a standard deviation of error of 3.6%
 [Draney2004]_.  In a study of *ex-vivo* porcine aortas comparing a control group
 to renovascular hypertension group, it was found that the Young's Modulus-wall
@@ -331,7 +331,7 @@ performed to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or
 apoptosis (\ :sup:`99m`\ Tc-annexin A5).
 [Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi et. al. have
 attempted to use :sup:`99m`\ Tc-IL2 scintigraphy to detect chronic inflammatory
-response indicated my T-cell and macrophage activation as a marker for Crohn's
+response indicated by T-cell and macrophage activation as a marker for Crohn's
 disease [Annovazzi2003]_.  :sup:`111`\In platelet scintigraphy is sensitive to
 thrombosis, but it cannot distinguish other tissue types [Manca2001]_.
 
@@ -346,14 +346,14 @@ CEA samples, Casscells et al. found that some plaques have focal regions that
 are warmer by 0.4-2.2 ºC, and they can be very close to one another, less than 1
 mm apart [Casscells1996]_.  Increased cell density correlated with macrophage
 cell density and proximity to the luminal surface.  In general, the thermal
-profile is heterogenous.  Temperture is also found to be higher in areas where
+profile is heterogenous.  Temperature is also found to be higher in areas where
 local pH is lower, and it is inversely correlated with smooth muscle cell
 density [Madjid2002]_.
 
 There are two methods to measure temperature variations *in vivo*: a thermistor
 and infrared means.  A thermistor placed at the tip of a catheter must come into
-direct contact with tissue's luminal surface.  An fiber-optic cable in a
-catheter can transmit infrared energy indicating local temperature.  In both cases, blood
+direct contact with tissue's luminal surface.  A fiber-optic cable in a
+catheter can transmit infrared energy that indicates local temperature.  In both cases, blood
 flow may redistribute local spikes in temperature [Kim2008]_.
 
 Optical
@@ -369,7 +369,7 @@ important for such small tissue volumes.
 Intravascular optical coherence tomography (OCT) is a catheter based method that
 provides limited penetration, but very high resolution, on the order of 10 μm
 axially and 20 μm laterally [Yabushita2002]_.  Sensitivity and specificity rates
-for composition classifcation range from 71% and 79% to 97% and 98%
+for composition classification range from 71% and 79% to 97% and 98%
 [Yabushita2002]_.  Lipid and necrotic core have low optical attenuation, while
 fibrous and calcified tissue have a higher attenuation [VanSoest2009]_.
 
@@ -377,14 +377,14 @@ Time-resolved fluorescence spectroscopy (TRFS) is another optical technique that
 is used in conjunction with intravascular ultrasound (IVUS)
 [Stephens2009,Marcu2005]_.  Anatomical guidance is provided by IVUS which is
 registered with the TRFS signal.  TRFS detects autofluorescence from elastic,
-collagen, lipids, and by products of inflammatory processes to characterize the
+collagen, lipids, and by-products of inflammatory processes to characterize the
 local biochemical composition.
 
-A methods that focus on collagen content is polarization-sensitive OCT (PSOCT)
+A method that focuses on collagen content is polarization-sensitive OCT (PSOCT)
 [Nadkarni2009]_.  Many different types of collagen fibers, primarily Type I and
 Type III, provide the majority of tensile strength and elasticity in healthy
-arteries [Plenz2003]_.  While smooth muscles migrate from the media to the
-intima to increase extracellular collagen during atherosclerosis, MMPs cause
+arteries [Plenz2003]_.  While smooth muscle cells migrate from the media to the
+intima in order to increase extracellular collagen during atherosclerosis, MMPs cause
 proteolysis of the collagen and apoptosis of intimal smooth muscle cells
 resulting in a net loss of collagen content [Newby1999]_.  In addition to high
 resolution plaque microstructure from OCT, PSOCT measures tissue birefringence.
@@ -393,7 +393,7 @@ polarized light passes through anisotropic material such as organized collagen
 or smooth muscle cell actin-myosin in atherosclerotic plaque [Nadkarni2009]_.
 
 Laser speckle is generally considered a source of noise in optical imaging, but
-the time-dependenct characterics of the speckle are targeted in laser speckle
+the time-dependent characteristics of the speckle are targeted in laser speckle
 imaging (LSI) [Nadkarni2009]_.  Speckle will change because of Brownian motion of suspended
 particles in the tissue.  The motility of particles depends on the viscoelastic
 properties of the medium, which is related to plaque vulnerability.  Images
