@@ -487,13 +487,13 @@ effects [Kono2004]_.
 Neoangiogenesis in large plaques also plays a role similar to ulceration as
 mechanical stress concentrators.  Unlike surface ulcerations, neoangiogenesis
 compromises the tissue at a deeper level, making large ruptures more likely.
-These tiny vessels that were previously undetectable with ultrasound, and they
-may now be visible under ultrasound imaging with contrast agents
-[Coli2008,Kaufmann2009]_.  Harmonic imaging of the microbubbles has allowed
-visualization the vasa vasorum in atherosclerotic rabbit models [Goertz2006]_.
-In the future, ultrasound molecular imaging of atherosclerosis may be performed by targeting
-markers for neoangiogenesis or inflammation with microbubbles, microparticles
-like echogenic liposomes or acoustically active nanoparticles [Kaufmann2009]_.
+These tiny vessels were previously undetectable with ultrasound, and they may
+now be visible when contrast agents are applied [Coli2008,Kaufmann2009]_.
+Harmonic imaging of microbubbles allows visualization the vasa vasorum in
+atherosclerotic rabbit models [Goertz2006]_.  In the future, ultrasound
+molecular imaging of atherosclerosis may be performed by targeting markers for
+neoangiogenesis or inflammation with microbubbles, acoustically active
+nanoparticles, or microparticles like echogenic liposomes [Kaufmann2009]_.
 
 Radiofrequency signal based characterization
 --------------------------------------------
@@ -513,7 +513,7 @@ propagation, such as the attenuation coefficient or effective scatterer size or
 density, or a combination of multiple aspects.  Determining the most appropriate
 parameters depends on the ability to generate accurate and precise estimates of
 the parameter and on the amount of correlation between the parameter and the tissue
-state of interest.  A parameter is most desireable there is high contrast
+state of interest.  A parameter is most desireable if there is high contrast
 between healthy and diseased tissue states, the parameter can be estimated with
 a high signal-to-noise ratio, and an image of the parameter has sufficient
 resolution to distinguish the structures present.
@@ -534,7 +534,7 @@ on the machine and acquisition settings [Bridal1998, Ota1997]_.  Volcano
 Corporation has released a clinically available IVUS tissue characterization
 system they call Virtual Histology [Koenig2007]_.  Their system measures local
 spectral parameters that have been statistically classified into tissue types to
-label tissue areas.
+label tissue areas. TODO: more on Bridal.
 
 Most of the ultrasonic tissue characterization methods on atherosclerotic plaque
 have used the method introduced by Lizzi to account for system
@@ -613,45 +613,45 @@ would stimulate a necrotic response that catabolizes the extracellular matrix,
 leading to further mechanical weakness at the site
 [Sirico2009,Lendon1993,Arroyo1999,Dhume2003,Ho2002,Lee1998,Lendon1991]_.  This
 is supported by a recent study comparing gene expression in calcific areas,
-often associated with stability, compared to non-calcific areas.  It was found
+often associated with stability, to non-calcific areas.  It was found
 that gene expression of factors that promote interleukin 8 and monocyte
 chemoattractant protein 1, associated with inflammation and thereby
 vulnerability, were higher in non-calcified areas [Wahlgren2009]_.  Lee et al.
 performed a mechanical finite element analysis simulation using the morphology
 of 12 unruptured human coronary lesions and assumed appropriate mechanical
 material properties for the tissue components.  When comparing images of
-immunoreactive MMP-1, they found that high stress had twice the MMP-1 expression
+immunoreactive MMP-1, they found that high stress regions had twice the MMP-1 expression
 as low stress regions [Lee1996]_.  Elevated levels of highly sensitive
 C-reactive protein, another inflammation marker, correlates with increased
 intima-media thickness [Benbir2005]_.  These high stress states may lead to
 fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
 
-Stress-stretch curves ([Holzapfel2004]_ Fig. 6) were created by Holzapfel during a tensile test on diseased
-intima sectioned from cadaver iliac arteries.  As the graphs
-progresses from the origin, the stretch and stress is increased on the tissue
-until the tissue fractures at the curve's termination.  The point in the curve
-farthest from the origin defines the stretch at which failure occurs, ultimate
-tensile stretch :math:`\lambda_{ult}`, and the stress at which failure
-occurs, ultimate tensile stress, :math:`\sigma_{ult}`.
+Stress-stretch curves ([Holzapfel2004]_ Fig. 6) were created by Holzapfel during
+a tensile test on diseased intima sectioned from cadaver iliac arteries.  As the
+graphs progresses from the origin, the stretch and stress is increased on the
+tissue until the tissue fractures at the curve's termination.  The point in the
+curve farthest from the origin defines the stretch at which failure occurs,
+ultimate tensile stretch λ\ :sub:`ult`, and the stress at which failure
+occurs, ultimate tensile stress, σ\ :sub:`ult`.
 
-Many of the atherosclerosis diagnostic imaging techniques have focused on
+Many of the atherosclerosis diagnostic imaging techniques discussed focus on
 imaging of plaque composition, which determines the elastic modulus.  While the
 distribution of material properties certainly affects stress and strain state,
 the sensitivity of stress and strain at the site of rupture in a diseased artery
 can be low.  In a computational analysis, it was found that +/- 50% variation in
 elastic modulus leads to less than a 10% change in stress at the site of rupture
-[Williamson2003]_.  Strain imaging has the potential to directly image the
+[Williamson2003]_.  In contrast, strain imaging has the potential to directly image the
 parameter of interest.
 
 Recently, ultrasonic strain imaging techniques have been applied to imaging of
 the carotid arteries.  Strain imaging creates an *in vivo* map of strain, a
 parameter directly related to tissue stretch or contraction, drawn on the
-abscissa in the mechanical tests in [Holzapfel2004]_.  Vulnerable plaques have a higher extensibility
-and a lower ultimate stress [Lendon1991,Holzapfel2004]_.  Therefore, strain
-imaging directly measures a parameter that determines how close a plaque is to
-failure [Tang2005]_.  This contrasts with other characterization methods that
-focus on parameters like composition, which may affect strain in a secondary
-manner and may be system dependent as previously discussed.  Strain imaging
+abscissa in the mechanical tests in [Holzapfel2004]_.  Vulnerable plaques have a
+higher extensibility and a lower ultimate stress [Lendon1991,Holzapfel2004]_.
+Therefore, strain imaging directly measures a parameter that determines how
+close a plaque is to failure [Tang2005]_.  This contrasts with other
+characterization methods that focus on parameters like composition, which may
+affect strain in a secondary manner and may be system dependent.  Strain imaging
 directly measures the effect of multiple stress concentrators including
 composition, ulceration, morphology, neovascularization, and hemodynamics.
 
@@ -659,16 +659,15 @@ IVUS strain imaging
 ~~~~~~~~~~~~~~~~~~~
 
 Most of the initial arterial strain imaging studies were performed with IVUS by
-de Korte
-[deKorte1997,Carlier2002,Cespedes2000,Korte2000]_.
-IVUS imaging differs from external ultrasound transducers in its insonification
-routine-- IVUS transducers are placed in a small catheter and a set of A-lines
-are emitted radially as the transducer is mechanically rotated or electronically
-steered.  The high frequencies in IVUS, from 20 MHz to 60 MHz, provide higher
-resolution images but lower penetration, and it is more common to find it
-applied to coronary arteries.  Shapo et al. reported IVUS strain measurements *in
-vivo* where strain was incurred with an angioplasty balloon [Shapo1996]_.  De
-Korte reported on strain measurements with IVUS on tissue-mimicking phantoms by
+de Korte [deKorte1997,Carlier2002,Cespedes2000,Korte2000]_.  IVUS imaging
+differs from external ultrasound transducers in its insonification routine--
+IVUS transducers are placed in a small catheter and a set of A-lines are emitted
+radially as the transducer is mechanically rotated or electronically steered.
+The high frequencies in IVUS, from 20 MHz to 60 MHz, provide higher resolution
+images but lower penetration, and it is more common to find it applied to
+coronary arteries.  Shapo et al. reported IVUS strain measurements *in vivo*
+where strain was incurred with an angioplasty balloon [Shapo1996]_.  De Korte
+reported on strain measurements with IVUS on tissue-mimicking phantoms by
 performing one-dimensional correlation with peak interpolation [deKorte1997]_.
 Adaptive and iterative estimation of local scaling factors has been added to
 simple one-dimensional cross-correlation techniques [Brusseau2001]_.  Two
@@ -676,15 +675,15 @@ dimensional correlation windows were utilized by Shapo et al. [Shapo1996]_ and
 Ryan and Foster [Ryan1997]_, with phase sensitive analysis and phase insensitive
 analysis performed by the former and latter.  Maurice et al. applied his motion
 tracking algorithm, the Lagrangian speckle model estimator (LSME)
-[Maurice2008]_.  Instead of block-matching techniques, Wan et al.
-applied an optical flow method to estimate tissue motion [Wan2001]_.  Liang et
-al. applied a Levenberg-Marquardt nonlinear minimization technique to a cubic
-B-spline model of displacement governed by a cost function that contained terms
-for intensity fidelity, a sum of squared difference, and strain smoothness, a
-sum of strain gradients [Liang2008]_.
+[Maurice2008]_.  Instead of block-matching techniques, Wan et al.  applied an
+optical flow method to estimate tissue motion [Wan2001]_.  Liang et al. applied
+a Levenberg-Marquardt nonlinear minimization technique to a cubic B-spline model
+of displacement governed by a cost function that contained terms for intensity
+fidelity, a sum of squared difference, and strain smoothness, a sum of strain
+gradients [Liang2008]_.
 
-The feasibility of *in vivo* application examined on 12 patients undergoing
-angioplasty and it was found that strain in calified material (0.20% +/- 0.07)
+The feasibility of *in vivo* application was examined on 12 patients undergoing
+angioplasty, and it was found that strain in calified material (0.20% +/- 0.07)
 was smaller than non-calcified tissue (0.51% +/- 0.20) [DeKorte2002]_.  During
 that study, it was revealed that catheter movement due to cardiac motion and
 blood flow impede strain estimation, so strain estimation was gated to points in
@@ -730,7 +729,7 @@ The thermal strain effect was used to estimate the spatio-temporal temperature
 changes that occur with another plaque characterization imaging technique,
 photoacoustic imaging [Sethuraman2008]_.  During intravascular photoacoustic
 imaging (IVPA), tissue is irradiated with a sub-ablation threshold laser at
-20Hz [Sethuraman2005a]_.  Optical absorption of the laser energy results in
+20 Hz [Sethuraman2005a]_.  Optical absorption of the laser energy results in
 thermoelastic expansion of the tissue and acoustic waves.  The acoustic waves
 are detected with an IVUS transducer, and a spatial map of optical absorption is
 reconstructed.  This method allows for imaging at optical resolutions but with a
