@@ -451,7 +451,7 @@ most commonly tested and most widely used metric of vulnerability.  Ultrasound
 echogenicity is assessed via direct visual examination of B-mode images.  Some
 authors prefer to use the Gray-Weale scale for echogenicity which stratifies
 echogenicity into five types ranging from echolucent to calcific with shadowing
-[Gray-Weale1988]_ A slight improvement to visual examination are
+[Gray-Weale1988]_. A slight improvement to visual examination are
 computer-assisted gray-scale median (GSM) measurements
 [Sztajzel2005,Aly2000,Lal2002]_.  These results are semi-quantitative since they
 rely on the settings and properties of the ultrasound scanning device.  Plaque
@@ -481,7 +481,7 @@ with increased stenosis.  By comparing with results from histology, it was
 found that for plaque with >50% stenosis, the sensitivity for direct
 ulceration detection was only 41% [ECPSG1995]_.  However, the use of
 microbubble contrast agents improve surface definition by increasing contrast
-at the lumen border where it may be otherwise compromised by partial-volume
+at the lumen border where it may otherwise be compromised by partial-volume
 effects [Kono2004]_.
 
 Neoangiogenesis in large plaques also plays a role similar to ulceration as
@@ -498,7 +498,7 @@ nanoparticles, or microparticles like echogenic liposomes [Kaufmann2009]_.
 Radiofrequency signal based characterization
 --------------------------------------------
 
-Quantitative ultrasound tissue characterization methods attempt to improve on
+Quantitative ultrasound tissue characterization attempt to improve on
 simple B-mode texture analysis by removing system dependent features from an
 image to isolate tissue characteristics in the image [Lizzi1983]_.  These images attempt
 to show tissue properties that influence ultrasound propagation and scattering
@@ -585,7 +585,7 @@ such as morphology and composition also increase local stress/strain
 [Tang2005a]_.  Similarily, Kock et al. found that MRI derived FSI models of
 carotid plaque showed elevated first principal stresses at areas of notorius
 risk [Kock2008]_.  These FEA studies are not limited to IVUS and MRI
-microstructure inputs; OCT microstructure and and composition derived model
+microstructure inputs; an OCT microstructure and and composition derived model
 has shown stress extrema at locations known for rupture [Chau2004]_.  In a
 sophisticated FEA model derived from 3D IVUS coronary images, Yang et al.
 found that "cyclic bending, anisotropic material properties, pulsating
@@ -814,7 +814,7 @@ The de Korte group from the Netherlands, whose efforts were previously focused o
 IVUS strain imaging, as described earlier, has recently forayed into the
 non-invasive strain imaging area [Ribbers2007]_.  A 2-D cross-correlation motion
 tracking technique was applied to a cylindrical phantom and some *in vivo* test
-cases.  Challenges noted in transverse images of the vessel mimicking phantom
+cases.  A challenge noted in transverse images of the vessel mimicking phantom
 was the refraction artifact that occurs in this configuration.  The speed of
 sound change coupled with the curvature of the artery's inner wall redirects
 propagation of the ultrasound beam.  Observed motion distal to the lumen-artery
@@ -834,7 +834,7 @@ Angular compounding
 
 Quality in ultrasound strain images can potentially be improved with angular
 compounding [Rao2006]_.  Angular compounding is achieved by electronically
-steering the ultrasound beam when time appropriate time delays are applied to
+steering the ultrasound beam with appropriate time delays applied to
 transducer array elements during the transmit pulse.  In B-Mode angular
 compounding, this gives a different instantiation of tissue speckle, which in
 can be averaged to improve image quality.  In strain imaging, a different
@@ -842,7 +842,7 @@ realization of tissue scattering is again made available, but the observation
 of the strain tensor is also obtained in a different coordinate system.  This is
 advantageous since ultrasound image resolution in inherently highly anisotropic:
 resolution is inherently high along the axis of beam propation, but low lateral
-to beam propagation.  As result, the quality of strain estimates in the axial
+to beam propagation.  As result, the quality of displacement estimates in the axial
 direction are better than the lateral direction.  Angular compounding has the
 potential to improve image quality with an averaging effect, but also provides
 axial quality motion tracking when the beam is steered to what is the lateral
@@ -872,16 +872,16 @@ Averaging strains with a simple arithmetic mean of axial and lateral components
 may decrease quality in areas that were previously calculated with only the
 lateral component.  Artifacts, such as the artifact due to refraction of the
 pulse at the curved arterial borders [Ribbers2007]_, may be compounded
-[Hansen2009]_.  How strain components ar calculated and extracted from the
+[Hansen2009]_.  How strain components are calculated and extracted from the
 strain tensor also plays a roll.  Additional noise is introduced if an approach
-is taken such an that one in Hansen et al., where the strain matrix is rotated
+is taken such as that in Hansen et al., where the strain matrix is rotated
 to a particular orientation, and components are average at that orientation.
 This is because the orientation may not be the same in all compounded images.
 For example, if prinicipal components (eigenvalues of the strain matrix) are
 averaged, they do not necessarily correspond to the same coordinate system
 orientation (eigenvectors of the strain matrix).  It is natural to try to
 extract 'radial' and 'circumferential' components of the strain tensor when
-dealing with a transverse view of an artery, because these corespond to the
+dealing with a transverse view of an artery, because these correspond to the
 direction of the principal components for a simple cylinder.  However,
 determination of the radial and circumferential directions introduce additional
 noise since the center of the lumen is used as a reference [Hansen2009]_ or
@@ -889,7 +889,7 @@ the local curvature at the luman-artery interface [Lin2008]_ must be determined
 for each image.  Furthermore, radial and circumferential directions are not very
 meaningful when dealing with the structure of a complex plaque as opposed to a
 healthy artery.  Most importantly, it remains to be determined if registration
-and displacement compensation techniques are significantly effective for the significant motion
+and displacement compensation techniques are effective for the significant motion
 that occurs *in vivo*.
 
 Even though strain imaging holds much promise in the detection of vulnerable
