@@ -519,22 +519,33 @@ a high signal-to-noise ratio, and an image of the parameter has sufficient
 resolution to distinguish the structures present.
 
 Various tissue characterization parameters have been utilized for plaque
-examination, including backscattered spectral slope, midband fit, intercept, minimum and maximum powers
-and their frequencies in the resulting spectra, along with the integrated
-backscatter, and attenuation slope parameters
+examination, including backscattered spectral slope, midband fit, intercept,
+minimum and maximum powers and their frequencies in the resulting spectra, along
+with the integrated backscatter, and attenuation slope parameters
 [Wilson1994,Lockwood1991,Bridal1997a,Bridal2000,Waters2003,Sano2006,Watson2000,Noritomi1997,Nair2001,Spencer1997a,Katouzian2008,Wickline1993]_.
 For example, lipid infiltrated and calcified tissue have a higher attenuation
 than fibrous plaque [Bridal1998, Bridal1997, Hoskins2007]_.  Also, integrated
 backscatter increases in magnitude from thrombic to lipidic to fibrous to
 calcified atherosclerotic plaques [Katouzian2008, Kawasaki2002, Waters2003]_.
-Additional parameters can be obtained through high frequency texture
-analysis [Stoitsis2006]_ or simple integrated backscatter calculations [Sano2006,
+Additional parameters can be obtained through high frequency texture analysis
+[Stoitsis2006]_ or simple integrated backscatter calculations [Sano2006,
 Wickline1993]_.  However, the quantities obtained in these methods is dependent
 on the machine and acquisition settings [Bridal1998, Ota1997]_.  Volcano
 Corporation has released a clinically available IVUS tissue characterization
 system they call Virtual Histology [Koenig2007]_.  Their system measures local
 spectral parameters that have been statistically classified into tissue types to
-label tissue areas. TODO: more on Bridal.
+label tissue areas. S. Lori Bridal performed high-frequency plaque
+characterization with some of the most rigorous attention towards quantitative
+parameter estimation.   Early work examined normal and atherosclerotic aorta *in
+vitro* [Bridal1996,Bridal1997a,Bridal1997]_.  Different quantities were
+examined: apparent integrated backscatter, attenuation slope, and attenuation at
+37.5 MHz [Bridal1997a]_.  Integrated backscatter was highest for calcified
+regions and was significantly higher for collagen-lipidic and lipidic regions
+relative to normal media and dense collagen [Bridal1997]_.  In following work on
+excised carotid plaques, Bridal suggested that discriminant analysis which
+incorporates multiple parameters, integrated backscatter, frequency dependence
+of backscatter, integrated attenuation and slope of attenuation, may be a more
+effective classifier than any single parameter [Bridal2000]_.
 
 Most of the ultrasonic tissue characterization methods on atherosclerotic plaque
 have used the method introduced by Lizzi to account for system
