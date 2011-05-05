@@ -7240,3 +7240,39 @@ title = {{Multiparametric attenuation and backscatter images for characterizatio
 volume = {22},
 year = {2000}
 }
+@article{Nightingale2002,
+abstract = {Acoustic Radiation Force Impulse (ARFI) imaging is a method for characterizing local variations in tissue mechanical properties. In this method, a single ultrasonic transducer array is used to both apply temporally short localized radiation forces within tissue and to track the resulting displacements through time. In an ongoing study of the response of tissue to temporally short radiation force excitation, ARFI datasets have been obtained of ex vivo tissues under various focal configurations. The goal of this paper is to report observations of the response of tissue to radiation force and discuss the implications of these results in the construction of clinical imaging devices.},
+author = {Nightingale, Kathryn and Bentley, Rex and Trahey, Gregg},
+issn = {0161-7346},
+journal = {Ultrasonic imaging},
+keywords = {Acoustics,Breast Neoplasms,Breast Neoplasms: ultrasonography,Elasticity,Female,Humans,Kidney,Kidney: ultrasonography,Male,Ovary,Ovary: ultrasonography,Prostate,Prostate: ultrasonography,Spleen,Spleen: ultrasonography,Thyroid Gland,Thyroid Gland: ultrasonography,Transducers,Uterus,Uterus: ultrasonography},
+month = jul,
+number = {3},
+pages = {129--38},
+pmid = {12503770},
+title = {{Observations of tissue response to acoustic radiation force: opportunities for imaging.}},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/12503770},
+volume = {24},
+year = {2002}
+}
+@inproceedings{Bridal1996,
+author = {Bridal, SL and Fornes, P. and Berger, G.},
+booktitle = {Ultrasonics Symposium, 1996. Proceedings., 1996 IEEE},
+file = {:home/matt/rs/references/Bridal, Fornes, Berger/1996/Ultrasonics Symposium, 1996. Proceedings., 1996 IEEE/Bridal, Fornes, Berger\_1996\_Local backscatter ultrasonic attenuation measurements in vitro (30 to 50 MHz) of the constituents of atherosclerotic plaques.pdf:pdf},
+isbn = {0780336151},
+issn = {1051-0117},
+pages = {1069--1072},
+publisher = {IEEE},
+title = {{Local backscatter ultrasonic attenuation measurements in vitro (30 to 50 MHz) of the constituents of atherosclerotic plaques}},
+url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=584176},
+volume = {2},
+year = {1996}
+}
+@article{Allen2011,
+author = {Allen, JD and Ham, KL and Dumont, DM and Sileshi, B},
+file = {:home/matt/rs/references/Allen et al./2011/Vascular Medicine/Allen et al.\_2011\_The Development and Potential of Acoustic Radiation Force Impulse (ARFI) Imaging for Carotid Artery Plaque Characterization.pdf:pdf},
+journal = {Vascular Medicine},
+title = {{The Development and Potential of Acoustic Radiation Force Impulse (ARFI) Imaging for Carotid Artery Plaque Characterization}},
+url = {http://vmj.sagepub.com/content/early/2011/03/26/1358863X11400936.abstract},
+year = {2011}
+}

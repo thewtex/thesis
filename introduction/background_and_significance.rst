@@ -568,6 +568,20 @@ to be evaluated at higher frequencies.  At lower frequencies, the small volume
 and heterogeneity of the tissue makes spectral estimation difficult.
 
 
+Acoustic radiation force impulse (ARFI) imaging
+-----------------------------------------------
+
+An emerging ultrasound imaging technology is acoustic radiation force impulse
+(ARFI) imaging [Nightingale2002]_.  In this technique, a high-intensity acoustic
+impulse of short duration (0.03-1 ms) generates localized displacements in the
+tissue, which is is tracked with diagnostic pulse-echo signals following the
+pushing pulse [Allen2011]_.  The magnitude and time course of the displacement
+reflects the local mechanical environment.  Preliminary results by Allen et. al.
+using an clinical external ultrasound transducers indicate that the magnitude of
+the ARFI displacement can be used to differentiate plaque composition
+[Allen2011]_.
+
+
 Strain imaging
 --------------
 
