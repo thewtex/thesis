@@ -214,6 +214,8 @@ define a *stress concentration factor* to be [Hibbeler2000]_
 
 .. math::  K = \frac{\sigma_{max}}{\sigma_{avg}}
 
+*Eqn. 2.1*
+
 The stress concentration factor, :math:`K`, is the maximum stress caused by
 the disturbance in uniformity, :math:`\sigma_{max}`, divided by the reference
 stress, :math:`\sigma_{avg}`.  This concept is relevant not only to
