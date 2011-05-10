@@ -40,7 +40,7 @@ from default import *
 ######## note: see help for bibstyles.shared.NameFormatter for name details
 CITATION_TEMPLATE.update(dict(
 indent_left=0,
-max_citation_names=5,
+max_citation_names=20,
 name_first = 'f{. }. |v |l|, j',
 name_other = 'f{. }. |v |l|, j',
 initials = 'f',
