@@ -1,9 +1,14 @@
 # Veusz saved document (version 1.8)
 # User: matt
-# Date: Sat, 12 Mar 2011 17:19:15 +0000
+# Date: Tue, 10 May 2011 16:17:37 +0000
 
 AddImportPath(u'/home/matt/rs/papers/thesis/high_freq_phantom/analysis')
-SetDataRange(u'4000E_atten', 4, (20.0, 50.0), linked=True)
+ImportString(u'4000E_atten(numeric)','''
+1.010000e+01
+1.860000e+01
+2.850000e+01
+4.090000e+01
+''')
 SetDataRange(u'4000E_atten_f', 4, (20.0, 50.0), linked=True)
 ImportString(u'5000E_atten(numeric)','''
 9.770000e+00
@@ -22,6 +27,7 @@ Set('label', u'Frequency [MHz]')
 Set('min', 15.0)
 Set('max', 55.0)
 Set('autoExtend', False)
+Set('Label/size', u'16pt')
 To('..')
 Add('axis', name='y', autoadd=False)
 To('y')
@@ -31,6 +37,7 @@ Set('max', 50.0)
 Set('autoExtend', False)
 Set('autoExtendZero', False)
 Set('direction', 'vertical')
+Set('Label/size', u'16pt')
 To('..')
 Add('xy', name=u'4000E_measure', autoadd=False)
 To(u'4000E_measure')
