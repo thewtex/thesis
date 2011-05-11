@@ -21,10 +21,7 @@ between precision and computational time are quantified, and optimal parameters
 are determined.  The usefulness of this approach is also proven to not rely on
 special properties of the image or similarity function by demonstrating its
 effectiveness after applying the regularization algorithm discussed in Chapter
-3. [#]_
-
-.. [#] This work is adapted from McCormick, M. and Varghese, T.  *An Approach to Unbiased Subsample Interpolation
-  for Motion Tracking*, Ultrasonics.  Under Review.
+3.
 
 .. |interp_method_plot| replace:: Fig. 4.1
 
