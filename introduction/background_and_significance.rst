@@ -7,16 +7,17 @@ Chapter 2 : Human Health Significance
 
 In this chapter, the role diagnostic medical ultrasound plays in addressing
 public health needs related to carotid plaque burden are discussed.
-Specifically, focus is placed on stroke due to carotid atherosclerotic disease
-with increased vessel stenosis or embolization being primary causative factors.
-First, the prevalence and pathology of stroke is described.  The
-current status of prevention and treatment measures are reviewed.  Current methods
-to access stroke risk are reviewed by describing these techniques, the physiological target
-they aim to quantify, status of development, and effectiveness.  In this
-chapter, focus is placed primarily on imaging methods.  A thorough literature review
-describes research efforts in medical ultrasound imaging for carotid plaque
-detection and characterization.  Finally, the approach taken in this
-dissertation is presented in the context of prior research efforts.
+Specifically, focus is placed on stroke or transient ischemic attacks (TIA) due
+to carotid atherosclerotic disease with increased vessel stenosis or
+embolization being primary causative factors.  First, the prevalence and
+pathology of stroke is described.  The current status of prevention and
+treatment measures are reviewed.  Current methods to assess stroke risk are
+reviewed by describing these techniques, the physiological target they aim to
+quantify, status of development, and effectiveness.  In this chapter, focus is
+placed primarily on imaging methods.  A thorough literature review describes
+research efforts in medical ultrasound imaging for carotid plaque detection and
+characterization.  Finally, the approach taken in this dissertation is presented
+in the context of prior research efforts.
 
 
 
@@ -35,7 +36,7 @@ cerebrovascular pathologies with different time-courses.  For example, transient
 ischemic attacks (TIA), usually last from 2-15 minutes.  They result in cerebral
 impairment that subsides in under twenty-four hours [Whisnant1990]_.  In
 addition, there also may be chronic ischemic events resulting from microemboli
-that explain some dementias due to vascular cognitive impairment
+that may explain some dementias due to vascular cognitive impairment
 [Whisnant1990]_.  According to Hachinski et al., one in three people will
 experience stroke or dementia, but twice as many individuals will incur
 cognitive impairment to a lesser degree [Hachinski2006]_.  Hachinski reported on
@@ -46,7 +47,7 @@ cognitive impairment is likely to become a productive area of future research
 since it has been a largely unrecognized detriment to human health.  Its
 widespread presence and increasing importance to quality of life as life
 expectancy continues to be prolonged cannot be understated
-[Hachinski2006,Hennerici2004]_.  Recent evidence has emerged suggesting that
+[Hachinski2006,Hennerici2004]_.  Recent evidence has also emerged suggesting that
 cerebral emboli may be a cause or accelerator for cognitive decline associated
 with Alzheimer's disease [Purandare2006a,Purandare2006,Purandare2007]_.  Some
 researchers have termed the Alzheimer's/vascular disease combination as 'mixed
@@ -63,7 +64,7 @@ al. [Jesurum2008]_ found that migraine with aura can be relieved when the source
 of ischemia causing emboli, a right-to-left shunt via a patent foramen ovale
 (PFO), is closed even partially with surgery.
 
-While the effects of stroke are far reaching, there are only a few basic causes.
+While the effects of stroke are varied, there are only a few basic causes.
 The pathogenesis of stroke can be classified into four categories
 [Whisnant1990]_, namely: brain hemorrhage, subarachnoid hemorrhage, intracranial
 hemorrhage from an arteriovenous malformation, and brain infarction, which is
@@ -74,7 +75,7 @@ around an atherosclerotic plaque, which occludes blood flow.  This can occur wit
 larger cerebral arteries that possess extensive cerebrovascular disease.
 
 Emboli causing brain infarction can have many origins.  One source of emboli is
-the heart.  Cardioembolic stroke can be due to many conditions.  Atrial
+the heart.  Cardio-embolic stroke can be due to many conditions.  Atrial
 fibrillation, recent myocardial infarction, congestive heart failure, valve
 disease or mechanical valve replacement can result in thrombosis with free
 passage to the brain.  Strokes that were previously labeled idiopathic,
@@ -86,7 +87,7 @@ could then find its way to cerebral tissue [Whisnant1990]_.  Finally,
 hemodynamic brain infarctions refer to hypoperfusion due to plaque stenosis or
 occlusion.
 
-The stroke pathogenesis targeted in this work are emboli originating
+The stroke pathogenesis targeted in this work are primarily emboli originating
 from carotid plaque.  This is one of the more common causes of stroke,
 underlying over 50% of strokes [Nikic2006,Rothwell2000]_.  The carotid artery is
 the main conduit of blood to the brain.  In humans there is a left and right
@@ -128,7 +129,7 @@ weighed carefully.  Yet, stroke is a widespread detriment to public health and
 increased sensitivity to stroke risk is desired for appropriate prophylactic
 treatments.  The risk factors for stroke are well known and include diabetes,
 hypercholesterolemia, hypertension, coronary heart disease, tobacco use, large
-artery disease, atrial fibrillation, patent foramen ovale or atrial septal
+artery disease, atrial fibrillation, PFO or atrial septal
 defect, and cervical artery dissection [Arnold2008]_.  In 2005, 780 thousand new
 cases of stroke occurred in the United States [AHAStats2008]_.  There were 150
 thousand deaths in the United States during 2004.  While mortality rates have
@@ -181,7 +182,7 @@ of pharmacological treatments such as statins.  These markers tag for macrophage
 infiltration, the presence of matrix metalloproteinase-9 (MMP-9), and the presence
 of inflammation.  Macrophage infiltration plays a role in plaque formation along
 with indicating an acute inflammatory response [Wasserman2002,Lendon1991]_.
-Buildup of lipids initiates inside macrophages that distend until they cannot escape
+Buildup of lipid initiates inside macrophages that then distend until they cannot escape
 into the circulation, forming 'foam cells', and eventually lipid crystals.
 Macrophages secrete proteolytic enzymes that weaken the extracellular matrix.
 MMP-9 functions as an enzyme that breaks down the extracellular matrix [Loftus2000]_.
@@ -198,14 +199,14 @@ bifurcation in healthy arteries [Younis2003]_.  Cyclic hemodynamic pulse
 pressure has been associated with carotid plaque ulceration [Lovett2003]_.
 Hypertension, as quantified with central systolic blood pressure, correlates
 with ischemia as quantified with fluid-attenuated inversion recovery (FLAIR) MRI
-images, where the white matter hyperintensities correlate independently from
+images, where the white matter hyper-intensities correlate independently from
 carotid plaque score [Shrestha2009]_.  Turbulent flow resulting from severe
 stenosis can increase root mean square pressure fluctuations by 3.6 fold when
 stenosis increases from 80 to 90% [Loree1991]_.  Hemodynamic forces vary from
 patient to patient with hypertension, pulsatility, and turbulence influenced by
 the bifurcation and plaque morphology.
 
-All these factors that have been intuitively been associated with plaque
+All these factors that have been intuitively associated with plaque
 vulnerability are explained formally by a quantity arising from solid mechanics
 models of the underlying physical behavior, local stress concentration.  Stress
 concentrators have received exhaustive attention in the Materials Science and
@@ -264,7 +265,7 @@ also provides a noninvasive method to identify components of lipid, fibrous,
 calcium, or thrombus.  Relative to the surrounding muscle, calcium appears
 hypointense on T\ :sub:`1`\ -weighted, very hypointense on proton-density
 weighted, and very hypointense on T\ :sub:`2`\ -weighted images.  Lipids are very
-hyperintense on T\ :sub:`1`\ -weighted, hypertense on proton-density weighted,
+hyperintense on T\ :sub:`1`\ -weighted, hyperintense on proton-density weighted,
 and hypointense on T\ :sub:`2`\ -weighted images.  Finally, fibrous tissue is
 isointense to slightly hyperintense on all three parameter-weighted images.  T\
 :sub:`1` shortening causing increased signal intensity is associated with the
@@ -308,15 +309,15 @@ Another MRI functional imaging approach is strain imaging.  The technique used
 to calculate displacements in MR strain imaging is similar to the technique used to
 calculate blood velocity in phase-contrast magnetic resonance angiography.
 Dephasing that occurs during a bipolar gradient is proportional to the
-displacements of the tissue.  Early work studied the porcine aorta and found
+displacement of tissue.  Early work studied the porcine aorta and found
 that when displacements estimated were compared to fiducial markers on the
-luminal wall, a strain of 10% would have a standard deviation of error of 3.6%
+luminal wall, a strain of 10% would have an error standard deviation of 3.6%
 [Draney2004]_.  In a study of *ex-vivo* porcine aortas comparing a control group
 to renovascular hypertension group, it was found that the Young's Modulus-wall
 thickness product, derived from MR strain images, differentiated the
-hypertensive group because of the increassed wall stiffness [Woodrum2009]_.
-Lin et al. used a displacement encoding with stimulated echoes
-(DENSE) pulse sequence to get the circumferencial strain of the carotid artery
+hypertensive group because of the increased wall stiffness [Woodrum2009]_.
+Lin et al. used displacement encoding with stimulated echoes
+(DENSE) pulse sequence to get the circumferential strain of the carotid artery
 [Lin2008]_.  High temporal resolution is obtained by utilizing steady-state
 free-precession (SSFP) along with high in-plane resolution, 0.6 mm.  Good
 repeatability was seen between acquisitions at 1.5 T and 3 T.  Changes in
@@ -327,13 +328,14 @@ Nuclear imaging
 ---------------
 
 Plaque inflammation is targeted in many of the newer nuclear imaging techniques
-[Chen2005]_.  :sup:`18`\ F-FDG PET detects the increased glycolytic activity of
-inflammatory cells. [Rominger2009,Tawakol2006,Rudd2002]_  SPECT imaging can be
+[Chen2005]_.  :sup:`18`\ F-FDG positron emission tomography (PET) detects the increased glycolytic activity of
+inflammatory cells. [Rominger2009,Tawakol2006,Rudd2002]_  Single-photon positron
+emission computed tomography (SPECT) imaging can be
 performed to trace oxidized low density lipoproteins (\ :sup:`99m`\ Tc-LDL), or
 apoptosis (\ :sup:`99m`\ Tc-annexin A5).
 [Lees1988,Virgolini1992,Boersma2005,Kietselaer2004]_  Annovazzi et. al. have
 attempted to use :sup:`99m`\ Tc-IL2 scintigraphy to detect chronic inflammatory
-response indicated by T-cell and macrophage activation as a marker for Crohn's
+response have indicated that T-cell and macrophage activation as a marker for Crohn's
 disease [Annovazzi2003]_.  :sup:`111`\In platelet scintigraphy is sensitive to
 thrombosis, but it cannot distinguish other tissue types [Manca2001]_.
 
@@ -348,12 +350,12 @@ CEA samples, Casscells et al. found that some plaques have focal regions that
 are warmer by 0.4-2.2 ºC, and they can be very close to one another, less than 1
 mm apart [Casscells1996]_.  Increased cell density correlated with macrophage
 cell density and proximity to the luminal surface.  In general, the thermal
-profile is heterogenous.  Temperature is also found to be higher in areas where
+profile is heterogeneous.  Temperature is also found to be higher in areas where
 local pH is lower, and it is inversely correlated with smooth muscle cell
 density [Madjid2002]_.
 
-There are two methods to measure temperature variations *in vivo*: a thermistor
-and infrared means.  A thermistor placed at the tip of a catheter must come into
+There are two methods to measure temperature variations *in vivo*: using either thermistors
+or infrared techniques.  A thermistor placed at the tip of a catheter must come into
 direct contact with tissue's luminal surface.  A fiber-optic cable in a
 catheter can transmit infrared energy that indicates local temperature.  In both cases, blood
 flow may redistribute local spikes in temperature [Kim2008]_.
@@ -362,34 +364,34 @@ Optical
 -------
 
 There have been a variety of optical techniques that have demonstrated
-diagnostic capabilities, which measure various optical characteristics. Like
-thermal methods, these methods require interrogation with a catheter because
-they generally have lower penetration than the other imaging modalities.  On the
-other hand, they have higher resolution than other modalities, which is
-important for such small tissue volumes.
+diagnostic capabilities, which measure various optical characteristics of the
+plaque. Like thermal methods, these methods require interrogation with a
+catheter because they generally have lower penetration than the other imaging
+modalities.  On the other hand, they have higher resolution than other
+modalities, which is important for such small tissue volumes.
 
 Intravascular optical coherence tomography (OCT) is a catheter based method that
 provides limited penetration, but very high resolution, on the order of 10 μm
 axially and 20 μm laterally [Yabushita2002]_.  Sensitivity and specificity rates
 for composition classification range from 71% and 79% to 97% and 98%
 [Yabushita2002]_.  Lipid and necrotic core have low optical attenuation, while
-fibrous and calcified tissue have a higher attenuation [VanSoest2009]_.
+fibrous and calcified tissue have higher attenuation [VanSoest2009]_.
 
 Time-resolved fluorescence spectroscopy (TRFS) is another optical technique that
 is used in conjunction with intravascular ultrasound (IVUS)
 [Stephens2009,Marcu2005]_.  Anatomical guidance is provided by IVUS which is
-registered with the TRFS signal.  TRFS detects autofluorescence from elastic,
+registered with the TRFS signal.  TRFS detects auto-fluorescence from elastic,
 collagen, lipids, and by-products of inflammatory processes to characterize the
 local biochemical composition.
 
 A method that focuses on collagen content is polarization-sensitive OCT (PSOCT)
 [Nadkarni2009]_.  Many different types of collagen fibers, primarily Type I and
 Type III, provide the majority of tensile strength and elasticity in healthy
-arteries [Plenz2003]_.  While smooth muscle cells migrate from the media to the
+arteries [Plenz2003]_.  While smooth muscle cells migrate from the media to
 intima in order to increase extracellular collagen during atherosclerosis, MMPs cause
 proteolysis of the collagen and apoptosis of intimal smooth muscle cells
 resulting in a net loss of collagen content [Newby1999]_.  In addition to high
-resolution plaque microstructure from OCT, PSOCT measures tissue birefringence.
+resolution plaque microstructure from OCT, PSOCT measures tissue bi-refringence.
 This behavior manifests itself as changes in back-reflected intensity when
 polarized light passes through anisotropic material such as organized collagen
 or smooth muscle cell actin-myosin in atherosclerotic plaque [Nadkarni2009]_.
@@ -405,23 +407,23 @@ decorrelation time constant.
 Raman spectroscopy is a method that measures the weak scattered signal from a
 laser light that shifts in frequency due to interactions with characteristic
 molecular vibrations and rotations [Hanlon2000]_.  Spectra provide a chemical
-footprint of biochemical composition.  Recent developments of optical fiber
+footprint of biochemical composition.  Recent developments in optical fiber
 technology and small diameter probes with sufficient filtering capabilities
-allows real-time *in vivo* acquisition [Motz2006]_.  The sensitivity
+enable real-time *in vivo* acquisition [Motz2006]_.  The sensitivity
 and specificity rates for determining carotid and femoral plaque composition
 were found to be 79% and 85%, respectively [Motz2006]_.  Near-infrared (NIR)
 spectroscopy is similar to Raman spectroscopy, but investigates the absorbance
 at wavelengths from 400 to 2400 nm [Lerakis2008]_.  The defining characteristics
 of tissue components in these situations can be determined empirically by
-applying a histology-based training set on principle component analysis or other
+applying a histology-based training set on principal component analysis or other
 methods to components of the spectra [Moreno2002]_.
 
 Finally, OCT elastography can generate strain images of vascular tissue
 [Chan2004]_.  Unlike MRI strain imaging but similar to ultrasound strain
 imaging, discussed later, OCT elastography is essentially a deformable image
 registration problem [Chan2004,Kirkpatrick2006,Karimi2008]_.  Again, a clear
-advantage of OCT is the resolution for profiling these small inhomogenous
-tissues.  In fact, the precision of OCT is so high, that deformation in the skin
+advantage of OCT is the resolution for profiling these small inhomogeneous
+tissues.  In fact, the precision of OCT is so high that deformation in the skin
 due to pressure waves in the audible range has been imaged [Adie2009]_.  While
 resolution is more ideal than other modalities, depth of penetration may limit
 application to coronary plaques and preclude carotid plaques.  On the other
@@ -452,7 +454,7 @@ echogenicity difficult to interpret.  Nonetheless, echogenicity has been the
 most commonly tested and most widely used metric of vulnerability.  Ultrasound
 echogenicity is assessed via direct visual examination of B-mode images.  Some
 authors prefer to use the Gray-Weale scale for echogenicity which stratifies
-echogenicity into five types ranging from echolucent to calcific with shadowing
+echogenicity into five types ranging from echolucent to calcified with shadowing
 [Gray-Weale1988]_. A slight improvement to visual examination are
 computer-assisted gray-scale median (GSM) measurements
 [Sztajzel2005,Aly2000,Lal2002]_.  These results are semi-quantitative since they
@@ -495,7 +497,7 @@ Harmonic imaging of microbubbles allows visualization the vasa vasorum in
 atherosclerotic rabbit models [Goertz2006]_.  In the future, ultrasound
 molecular imaging of atherosclerosis may be performed by targeting markers for
 neoangiogenesis or inflammation with microbubbles, acoustically active
-nanoparticles, or microparticles like echogenic liposomes [Kaufmann2009]_.
+nanoparticles, or micro-particles like echogenic liposomes [Kaufmann2009]_.
 
 Radiofrequency signal based characterization
 --------------------------------------------
@@ -553,12 +555,12 @@ Most of the ultrasonic tissue characterization methods on atherosclerotic plaque
 have used the method introduced by Lizzi to account for system
 characteristics [Lizzi1983]_.  In this method, a flat reflector, often made of acrylic or
 steel, is placed at various distances in front of the transducer, and the
-returned signal is recorded.  The spectra received is used to normalize the
+returned signal is recorded.  The estimated power spectra is used to normalize the
 spectra obtained from the region of interest in tissue.
 
 While this is an improvement, there are still inaccuracies inherent to the
 system approximation.  The measurement is made in water, which does not exhibit
-scattering throughout the beam path as would occur in vivo, and water does not
+scattering throughout the beam path as would generally occur *in vivo*, and water does not
 have the same attenuation properties as tissue.  Furthermore, it relies on good
 alignment between the transducer and reflector, which is increasingly difficult
 at higher frequencies.  Reference phantom based methods have been developed that
@@ -610,9 +612,9 @@ histopathological analysis in a second study  [Tang2009a,Tang2005]_.  These
 studies also verify that markers traditionally considered for vulnerability
 such as morphology and composition also increase local stress/strain
 [Tang2005a]_.  Similarily, Kock et al. found that MRI derived FSI models of
-carotid plaque showed elevated first principal stresses at areas of notorius
+carotid plaque showed elevated first principal stresses at areas of notorious
 risk [Kock2008]_.  These FEA studies are not limited to IVUS and MRI
-microstructure inputs; an OCT microstructure and and composition derived model
+microstructure inputs; an OCT microstructure and composition derived model
 has shown stress extrema at locations known for rupture [Chau2004]_.  In a
 sophisticated FEA model derived from 3D IVUS coronary images, Yang et al.
 found that "cyclic bending, anisotropic material properties, pulsating
@@ -630,7 +632,7 @@ were compared to locations of plaque rupture cause by the angioplasty, and
 they were found to correspond.  In another case study, high shear stress was
 associated with the rupture and ulceration of a carotid artery plaque on an
 individual that had received serial MRI imaging.  Computational fluid
-dynamics base on MRI structure and composition identified the location of
+dynamics based on MRI structure and composition identified the location of
 high shear stress with the location of the ulcer [Groen2008]_.  Ulceration
 has been observed to be more common proximal to stenosis and more common for fatty
 plaques [Saba2007]_.
@@ -639,8 +641,8 @@ Inflammation may be part of a positive feedback process where mechanical tearing
 would stimulate a necrotic response that catabolizes the extracellular matrix,
 leading to further mechanical weakness at the site
 [Sirico2009,Lendon1993,Arroyo1999,Dhume2003,Ho2002,Lee1998,Lendon1991]_.  This
-is supported by a recent study comparing gene expression in calcific areas,
-often associated with stability, to non-calcific areas.  It was found
+is supported by a recent study comparing gene expression in calcified areas,
+often associated with stability, when compared to non-calcified areas.  It was found
 that gene expression of factors that promote interleukin 8 and monocyte
 chemoattractant protein 1, associated with inflammation and thereby
 vulnerability, were higher in non-calcified areas [Wahlgren2009]_.  Lee et al.
@@ -650,7 +652,7 @@ material properties for the tissue components.  When comparing images of
 immunoreactive MMP-1, they found that high stress regions had twice the MMP-1 expression
 as low stress regions [Lee1996]_.  Elevated levels of highly sensitive
 C-reactive protein, another inflammation marker, correlates with increased
-intima-media thickness [Benbir2005]_.  These high stress states may lead to
+intima-media thickness [Benbir2005]_.  These high stress states may also lead to
 fatigue failure [Bank2000,Bauters2002,Cheng1993]_.
 
 Stress-stretch curves ([Holzapfel2004]_ Fig. 6) were created by Holzapfel during
@@ -668,11 +670,11 @@ the sensitivity of stress and strain at the site of rupture in a diseased artery
 can be low.  In a computational analysis, it was found that +/- 50% variation in
 elastic modulus leads to less than a 10% change in stress at the site of rupture
 [Williamson2003]_.  In contrast, strain imaging has the potential to directly image the
-parameter of interest.
+feature of interest.
 
 Recently, ultrasonic strain imaging techniques have been applied to imaging of
 the carotid arteries.  Strain imaging creates an *in vivo* map of strain, a
-parameter directly related to tissue stretch or contraction, drawn on the
+feature directly related to tissue stretch or contraction, drawn on the
 abscissa in the mechanical tests in [Holzapfel2004]_.  Vulnerable plaques have a
 higher extensibility and a lower ultimate stress [Lendon1991,Holzapfel2004]_.
 Therefore, strain imaging directly measures a parameter that determines how
@@ -693,7 +695,7 @@ radially as the transducer is mechanically rotated or electronically steered.
 The high frequencies in IVUS, from 20 MHz to 60 MHz, provide higher resolution
 images but lower penetration, and it is more common to find it applied to
 coronary arteries.  Shapo et al. reported IVUS strain measurements *in vivo*
-where strain was incurred with an angioplasty balloon [Shapo1996]_.  De Korte
+where strain was induced with an angioplasty balloon [Shapo1996]_.  De Korte
 reported on strain measurements with IVUS on tissue-mimicking phantoms by
 performing one-dimensional correlation with peak interpolation [deKorte1997]_.
 Adaptive and iterative estimation of local scaling factors has been added to
@@ -710,7 +712,7 @@ fidelity, a sum of squared difference, and strain smoothness, a sum of strain
 gradients [Liang2008]_.
 
 The feasibility of *in vivo* application was examined on 12 patients undergoing
-angioplasty, and it was found that strain in calified material (0.20% +/- 0.07)
+angioplasty, and it was found that strain in calcified material (0.20% +/- 0.07)
 was smaller than non-calcified tissue (0.51% +/- 0.20) [DeKorte2002]_.  During
 that study, it was revealed that catheter movement due to cardiac motion and
 blood flow impede strain estimation, so strain estimation was gated to points in
@@ -718,16 +720,16 @@ late diastole.  Catheter movement with blood flow can make it difficult to
 determine the orientation of the transducer and to differentiate between
 catheter and artery movement, although movement compensation schemes have been
 described [DeKorte1999,Shi2005b]_.  In the technique described by Shapo et al.,
-motion is constrained with the angioplasty ballon, but strains are also measured
+motion is constrained with the angioplasty balloon, but strains are also measured
 relative to an artery's geometric center that is calculated from segmentation of
 the lumen [Shapo1996]_.  Schaar et al. described the effectiveness of what they
 termed palpography, an elastogram that only investigates the first 450 μm at the
 lumen boundary since this is where rupture may occur [Schaar2006]_.  Comparison
 of mean strain values and histology revealed higher strain colocalized with
 fatty areas and areas with increased concentration of macrophages
-[DeKorte2000]_.  In a study of 54 cross sections validated by history,
-palpography was found to have a sensitivity of 88% and a specifity of 89% [Schaar2003]_.
-In a study of an atherosclerotic Yucantan minipig, it was found
+[DeKorte2000]_.  In a study of 54 cross sections validated by histology,
+palpography was found to have a sensitivity of 88% and a specificity of 89% [Schaar2003]_.
+In a study of an atherosclerotic Yucatan mini-pigs, it was found
 that mean strain correlated with tissue type and localized high strain values
 correlated with indicators of inflammation, macrophages [DeKorte2002a]_.  The
 nature of IVUS acquisition results in 2D images of the vessel cross-section, but
@@ -757,8 +759,8 @@ changes that occur with another plaque characterization imaging technique,
 photoacoustic imaging [Sethuraman2008]_.  During intravascular photoacoustic
 imaging (IVPA), tissue is irradiated with a sub-ablation threshold laser at
 20 Hz [Sethuraman2005a]_.  Optical absorption of the laser energy results in
-thermoelastic expansion of the tissue and acoustic waves.  The acoustic waves
-are detected with an IVUS transducer, and a spatial map of optical absorption is
+thermoelastic expansion of the tissue and subsequent generation of acoustic waves.  The acoustic waves
+are detected with an IVUS transducer, and a spatial map of optical absorption
 reconstructed.  This method allows for imaging at optical resolutions but with a
 depth of penetration that is closer to ultrasound.  By exciting tissue with
 multiple wavelengths in the 680 - 900 nm range, the absorption properties across
@@ -775,12 +777,10 @@ appropriate for general stroke risk screening purposes.
 
 The first plaque strain characterization based on an external
 clinical transducer, a 7.0 MHz Acuson linear array, was reported by Meairs and
-Hennerici in 1999 [Meairs1999]_.  While the bulk of research in this area ensued
-5 years following, the quality of the Meairs and Hennerici paper supercedes
-later work.  4D *in vivo* characterization was performed on carotid artery
+Hennerici in 1999 [Meairs1999]_.  4D *in vivo* characterization was performed on carotid artery
 plaques of 23 asymptomatic and 22 symptomatic patients by scanning the linear
 array with an ECG gated stepper motor.  The motion estimator was a hierarchical
-algorithm applied to laplacian filtered images that minimized a sum-of-squared
+algorithm applied to Laplacian filtered images that minimized a sum-of-squared
 differences cost function with the Gauss-Newton method.  They found that even
 though no significant differences in echogenicity or surface structure between
 symptomatic and asymptomatic cases could be found, symptomatic plaques
@@ -789,7 +789,7 @@ evaluated two parameters: maximal surface velocity (MSV) and maximal discrepant
 surface velocity (MDSV).  They found that MSV, which is termed local
 displacement in other literature that does not account the inter-frame time
 period, did not have significant differences between symptomatic and
-asymptomatic cases.  In contract, MDSV, which is is termed local strain in other
+asymptomatic cases.  In contract, MDSV, which is termed local strain in other
 literature, did show a statistically significant difference between symptomatic
 and asymptomatic patients.
 
@@ -797,52 +797,54 @@ Later, Bang et al. implemented a motion tracking algorithm similar to what is
 found in the elastography literature [Ophir2000, Ophir2001]_, though they
 appeared to be unaware of that body of literature [Bang2003,Dahl2004]_.  That
 is, a 2D cross correlation is calculated between small windows of tissue at
-frames contigious in time for different translations of the window.  The local
+frames contiguous in time for different translations of the window.  The local
 displacement is assumed to correspond to the translation with highest
 correlation.  The precision of the correlation function can be improved with
 interpolation of the correlation matrix.  Their images appeared to be quite
 noisy, and the fidelity of their method can not be determined because there was
-not rigorous validation.  However, they commented on a few challenges that exist
+no rigorous validation.  However, they commented on a few challenges that exist
 in the image analysis.  First, the selection of optimal correlation window size
 is required for good performance.  Second, a low framerate results in
 significant out-of-plane motion that diminishes tracking performance.
 
-Kanai et al. performed regional plaque displacement tracking in longitudinal
-plane images with the phase tracking method used by Kanai in cardiac strain
-applications [Kanai2003,Kanai1996,Kanai1997]_.  This method was tauted for
-having a precision of approximately 0.5 μm observed with a rubber plate in a
+Kanai et al. performed regional plaque displacement tracking in images acquired
+along the longitudinal
+plane using a phase tracking method previously used in cardiac strain
+applications [Kanai2003,Kanai1996,Kanai1997]_.  This method was reported to
+have a precision of approximately 0.5 μm observed with a rubber plate in a
 water tank [Kanai2003]_.
 
 Recent efforts working towards noninvasive strain estimation come from The
-University of Montreal and Montreal Hospital, Quebec.  They call their motion
-tracking algorithm the Lagrangian speckle model estimator (LSME)
-[Maurice2004a,Maurice2005]_.  The algorithm is similar to the approach by taken
-by Meairs: local motion is formulated as an non-linear minimization problem
-where the cost function is a sum of squared difference in intensity.  The
-optimization algorithm utilized in this case is the Levenberg-Marquardt method
-instead of the Gauss-Newton method, and this motion model is a full affine
-transform instead of a simple translation.  The translation portion of the
-problem is determined by peaking 2D cross-correlation, while determining tho
-parameters of the linear transformation (scaling, rotation, and shearing) matrix
-is treated as a nonlinear optimization problem.  In order for the model to
-incorporate decorrelation noise in their model, they have tried adding
-brightness offset and contrast parameters to the affine model [Schmitt2007]_.
-They have also used an optical flow approach [Maurice2005a]_.  Unlike other
-methods where strains are calculated from the contrast in displacements of
-adjacent tracking points, strains are calculated from components of the linear
-transformation matrix of a single tracking point.  Their method was applied to
-16 subjects without carotid atherosclerosis binned into four age categories,
-[40-49], [50-59], [60-69], and [70-79] years old.  While they were able to
-obtain reproducibility between left and right carotid and scanning from two
-independent radiologists, a statistically significant difference was not
-observed across age groups [Maurice2008a]_.
+University of Montreal and Montreal Hospital, Quebec.  They refer to their
+motion tracking algorithm as the Lagrangian speckle model estimator (LSME)
+[Maurice2004a,Maurice2005]_.  The algorithm is similar to the approach taken by
+Meairs and Hennerici; i.e. the local motion is formulated as a non-linear
+minimization problem where the cost function is a sum of squared difference in
+intensity.  The optimization algorithm utilized in this case is the
+Levenberg-Marquardt method instead of the Gauss-Newton method, and this motion
+model is a full affine transform instead of a simple translation.  The
+translation portion of the problem is determined from the peak of the 2D
+cross-correlation, while determination of the parameters of the linear
+transformation (scaling, rotation, and shearing) matrix is treated as a
+nonlinear optimization problem.  In order for the model to incorporate
+decorrelation noise in their model, they have tried adding brightness offset and
+contrast parameters to the affine model [Schmitt2007]_.  They have also used an
+optical flow approach [Maurice2005a]_.  Unlike other methods where strains are
+calculated from the displacement slope of adjacent tracking points,
+strains are calculated from components of the linear transformation matrix of a
+single tracking point.  Their method was applied to 16 subjects without carotid
+atherosclerosis binned into four age categories, [40-49], [50-59], [60-69], and
+[70-79] years old.  While they were able to obtain reproducibility between left
+and right carotid and scanning from two independent radiologists, a
+statistically significant difference was not observed across age groups
+[Maurice2008a]_.
 
 The de Korte group from the Netherlands, whose efforts were previously focused on
-IVUS strain imaging, as described earlier, has recently forayed into the
+IVUS strain imaging, as described earlier, have recently forayed into the
 non-invasive strain imaging area [Ribbers2007]_.  A 2-D cross-correlation motion
 tracking technique was applied to a cylindrical phantom and some *in vivo* test
-cases.  A challenge noted in transverse images of the vessel mimicking phantom
-was the refraction artifact that occurs in this configuration.  The speed of
+cases have been reported.  A challenge noted in transverse images of the vessel mimicking phantom
+were the refraction artifact that occurs in this configuration.  The speed of
 sound change coupled with the curvature of the artery's inner wall redirects
 propagation of the ultrasound beam.  Observed motion distal to the lumen-artery
 interface can then actually be due to movement of the lumen-artery interface
@@ -851,9 +853,9 @@ transducer, which makes motion tracking a challenge.
 
 Recently, Shi et al. from our laboratory presented preliminary results from
 diagnostic characterization of carotid endarterectory patients with strain
-imaging [Shi2008]_.  A hierachical 2D cross-correlation method was used for
-motion tracking.  The results indicted tho strain values correlated with
-calcific and non-calcific B-Mode presentation and that strain indices may
+imaging [Shi2008]_.  A hierarchical 2D cross-correlation method was used for
+motion tracking.  The results indicated that the estimated axial strain values correlated with
+calcified and non-calcified B-Mode presentation and that strain indices may
 differentiate symptomatic and asymptomatic cases.
 
 Angular compounding
@@ -862,49 +864,50 @@ Angular compounding
 Quality in ultrasound strain images can potentially be improved with angular
 compounding [Rao2006]_.  Angular compounding is achieved by electronically
 steering the ultrasound beam with appropriate time delays applied to
-transducer array elements during the transmit pulse.  In B-Mode angular
-compounding, this gives a different instantiation of tissue speckle, which in
+transducer array elements during the transmit phase.  For B-Mode images, angular
+compounding provides a different view of tissue speckle, which in
 can be averaged to improve image quality.  In strain imaging, a different
 realization of tissue scattering is again made available, but the observation
 of the strain tensor is also obtained in a different coordinate system.  This is
-advantageous since ultrasound image resolution in inherently highly anisotropic:
-resolution is inherently high along the axis of beam propation, but low lateral
-to beam propagation.  As result, the quality of displacement estimates in the axial
-direction are better than the lateral direction.  Angular compounding has the
+advantageous since ultrasound image resolution in inherently highly anisotropic;
+resolution is inherently high along the axis of beam propagation, but low lateral
+to the beam propagation direction.  As a result, the quality of displacement estimates in the beam (axial)
+direction are better than that along the lateral direction.  Angular compounding has the
 potential to improve image quality with an averaging effect, but also provides
-axial quality motion tracking when the beam is steered to what is the lateral
+axial quality motion tracking when the beam is steered to that obtained in the lateral
 direction when the beam is not steered.
 
 Preliminary work on applying angular compounding to strain images on transverse
 images of a hollow cylinder phantom have been performed by Hansen et al.
-[Hansen2009]_.  A number of complications exist that question whether angular
-compounding of strain images of extensive carotid atherosclerosis *in vivo* will
-improve image quality.
+[Hansen2009]_.  However, a number of complications exist that have to be
+addressed before angular
+compounding of strain images of extensive carotid atherosclerosis *in vivo*
+would improve image quality.
 
 First, there are practical limitations to the maximum angle that can be steered
-due to transducer technology.  Grating lobe artifacts, which signifantly
-decrease image quality, will appear if the spacing between array elements is not
+with linear array transducer technology.  Grating lobe artifacts, which signifantly
+decrease image quality, will appear if the spacing between array elements are not
 small enough for a given excitation frequency and steering angle.  As a
 consequence, steering angles on current high frequency linear array transducers
 are limited to approximately +/- 15º.  Hansen et al. worked around this
 limitation to some extent by low pass filtering the signal at higher angles with
 a cutoff frequency corresponding to the frequency when grating lobes occur.
-This allowed them to steer up to +/- 45º without significant artifact, but the
-removal of high frequency content decreases the advantage of tracking in the
-axial direction.
+This allowed them to steer up to +/- 45º without significant artifacts, but the
+removal of high frequency content decreases the advantage of tracking along the
+beam direction.
 
 Secondly, the combination of multiple images may introduce more noise than
 signal in the composite image.  The noise may be introduced by multiple factors.
 Averaging strains with a simple arithmetic mean of axial and lateral components
 may decrease quality in areas that were previously calculated with only the
-lateral component.  Artifacts, such as the artifact due to refraction of the
+lateral component.  Artifacts, due to refraction of the
 pulse at the curved arterial borders [Ribbers2007]_, may be compounded
-[Hansen2009]_.  How strain components are calculated and extracted from the
-strain tensor also plays a roll.  Additional noise is introduced if an approach
-is taken such as that in Hansen et al., where the strain matrix is rotated
-to a particular orientation, and components are average at that orientation.
+[Hansen2009]_.  The manner by which the strain components are calculated and extracted from the
+strain tensor also plays a role.  Additional noise is introduced if an approach
+is taken such as the one proposed in Hansen et al., where the strain matrix is rotated
+to a particular orientation, and components are averaged at that orientation.
 This is because the orientation may not be the same in all compounded images.
-For example, if prinicipal components (eigenvalues of the strain matrix) are
+For example, if the prinicipal components (eigenvalues of the strain matrix) are
 averaged, they do not necessarily correspond to the same coordinate system
 orientation (eigenvectors of the strain matrix).  It is natural to try to
 extract 'radial' and 'circumferential' components of the strain tensor when
@@ -912,10 +915,10 @@ dealing with a transverse view of an artery, because these correspond to the
 direction of the principal components for a simple cylinder.  However,
 determination of the radial and circumferential directions introduce additional
 noise since the center of the lumen is used as a reference [Hansen2009]_ or
-the local curvature at the luman-artery interface [Lin2008]_ must be determined
+the local curvature at the lumen-artery interface [Lin2008]_ must be determined
 for each image.  Furthermore, radial and circumferential directions are not very
 meaningful when dealing with the structure of a complex plaque as opposed to a
-healthy artery.  Most importantly, it remains to be determined if registration
+healthy artery.  Most importantly, it remains to be determined if the registration
 and displacement compensation techniques are effective for the significant motion
 that occurs *in vivo*.
 
