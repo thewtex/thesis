@@ -71,7 +71,7 @@ Chapter 3 : Recursive Bayesian Regularization for Ultrasound Strain Imaging
 This chapter describes a recursive Bayesian regularization algorithm
 applied during ultrasound displacement estimation to improve the quality by
 reducing artifacts and improving the signal-to-noise in
-carotid strain images.  First, we describe regularization's role in the 
+carotid strain images.  First, we describe regularization's role in the
 block-matching approach to deformable image registration.  Then we review
 regularization algorithms that have been implemented in the literature.  Next,
 we describe the iterative probabilistic approach taken in this work.  Finally,
@@ -107,6 +107,8 @@ be formulated as
 
 .. math:: \mathbf{\hat{u}_x} = \arg\min_{\mathbf{u_x}}  E_s( \mathbf{u_x} )
 
+*Eqn. 3.1*
+
 .. epigraph::
 
   Where *E*\ :sub:`s` is a similarity metric term, and examples include the sum of squared differences,
@@ -114,6 +116,8 @@ be formulated as
   in a cost function paradigm, an additional term must be minimized.
 
 .. math:: \mathbf{\hat{u}_x} = \arg\min_{\mathbf{u_x}} [ E_s( \mathbf{u_x} ) + \alpha \: E_c( \mathbf{u}_{\mathcal{N}_x}, E_s( \mathbf{u}_{\mathcal{N}_x} )  ) ]
+
+*Eqn. 3.2*
 
 Here *E*\ :sub:`c` is a continuity term that depends on the neighboring
 displacements and the similarity metric at neighboring displacements.  The
@@ -246,10 +250,14 @@ as a similarity metric and a number of continuity terms were examined
 
 .. math:: E_{c,c} = 2 \, (e^S - 1)
 
+*Eqn. 3.3*
+
 In Rivaz's article, he examined the sum of absolute differences as a similarity
 metric and the following continuity term [Rivaz2008]_,
 
 .. math:: E_c = ( d_i - d_{i-1} )^2
+
+*Eqn. 3.4*
 
 .. epigraph::
 
@@ -261,6 +269,8 @@ for constrained parameters.  She applied normalized cross correlation as the
 similarity metric and used the following expression as a continuity term [Brusseau2008]_,
 
 .. math:: E_c = \left( \frac{ \alpha - \alpha_{average} }{ \alpha_{max} - \alpha_{min}} \right)^2 + \left( \frac{u - u_{average}}{ u_{max} - u_{min} } \right) ^2
+
+*Eqn. 3.5*
 
 .. epigraph::
 
@@ -290,6 +300,8 @@ values for a deformable cubic B-spline motion model that was regularized by a
 smoothing term, described as:
 
 .. math:: \rho \int \int u_{xx}^2 + 2 u_{xy}^2 + u_{yy}^2
+
+*Eqn. 3.6*
 
 .. epigraph::
 
@@ -349,6 +361,8 @@ a Bayesian framework.
 
 .. math:: Pr( \mathbf{u_x} | \mathbf{u}_{\mathcal{N}_x} ) = \frac {Pr( \mathbf{u}_{\mathcal{N}_x} | \mathbf{u_x} ) Pr( \mathbf{u_x} )} { Pr ( \mathbf{u}_{\mathcal{N}_x} ) }
 
+*Eqn. 3.7*
+
 .. epigraph::
 
   where :math:`\mathbf{u_x}` is the displacement of the kernel at location :math:`\mathbf{x}` and
@@ -364,6 +378,8 @@ probabilities are independent.
 
 .. math:: Pr ( \mathbf{u}_{\mathcal{N}_x} | \mathbf{u_x} ) = \prod_{\mathbf{x'} \in \mathcal{N}_x} Pr( \mathbf{u_{x'}} | \mathbf{u_x} )
 
+*Eqn. 3.8*
+
 .. epigraph::
 
   Here :math:`Pr( \mathbf{u_{x'}} | \mathbf{u_x} )` is the probability that a neighboring block at
@@ -376,6 +392,8 @@ We model :math:`P( \mathbf{u_{x'}} | \mathbf{u_x} )` as the maximum of the neigh
 by a Gaussian term.
 
 .. math:: Pr( \mathbf{u_{x'}} | \mathbf{u_x} ) = \max_{\mathbf{v}} \left[ Pr( \mathbf{v_{x'}} ) \exp( \frac{- || \mathbf{v_{x'}} - \mathbf{u_x} || ^2 } { 2 \mathbf{\sigma_u}^2 } ) \right]
+
+*Eqn. 3.9*
 
 .. epigraph::
 
@@ -391,6 +409,8 @@ A likelihood term for the Bayesian model can then be written as,
 
 .. math:: Pr( \mathbf{u}_{\mathcal{N}_x} | \mathbf{u_x} ) = \prod_{\mathbf{x'} \in  \mathcal{N}_x} Pr( \mathbf{u_{x'}} | \mathbf{u_x} ) = \prod_{\mathbf{x'} \in  \mathcal{N}_x} \max_{\mathbf{v}} \left[ Pr( \mathbf{v_{x'}} ) \exp( \frac{- || \mathbf{v_{x'}} - \mathbf{u} || ^2 } { 2 \mathbf{\sigma_u}^2 } ) \right]
 
+*Eqn. 3.10*
+
 The influence of neighbors beyond adjacent blocks can be achieved by
 recursively applying the regularization.
 
@@ -398,6 +418,8 @@ The displacement of the kernel is taken according to the *maximum a posteriori*
 principle.
 
 .. math:: \mathbf{u_x} = \arg\max_{ \mathbf{u_x} } Pr( \mathbf{u_x} | \mathbf{u}_{\mathcal{N}_x} )
+
+*Eqn. 3.11*
 
 Subsample precision of the displacement is achieved using interpolation of the
 posterior probability.
@@ -434,6 +456,8 @@ log posterior probability is computed using
 
 .. math:: Pr_{log} ( \mathbf{u_x} | \mathbf{u}_{\mathcal{N}_x} ) \propto \sum_{\mathbf{x'} \in  \mathcal{N}_x} \max_{\mathbf{v}} \left[ Pr_{log} ( \mathbf{v_{x'}} ) - \frac{ || \mathbf{v_{x'}} - \mathbf{u} || ^2 } { 2 \mathbf{\sigma_u}^2 } \right] + Pr_{log} ( \mathbf{u_x} )
 
+*Eqn. 3.12*
+
 .. epigraph::
 
   The statement is only proportional because it does not contain the denominator
@@ -465,6 +489,8 @@ Displacement estimation error was quantified using the elastographic
 signal-to-noise (*SNRe*) ratio computed along the axial direction [Ophir2001]_
 
 .. math:: SNR_e [dB] = 20 \log10 \; ( \frac {m_\varepsilon} {s_\varepsilon} )
+
+*Eqn. 3.13*
 
 .. epigraph::
 
@@ -554,6 +580,8 @@ the image where edge effects or out-of-bounds conditions may occur.
 
 .. math:: MARD = \frac{ \sum_{i=1}^n | I_m(\mathbf{x}_i - \mathbf{u}_{x,i}) - I_f(\mathbf{x}_i) | } { n }
 
+*Eqn. 3.14*
+
 .. epigraph::
 
   where :math:`I_m` is the interpolated RF value in the post-deformation (moving)
@@ -586,6 +614,8 @@ mean absolute axial displacement difference (MADD) is reported excluding the
 edges of the image, where edge effects may occur.
 
 .. math:: MADD = \frac{ \sum_{i=1}^n | \hat{u}_a - u_a | } { n }
+
+*Eqn. 3.15*
 
 .. epigraph::
 
@@ -870,7 +900,7 @@ regularization introduces additional artifacts compared to the case with no
 regularizations.  This may be expected given the poor performance at very low
 strains that is observed in |metric_plot_uniform| and |metric_plot_inclusion|.
 The MARD was 55.6, 50.5, and 46.6 for no correction, median
-filtering, and Bayesian regularization, respectively.  
+filtering, and Bayesian regularization, respectively.
 
 Improvement of a liver ablation
 ====================================
@@ -883,7 +913,7 @@ of the University of Wisconsin-Madison.  Details about this study are presented
 in [Rubert2010]_.  The source of deformation in this case was movement of the
 ablation electrode and breathing of the animal.  This case used the Siemens 9L4
 linear array
-transducer.  
+transducer.
 
 Liver and carotid B-mode images are displayed along with axial strain images
 with no regularization, 3×3 median filtering, and three iterations of Bayesian
@@ -968,7 +998,6 @@ signal decorrelation also varies with the applied strain [Varghese1997]_, which 
 also affect the optimal parameter.  In an approximate sense, the SRS can be
 viewed as the standard deviation of a function that modulates the estimated
 strain.
- 
 
 As seen in |metric_plot_uniform| and |metric_plot_inclusion|, Bayesian
 regularization can greatly increase the quality of motion tracking and dynamic
