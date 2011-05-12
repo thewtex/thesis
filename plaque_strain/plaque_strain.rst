@@ -224,6 +224,8 @@ after anisotropically scaling the block by a factor
 
 .. math:: s_i = 1 + e_{ii}^*
 
+*Eqn. 9.1*
+
 .. epigraph::
 
   where the scaling factor is one plus the normal strain in that direction if the
