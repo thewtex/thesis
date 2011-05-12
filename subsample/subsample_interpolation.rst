@@ -176,7 +176,9 @@ displacements.
 We obtained subsample displacements values with 2D sinc interpolation
 [Meijering1999,Yoo2002]_.  The sinc kernel, *K(t)* is given by
 
-.. math:: K(t) =  w(t) sinc(t) = w(t) \frac{\sin(\pi t)}{\pi t} \;\;\;\;\; (Eq.\; 1)
+.. math:: K(t) =  w(t) sinc(t) = w(t) \frac{\sin(\pi t)}{\pi t}
+
+*Eqn. 4.1*
 
 where *w(t)* denotes the window function.  We examined different window
 functions shown in |sinc_windows_table| [Meijering1999,Yoo2002]_,  Here *m* is the window
@@ -199,7 +201,9 @@ radius; the window is non-zero from *-m* to *m*.
 An interpolated normalized cross-correlation value, *XCORR(x,y)* was calculated with
 the sampled correlation values across the radius, and the window,
 
-.. math:: XCORR(x,y) = \sum_{i=\lfloor x \rfloor + 1 - m}^{\lfloor x \rfloor + m} \sum_{j=\lfloor y \rfloor + 1 - m}^{\lfloor y \rfloor + m} XCORR_{i,j} K(x-i) K(y-j) \;\;\;\;\; (Eq.\; 2)
+.. math:: XCORR(x,y) = \sum_{i=\lfloor x \rfloor + 1 - m}^{\lfloor x \rfloor + m} \sum_{j=\lfloor y \rfloor + 1 - m}^{\lfloor y \rfloor + m} XCORR_{i,j} K(x-i) K(y-j)
+
+*Eqn. 4.2*
 
 In this chapter, two simple optimization methods were examined: a regular-step
 gradient descent and Nelder-Mead simplex (amoeba) optimization.  In the
@@ -313,7 +317,9 @@ Behavior of optimization methods
 Following the analysis by Cespedes et al. [Cespedes1995]_, we evaluated the effectiveness of the
 subsample interpolation method using the *SNRe* feature.
 
-.. math:: SNR_e = \frac {m_\varepsilon} {s_\varepsilon} \;\;\;\;\; (Eq.\; 3)
+.. math:: SNR_e = \frac {m_\varepsilon} {s_\varepsilon}
+
+*Eqn. 4.3*
 
 The *SNRe* estimate was evaluated over the applied deformations examined for
 both the TM phantom and numerical simulation, along the axial and lateral
