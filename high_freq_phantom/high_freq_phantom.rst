@@ -141,12 +141,16 @@ proportional to the amplitude of the pulse,
 
 .. math:: \frac{dA}{dz} = - \alpha A
 
+*Eqn. 6.1*
+
 .. epigraph::
 
   where α denotes the attenuation coefficient.  The amplitude of the
   acoustic wave decreases exponentially with time,
 
 .. math:: A(t) = A_0 \exp( -\alpha z )
+
+*Eqn. 6.2*
 
 .. epigraph::
 
@@ -292,6 +296,8 @@ transducer.
 
 .. math:: A_w = A_0 \exp( -\alpha_w z_1 ) \exp( -\alpha_w d ) \exp( -\alpha_w z_2 )
 
+*Eqn. 6.3*
+
 When sound propagates through the surrounding water and sample, the received
 amplitude is,
 
@@ -311,6 +317,8 @@ amplitude is,
   :width: 14cm
   :height: 2.23cm
   :align: center
+
+*Eqn. 6.4*
 
 .. epigraph::
 
@@ -350,6 +358,8 @@ amplitude is,
 
 .. math:: \alpha (f) = \frac{20}{d} \log_{10} ( \frac{A_w T_{total}}{A_s} ) + \alpha_w (f)
 
+*Eqn. 6.5*
+
 The thickness of the test cylinder is 5.00 mm as measured with a calibrated
 micrometer.  This is significantly thinner than the larger 'hockey-puck'
 cylinders used at lower frequencies to limit high frequency attenuation.
@@ -360,6 +370,8 @@ the square of frequency from 3-70 MHz [Kay1995]_, and in dB/cm is
 
 .. math:: \alpha_w (f) [dB/cm] = 2.08e^{-3} \, f^2
 
+*Eqn. 6.6*
+
 .. epigraph::
 
   when *f* is in MHz.
@@ -368,6 +380,8 @@ Results of attenuation coefficient characterization for both the 4000E and 5000E
 phantom is shown in |attenuation_plot|.  Values from fitting to a power law model
 
 .. math:: \alpha (f) [dB/cm] = \alpha_0 f^n
+
+*Eqn. 6.7*
 
 are tabulated in |attenuation_table|.
 
@@ -406,6 +420,8 @@ The speed of sound is then obtained by inserting the change in time delay, Δ*t*
 and sample thickness, *d*, into the following equation [Wear2007]_
 
 .. math:: c = \frac{c_w}{1 + \frac{c_w \Delta t}{ d }}
+
+*Eqn. 6.8*
 
 .. epigraph::
 
@@ -509,6 +525,8 @@ transducer, instrumentation properties, and ultrasonic properties of intervening
 materials.
 
 .. math::  BSC (f) \approx \frac{\langle V_g(f) V_g^*(f) \rangle}{C^2 \Vert T(f) B_0(f) \Vert^2 \int \int \int \Vert A(\mathbf{r}, f ) \Vert^4 d \mathbf{r} }
+
+*Eqn. 6.9*
 
 The backscattered signal *V*\ :sub:`g`'s spectrum is averaged from many
 uncorrelated locations in the phantom to obtain the power spectrum.  The term
@@ -639,6 +657,8 @@ phantom, respectively.  Superposition using the diameter distribution given in
 
 .. math:: m_g = \rho_m \sum_{i=1}^N \frac{\pi}{6} D_i^3 g(D_i), \; \; \; \; \; D_1 = 0,\: D_N = D_{max}
 
+*Eqn. 6.10*
+
 .. epigraph::
 
   where *ρ*\ :sub:`m` is the bead mass density, *D* is the diameter of
@@ -647,6 +667,8 @@ phantom, respectively.  Superposition using the diameter distribution given in
   diameter per unit volume - is calculated.  The bead number density, *ρ*\ :sub:`n`\ *(D)*, is
 
 .. math:: \rho_n (D) = \frac{\rho_V}{m_g} g(D)
+
+*Eqn. 6.11*
 
 .. epigraph::
 
@@ -657,10 +679,14 @@ phantom, respectively.  Superposition using the diameter distribution given in
 
 .. math:: BSC(f) = \sum_{i=1}^N BS_s (f, D_i) \rho_n(D_i)
 
+*Eqn. 6.12*
+
 The amplitude attenuation coefficient of the thin layer covering the phantom is
 assumed to take the form
 
 .. math:: \alpha (f) = \alpha_0 \; f^{n}
+
+*Eqn. 6.13*
 
 .. epigraph::
 
