@@ -388,6 +388,8 @@ Doppler angle.  The Doppler frequency shift, *f*\ :sub:`d` is given by [Zagzebsk
 
 .. math:: f_d = \frac{ 2 f_t V \cos \theta}{c}
 
+*Eqn. 8.1*
+
 .. epigraph::
 
   It is a function of the transmit frequency, *f*\ :sub:`t`, the blood velocity,
