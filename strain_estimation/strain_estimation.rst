@@ -15,9 +15,9 @@ that be used for statistical analysis of plaque vulnerability.  Finally, methods
 to calculate accumulated strain in digital ultrasound strain images over the
 cardiac cycle are explained.
 
-.. |points| replace:: Fig. 5.1
+.. |solidbody| replace:: Fig. 5.1
 
-.. |points_long| replace:: **Figure 5.1**
+.. |solidbody_long| replace:: **Figure 5.1**
 
 .. |segments| replace:: Fig. 5.2
 
@@ -99,6 +99,10 @@ cardiac cycle are explained.
 
 .. |frame_skip_long| replace:: **Figure 5.21**
 
+.. |points| replace:: Fig. 5.22
+
+.. |points_long| replace:: **Figure 5.22**
+
 
 .. |higher_coefficients| replace:: Table 5.1
 
@@ -124,7 +128,7 @@ deformation of the body.
   :height: 7.964cm
 .. highlights::
 
-  |points_long|: 2D solid body at reference time *t*\ :sub:`0`, and after motion
+  |solidbody_long|: 2D solid body at reference time *t*\ :sub:`0`, and after motion
   at time *t*.  The vector **X** defines the position of point *P*\ (*t*\ :sub:`0`\ )
   in the reference configuration, and the vector **x** defines the point's
   position after motion.  The vector **u** is the difference between the two
@@ -138,6 +142,8 @@ reference configuration.  We will consider the location of *P* after motion occu
 to be the reference location plus a displacement, **u**, i.e.
 
 .. math:: \mathbf{x} = \mathbf{X} + \mathbf{u}( \mathbf{X}, t )
+
+*Eqn. 5.1*
 
 .. image:: images/segments.png
   :align: center
@@ -155,11 +161,15 @@ pre-deformation states at
 
 .. math:: \mathbf{x} + d\mathbf{x} = \mathbf{X} + d\mathbf{X} + \mathbf{u}( \mathbf{X} + d\mathbf{X}, t )
 
+*Eqn. 5.2*
+
 .. epigraph::
 
   It is clear from |segments| that
 
 .. math:: d\mathbf{x} = d\mathbf{X} + \mathbf{u}( \mathbf{X} + d\mathbf{X}, t) - \mathbf{u}( \mathbf{X}, t)
+
+*Eqn. 5.3*
 
 .. epigraph::
 
@@ -167,6 +177,8 @@ pre-deformation states at
   gradient [Lai1993]_, :math:`\nabla \mathbf{u}`.  In 2D Cartesian coordinates:
 
 .. math:: \nabla \mathbf{u} = \begin{bmatrix} \dfrac{\partial u_1}{\partial X_1} & \dfrac{\partial u_1}{\partial X_2} \\ \dfrac{\partial u_2}{\partial X_1} & \dfrac{\partial u_2}{\partial X_2} \end{bmatrix}
+
+*Eqn. 5.4*
 
 .. epigraph::
 
@@ -201,6 +213,8 @@ Observe that
   :width: 6cm
   :height: 1.0cm
 
+*Eqn. 5.5*
+
 .. epigraph::
 
   It is from this model that the different expressions for the strain tensor
@@ -214,11 +228,15 @@ becomes negligible, and
 
 .. math:: \mathbf{F}^T \mathbf{F} \approx \mathbf{I} + \nabla \mathbf{u} + (\nabla \mathbf{u})^T \equiv \mathbf{I} + 2 \mathbf{E}
 
+*Eqn. 5.6*
+
 .. epigraph::
 
   where
 
 .. math:: \mathbf{E} = \frac{1}{2} ( (\nabla \mathbf{u} )^T + \nabla \mathbf{u})
+
+*Eqn. 5.7*
 
 Note that **E** is a second-rank tensor since :math:`\nabla \mathbf{u}` is a
 second-rank tensor, and it is symmetric because we have the transpose added to
@@ -226,6 +244,8 @@ itself.  The tensor **E** is the *infinitesimal strain* [Lai1993]_, also known a
 *engineering strain* or *small strain*.  We then have:
 
 .. math:: d \mathbf{x}^{(1)} \cdot d \mathbf{x}^{(2)} = d \mathbf{X}^{(1)} \cdot d \mathbf{X}^{(2)} + 2 d \mathbf{X}^{(1)} \cdot \mathbf{E} d \mathbf{X}^{(2)}
+
+*Eqn. 5.8*
 
 .. epigraph::
 
@@ -236,11 +256,15 @@ For Cartesian coordinates in Einstein notation,
 
 .. math:: E_{ij} = \frac{1}{2} ( \frac{\partial u_i}{\partial X_j} + \frac{\partial u_j}{\partial X_i} )
 
+*Eqn. 5.9*
+
 .. epigraph::
 
   and in 2D the infinitesimal strain tensor is explicitly defined as,
 
 .. math:: \mathbf{E} = \begin{bmatrix} \dfrac{\partial u_1}{\partial X_1} & \dfrac{1}{2}( \dfrac{\partial u_1}{\partial X_2} + \dfrac{\partial u_2}{\partial X_1}) \\ \dfrac{1}{2}( \dfrac{\partial u_1}{\partial X_2} + \dfrac{\partial u_2}{\partial X_1}) & \dfrac{\partial u_2}{\partial X_2} \end{bmatrix}
+
+*Eqn. 5.10*
 
 We can elucidate the physical meaning of the infinitesimal strain tensor by
 examining special cases for :math:`d \mathbf{X}^{(1)}` and :math:`d
@@ -268,6 +292,8 @@ For small deformations, :math:`(ds + dS)( ds - dS) \approx 2 dS( ds - dS )`, and
 
 .. math:: \frac{ ds - dS }{dS} = \mathbf{e_1} \cdot \mathbf{E} \mathbf{e_1} = E_{11}
 
+*Eqn. 5.11*
+
 Therefore, *E*\ :sub:`11` is equal to the unit elongation (or shortening) for the segment
 in the direction of **e**\ :sub:`1`.  Similarly, *E* :sub:`22` is the
 unit elongation for the segment that is in the direction of
@@ -275,6 +301,8 @@ unit elongation for the segment that is in the direction of
 *normal strains* [Lai1993]_.  Note that
 
 .. math:: 100 \, \frac{ds - dS}{dS} \equiv \% \mbox{ elongation of } dS
+
+*Eqn. 5.12*
 
 Therefore, in the small strain case, a normal strain component multiplied by 100 is equal to
 the percent elongation.  A positive normal strain indicates an extension of
@@ -309,13 +337,19 @@ Let :math:`d \mathbf{X}^{(1)} = dS_1 \, \mathbf{e_2}` and :math:`d
 
 .. math:: \sin \gamma = \cos( \pi / 2 - \gamma )
 
+*Eqn. 5.12*
+
 .. epigraph::
 
   For small strain
 
 .. math:: \sin \gamma \approx \gamma, \; \frac{dS_1}{ds_1} \approx 1, \; \frac{dS_2}{ds_2} \approx 1
 
+*Eqn. 5.13*
+
 .. math:: \gamma = 2 \, E_{12} = 2 \, E_{21}
+
+*Eqn. 5.14*
 
 That is, for infinitesimal strain, the decrease in angle between orthogonal
 segments is equal to twice the diagonal component of the strain tensor, the
@@ -334,6 +368,8 @@ equation:
   :width: 11cm
   :height: 1.634cm
 
+*Eqn. 5.15*
+
 .. epigraph::
 
   where :math:`\mathbf{E}^* = \frac{1}{2} ( \mathbf{F}^T \mathbf{F} - \mathbf{I})`
@@ -349,9 +385,13 @@ and :math:`||d\mathbf{x}|| = ds`,
 
 .. math:: E_{11}^* = \frac{ ds^2 - dS^2}{2 dS^2}
 
+*Eqn. 5.16*
+
 Similarly, if :math:`d \mathbf{X} = ds \, \mathbf{e}_2`,
 
 .. math:: E_{22}^* = \frac{ds^2 - dS^2}{2 dS^2}
+
+*Eqn. 5.17*
 
 And, if we again look at |ds_perpendicular_dia|, where
 :math:`d \mathbf{X}^{(1)} = ds_1 \mathbf{e}_1` and :math:`d \mathbf{X}^{(2)} =
@@ -361,15 +401,23 @@ vectors,
 
 .. math:: ds_1 ds_2 \mathbf{m} \cdot \mathbf{n} = 2 dS_1 dS_2 \mathbf{e}_1 \cdot \mathbf{E}^* \mathbf{e}_2
 
+*Eqn. 5.18*
+
 .. math:: E_{12}^* = \frac{ds_1 ds_2}{2 dS_1 dS_2} \cos( \mathbf{m}, \mathbf{n})
+
+*Eqn. 5.19*
 
 The expression of :math:`\mathbf{E}^*` in terms of the displacement gradient is
 
 .. math:: \mathbf{E}^* = \frac{1}{2}( \nabla \mathbf{u} + (\nabla \mathbf{u})^T + (\nabla \mathbf{u})^T \nabla \mathbf{u} )
 
+*Eqn. 5.20*
+
 In Einstein summation notation,
 
 .. math:: E_{ij}^* = \frac{1}{2}(\frac{\partial u_i}{\partial X_i} + \frac{\partial u_j}{\partial X_i} + \frac{1}{2} \frac{\partial u_m}{\partial X_i} \frac{\partial u_m}{\partial X_j}
+
+*Eqn. 5.21*
 
 The explicit components in a 2D Cartesian coordinate system are,
 
@@ -377,6 +425,8 @@ The explicit components in a 2D Cartesian coordinate system are,
   :align: center
   :width: 9.5cm
   :height: 3.07cm
+
+*Eqn. 5.22*
 
 5.1.1.3 Eulerian strain
 -----------------------
@@ -386,9 +436,13 @@ specified in the deformed configuration,
 
 .. math:: d \mathbf{X} = \mathbf{F}^{-1} d \mathbf{x}
 
+*Eqn. 5.23*
+
 where **F**\ :sup:`-1` is the inverse of **F** [Lai1993]_,
 
 .. math:: \mathbf{F}^{-1} = \begin{bmatrix} \dfrac{\partial X_1}{\partial x_1} & \dfrac{\partial X_1}{\partial x_2} \\ \dfrac{\partial X_2}{\partial x_1} & \dfrac{\partial X_2}{\partial x_2} \end{bmatrix}
+
+*Eqn. 5.24*
 
 Again considering the deformation of two small segments in the volume,
 
@@ -396,6 +450,8 @@ Again considering the deformation of two small segments in the volume,
   :align: center
   :width: 7cm
   :height: 1.74cm
+
+*Eqn. 5.25*
 
 Subtracting the above from :math:`d \mathbf{x}^{(1)} \cdot d \mathbf{x}^{(2)}`
 to again obtain an expression for the change in the inner product between the
@@ -405,6 +461,8 @@ two segments,
   :align: center
   :width: 11cm
   :height: 1.62cm
+
+*Eqn. 5.26*
 
 .. epigraph::
 
@@ -427,7 +485,11 @@ and :math:`||d \mathbf{x}|| = dS`, then
 
 .. math:: ds^2 - dS^2 = 2 dS \mathbf{e}_1 \mathbf{e}^* dS \mathbf{e}_1
 
+*Eqn. 5.27*
+
 .. math:: e_{11}^* = \frac{ds^2 - dS^2}{2 dS^2}
+
+*Eqn. 5.28*
 
 And, when considering two segments :math:`d\mathbf{x}^{(1)} = ds_1 \mathbf{e}_1`
 and :math:`d\mathbf{x}^{(2)} = ds_2 \mathbf{e}_2` that deformed from
@@ -437,7 +499,11 @@ vectors,
 
 .. math:: - dS_1 dS_2 \, \mathbf{n} \cdot \mathbf{m} = 2 \, ds_1 ds_2 \, \mathbf{e}_1 \cdot \mathbf{e}^* \mathbf{e}_2
 
+*Eqn. 5.29*
+
 .. math:: e_{12}^* = \frac{ -dS_1 dS_2 \cos( \mathbf{n}, \mathbf{m} )}{2 ds_1 ds_2}
+
+*Eqn. 5.30*
 
 Since :math:`\mathbf{F}^{-1} = \mathbf{I} - \nabla_x \mathbf{u}` [Lai1993]_
 (:math:`\nabla_x` indicates differentiation with respect to coordinates of the
@@ -448,13 +514,19 @@ deformed configuration),
   :width: 9cm
   :height: 1.23cm
 
+*Eqn. 5.31*
+
 and
 
 .. math:: \mathbf{e}^* = \frac{1}{2}( \nabla_x \mathbf{u} + (\nabla_x \mathbf{u})^T - (\nabla_x \mathbf{u})^T \nabla_x \mathbf{u}
 
+*Eqn. 5.32*
+
 In Einstein summation notation,
 
 .. math:: e_{ij}^* = \frac{1}{2}(\frac{\partial u_i}{\partial x_i} + \frac{\partial u_j}{\partial x_i}) - \frac{1}{2} \frac{\partial u_m}{\partial x_i} \frac{\partial u_m}{\partial x_j}
+
+*Eqn. 5.33*
 
 Explicitly in 2D Cartesian coordinates,
 
@@ -463,6 +535,7 @@ Explicitly in 2D Cartesian coordinates,
   :width:  9.5cm
   :height: 3.3cm
 
+*Eqn. 5.34*
 
 5.1.2 Application in ultrasound
 ===============================
@@ -484,6 +557,8 @@ Diagnostic ultrasound has the longest history of calculating strain
 Ophir et al. [Ophir1991]_ calculated strain using:
 
 .. math:: s_i = \frac{t_{i+1} - t_i}{2dz/c}
+
+*Eqn. 5.35*
 
 .. epigraph::
 
@@ -546,6 +621,8 @@ symmetric, second-rank tensor is:
 
 .. math:: n_c = D \frac{D+1}{2}
 
+*Eqn. 5.36*
+
 .. epigraph::
 
   Note that there are six components in the 3D strain tensor; two addition shear strain
@@ -584,7 +661,7 @@ methods to compute the displacement gradient are examined.
   :width: 9cm
   :height: 7.02cm
 .. highlights::
-  
+
   |cylinder_long|: Illustration of the mechanical model from which the
   displacements and strains in this chapter are studied.  A block with
   homogeneous stiffness has a stiffer cylindrical inclusion embedded within.
@@ -678,6 +755,8 @@ offset *k* using finite differences is the central difference method.
 
 .. math::  f^1_0  \approx \frac{f_1 - f_{-1}} { 2 h }
 
+*Eqn. 5.37*
+
 .. epigraph::
 
   where *h* is the sampling period.
@@ -685,6 +764,8 @@ offset *k* using finite differences is the central difference method.
 This expression comes from a Taylor series expansion of the component terms
 
 .. math::  f_1 = f_0 + h f^1_0 + \frac{h^2}{2!}f^2_0 + \cdots + \frac{h^n}{n!} + \mathcal{O}(h^{n+1})
+
+*Eqn. 5.38*
 
 .. epigraph::
 
@@ -695,9 +776,13 @@ We also have
 
 .. math:: f_{-1} = f_0 - h f^1_0 + \mathcal{O}(h^{2})
 
+*Eqn. 5.39*
+
 Then we see
 
 .. math::  f^1_0 = \frac{f_1 - f_{-1}} { 2 h } + \mathcal{O}(h^{2})
+
+*Eqn. 5.40*
 
 This approximation is, therefore, *second-order accurate*.  Strain calculated
 using the central difference method to compute the displacement gradient is
@@ -719,10 +804,14 @@ In the forward difference method,
 
 .. math::  f^1_0  \approx \frac{f_1 - f_{0}} { h }
 
+*Eqn. 5.41*
+
 After looking at the Taylor series expansion, the forward difference method, like the backward
 difference method, is first-order accurate.
 
 .. math::  f^1_0  =  \frac{f_1 - f_{0}} { h } + \mathcal{O}(h)
+
+*Eqn. 5.42*
 
 Higher order accurate [#]_ approximations can be made by using additional
 samples.  Various schemes will yield correct results as long as the Taylor
@@ -733,6 +822,8 @@ series.  For instance, a central difference approximation to the first
 derivative that uses a five point kernel is
 
 .. math:: f^1_0 = \frac{f_{-2} - 8 f_{-1} + 8 f_1 - f_2}{ 12 h } + \mathcal{O}(h^4)
+
+*Eqn. 5.43*
 
 .. [#] Here we use the terminology *order of accuracy* to refer to the number of terms used in the Taylor series approximation and *order derivative* to refer to the degree of the derivative.
 
@@ -755,6 +846,8 @@ first order derivative are:
   :align:  center
   :width:  8cm
   :height: 1.25cm
+
+*Eqn. 5.44*
 
 The first sets of coefficients are explicitly given in |higher_coefficients|.
 
@@ -810,12 +903,16 @@ high frequency content.  In two dimensions, a Gaussian is given by
 
 .. math:: g(x_1, x_2) = \frac{1}{\sqrt{2 \pi}\sigma} e^{\frac{-(x_1^2 + x_2^2)}{2\sigma^2}}
 
+*Eqn. 5.45*
+
 It follows from the derivative theorem and the convolution theorem, that
 convolving one function with the derivative of another is equivalent to
 taking the derivative of the first and convolving with the other
 [Bracewell2000]_.
 
 .. math:: ( f \ast g )' = f' \ast g = f \ast g'
+
+*Eqn. 5.46*
 
 Thus, we can convolve the displacement images with a derivative of a Gaussian to
 get smoothed derivatives for the strain calculation.  Since a large proportion
@@ -859,11 +956,15 @@ first, the linear expression for a single datum is written,
 
 .. math:: u_1^{(0)} = m \, x_1^{(0)} + b
 
+*Eqn. 5.47*
+
 .. epigraph::
 
   For a five point least-squares kernel in matrix form,
 
 .. math:: \begin{bmatrix} u_1^{(-2)} \\ u_1^{(-1)} \\ u_1^{(0)} \\ u_1^{(1)} \\ u_1^{(2)} \end{bmatrix} = \begin{bmatrix} x_1^{(-2)} & 1 \\ x_1^{(-1)} & 1 \\ x_1^{(0)} & 1 \\ x_1^{(1)} & 1 \\ x_1^{(2)} & 1 \end{bmatrix} \begin{bmatrix} m \\ b \end{bmatrix}
+
+*Eqn. 5.48*
 
 .. epigraph::
 
@@ -871,17 +972,23 @@ first, the linear expression for a single datum is written,
 
 .. math:: \mathbf{u} = \mathbf{A} \begin{bmatrix} m \\ b \end{bmatrix}
 
+*Eqn. 5.49*
+
 .. epigraph::
 
   Then the classic least-squares solution is [Kallel1997a,WeissteinEric2011]_
 
 .. math:: \begin{bmatrix} \hat{m} \\ \hat{b} \end{bmatrix} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{u}
 
+*Eqn. 5.50*
+
 .. epigraph::
 
   This can be written as
 
 .. math:: \begin{bmatrix} \hat{m} \\ \hat{b} \end{bmatrix} = \mathbf{A}^+ \mathbf{u}
+
+*Eqn. 5.51*
 
 .. epigraph::
 
@@ -1039,6 +1146,8 @@ such as a rotation, the transformed tensor is given by [Lai1993]_,
 
 .. math:: [ \mathbf{Q} ]^T [ \mathbf{T} ] [ \mathbf{Q} ]
 
+*Eqn. 5.52*
+
 .. epigraph::
 
   where **Q** is the transformation on the tensor **T**.  There is a
@@ -1048,6 +1157,8 @@ such as a rotation, the transformed tensor is given by [Lai1993]_,
 Recall that when
 
 .. math:: \mathbf{E} \mathbf{n} = \lambda \mathbf{n}
+
+*Eqn. 5.53*
 
 .. epigraph::
 
@@ -1083,6 +1194,8 @@ in the spatially varying magnetic-field gradient, which is given by [Basser1994a
 
 .. math:: \ln \left[ \frac{A(TE)}{A(0)} \right]  = -\gamma^2 \left[ \delta^2( \Delta - \frac{\delta}{3}) + \frac{\varepsilon^3}{30} - \frac{\delta}{\varepsilon}^2{6} \right] \mathbf{g}^T \mathbf{D} \mathbf{g}
 
+*Eqn. 5.54*
+
 .. epigraph::
 
   where *A(TE)* is the amplitude of the magnetization at the time of the echo,
@@ -1102,6 +1215,8 @@ The probability density function that a molecule diffuses from location **x**\
 
 .. math:: \rho( \mathbf{x} | \mathbf{x}_0, \tau ) = \frac{1}{\sqrt{|\mathbf{D}(\tau)|(4\pi \tau)^3)}} \exp \left[ \frac{-(\mathbf{x} - \mathbf{x}_0)^T \mathbf{D}^{-1}(\tau)(\mathbf{x} - \mathbf{x}_0)}{4 \tau}\right]
 
+*Eqn. 5.55*
+
 The probability of displacement of a molecule is dependent on the inverse of the
 diffusion tensor, whose eigenvectors are the same as **D** and whose eigenvalues
 are 1/ λ\ :sub:`i`.  If the inverse diffusion tensor is applied in a quadric operation on the vector **x** and
@@ -1110,6 +1225,8 @@ direction **x** [Basser1994]_.  If the matrix has been diagonalized, the
 expression has the form,
 
 .. math:: \frac{x_1^2}{\lambda_1^2} + \frac{x_2^2}{\lambda_2^2} + \frac{x_3^2}{\lambda_3^2} = 1
+
+*Eqn. 5.56*
 
 .. epigraph::
 
@@ -1133,6 +1250,8 @@ is negative, the expression is no longer represented by an ellipse but by a
 hyperbola,
 
 .. math:: \frac{x_1^2}{\lambda_1^2} - \frac{x_2^2}{\lambda_2^2} = 1
+
+*Eqn. 5.57*
 
 In 3D, if one of the principal strains is negative the quadratic expression
 specifies a hyperboloid of one sheet, and if two of the principal strains are
@@ -1181,11 +1300,15 @@ the maximum principal strain,
 
 .. math:: max\left\{ | \lambda_1 | , | \lambda_2 | \right\}
 
+*Eqn. 5.58*
+
 .. epigraph::
 
   the maximum shear strain,
 
 .. math:: \lambda_1 - \lambda_2
+
+*Eqn. 5.59*
 
 .. epigraph::
 
@@ -1193,11 +1316,15 @@ the maximum principal strain,
 
 .. math:: \frac{1}{2} E \left( \lambda_1^2 + \lambda_2^2 \right)
 
+*Eqn. 5.60*
+
 .. epigraph::
 
   and the distortional energy,
 
 .. math:: \frac{1}{2} E \left( \lambda_1 - \lambda_2 \right)^2
+
+*Eqn. 5.61*
 
 The latter has been used by Maurice et al. for the examination of carotid
 plaque [Maurice2004]_.  Note that although the modulus, *E*, is unknown, plaque
