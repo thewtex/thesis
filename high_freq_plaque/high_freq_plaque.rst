@@ -126,6 +126,8 @@ for arterial plaque specimens based on values reported in the literature
 
 .. math::   BSC_s(f) = \frac{BSC_r(f) S_s(f)}{S_r(f)}
 
+*Eqn. 7.1*
+
 Log compression and linear interpolation were applied to the displayed IBSC
 images.
 Identical dynamic ranges and color transform functions were used in all corresponding images.
@@ -153,6 +155,8 @@ signal, *f(x)*, is defined to be
 
 .. math::  f_A(x) = f(x) - i \, f_H (x)
 
+*Eqn. 7.2*
+
 .. [#] Local phase is a 1D concept, and the analytic signal is not defined for multi-dimensional signals.  To split a multi-dimensional image into structural and energetic information, see the monogenic signal [Felsberg2001]_.
 
 .. epigraph::
@@ -161,10 +165,14 @@ signal, *f(x)*, is defined to be
 
 .. math::  f_H(x) = \frac{1} {\pi} \int_{-\infty}^{\infty} \frac {f(x')}{x' - x} \, dx'
 
+*Eqn. 7.3*
+
 The Hilbert Transform can be calculated without performing
 convolution by applying the following property in Fourier space,
 
 .. math::  F_H(\xi) = F(\xi) \cdot i \, \text{sgn} (\xi)
+
+*Eqn. 7.4*
 
 As a result, the analytic signal's representation in Fourier space is
 
@@ -172,6 +180,8 @@ As a result, the analytic signal's representation in Fourier space is
   :align: center
   :width: 6cm
   :height: 1.70cm
+
+*Eqn. 7.5*
 
 Even though it does not have ideal properties when applied to a discrete
 signal [Bracewell2000]_ an approach to calculate the analytic signal is then
@@ -185,6 +195,8 @@ For narrow band signals, the local phase, :math:`\phi(x)`, and the local energy,
   :align: center
   :width: 6cm
   :height: 1.65cm
+
+*Eqn. 7.6*
 
 After the envelope, *A(x)*, is calculated, post-processing can be performed.
 The majority of an ultrasound image's content is speckle, random scattering
