@@ -1,6 +1,6 @@
-# Veusz saved document (version 1.8)
+# Veusz saved document (version 1.11)
 # User: matt
-# Date: Tue, 10 May 2011 16:17:37 +0000
+# Date: Thu, 26 May 2011 19:31:56 +0000
 
 AddImportPath(u'/home/matt/rs/papers/thesis/high_freq_phantom/analysis')
 ImportString(u'4000E_atten(numeric)','''
@@ -70,13 +70,13 @@ To('..')
 Add('fit', name='fit1', autoadd=False)
 To('fit1')
 Set('function', u'a * x**b')
-Set('values', {u'a': 0.068346928886163477, u'b': 1.6636957309680425})
+Set('values', {u'a': 0.06834692888616348, u'b': 1.6636957309680425})
 Set('xData', u'5000E_atten_f')
 Set('yData', u'5000E_atten')
 Set('fitRange', True)
 Set('Line/color', u'#55aaff')
 Set('Line/width', u'2.0pt')
-Set('Line/style', u'dashed')
+Set('Line/style', u'dotted')
 To('..')
 Add('key', name='key1', autoadd=False)
 To('..')
